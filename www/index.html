@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CMSC 33260: Internet Censorship and Online Discourse</title>
+    <title>CMSC 33260: Internet Censorship and Online Speech</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -12,7 +12,7 @@
 
     <div class="container">
       <header class="jumbotron subhead" id="overview">
-        <h1>Internet Censorship and Online Discourse</h1>
+        <h1>Internet Censorship and Online Speech</h1>
         <p class="lead">CMSC 33260, University of Chicago, Winter 2020</p>
       </header>
 
@@ -25,7 +25,6 @@
               <li><a href="#tab2" data-toggle="tab">Syllabus</a></li>
               <li><a href="#tab3" data-toggle="tab">Schedule</a></li>
               <li><a href="#tab4" data-toggle="tab">Resources</a></li>
-              <li><a href="#tab5" data-toggle="tab">Labs</a></li>
             </ul>
 
     <div class="tab-content">
@@ -81,17 +80,13 @@
 
   <p>The course will meet once a week for 180-minute <b>class meetings</b>.</p>
 
-  <p>Each class meeting will have three parts. 
-  <ul>
-      <li> The first part of each meeting
-          will be a lecture on technical material. The presentation will be
-          interactive. We will cover technical background on the topic in question.
-          Format will be based on question-and-answer.</li>
-      <li>The second part of each meeting will be student presentations on the
-          topic of interest. </li> 
-      <li>The third part of each meeting will involve a short hands-on lab activity,
-          to be completed in class.</li>
-  </ul> 
+  <p>Each class meeting will have <b>three parts</b>.
+  <ol>
+      <li> <b>Technical lecture.</b> The presentation will be
+          interactive. We will cover technical background on the topic of the week.</li>
+      <li><b>Student presentations</b> on the weekly topic. </li> 
+      <li>A short <b>hands-on lab</b> activity, to be completed in class.</li>
+  </ol> 
   </p>
 
 <h3>Recommended Background</h3>
@@ -100,8 +95,10 @@
 <b>Prerequisite:</b> Some background in computer networking, network security
 and privacy, and machine learning will be helpful to understand some of the
 concepts covered in the class. A prior course in computer networking is
-strongly recommended.
-</>
+strongly recommended. Additionally, the labs will involve basic exploratory
+data analysis; some experience with Python and Pandas may be useful, though it
+is not required.
+</p>
 
 <h3>Grading</h3>
 
@@ -110,9 +107,12 @@ strongly recommended.
   <ul>
       <li><b>Weekly Writeups (25%).</b> Each week, you should write a 500-word
           reaction piece on the topic of the assigned work. You must address
-          the following in your writeup: (1) What is a summary of the reading?
-          (2) What main questions did you have after reading? Writeups are due
-          Friday before the topic is covered on the following Monday.
+          the following in your writeup: 
+          <ol>
+              <li>What is a summary of the reading?</li>
+              <li>What main questions did you have after reading?</li>
+          </ol>
+          Writeups are due Friday before the topic is covered on the following Monday.
       </li>
       <li><b>Presentation (25%).</b> Each student (or group) will present to
           the class concerning the topic of the week. The presentation can be
@@ -136,7 +136,8 @@ strongly recommended.
       </li>
       <li><b>Participation (15%).</b> Come to class prepared to discuss the
           assigned readings and any preparation as posted on the course
-          website.</li>
+          website. Submitting pull requests on the (in-progress) book, where
+          each week corresponds to a chapter, also counts towards participation.</li>
     </ul>
   </p>
 
@@ -199,7 +200,7 @@ forthcoming book, notes, and published research papers.
   <h4> Overview</h4>
       <p>This schedule and syllabus is preliminary and subject to
       change. Edits will be ongoing, but you can assume that all updates
-      for the subsequent week will be completed by 5p ET of the Friday 
+      for the subsequent week will be completed by 5p Chicago Time of the Friday 
       prior to the week of instruction.</p>
 
  <table class="table table-striped table-custom">
@@ -207,7 +208,7 @@ forthcoming book, notes, and published research papers.
      <th class="custom-col-1">Date</th>
      <th class="custom-col-2">Topic</th>
      <th class="custom-col-3">Lab</th>
-     <th class="custom-col-4">Preparation Material</th>
+     <th class="custom-col-4">Preparation</th>
      <th class="custom-col-5">Notes</th>
    </tr>
 
@@ -220,7 +221,8 @@ forthcoming book, notes, and published research papers.
              <li>Tools for Empowerment</li>
          </ul>
      </td>
-     <td><ul></ul></td>
+     <td><ul>
+         </ul></td>
      <td><ul></ul></td>
      <td><ul></ul></td>
    </tr>
@@ -233,8 +235,14 @@ forthcoming book, notes, and published research papers.
              <li>Throttling</li>
          </ul>
      </td>
-     <td><ul></ul></td>
-     <td><ul></ul></td>
+     <td><ul>
+             <li><a href="https://iclab.org/censorship-data/">ICLab Dataset</a></li>
+         </ul>
+     </td>
+     <td><ul>
+             <li>Chapters 1-2</li>
+             <li><a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-pearce.pdf">Iris USENIX</a></li>
+         </ul></td>
      <td><ul></ul></td>
    </tr>
 
@@ -245,20 +253,30 @@ forthcoming book, notes, and published research papers.
              <li>The Great Cannon</li>
          </ul>
      </td>
-     <td><ul></ul></td>
-     <td><ul></ul></td>
+     <td><ul><li><a href="https://github.com/GaloisInc/ddosflowgen">DDoS FlowGen</a></li></ul></td>
+     <td><ul>
+             <li>Chapter 3</li>
+             <li><a href="https://citizenlab.ca/2015/04/chinas-great-cannon/">Citizen Lab Report</a></li>
+             <li><a href="https://cybersecurity.att.com/blogs/labs-research/the-great-cannon-has-been-deployed-again">Cannon in Hong Kong</a></li>
+         </ul></td>
      <td><ul></ul></td>
    </tr>
 
    <tr>
      <td>January 27</td>
-     <td>Measuring Internet Censorship
+     <td>Measuring Censorship (and Ethics)
          <ul>
-             <li>Tools: Augur (TCP/IP), Iris (DNS)</li>
-             <li>Global Studies: ICLab, Censored Planet</li>
+             <li>Tools: Encore (HTTP), Augur (TCP/IP), Iris (DNS)</li>
+             <li>Global Studies: OONI, ICLab, Censored Planet</li>
          </ul></td>
-     <td><ul></ul></td>
-     <td><ul></ul></td>
+         <td><ul>
+                 <li><a href="https://encore.noise.gatech.edu/">Encore</a> Dataset</li>
+             </ul></td>
+     <td>
+         <ul>
+             <li>Chapter 4</li>
+             <li><a href="http://conferences.sigcomm.org/sigcomm/2015/pdf/papers/p653.pdf">Encore</a></li>
+         </ul></td>
      <td><ul></ul></td>
    </tr>
 
@@ -272,8 +290,11 @@ forthcoming book, notes, and published research papers.
              <li>Telex/Tapdance</li>
              <li>Lantern and Secure Messaging</li>
          </ul></td>
-     <td><ul></ul></td>
-     <td><ul></ul></td>
+         <td><ul><li>VPN Leakage</li></ul></td>
+         <td><ul>
+                 <li>Chapter 5</li>
+                 <li><a href="https://dl.acm.org/citation.cfm?id=3278570">VPN Ecosystem</a></li>
+             </ul></td>
      <td><ul></ul></td>
    </tr>
 
@@ -287,8 +308,12 @@ forthcoming book, notes, and published research papers.
          <li>Moderation of Speech: Political Advertising, Hate Speech, etc.</li>
      </ul>
      </td>
-     <td><ul></ul></td>
-     <td><ul></ul></td>
+     <td><ul>
+             <li><a href="https://github.com/spotify/echoprint-codegen">Echoprint</a></li></ul></td>
+     <td><ul>
+             <li>Chapter 6</li>
+             <li><a href="https://www.amazon.com/Custodians-Internet-Platforms-Moderation-Decisions/dp/030017313X/">Custodians</a> (TBD)</li>
+         </ul></td>
      <td><ul></ul></td>
    </tr>
 
@@ -300,8 +325,12 @@ forthcoming book, notes, and published research papers.
              <li>Pollution attacks</li>
          </ul>
      </td>
-     <td><ul></ul></td>
-     <td><ul></ul></td>
+     <td><ul><li>Hyper-personalization</li><li>Profile Pollution</li></ul></td>
+     <td><ul>
+             <li>Chapter 7</li>
+             <li><a href="https://www.usenix.org/system/files/conference/usenixsecurity13/sec13-paper_xing.pdf">Take This Personally</a></li>
+             <li><a href="https://www.amazon.com/Influence-Practice-Robert-B-Cialdini/dp/0205609996/">Influence</a> (TBD)</li>
+         </ul></td>
      <td><ul></ul></td>
    </tr>
 
@@ -312,24 +341,31 @@ forthcoming book, notes, and published research papers.
          <ul><li>CDA Section 230</li>
              <li>DMCA Section 512</li>
              <li>"Kill Switch" Proposals</li>
-             <li>Relevant EU Law and Policy</li>
+             <li>Net Neutrality and Zero Rating</li>
          </ul>
      </td>
-     <td><ul></ul></td>
-     <td><ul></ul></td>
+     <td><ul>
+         </ul></td>
+     <td><ul>
+             <li>Chapter 8</li>
+             <li><a href="https://heinonline.org/HOL/Page?handle=hein.journals/fedcom49&id=69&collection=journals&index=">Cannon</a> (pp. 52-59, 72-94)</li>
+         </ul></td>
      <td><ul></ul></td>
    </tr>
 
    <tr>
      <td>March 9</td>
-     <td>Disinformation ("Fake News")
+     <td>Disinformation 
          <ul>
              <li>Defining Fake News</li>
              <li>Detecting Fake News</li>
              <li>Political Advertisements</li>
          </ul></td>
-     <td><ul></ul></td>
-     <td><ul></ul></td>
+         <td><ul><li>Infrastructure-Based Detection</li></ul></td>
+     <td><ul>
+             <li>Chapter 9</li>
+             <li><a href="https://www.amazon.com/Censored-Distraction-Diversion-Inside-Firewall/dp/0691178860/">Censored</a> (TBD)</li>
+         </ul></td>
      <td><ul></ul></td>
    </tr>
 
@@ -350,19 +386,11 @@ forthcoming book, notes, and published research papers.
 
        <h3>Course Resources</h3>
        <ul>
-           <li><a href="https://piazza.com/">Piazza Online Discussion Forum</a></li>
+           <li><a href="https://github.com/noise-lab/censorship-book">Textbook Github</a> (In Progress)</li>
        </ul>
 
     </div> <!-- end tab pane -->
 
-     <div class="tab-pane" id="tab5">
-
-       <h3>Labs</h3>
-       <ul>
-           <li>TBD</li>
-       </ul>
-
-    </div> <!-- end tab pane -->
 
 
 
