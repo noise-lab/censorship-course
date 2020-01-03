@@ -1,0 +1,32 @@
+/*!
+ * Start Bootstrap - Small Business (https://startbootstrap.com/template-overviews/small-business)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-small-business/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.card-img-top {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.table-sm{
+  font-size: 11px;
+}
+
+.img-responsive{
+  height: 200px;
+  width: 170px;
+  border-radius: 95%;
+}

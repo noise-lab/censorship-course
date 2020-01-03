@@ -1,0 +1,138 @@
+img {
+   border: 0px;
+}
+
+body, html { 
+  padding-left: 1.5em;
+  width: 90%;
+}
+
+img {  
+  border-style: none;
+  vertical-align: middle;
+}
+
+h3 {
+        font-size: 145% ;
+        font-weight: bold ;
+        color: #4A4A3C ;
+        color-grey: #bbbbbb
+}
+
+
+a {
+        text-decoration: none ;
+        color: #991133 ;
+}
+
+a:hover {
+        text-decoration: underline
+}
+
+body {
+        font-family: arial, sans-serif ;
+        font-size: 9pt ;
+        margin: 25
+}
+
+FORM {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+P, TD {
+  font-family: arial, sans-serif;
+}
+
+P.contact {
+  text-align: center;  
+}
+
+P.contact A {
+  font-family: arial, sans-serif;
+  font-weight: normal;  
+}
+
+SPAN.email {
+  font-family: arial, sans-serif;
+  font-weight: bold;
+}
+
+P IMG {
+  vertical-align: text-bottom;
+}
+
+P.crumbbreadth {
+  margin-top: 0.25em;
+}
+
+.compact {
+  margin-top: -0.5em;
+  text-indent: 0em;
+}
+
+SPAN.biblio {
+  font-style: italic;
+}
+
+SPAN.biblio A {
+  font-family: arial, sans-serif;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+SPAN.availability {
+  font-family: arial, sans-serif;
+  font-weight: normal;
+}
+
+UL {
+  list-style: outside;
+}
+
+UL.expand {
+  margin-bottom: 1em;
+}
+
+UL.sections {
+  list-style: none;
+}
+
+/* Font-level properties */
+
+PRE {
+  font-family: lucidatypewriter, "Lucida Typewriter", Monaco, "Lucida Sans Unicode", monospace;
+}
+
+STRONG, A {
+  font-family: arial, sans-serif;
+  font-weight: bold;
+}
+
+A:link {
+  color: #B00;
+}
+
+A:visited {
+  color: #903;
+}
+
+H1, H2, H3, H4, H5, H6 {
+  font-family: arial, sans-serif;
+}
+
+H1 A, H2 A, H3 A, H4 A, H5 A, H6 A {
+  font-family: arial, sans-serif;
+}
+
+H1 {
+  color: #00B;
+}
+
+H2 {
+  color: #006;
+}
+
+H3 {
+  color: #006;
+}
