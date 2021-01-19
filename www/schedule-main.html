@@ -16,12 +16,13 @@
      <td>Week 1</td>
      <td>Course Overview
          <ul>
-             <li>Technical Censorship and Filtering</li>
-             <li>Information Manipulation</li>
-             <li>Tools for Empowerment</li>
+             <li>What is censorship?</li>
+             <li>How and why is it implemented?</li>
+             <li>Where is it taking place?</li>
          </ul>
      </td>
      <td><ul>
+             <li>None</li>
          </ul></td>
          <td><ul>
                  <li><a href="http://kirste.userpage.fu-berlin.de/outerspace/internet-article.html">First Nation in Cyberspace</a></li>
@@ -31,37 +32,40 @@
 
    <tr>
      <td>Week 2</td>
-     <td>Protocol Interference
+     <td>Protocol Interference and Defenses
          <ul>
              <li>TCP/IP Filtering</li>
              <li>BGP Hijacking</li>
-             <li>DNS Manipulation</li>
+             <li>DNS Manipulation (and Encrypted DNS)</li>
              <li>HTTP Block Pages</li>
              <li>Throttling</li>
          </ul>
      </td>
      <td><ul>
-             <li>DNS</li>
-             <li>Wireshark</li>
+             <li>DNS and Wireshark</li>
+             <li>DNSCrypt</li>
          </ul>
      </td>
      <td><ul>
              <li>Chapters 1-2</li>
-             <li><a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-pearce.pdf">Iris USENIX</a></li>
+             <li><a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-pearce.pdf">DNS Manipulation</a></li>
+             <li><a href="https://blog.mozilla.org/netpolicy/files/2020/11/DoH-Explainer-1.pdf">DNS over HTTPS</a></li>
          </ul></td>
      <td>Project Teams Due</td>
    </tr>
 
    <tr>
        <td>Week 3</td>
-     <td>Active Attacks/Denial of Service
+     <td>Active Attacks
          <ul>
+             <li>Denial of Service Attacks</li>
              <li>The Great Cannon</li>
          </ul>
      </td>
      <td><ul><li><a href="https://github.com/GaloisInc/ddosflowgen">DDoS FlowGen</a></li></ul></td>
      <td><ul>
              <li>Chapter 3</li>
+             <li><a href="https://dl.acm.org/doi/abs/10.1145/2815675.2815690">Tor Relay Probing</a>
              <li><a href="https://citizenlab.ca/2015/04/chinas-great-cannon/">Citizen Lab Report</a></li>
              <li><a href="https://cybersecurity.att.com/blogs/labs-research/the-great-cannon-has-been-deployed-again">Cannon in Hong Kong</a></li>
          </ul></td>
@@ -70,15 +74,14 @@
 
    <tr>
      <td>Week 4</td>
-     <td>Measuring Censorship (and Ethics)
+     <td>Measuring Censorship 
          <ul>
-             <li>Tools: Encore (HTTP), Augur (TCP/IP), Iris (DNS)</li>
-             <li>Global Studies: OONI, ICLab, Censored Planet</li>
+             <li>Open Observatory of Network Interference</li>
+             <li>Encore, Iris</li>
          </ul></td>
          <td><ul>
                  <li><a href="https://ooni.org/post/mining-ooni-data">OONI Dataset</a></li>
-                 <li><a href="https://iclab.org/post/iclab_data/">ICLab Dataset</a></li>
-                 <li><a href="https://encore.noise.gatech.edu/">Encore</a> Dataset</li>
+                 <li><a href="https://encore-data.s3.us-east-2.amazonaws.com/index.html">Encore Dataset</a></li>
              </ul></td>
      <td>
          <ul>
@@ -94,15 +97,18 @@
      <td>Circumventing Internet Censorship
          <ul>
              <li>VPNs</li>
-             <li>Information Hiding/Steganography</li>
              <li>Domain Fronting</li>
+             <li>Snowflake</li>
              <li>Telex/Tapdance</li>
-             <li>Lantern and Secure Messaging</li>
+             <li>Secure Messaging (e.g., Lantern)</li>
+             <li>NLP-Based Evasion</li>
          </ul></td>
-         <td><ul><li>VPN Leakage</li></ul></td>
+         <td><ul><li>Slitheen</li></ul></td>
          <td><ul>
                  <li>Chapter 5</li>
-                 <li><a href="https://dl.acm.org/citation.cfm?id=3278570">VPN Ecosystem</a></li>
+                 <li><a href="https://dl.acm.org/doi/abs/10.1145/2976749.2978312">Slitheen</a></li>
+                 <li><a href="https://www.bamsoftware.com/papers/thesis/#chap:snowflake">Snowflake</a></li>
+                 <li><a href="https://www.itsmrlin.com/papers/2015_icwsm_weibo.pdf">Homophones</a></li>
              </ul></td>
      <td></td>
    </tr>
@@ -110,11 +116,11 @@
 
    <tr>
      <td>Week 6</td>
-     <td>Platform Censorship and Content Moderation
+     <td>Content Moderation at Scale
      <ul>
          <li>Content Identification and Fingerprinting</li>
+         <li>AI/ML and Content Moderation</li>
          <li>User-Generated Content Platforms, CDNs</li>
-         <li>Moderation of Speech: Political Advertising, Hate Speech, etc.</li>
      </ul>
      </td>
      <td><ul>
@@ -123,24 +129,26 @@
          </ul></td>
      <td><ul>
              <li>Chapter 6</li>
-             <li><a href="https://www.amazon.com/Custodians-Internet-Platforms-Moderation-Decisions/dp/030017313X/">Custodians</a> (Ch.4,7)</li>
+             <li><a href="https://journals.sagepub.com/doi/pdf/10.1177/2053951719897945">Algorithmic Content Moderation</a></li>
+             <li><a href="https://www.aclweb.org/anthology/D17-1117.pdf">Deep Learning</a>
+             <li><a href="https://dl.acm.org/doi/10.1145/3338243">Human-Machine Collaboration</a></li>
          </ul></td>
      <td>Project Interim Report</td>
    </tr>
 
    <tr>
      <td>Week 7</td>
-     <td>Personalization and Filter Bubbles
-         <ul><li>Online advertising</li>
-             <li>Filter bubbles</li>
-             <li>Pollution attacks</li>
+     <td>Platform Moderation and Censorship
+         <ul>
+             <li>Personalization/Filter Bubbles</li>
+             <li>Political Advertising, Hate Speech, etc.</li>
          </ul>
      </td>
-     <td><ul><li>Hyper-personalization</li><li>Profile Pollution</li></ul></td>
+     <td><ul><li>Content Moderation at Scale</li></ul></td>
      <td><ul>
              <li>Chapter 7</li>
+             <li><a href="https://www.amazon.com/Custodians-Internet-Platforms-Moderation-Decisions/dp/030017313X/">Custodians</a> (Ch.4,7)</li>
              <li><a href="https://www.usenix.org/system/files/conference/usenixsecurity13/sec13-paper_xing.pdf">Take This Personally</a></li>
-             <li><a href="https://www.amazon.com/Influence-Practice-Robert-B-Cialdini/dp/0205609996/">Influence</a> (Ch. 4, parts of 5, 8)</li>
          </ul></td>
      <td><ul></ul></td>
    </tr>
@@ -148,7 +156,7 @@
 
    <tr>
      <td>Week 8</td>
-     <td>Legal Aspects of Content Moderation
+     <td>Law and Policy
          <ul><li>CDA Section 230</li>
              <li>DMCA Section 512</li>
              <li>"Kill Switch" Proposals</li>
@@ -159,23 +167,24 @@
          </ul></td>
      <td><ul>
              <li>Chapter 8</li>
-             <li><a href="https://heinonline.org/HOL/Page?handle=hein.journals/fedcom49&id=69&collection=journals&index=">Cannon</a> (pp. 52-59, 72-94)</li>
+             <li><a href="https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1662&context=uclf">Internet as Speech Machine</a></li>
+             <li><a href="https://heinonline.org/HOL/LandingPage?handle=hein.journals/fedcom49&div=10&id=&page=">CDA History</a></li>
          </ul></td>
      <td><ul></ul></td>
    </tr>
 
    <tr>
      <td>Week 9</td>
-     <td>Disinformation 
+     <td>Censorhsip Trends: Flooding, Propaganda, Disinformation 
          <ul>
-             <li>Defining Fake News</li>
-             <li>Detecting Fake News</li>
+             <li>Flooding and Propaganda</li>
+             <li>Disinformation</li>
              <li>Political Advertisements</li>
          </ul></td>
          <td><ul><li>Infrastructure-Based Detection</li></ul></td>
      <td><ul>
              <li>Chapter 9</li>
-             <li><a href="https://www.amazon.com/Censored-Distraction-Diversion-Inside-Firewall/dp/0691178860/">Censored</a> (TBD)</li>
+             <li><a href="https://www.amazon.com/Censored-Distraction-Diversion-Inside-Firewall/dp/0691178860/">Censored</a> (Flooding)</li>
          </ul></td>
      <td><ul></ul></td>
    </tr>
