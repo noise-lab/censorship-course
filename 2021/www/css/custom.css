@@ -1,0 +1,32 @@
+
+.table-custom td {
+    border-color:rgb(219,219,219);
+    border-style:solid;
+    border-width:1px;
+    padding:10px;margin:0px;
+}
+
+.table-custom th {
+    background-color: #dff0d8!important;
+}
+.table-custom .custom-col-1 {
+    width: 10%;
+}
+.table-custom .custom-col-2 {
+    width: 20%;
+}
+.table-custom .custom-col-3 {
+    width: 20%;
+}
+.table-custom .custom-col-4 {
+    width: 25%;
+}
+.table-custom .custom-col-5 {
+    width: 25%;
+}
+a.current {
+    font-weight: bold;
+}
+a.late {
+    color: rgb(231, 46, 27);
+}
