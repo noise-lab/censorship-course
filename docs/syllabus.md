@@ -1,4 +1,4 @@
-### Course Format
+## Course Format
 
 The course material will be delivered in two formats: (1) asynchronous
 preparation; (2) class meetings.
@@ -20,7 +20,7 @@ Each class meeting will have **one of the following activities**.
     topic of class.
 2.  **Group work:** A short **hands-on lab** activity.
 
-### Recommended Background
+## Recommended Background
 
 **Prerequisites:** There are no required prerequisites, although some
 background in computer networking, network security and privacy, and
@@ -35,7 +35,7 @@ Additionally, the labs will involve basic exploratory data analysis;
 some experience with Python and Pandas may be useful, though it is not
 required.
 
-### Grading
+## Grading
 
 Grading is based on:
 
@@ -67,7 +67,7 @@ Grading is based on:
   3.  Submit pull requests on the (in-progress) book, where each week
       corresponds to a chapter, also counts towards participation.
 
-### Late Policy
+## Late Policy
 
 We understand that sometimes life events occur and that it's not always
 possible to meet every deadline. As such, we are willing to accept late
@@ -98,7 +98,7 @@ lateness—including but not limited to interviews, conferences, etc.—are
 *not* legitimate excuses and any resulting lateness will count against
 your grace period.
 
-### Reading and Videos
+## Reading and Videos
 
 All readings will be posted on the schedule page of this webpage.
 Readings will comprise popular press articles, draft book chapters from
