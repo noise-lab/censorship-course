@@ -1,3 +1,5 @@
+# Internet Censorship and Online Speech
+
 ## Overview
 
 Information dissemination and online discourse on the Internet are
@@ -37,23 +39,23 @@ assume that all updates for the subsequent week will be completed by 5p
 Chicago Time of the Friday prior to the week of instruction.
 
 
-| Class | Topic                                               | Lab             | Preparation |
-|-------|-----------------------------------------------------|-----------------|-------------|
-| 1     | The What and Why of Information Control             | Chapter 1       |             |
-| 2     | How Common is Information Control?                  | Chapter 2.1-2.4 |             |
-| 3     | Techniques and Ethics of Censorship Measurement     | Chapter 2.5     |             |
-| 4     | DNS and TCP/IP Manipulation                         | Chapter 3.1-3.4 |             |
-| 5     | BGP and Web Manipulation                            | Chapter 3.5-3.6 |             |
-| 6     | Throttling and Rate Limiting                        | Chapter 3.7     |             |
-| 7     | Denial of Service Attacks                           | Chapter 4.1-4.3 |             |
-| 8     | Reflection and Amplification                        | Chapter 4.4-4.5 |             |
-| 9     | Content Moderation                                  | Chapter 5       |             |
-| 10    | Personalization and Filter Bubbles                  | Chapter 6.2     |             |
-| 11    | Copyright as Censorship                             | Chapter 7.1-7.2 |             |
-| 12    | Net Neutrality and Prioritization                   | Chapter 7.3     |             |
-| 13    | Financial Friction: Zero Rating and Digitial Divide | Chapter 7.4     |             |
-| 14    | Flooding and Propaganda                             | Chapter 8.1-8.2 |             |
-| 15    | Disinformation                                      | Chapter 8.3     |             |
-| 16    | Defenses: VPNs and Tor                              | Chapter 9.1-9.2 |             |
-| 17    | In-Network Defense: Decoy Routing                   | Chapter 9.5     |             |
-| 18    | The Future of Speech Online                         |                 |             |
+| Class | Topic                                               | Reading | Preparation |
+|-------|-----------------------------------------------------|---------|-------------|
+| 1     | The What and Why of Information Control             | 1       |             |
+| 2     | How Common is Information Control?                  | 2.1-2.4 |             |
+| 3     | Techniques and Ethics of Censorship Measurement     | 2.5     |             |
+| 4     | DNS and TCP/IP Manipulation                         | 3.1-3.4 |             |
+| 5     | BGP and Web Manipulation                            | 3.5-3.6 |             |
+| 6     | Throttling and Rate Limiting                        | 3.7     |             |
+| 7     | Denial of Service Attacks                           | 4.1-4.3 |             |
+| 8     | Reflection and Amplification                        | 4.4-4.5 |             |
+| 9     | Content Moderation                                  | 5       |             |
+| 10    | Personalization and Filter Bubbles                  | 6.2     |             |
+| 11    | Copyright as Censorship                             | 7.1-7.2 |             |
+| 12    | Net Neutrality and Prioritization                   | 7.3     |             |
+| 13    | Financial Friction: Zero Rating and Digital Divide | 7.4     |             |
+| 14    | Flooding and Propaganda                             | 8.1-8.2 |             |
+| 15    | Disinformation                                      | 8.3     |             |
+| 16    | Defenses: VPNs and Tor                              | 9.1-9.2 |             |
+| 17    | In-Network Defense: Decoy Routing                   | 9.5     |             |
+| 18    | The Future of Speech Online                         |         |             |
