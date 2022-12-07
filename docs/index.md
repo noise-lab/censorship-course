@@ -23,11 +23,6 @@ More details are in the [course syllabus](syllabus.md).
 
 ## Schedule
 
-This schedule is subject to change. Edits will be ongoing, but you can
-assume that all updates for the subsequent week will be completed by 5p
-Chicago Time of the Friday prior to the week of instruction.
-
-
 | Class | Topic                                               | Reading | Preparation |
 |-------|-----------------------------------------------------|---------|-------------|
 | 1     | The What and Why of Information Control             | 1       |             |
