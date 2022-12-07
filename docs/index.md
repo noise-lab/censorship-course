@@ -36,142 +36,24 @@ This schedule is subject to change. Edits will be ongoing, but you can
 assume that all updates for the subsequent week will be completed by 5p
 Chicago Time of the Friday prior to the week of instruction.
 
-<table class="table table-striped table-custom">
-<thead>
-<tr class="header">
-<th class="custom-col-1">Date</th>
-<th class="custom-col-2">Topic</th>
-<th class="custom-col-3">Lab</th>
-<th class="custom-col-4">Preparation</th>
-<th class="custom-col-5">Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>11 Jan</td>
-<td>The What and Why of Information Control</td>
-<td>Chapter 1</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>13 Jan</td>
-<td>How Common is Information Control?</td>
-<td>Chapter 2.1-2.4</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>18 Jan</td>
-<td>Techniques and Ethics of Censorship Measurement</td>
-<td>Chapter 2.5</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>20 Jan</td>
-<td>DNS and TCP/IP Manipulation</td>
-<td>Chapter 3.1-3.4</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>25 Jan</td>
-<td>BGP and Web Manipulation</td>
-<td>Chapter 3.5-3.6</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>27 Jan</td>
-<td>Throttling and Rate Limiting</td>
-<td>Chapter 3.7</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>1 Feb</td>
-<td>Denial of Service Attacks</td>
-<td>Chapter 4.1-4.3</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>3 Feb</td>
-<td>Reflection and Amplification</td>
-<td>Chapter 4.4-4.5</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>8 Feb</td>
-<td>Content Moderation</td>
-<td>Chapter 5</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>10 Feb</td>
-<td>Personalization and Filter Bubbles</td>
-<td>Chapter 6.2</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>15 Feb</td>
-<td>Copyright as Censorship</td>
-<td>Chapter 7.1-7.2</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>17 Feb</td>
-<td>Net Neutrality and Prioritization</td>
-<td>Chapter 7.3</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>22 Feb</td>
-<td>Financial Friction: Zero Rating and Digitial Divide</td>
-<td>Chapter 7.4</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>24 Feb</td>
-<td>Flooding and Propaganda</td>
-<td>Chapter 8.1-8.2</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>1 Mar</td>
-<td>Disinformation</td>
-<td>Chapter 8.3</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>3 Mar</td>
-<td>Defenses: VPNs and Tor</td>
-<td>Chapter 9.1-9.2</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>8 Mar</td>
-<td>In-Network Defense: Decoy Routing</td>
-<td>Chapter 9.5</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>10 Mar</td>
-<td>The Future of Speech Online</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+
+| Class | Topic                                               | Lab             | Preparation |
+|-------|-----------------------------------------------------|-----------------|-------------|
+| 1     | The What and Why of Information Control             | Chapter 1       |             |
+| 2     | How Common is Information Control?                  | Chapter 2.1-2.4 |             |
+| 3     | Techniques and Ethics of Censorship Measurement     | Chapter 2.5     |             |
+| 4     | DNS and TCP/IP Manipulation                         | Chapter 3.1-3.4 |             |
+| 5     | BGP and Web Manipulation                            | Chapter 3.5-3.6 |             |
+| 6     | Throttling and Rate Limiting                        | Chapter 3.7     |             |
+| 7     | Denial of Service Attacks                           | Chapter 4.1-4.3 |             |
+| 8     | Reflection and Amplification                        | Chapter 4.4-4.5 |             |
+| 9     | Content Moderation                                  | Chapter 5       |             |
+| 10    | Personalization and Filter Bubbles                  | Chapter 6.2     |             |
+| 11    | Copyright as Censorship                             | Chapter 7.1-7.2 |             |
+| 12    | Net Neutrality and Prioritization                   | Chapter 7.3     |             |
+| 13    | Financial Friction: Zero Rating and Digitial Divide | Chapter 7.4     |             |
+| 14    | Flooding and Propaganda                             | Chapter 8.1-8.2 |             |
+| 15    | Disinformation                                      | Chapter 8.3     |             |
+| 16    | Defenses: VPNs and Tor                              | Chapter 9.1-9.2 |             |
+| 17    | In-Network Defense: Decoy Routing                   | Chapter 9.5     |             |
+| 18    | The Future of Speech Online                         |                 |             |
