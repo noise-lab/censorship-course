@@ -1,6 +1,6 @@
 # Internet Censorship and Online Speech
 
-## Overview
+## Course Description 
 
 Information dissemination and online discourse on the Internet are
 subject to the algorithms and filters that operate on Internet
@@ -17,20 +17,9 @@ implications of consolidation for control over online discourse. Each
 course meeting will include a technical overview, reading discussion,
 and a hands-on laboratory activity.
 
+## Syllabus
+
 More details are in the [course syllabus](syllabus.md).
-
-## Logistics
-
-**Contact:**  
-Prof. [Nick Feamster](https://people.cs.uchicago.edu/~feamster/)  
-Ryerson 176  
-\<my last name\>@uchicago.edu
-
-**Class Location and Time:**  
-Tuesdays and Thursdays, 12:30-1:50 pm
-
-**Office Hours**  
-Nick: [By Appointment](https://calendly.com/feamster/)
 
 ## Schedule
 
