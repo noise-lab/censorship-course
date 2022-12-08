@@ -46,4 +46,5 @@ More details are in the [course syllabus](syllabus.md).
 
 ## Resources
 
-* [Lecture Videos](https://www.youtube.com/playlist?list=PLpherdrLyny9vAH3GUofYRu4Ig8wY9Lho)
+* [Lecture
+  Videos](https://youtube.com/playlist?list=PLpherdrLyny9vAH3GUofYRu4Ig8wY9Lho)
