@@ -43,3 +43,7 @@ More details are in the [course syllabus](syllabus.md).
 | 16    | Defenses: VPNs and Tor                              | 9.1-9.2 |             |
 | 17    | In-Network Defense: Decoy Routing                   | 9.5     |             |
 | 18    | The Future of Speech Online                         |         |             |
+
+## Resources
+
+* [Lecture Videos](https://www.youtube.com/playlist?list=PLpherdrLyny9vAH3GUofYRu4Ig8wY9Lho)
