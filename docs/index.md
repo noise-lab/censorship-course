@@ -23,26 +23,31 @@ More details are in the [course syllabus](syllabus.md).
 
 ## Schedule
 
-| Class | Topic                                               | Reading | Preparation |
-|-------|-----------------------------------------------------|---------|-------------|
-| 1     | The What and Why of Information Control             | 1       |             |
-| 2     | How Common is Information Control?                  | 2.1-2.4 |             |
-| 3     | Techniques and Ethics of Censorship Measurement     | 2.5     |             |
-| 4     | DNS and TCP/IP Manipulation                         | 3.1-3.4 |             |
-| 5     | BGP and Web Manipulation                            | 3.5-3.6 |             |
-| 6     | Throttling and Rate Limiting                        | 3.7     |             |
-| 7     | Denial of Service Attacks                           | 4.1-4.3 |             |
-| 8     | Reflection and Amplification                        | 4.4-4.5 |             |
-| 9     | Content Moderation                                  | 5       |             |
-| 10    | Personalization and Filter Bubbles                  | 6.2     |             |
-| 11    | Copyright as Censorship                             | 7.1-7.2 |             |
-| 12    | Net Neutrality and Prioritization                   | 7.3     |             |
-| 13    | Financial Friction: Zero Rating and Digital Divide | 7.4     |             |
-| 14    | Flooding and Propaganda                             | 8.1-8.2 |             |
-| 15    | Disinformation                                      | 8.3     |             |
-| 16    | Defenses: VPNs and Tor                              | 9.1-9.2 |             |
-| 17    | In-Network Defense: Decoy Routing                   | 9.5     |             |
-| 18    | The Future of Speech Online                         |         |             |
+| Class                     | Topic                                              | Reading | Preparation |
+|---------------------------|----------------------------------------------------|---------|-------------|
+| 1                         | The What and Why of Information Control            | 1       |             |
+| *Attacks on Availability* |                                                    |         |             |
+| 4                         | DNS and TCP/IP Manipulation                        | 2.1     |             |
+| 5                         | BGP and Web Manipulation                           | 2.2     |             |
+| 6                         | Throttling and Rate Limiting                       | 2.3     |             |
+| 2                         | How Common is Information Control?                 | 2.4     |             |
+| 3                         | Measuring Censorship                               | 2.5-2.6 |             |
+| *Attacks on Availability* |                                                    |         |             |
+| 7                         | Denial of Service Attacks                          | 3.1-3.3 |             |
+| 8                         | Reflection and Amplification                       | 3.4     |             |
+| *Attacks on Attention*    |                                                    |         |             |
+| 9                         | Content Moderation                                 | 4       |             |
+| 10                        | Personalization and Filter Bubbles                 | 5.1-5.2 |             |
+| 11                        | Flooding and Propaganda                            | 5.3-5.4 |             |
+| 12                        | Disinformation                                     | 5.5     |             |
+| *Law and Policy*          |                                                    |         |             |
+| 13                        | Copyright as Censorship                            | 6.1     |             |
+| 14                        | Net Neutrality and Prioritization                  | 6.2     |             |
+| 15                        | Zero Rating                                        | 6.3     |             |
+| *Defenses*                |                                                    |         |             |
+| 16                        | VPNs and Tor                                       | 7.1-7.3 |             |
+| 17                        | Infrastructure Circumvention                       | 7.4     |             |
+| 18                        | The Future of Speech Online                        |         |             |
 
 ## Resources
 
