@@ -27,11 +27,11 @@ More details are in the [course syllabus](syllabus.md).
 |---------------------------|----------------------------------------------------|---------|-------------|
 | 1                         | The What and Why of Information Control            | 1       |             |
 | *Attacks on Availability* |                                                    |         |             |
-| 4                         | DNS and TCP/IP Manipulation                        | 2.1     |             |
-| 5                         | BGP and Web Manipulation                           | 2.2     |             |
-| 6                         | Throttling and Rate Limiting                       | 2.3     |             |
-| 2                         | How Common is Information Control?                 | 2.4     |             |
-| 3                         | Measuring Censorship                               | 2.5-2.6 |             |
+| 2                         | DNS and TCP/IP Manipulation                        | 2.1     |             |
+| 3                         | BGP and Web Manipulation                           | 2.2     |             |
+| 4                         | Throttling and Rate Limiting                       | 2.3     |             |
+| 5                         | How Common is Information Control?                 | 2.4     |             |
+| 6                         | Measuring Censorship                               | 2.5-2.6 |             |
 | *Attacks on Availability* |                                                    |         |             |
 | 7                         | Denial of Service Attacks                          | 3.1-3.3 |             |
 | 8                         | Reflection and Amplification                       | 3.4     |             |
