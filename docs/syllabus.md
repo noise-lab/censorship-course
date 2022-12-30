@@ -58,8 +58,9 @@ Grading is based on:
 - **Group research project (35%).** You should complete an original
   research project as part of the course, addressing an open question
   related to Internet censorship or online discourse. You should have a
-  goal of preparing and submitting a paper in Spring 2022. Papers and
-  presentations will be due the final day of class.
+  goal of eventually preparing and submitting a research paper. Papers and
+  presentations will be due the final day of class. More details on the
+  project can be found [here](assignments/project.md).
 - **Participation (15%).** Participation has three factors:
   1.  Show up. Come to class prepared to discuss the assigned readings
       and any preparation as posted on the course website.

@@ -26,7 +26,7 @@ More details are in the [course syllabus](syllabus.md).
 | Class                     | Topic                                              | Reading | Preparation |
 |---------------------------|----------------------------------------------------|---------|-------------|
 | 1                         | The What and Why of Information Control            | 1       |             |
-| *Attacks on Availability* |                                                    |         |             |
+| *Attacks on Protocols*    |                                                    |         |             |
 | 2                         | DNS and TCP/IP Manipulation                        | 2.1     |             |
 | 3                         | BGP and Web Manipulation                           | 2.2     |             |
 | 4                         | Throttling and Rate Limiting                       | 2.3     |             |
