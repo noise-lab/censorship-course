@@ -104,3 +104,65 @@ your grace period.
 All readings will be posted on the schedule page of this webpage.
 Readings will comprise popular press articles, draft book chapters from
 Prof. Feamster's forthcoming book, notes, and published research papers.
+
+## Academic Honesty and Integrity
+
+You are taking this class to learn. My goal is to teach you new concepts---any
+attempts to circumvent that deprive you of the process of learning.  To that
+end, you are responsible for doing your own work in this class. 
+
+You may talk to the course staff and to other students (past and present)
+about any assignments in this class. You can work together in discussing
+**how** you approached a particular problem, as long as you acknowledge who
+you worked with. 
+
+"Modern" coding indeed involves a lot of copy/paste/adaptation of existing
+code blocks, and such adaptation is permissible, within reason. If you find
+approaches and solutions on the Internet to various problems in this class,
+you are welcome to borrow ideas and approaches (and even copy code snippets,
+with acknowledgment and links). **Please acknowledge all collaborators and
+sources.** 
+
+The primary activity that is not permitted it copying a solution
+verbatim; if you find yourself running code that has been copy/pasted from
+anywhere, pause and think. Ask the staff if you have questions about this
+policy.
+
+The University of Chicago has formal policies related to academic honesty and
+plagiarism. We abide by these standards in this course. Depending on the
+severity of the offense, you risk being dismissed altogether from the course.
+
+No collaboration is permitted on quizzes or exams. All work submitted for the
+project must properly cite ideas and work that are not those of the students
+in the group.
+
+## Kindness, Respect, and Free Expression
+
+Topics in this course, particularly those that touch on ethics, policy, the
+law, and society,  may touch on topics that challenge your existing thinking,
+and certain discussions may make you feel uncomfortable or challenged. 
+
+To this end, we seek to make this class an inclusive environment, one of
+mutual respect for others. The University of Chicago is committed to the
+principles of free expression, and part of my duty as your instructor is to
+help foster that environment. 
+
+To achieve the vibrant intellectual atmosphere we aim for, an environment of
+respect for each other is of utmost importance. Every person should conduct
+themselves with integrity, compassion, and thoughtfulness so everyone feels
+comfortable participating and benefits from a collective learning experience.
+
+Think not only of what you say but *how* you say it.  
+
+Participation and speaking up is critical to the vibrant intellectual
+environment we all want to create among ourselves. I may not always be clear
+in my own presentation (and I also make plenty of mistakes), but I will not
+know that unless you speak up. If you have a question, there's a good chance
+half of the class is probably thinking the same thing. Be bold.  
+
+Finally, think about when to step back, so that everyone can have a chance to
+speak.  To that end, I typically make a concerted effort to step back from
+discussions myself---viewing my role as more of a facilitator---so that you
+can feel free to speak. If I announce (or allude to) my opinion on a matter in
+front of the class, that may make some of you less eager to share your own
+viewpoints, which is also a fail.
