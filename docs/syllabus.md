@@ -45,7 +45,7 @@ Grading is based on:
   1.  What is a summary of the reading?
   2.  What questions did you have after reading?
 
-  Writeups are due on Wednesday morning, before the topic is covered for
+  Writeups are due before the topic is covered for
   that week, to allow for others to read, summarize, and comment.
   (Grading is 0/1.)
 - **Presentation (25%).** Each student (or group) will present to the
@@ -53,7 +53,7 @@ Grading is based on:
   but it should be informed and teach the class something that is not on
   the syllabus. It can be a technical primer, current event overview,
   paper summary, etc. You should clear your presentation topic and
-  slides draft the Friday before you are due to present. Group order
+  slides draft the end of the week before you are due to present. Group order
   will be signup-based, then at random among remaining topics and slots.
 - **Group research project (35%).** You should complete an original
   research project as part of the course, addressing an open question
