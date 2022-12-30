@@ -6,7 +6,7 @@ Your proposal can be a \"skeletal\" version of your final
 report.  Here are some things you may wish to include.
 
 
-**1. Project Title and Team: **
+**1. Project Title and Team**
 
 -   **Provide a title for your project**
 -   List all members of your team (full names and CNET IDs). The ideal
@@ -14,7 +14,7 @@ report.  Here are some things you may wish to include.
     need an exception on this and justify it in your proposal. In the
     above template, you can drop this in simply as the author list.
 
-**2. Project Summary:**
+**2. Project Summary**
 
 -   Think of this as a draft of your project report introduction.
     Advice on [writing a good
@@ -27,7 +27,7 @@ report.  Here are some things you may wish to include.
 -   What kinds of actions could be taken based on your results, and who
     is equipped to take those actions? 
 
-**3. Related Work:**
+**3. Related Work**
 
 -   Draft as much as you can of your related work section.
 -   Organize your related work so it is more than just a "list". 
@@ -37,7 +37,7 @@ report.  Here are some things you may wish to include.
     complete as possible for now.
 -   Also articulate *how your work extends* the related work you cite.
 
-**4. Project Preparation and Prerequisites: **
+**4. Project Preparation and Prerequisites**
 
 -   What do you need to complete this project?
 -   If your project is measurement based, describe the data you have and
@@ -47,13 +47,13 @@ report.  Here are some things you may wish to include.
     tool), describe how you may go about doing that (will you extend an
     existing software code base, for example)?
 
-**5. Evaluation: **
+**5. Evaluation**
 
 -   This of this as a starting point for the project.
 -   Describe your evaluation process? Be as specific as possible about
     your evaluation techniques 
 
-**6. Ethics:**
+**6. Ethics**
 
 -   Briefly discuss the ethical implications of your work. Will your
     models suffer from any kind of bias? Will this potential bias impact
