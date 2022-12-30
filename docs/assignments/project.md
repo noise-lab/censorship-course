@@ -1,9 +1,10 @@
-Use [this](https://github.com/noise-lab/paper-skeleton){.inline_disabled
-target="_blank" rel="noopener"} (preferred) or
-[this](https://www.overleaf.com/latex/templates/association-for-computing-machinery-acm-sig-proceedings-template/bmvfhcdnxfty){.inline_disabled
-target="_blank" rel="noopener"} (if you must) as a paper skeleton for
-your report. Your proposal can be a \"skeletal\" version of your final
+# Project
+
+## Proposal
+
+Your proposal can be a \"skeletal\" version of your final
 report.  Here are some things you may wish to include.
+
 
 **1. Project Title and Team: **
 
@@ -16,9 +17,8 @@ report.  Here are some things you may wish to include.
 **2. Project Summary:**
 
 -   Think of this as a draft of your project report introduction.
-    (Advice on [writing a good
-    introduction](http://www-net.cs.umass.edu/kurose/writing/intro-style.html){.inline_disabled
-    target="_blank" rel="noopener"}.)
+    Advice on [writing a good
+    introduction](http://www-net.cs.umass.edu/kurose/writing/intro-style.html)
 -   What is the problem?
 -   Why is it an important problem? (Provide citations if possible to
     support your claims of relevance. Examples could be previous
@@ -30,7 +30,7 @@ report.  Here are some things you may wish to include.
 **3. Related Work:**
 
 -   Draft as much as you can of your related work section.
--   Organize your related work so it is more than just a \"list\". 
+-   Organize your related work so it is more than just a "list". 
     Organize thematically; look at related work sections from other
     published papers for examples.
 -   Include all references (e.g., as bibtex) so your related work is as
@@ -59,7 +59,7 @@ report.  Here are some things you may wish to include.
     models suffer from any kind of bias? Will this potential bias impact
     the fairness of any proposed solutions?
 
- 
+## Final Deliverable 
 
 Your final project deliverable should be:
 
@@ -77,4 +77,10 @@ Your final project deliverable should be:
     playlist and host a watch party (if/when there is interest); (2)
     showcase the class; (3) show them as examples in future years.
 
- 
+ Use [this](https://github.com/noise-lab/paper-skeleton)
+(preferred) or
+[this](https://www.overleaf.com/latex/templates/association-for-computing-machinery-acm-sig-proceedings-template/bmvfhcdnxfty)
+(if you must) as a paper skeleton for
+your report. 
+
+
