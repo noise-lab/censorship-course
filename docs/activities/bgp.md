@@ -22,15 +22,17 @@ You can explore the data in a variety of ways, including:
 In this brief hands on, you will log in to RouteViews and explore the routes
 available from the RouteViews server to the University of Chicago.
 
-1. Log in to one of the [Routeviews
+1. Using a command like `dig`, find the IP address for the University of Chicago web server.
+2. Log in to one of the [Routeviews
    servers](https://www.routeviews.org/routeviews/index.php/collectors/).
-2. Find the IP address for the University of Chicago web server.
-3. Use the command `show ip bgp <IP address>` to list all of the routes to the
-   University of Chicago.
+3. At the Routeviews collector prompt use the command `show ip bgp <IP
+   address>` to list all of the routes to the University of Chicago.
    
 The output includes a significant amount of information, including (among
 other things) the list of autonomous systems corresponding to each advertised
-route.  Those autonomous systems are listed as numbers, which you can look up
+route.  
+
+**Going Further.** Those autonomous systems are listed as numbers, which you can look up
 using `whois -h whois.cymru.com as<#>`.  Try to explore some of the available
 advertised paths and routes.
 
