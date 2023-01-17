@@ -31,7 +31,7 @@ More details are in the [course syllabus](syllabus.md).
 | 2                         | DNS and TCP/IP Manipulation             | 2.1         | [DNS](activities/dns.md)                                |
 | 3                         | BGP and Web Manipulation                | 2.2         | [BGP](activities/bgp.md) [DNSSEC](activities/dnssec.md) |
 | 4                         | Throttling and Rate Limiting            | 2.3         | [Throttling](activities/throttling.md)                  |
-| 5                         | How Common is Information Control?      | 2.4         | Transparency Reports                                    |
+| 5                         | How Common is Information Control?      | 2.4         | [Transparency](activities/transparency.md)              |
 | 6                         | Measuring Censorship                    | 2.5-2.6     | OONI Explorer                                           |
 | *Attacks on Availability* |                                         |             |                                                         |
 | 7                         | Denial of Service Attacks               | 3.1-3.3     | P1                                                      |
