@@ -28,7 +28,7 @@ censorship and surveillance around the world.
 In this activity, you will explore data that is collected by OONI to measure
 different types of censorship.
 
-## Part 1: Open Observatory of Network Interference (OONI)
+## Part 1: Censorship Measurement
 
 1. Visit the [OONI Explorer](https://explorer.ooni.org/) and select a country
    from the map. You can also select a country from the list of countries
