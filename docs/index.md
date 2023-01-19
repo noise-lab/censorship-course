@@ -32,7 +32,7 @@ More details are in the [course syllabus](syllabus.md).
 | 3                         | BGP and Web Manipulation                | 2.2         | [BGP](activities/bgp.md) [DNSSEC](activities/dnssec.md) |
 | 4                         | Throttling and Rate Limiting            | 2.3         | [Throttling](activities/throttling.md)                  |
 | 5                         | How Common is Information Control?      | 2.4         | [Transparency](activities/transparency.md)              |
-| 6                         | Measuring Censorship                    | 2.5-2.6     | OONI Explorer                                           |
+| 6                         | Measuring Censorship                    | 2.5-2.6     | [Measurement](activities/measurement.md)                |
 | *Attacks on Availability* |                                         |             |                                                         |
 | 7                         | Denial of Service Attacks               | 3.1-3.3     | P1                                                      |
 | 8                         | Reflection and Amplification            | 3.4         | P2                                                      |
