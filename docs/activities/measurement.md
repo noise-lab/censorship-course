@@ -54,7 +54,7 @@ different types of censorship.
 
 ## Part 2: Country Reports
 
-1. Visit the [OONI Country Reports](https://ooni.org/countries/) and select a
+1. Visit the [OONI Country Reports](https://explorer.ooni.org/countries/) and select a
    country from the list of countries.
 2. Explore the report for the country that you selected. What can you learn
    from the report? What can you learn about censorship that is taking place
