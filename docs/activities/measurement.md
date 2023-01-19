@@ -14,15 +14,15 @@ from these measurements.
 ## Background: Open Observatory of Network Interference (OONI)
 
 The Open Observatory of Network Interference (OONI) is a free software project
-that collects and analyzes data on internet censorship, surveillance, and
+that collects and analyzes data on Internet censorship, surveillance, and
 traffic manipulation. OONI is designed to detect and measure censorship,
-surveillance, and traffic manipulation on the internet. It does this by
+surveillance, and traffic manipulation on the Internet. It does this by
 running tests on networks to measure the performance of websites, services,
 and applications. OONI also collects data on network interference, such as
 blocking of websites, services, and applications. This data is then used to
 create reports and visualizations that can be used to identify trends in
-internet censorship, surveillance, and traffic manipulation. OONI is used by
-researchers, journalists, and activists to investigate and report on internet
+Internet censorship, surveillance, and traffic manipulation. OONI is used by
+researchers, journalists, and activists to investigate and report on Internet
 censorship and surveillance around the world.
 
 In this activity, you will explore data that is collected by OONI to measure
