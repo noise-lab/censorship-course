@@ -30,6 +30,8 @@ different types of censorship.
 
 ## Part 1: Censorship Measurement
 
+Explore the OONI Explorer to see what types of data OONI collects.
+
 1. Visit the [OONI Explorer](https://explorer.ooni.org/) and select a country
    from the map. You can also select a country from the list of countries
    below the map.
@@ -56,6 +58,9 @@ different types of censorship.
 
 ## Part 2: Country Reports
 
+Next, see what types of conclusions can be drawn from this data, in the form
+of reports.
+
 1. Visit the [OONI Country Reports](https://explorer.ooni.org/countries/) and select a
    country from the list of countries.
 2. Explore the report for the country that you selected. What can you learn
@@ -63,6 +68,8 @@ different types of censorship.
    in that country?
 
 ## Part 3: Circumvention Tool Measurement
+
+Finally, explore the data about the use of circumvention tools.
 
 1. Visit the [Circumvention
    Charts](https://explorer.ooni.org/chart/circumvention) page.
