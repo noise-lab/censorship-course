@@ -11,7 +11,7 @@ measurement data to better understand the type of data that is often
 collected to measure censorship, as well as what can (and cannot) be inferred
 from these measurements.
 
-## Part 1: Open Observatory of Network Interference (OONI)
+## Background: Open Observatory of Network Interference (OONI)
 
 The Open Observatory of Network Interference (OONI) is a free software project
 that collects and analyzes data on internet censorship, surveillance, and
@@ -27,6 +27,8 @@ censorship and surveillance around the world.
 
 In this activity, you will explore data that is collected by OONI to measure
 different types of censorship.
+
+## Part 1: Open Observatory of Network Interference (OONI)
 
 1. Visit the [OONI Explorer](https://explorer.ooni.org/) and select a country
    from the map. You can also select a country from the list of countries
