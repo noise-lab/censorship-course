@@ -32,10 +32,9 @@ malicious traffic.
 
 1. What are some of the reasons that an organization might be targeted by a
    DoS attack?
-2. Imagine yourself as an adminsitrator for Project Galileo. How do you decide
-   who to offer the service to? Should it be based on anyone who needs it?
-   Should it be based on content, merit, or type of speech? Should it only be
-   for services currently under attack, or is a proactive approach
-   appropriate? 
-   decide which "tier" of service to offer to an applicant? 
-
+2. Imagine yourself as an adminsitrator for Project Galileo. 
+    * How do you decide who to offer the service to? 
+    * Should it be based on anyone who needs it?
+    * Should it be based on content, merit, or type of speech? 
+    * Should it only be for services currently under attack, or is a proactive approach appropriate? 
+    * How would you decide which "tier" of service to offer to an applicant? 
