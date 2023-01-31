@@ -37,7 +37,7 @@ More details are in the [course syllabus](syllabus.md).
 | 7                         | Denial of Service Attacks               | 3.1-3.3     | [Galileo](https://cloudflare.com/galileo/) / P1     |
 | 8                         | Reflection and Amplification            | 3.4         | P2                                                      |
 | *Attacks on Attention*    |                                         |             |                                                         |
-| 9                         | Content Moderation                      | 4           | Perspectives                                            |
+| 9                         | Content Moderation                      | 4           | [Moderation](activities/moderation.md)                  |
 | 10                        | Personalization and Filter Bubbles      | 5.1-5.2     | Personalization                                         |
 | 11                        | Flooding and Propaganda                 | 5.3-5.4     | P3                                                      |
 | 12                        | Disinformation                          | 5.5         | P4                                                      |
