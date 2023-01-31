@@ -33,7 +33,8 @@ spectral analysis.
 In this part of the hands-on assignment, you can download or compile the
 Echoprint code and perform some spectral hashes on audio files. 
 
-1. Download and compile the Echoprint code.
+1. Download and install the Echoprint code. [Setup
+   instructions.](https://gist.github.com/predakanga/2376835)
 2. Select an mp3 file and compute the spectral fingerprint for that audio.
 3. Try various modifications to see if Echoprint's fingerprint is affected:
     - Shorten the clip (e.g., take the first 30 seconds)
