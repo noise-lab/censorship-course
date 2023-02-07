@@ -39,7 +39,7 @@ More details are in the [course syllabus](syllabus.md).
 | *Attacks on Attention*    |                                         |             |                                                                               |
 | 9                         | Content Moderation                      | 4           | [Moderation](activities/moderation.md) |
 | 10                        | Personalization and Filter Bubbles      | 5.1-5.2     | [Automation](activities/automation.md) |
-| 11                        | Flooding and Propaganda                 | 5.3-5.4     | P3                                                                            |
+| 11                        | Flooding and Propaganda                 | 5.3-5.4     | [Bubbles](activities/bubbles.md) / P3  |
 | 12                        | Disinformation                          | 5.5         | P4                                                                            |
 | *Law and Policy*          |                                         |             |                                                                               |
 | 13                        | Copyright as Censorship                 | 6.1         | P5                                                                            |
