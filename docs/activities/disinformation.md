@@ -18,6 +18,7 @@ ways that they may be similar or different to authentic news sites.
    that attempted to automatically characterize these sites according to
    infrastructure features. The dataset is
    [here](https://github.com/ahounsel/disinfo-infra-public/blob/master/src/system/data/training/disinformation_domains.csv).
+
 2. What are some of the common features of these sites? What are some of the
    differences?
    
@@ -41,7 +42,9 @@ ways that they may be similar or different to authentic news sites.
 
 1. What could be the role of crowdsourcing in detecting disinformation? What
    are some of the challenges of crowdsourcing in this context?
+
 2. To what extent are users themselves responsible for identifying
    disinformation? Are users responsible for avoiding disinformation?
+
 3. What are some of the ways that disinformation can be used to manipulate
    public debate and influence political decisions?
