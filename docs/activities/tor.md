@@ -22,13 +22,17 @@ that.
 
 ## Part 1: Experience with the Tor Browser
 
-1. Download the Tor Browser Bundle from the [Tor Project website](https://www.torproject.org/download/).
+1. Download the Tor Browser Bundle from the [Tor Project
+   website](https://www.torproject.org/download/). Alternatively, you may use
+   the Brave browser, which is based on the Chromium browser and has Tor built-in.
 
-2. Launch the Tor Browser on your computer. 
+2. Launch the Tor Browser on your computer (or, alternatively, open a Tor browser window in Brave). 
 
 3. Explore the Tor Browser interface and understand the different options available.
 
-4. Visit any website using the Tor Browser. 
+4. Visit any website using the Tor Browser. You should also visit the same
+   website using your regular browser (e.g., Chrome, Firefox, Brave). Compare
+   the two experiences and note the differences.
 
 5. Check your IP address before and after using Tor Browser. You can do this by
    visiting a website that displays your IP address, such as whatismyip.com.
