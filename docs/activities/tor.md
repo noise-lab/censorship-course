@@ -22,19 +22,21 @@ that.
 
 ## Part 1: Experience with the Tor Browser
 
-1. Launch the Tor Browser on your computer.
+1. Download the Tor Browser Bundle from the [Tor Project website](https://www.torproject.org/download/).
 
-2. Explore the Tor Browser interface and understand the different options available.
+2. Launch the Tor Browser on your computer. 
 
-3. Visit any website using the Tor Browser. 
+3. Explore the Tor Browser interface and understand the different options available.
 
-4. Check your IP address before and after using Tor Browser. You can do this by
+4. Visit any website using the Tor Browser. 
+
+5. Check your IP address before and after using Tor Browser. You can do this by
    visiting a website that displays your IP address, such as whatismyip.com.
    Compare the IP addresses before and after using Tor Browser. Note the
    differences, and understand why Tor Browser is an important tool for privacy
    and security.
 
-5. Use the browser inspect feature to understand the time it takes to load a
+6. Use the browser ``inspect'' feature to understand the time it takes to load a
    website with and without Tor Browser. Note the differences, and understand
    how the Tor Browser contributes to increased latency (and decreased
    performance as compared to a regular browser).
