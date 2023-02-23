@@ -41,8 +41,19 @@ that.
    how the Tor Browser contributes to increased latency (and decreased
    performance as compared to a regular browser).
 
+7. Tor releases its software as a browser bundle so that users can use the tool
+   simply by installing the bundle and opening the browser. One of the reasons
+   the software is released in this fashion is to ensure that users are not
+   exposed to elements on websites that may make it easier to re-identify or track
+   them. For example, a website may use a browser fingerprinting technique to track
+   users. In this technique, the website collects information about the user's browser. 
+   To see these effects, visit the [Tor Browser Fingerprinting Test](https://amiunique.org/fp) 
+   with and without Tor Browser. Note the differences, and understand how Tor
+   Browser protects users from browser fingerprinting.
+
 ## Part 2: Discussion
 
 1. What are the advantages of using Tor Browser?
 2. What are the disadvantages of using Tor Browser?
-3. Does Tor Browser protect you from all kinds of threats? Why or why not?
+3. What threats does Tor Browser protect against?
+4. What threats does Tor Browser not protect against?
