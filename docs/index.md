@@ -46,8 +46,7 @@ More details are in the [course syllabus](syllabus.md).
 | 14                        | Net Neutrality and Prioritization       | 6.2         | P6                                                      |
 | 15                        | Zero Rating                             | 6.3         | P7                                                      |
 | *Defenses*                |                                         |             |                                                         |
-| 16                        | VPNs and Tor                            |
-7.1-7.3     | [Tor](activities/tor.md)                                                     |
+| 16                        | VPNs and Tor                            | 7.1-7.3     | [Tor](activities/tor.md)                                                     |
 | 17                        | Infrastructure Circumvention            | 7.4         | P8                                                      |
 | 18                        | The Future of Speech Online             |             | P9                                                      |
 
