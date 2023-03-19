@@ -34,7 +34,7 @@ More details are in the [course syllabus](syllabus.md).
 | 5                         | How Common is Information Control?      | 2.4         | [Transparency](activities/transparency.md)     |
 | 6                         | Measuring Censorship                    | 2.5-2.6     | [Measurement](activities/measurement.md)       |
 | *Attacks on Availability* |                                         |             |                                                |
-| 7                         | Denial of Service Attacks               | 3.1-3.3     | [Galileo](https://cloudflare.com/galileo/)     |
+| 7                         | Denial of Service Attacks               | 3.1-3.3     | [Galileo](activities/ddos.md)     |
 | 8                         | Reflection and Amplification            | 3.4         | [Reflection](activities/reflection.md)         |
 | *Attacks on Attention*    |                                         |             |                                                |
 | 9                         | Content Moderation                      | 4           | [Moderation](activities/moderation.md)         |
