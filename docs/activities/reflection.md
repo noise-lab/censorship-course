@@ -6,6 +6,32 @@ network with a large volume of traffic. In this assignment, you will simulate
 the behavior of a DNS reflection and amplification attack to understand how it
 works and its impact on a network.
 
+## Setup Instructions
+
+To complete this activity, you will first need to set up a virtual network
+environment using a tool such as VirtualBox, as follows:
+
+1. Download and install VirtualBox on your computer.
+2. Create a new virtual machine (VM) for the DNS server, victim machine, and
+   attacker machine. You can use different operating systems for each machine,
+   such as Linux or Windows.
+3. In the VirtualBox network settings, configure each VM to use the "Internal
+   Network" option for the network adapter. This will create a private network
+   between the VMs that is isolated from the host machine and the outside world.
+4. Assign a static IP address to each VM on the private network. Make sure
+   that each VM is on the same subnet.
+5. Install and configure the DNS server software on the DNS server VM.
+6. Configure the victim machine and attacker machine to use the DNS server as
+   their primary DNS resolver.
+7. Use the VM console or remote desktop software to access each VM and test
+   the network connectivity.
+
+Keep in mind that the exact steps to set up the virtual network environment
+may vary depending on your specific setup and operating system. Additionally,
+it's important to ensure that your host machine has enough resources (such as
+memory and CPU) to run multiple VMs simultaneously.
+
+
 ## Assignment
 
 ### Part 1: Setting up the virtual network environment
