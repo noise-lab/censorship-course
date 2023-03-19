@@ -44,7 +44,7 @@ More details are in the [course syllabus](syllabus.md).
 | *Law and Policy*          |                                         |             |                                                |
 | 13                        | Laws as Censorship                      | 6.1         |                                                |
 | 14                        | Net Neutrality and Prioritization       | 6.2         |                                                |
-| 15                        | Zero Rating                             | 6.3         |                                                |
+| 15                        | Zero Rating                             | 6.3         | [Zero Rating](activities/zero-rating.md)                                               |
 | *Defenses*                |                                         |             |                                                |
 | 16                        | VPNs and Tor                            | 7.1-7.3     | [Tor](activities/tor.md)                       |
 | 17                        | Infrastructure Circumvention            | 7.4         |                                                |
