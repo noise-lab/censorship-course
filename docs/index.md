@@ -42,7 +42,7 @@ More details are in the [course syllabus](syllabus.md).
 | 11                        | Flooding and Propaganda                 | 5.3-5.4     | [Bubbles](activities/bubbles.md)               |
 | 12                        | Disinformation                          | 5.5         | [Disinformation](activities/disinformation.md) |
 | *Law and Policy*          |                                         |             |                                                |
-| 13                        | Laws as Censorship                      | 6.1         |                                                |
+| 13                        | Copyright, etc.                         | 6.1         | [Copyright](activities/copyright.md)                                               |
 | 14                        | Net Neutrality and Prioritization       | 6.2         |                                                |
 | 15                        | Zero Rating                             | 6.3         | [Zero Rating](activities/zero-rating.md)                                               |
 | *Defenses*                |                                         |             |                                                |
