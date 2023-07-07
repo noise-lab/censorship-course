@@ -20,7 +20,7 @@ authoritative name server returning the record (or referral).
 Explore some domains to see if DNSSEC records deployed. The following commands
 may be useful:
 - `dig any`
-- `dig +dnssec`
+- `dig +dnssec rrsig`
 
 ## Part 2: Discussion
 
