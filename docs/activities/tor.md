@@ -51,7 +51,8 @@ that.
    exposed to elements on websites that may make it easier to re-identify or track
    them. For example, a website may use a browser fingerprinting technique to track
    users. In this technique, the website collects information about the user's browser. 
-   To see these effects, visit the [Tor Browser Fingerprinting Test](https://amiunique.org/fp) 
+   To see these effects, visit the [Tor Browser Fingerprinting
+   Test](https://coveryourtracks.eff.org/) 
    with and without Tor Browser. Note the differences, and understand how Tor
    Browser protects users from browser fingerprinting.
 
