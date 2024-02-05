@@ -23,6 +23,19 @@ as threats, obscenity, and identity-based hate.
     - Words or phrases with two meanings
     - Phrases in foreign languages
 
+## Sentiment Analysis with Large Language Models
+
+The Perspective API is just one example of a sentiment analysis tool. There
+are many other tools and libraries that can be used to perform sentiment
+analysis. More recently, the advent of OpenAI's GPT-3 has opened up new
+possibilities for sentiment analysis. GPT-3 is a large language model that can
+be used to perform a variety of natural language processing tasks.
+
+Try asking ChatGPT to perform sentiment analysis on the same set of phrases
+that you used with the Perspective API. 
+* How do the results compare? 
+* How do your results depend on how you prompt ChatGPT?
+
 ## Spectral Hashing: Echoprint
 
 One approach used for audio is to perform a so-called spectral or
