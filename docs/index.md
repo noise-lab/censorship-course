@@ -21,6 +21,8 @@ and a hands-on laboratory activity.
 
 More details are in the [course syllabus](syllabus.md).
 
+A planned agenda for each lecture is in the [agenda](agenda.md).
+
 ## Schedule
 
 
