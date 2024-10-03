@@ -30,7 +30,7 @@ A planned agenda for each lecture is in the [agenda](agenda.md).
 |---------------------------|-----------------------------------------|-------------|------------------------------------------------|
 | 1                         | The What and Why of Information Control | 1           | [DNS](activities/dns.md)                       |
 | *Attacks on Integrity*    |                                         |             |                                                |
-| 2                         | DNS and TCP/IP Manipulation             | 2.1         | [DNSSEC](activities/dnssec.md)                 |
+| 2                         | DNS and TCP/IP Manipulation             | 2.1         | [DoH/DNSSEC](activities/dnssec.md)                 |
 | 3                         | BGP and Web Manipulation                | 2.2         | [BGP](activities/bgp.md)                       |
 | 4                         | Throttling and Rate Limiting            | 2.3         | [Throttling](activities/throttling.md)         |
 | 5                         | How Common is Information Control?      | 2.4         | [Transparency](activities/transparency.md)     |
