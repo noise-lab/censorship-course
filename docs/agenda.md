@@ -20,3 +20,10 @@
 * BGP Hijacking
   * Prevalence, Visibility, Defenses
   * Hands-On (RouteViews)
+
+# Lecture 4
+
+* Throttling
+  * Overview
+  * Hands-On (Throttling Detection)
+
