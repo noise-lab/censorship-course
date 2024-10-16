@@ -37,6 +37,7 @@ have time), find one more that is not listed:
 * [Facebook](https://transparency.fb.com/)
 * [Twitch](https://safety.twitch.tv/s/article/Transparency-Reports?language=en_US)
 * [TikTok](https://www.tiktok.com/transparency/en-us/)
+* [Reddit](https://www.redditinc.com/policies/transparency-report)
 
 While these transparency reports focus on a wide variety of activities, in
 this class we are primarily focused on activities that relate to speech (e.g.,
