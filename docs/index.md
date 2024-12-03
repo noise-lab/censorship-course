@@ -50,7 +50,7 @@ A planned agenda for each lecture is in the [agenda](agenda.md).
 | *Defenses*                |                                         |             |                                                |
 | 16                        | VPNs and Tor                            | 7.1-7.3     | [Tor](activities/tor.md)                       |
 | 17                        | Other Circumvention                     | 7.4         |                                                |
-| 18                        | The Future of Speech Online             |             |                                                |
+| 18                        | AI and Censorship |             | [LLM](activities/llm.md)                                               |
 
 ## Resources
 

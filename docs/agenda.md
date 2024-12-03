@@ -27,3 +27,11 @@
   * Overview
   * Hands-On (Throttling Detection)
 
+# Lecture 5
+
+* Transparency Hands-On
+
+# Lecture 6
+
+* OONI Hands-On
+* Ethics of censorship measurement
