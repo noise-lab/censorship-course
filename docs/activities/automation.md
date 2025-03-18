@@ -16,14 +16,32 @@ comments, and is able to distinguish between different types of toxicity, such
 as threats, obscenity, and identity-based hate.
 
 1. Download and install the Perspectives library and try it on various text
-   input. Here are some [instructions for getting
-   started](https://developers.perspectiveapi.com/s/docs-get-started?language=en_US)
+   input. Here are some [instructions for getting started](https://developers.perspectiveapi.com/s/docs-get-started?language=en_US). 
+   You can also try the API directly from the website.
 2. You might try its effectiveness on the following:
     - Full sentences vs. phrases
     - Words or phrases with two meanings
     - Phrases in foreign languages
 
-## Spectral Hashing: Echoprint
+## Sentiment Analysis: Large Language Models
+
+The Perspective API is just one example of a sentiment analysis tool. There
+are many other tools and libraries that can be used to perform sentiment
+analysis. More recently, the advent of OpenAI's GPT-3 has opened up new
+possibilities for sentiment analysis. GPT-3 is a large language model that can
+be used to perform a variety of natural language processing tasks.
+
+Try asking ChatGPT or Claude to perform sentiment analysis on the same set of phrases
+that you used with the Perspective API. 
+
+* How do the results compare? 
+* How do your results depend on how you prompt ChatGPT?
+
+As a follow-up activity, you could input a platform's content moderation
+policy into an LLM, and subsequently input other types of content into the LLM
+to see how it might be classified.
+
+## Bonus Activity: Spectral Hashing
 
 One approach used for audio is to perform a so-called spectral or
 frequency-based, which does not match the content bit-by-bit, but rather
