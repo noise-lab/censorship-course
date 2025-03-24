@@ -31,9 +31,9 @@ More details are in the [course syllabus](syllabus.md).
 | *Controlling Communication*        |                                         |             |                                                 |
 | 2                                  | DNS Manipulation                        | 2.2.1       | [DNS](activities/dns.md)                        |
 | 3                                  | Transport Layer Manipulation            | 2.2.2       | [DNSSEC](activities/dnssec.md)                  |
-| 3                                  | BGP and Web Manipulation                | 2.2.3-2.2.4 | [BGP](activities/bgp.md)                        |
-| 4                                  | Throttling and Rate Limiting            | 2.3.1       | [Throttling](activities/throttling.md)          |
-| 5                                  | Denial of Service                       | 2.3.2       | [Galileo](activities/ddos.md)                   |
+| 4                                  | BGP and Web Manipulation                | 2.2.3-2.2.4 | [BGP](activities/bgp.md)                        |
+| 5                                  | Throttling and Rate Limiting            | 2.3.1       | [Throttling](activities/throttling.md)          |
+| 6                                  | Denial of Service                       | 2.3.2       | [Galileo](activities/ddos.md)                   |
 | *Controlling Content*              |                                         |             |                                                 |
 | 7                                  | Flooding and Propaganda                 | 3.1.1       | [Sentiment Analysis](activities/automation.md)  |
 | 8                                  | Disinformation                          | 3.1.2       | [Disinformation](activities/disinformation.md)  |
@@ -44,10 +44,10 @@ More details are in the [course syllabus](syllabus.md).
 | 12                                 | Transparency Reports                    | 4.4         | [Transparency](activities/transparency.md)      |
 | *Law and Policy*                   |                                         |             |                                                 |
 | 13                                 | Copyright, Section 230, CFAA            | 5.1         | [Copyright](activities/copyright.md)            |
-| 14                                 | Net Neutrality and Open Internet        | 5.2         | [Prioritization](activities/prioritization.md)  |
-| 15                                 | Financial Barriers to Speech            | 5.3         | [Zero Rating](activities/zero-rating.md)        |
+| 14                                 | Net Neutrality and Open Internet        | 5.2         | [Prioritization](activities/prioritization-old)  |
+| 15                                 | Financial Barriers to Speech            | 5.3         | [Zero Rating](activities/zero-rating-debate)        |
 | *Defensive Techniques*             |                                         |             |                                                 |
-| 16                                 | Virtual Private Networks                | 6.1         |                                                 |
+| 16                                 | Virtual Private Networks                | 6.1         | [VPN](activities/vpn.md)                        |
 | 17                                 | Tor                                     | 6.2         | [Tor](activities/tor.md)                        |
 | *Looking Ahead*                    |                                         |             |                                                 | 
 | 18                                 | AI and Online Speech                    |             |                                                 |

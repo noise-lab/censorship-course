@@ -1,47 +1,48 @@
-# Activity: Prioritizing Video Traffic over Web Traffic
+# Traffic Prioritization
 
-## Objectives
+## Learning Objective
 
-- Understand the concept of traffic prioritization and its impact on network
-  performance
-- Explore the challenges and trade-offs involved in prioritizing traffic
+Understand how traffic prioritization affects network performance by simulating competing web and video traffic, measuring the resulting performance impacts, and analyzing traffic patterns using Wireshark.
 
-## Materials
+## Part 1: Experience with Traffic Prioritization
 
-- Network simulator tool or platform (e.g., Cisco Packet Tracer, GNS3, or
-  OpenNet)
-- Laptop
+### Step 1: Run a Baseline Speed Test
 
-## Instructions
+- Use a tool like [fast.com](https://fast.com) or [speedtest.net](https://www.speedtest.net) to measure:
+  - Download speed
+  - Upload speed
+  - Latency
+- Record these values to establish your baseline network performance.
 
-1. Divide into groups of 3-4 and assign each group a network simulator tool or
-   platform.
+### Step 2: Simulate Competing Traffic
 
-2. Discuss the concept of traffic prioritization and how ISPs might prioritize
-   certain types of traffic over others to manage network congestion.
+- Open multiple browser tabs and begin streaming videos (e.g., YouTube or Vimeo).
+- In parallel, begin downloading a large file from a site like [testfile.org](https://testfile.org/) or a university open dataset archive.
+- While both are running, try accessing lightweight websites such as [https://www.wikipedia.org](https://www.wikipedia.org) or [https://text.npr.org](https://text.npr.org).
+- Observe and record any delays, buffering, or performance degradation.
 
-3. Explain that in this activity, you will play the role of an ISP and
-   prioritize video traffic over web traffic.
+### Step 3: Capture Network Traffic
 
-4. Open your network simulator tool or platform and create a network topology
-   that includes multiple devices such as PCs, servers, routers, and switches.
+- Open **Wireshark** and begin capturing packets on your primary network interface (Wi-Fi or Ethernet).
+- Use your web browser and video stream as described above.
+- Stop the capture after a few minutes of simultaneous activity.
+- Filter traffic using:
+  - `ip.dst` to examine destination IPs
+  - `http`, `tls`, or `tcp.port == 443` for web traffic
+- Look for signs of congestion, retransmissions, or prioritization effects.
 
-5. Set up a web server and a video streaming server on separate devices in
-   your network.
+### Step 4: (Optional) Explore Manual Prioritization
 
-6. Configure your network to prioritize video traffic over web traffic. You
-   can use various techniques such as quality of service (QoS) policies,
-   traffic shaping, or bandwidth allocation.
+- If you have access to a Linux system or programmable router, use tools such as `tc` (traffic control) or QoS features in OpenWRT.
+- Set rules to prioritize video traffic (e.g., port 1935 or streaming domains) over HTTP.
+- Use `iperf` or download tests to compare prioritized vs. throttled traffic streams.
 
-7. Test your network by having some devices access the web server and others
-   access the video streaming server. Observe how your network performs under
-   different traffic conditions and measure the impact of your traffic
-   prioritization rules on network performance.
+## Part 2: Discussion
 
-## Discussion
+Answer the following questions based on your experiment:
 
-Discuss the trade-offs involved in prioritizing video traffic over web
-traffic. For example, how does prioritizing video traffic affect the
-performance of other applications? How does it impact net neutrality
-principles?
-
+1. How did network performance change when multiple types of traffic competed for bandwidth?
+2. Which applications appeared to suffer most during congestion? Which were less affected?
+3. Did you observe any evidence of prioritization or throttling in your packet captures?
+4. Should video traffic receive higher priority than other types of traffic? Why or why not?
+5. How might these traffic management practices affect innovation or fair access to services online?
