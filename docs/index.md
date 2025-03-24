@@ -28,7 +28,7 @@ More details are in the [course syllabus](syllabus.md).
 |------------------------------------------|-----------------------------------------|-------------|:-------------------------------------------------------|
 | *From Censorship to Information Control* |                                         |             |                                                        |
 | 1                                        | Information Control: What, Why, and How | 1           | [Stack](activities/full-stack.md)                      |
-| *Technical Controls*       |                                         |             |                                                        |
+| *Technical Controls*                     |                                         |             |                                                        |
 | 2                                        | DNS Manipulation                        | 2.2.1       | [DNS](activities/dns.md)                               |
 | 3                                        | Transport Layer Manipulation            | 2.2.2       | [DNSSEC](activities/dnssec.md)                         |
 | 4                                        | BGP and Web Manipulation                | 2.2.3-2.2.4 | [BGP](activities/bgp.md)                               |
