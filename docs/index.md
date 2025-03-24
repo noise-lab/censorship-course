@@ -28,13 +28,13 @@ More details are in the [course syllabus](syllabus.md).
 |------------------------------------------|-----------------------------------------|-------------|:-------------------------------------------------------|
 | *From Censorship to Information Control* |                                         |             |                                                        |
 | 1                                        | Information Control: What, Why, and How | 1           | [Stack](activities/full-stack.md)                      |
-| *Controlling Communication*              |                                         |             |                                                        |
+| *Technical Controls*       |                                         |             |                                                        |
 | 2                                        | DNS Manipulation                        | 2.2.1       | [DNS](activities/dns.md)                               |
 | 3                                        | Transport Layer Manipulation            | 2.2.2       | [DNSSEC](activities/dnssec.md)                         |
 | 4                                        | BGP and Web Manipulation                | 2.2.3-2.2.4 | [BGP](activities/bgp.md)                               |
 | 5                                        | Throttling and Rate Limiting            | 2.3.1       | [Throttling](activities/throttling.md)                 |
 | 6                                        | Denial of Service                       | 2.3.2       | [Galileo](activities/ddos.md)                          |
-| *Technical Controls*                     |                                         |             |                                                        |
+| *Platform Controls*                      |                                         |             |                                                        |
 | 7                                        | Flooding and Propaganda                 | 3.1-3.2.1   | [Sentiment Analysis](activities/automation.md)         |
 | 8                                        | Disinformation                          | 3.2.2       | [Disinformation](activities/disinformation.md)         |
 | 9                                        | Content Moderation                      | 3.3         | [Moderation Policies](activities/moderation.md)        |
