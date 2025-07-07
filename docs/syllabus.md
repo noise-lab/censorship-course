@@ -39,10 +39,10 @@ required.
 
 Grading is based on:
 
-- **Reading Responses (25%).** Each week, you will write a 500-word
+- **Reading Responses (25%).** Each week, you will write a short
   reaction piece on the topic of the assigned work. You must address the
   following in your writeup:
-  1.  What is a summary of the reading?
+  1.  (Optional) What is a summary of the reading?
   2.  What questions did you have after reading?
 
   Writeups are due before the topic is covered for
