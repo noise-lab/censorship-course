@@ -12,7 +12,8 @@ meeting time for more interactive activities: discussion, data analysis
 activities, etc.
 
 **Class meetings.**The course will meet twice a week for 90-minute
-**class meetings**.
+**class meetings**, or (in alternate format), three times a week over three weeks, 
+for three hours per meeting.
 
 Each class meeting will have **one of the following activities**.
 
