@@ -14,8 +14,6 @@ is from the [RouteViews](https://routeviews.org/) project, which maintains
 various ways to explore Internet routing data.
 
 You can explore the data in a variety of ways, including:
-- [RouteViews BGP Data](https://www.routeviews.org/bgpdata/)
-- [RouteViews BGP Data Analysis](https://www.routeviews.org/bgpdata/analysis.html)
 - Login to the Routeviews servers via telnet.
 
 In this brief hands on, you will log in to RouteViews and explore the routes
