@@ -29,7 +29,7 @@ that the comany wrote in 2025.
 4. Who are the partners of Project Galileo?
 
 
-## Part 2: Discussion
+## Part 2: Discussion: "The Protector Becomes the Censor"
 
 1. What are some of the reasons that an organization might be targeted by a
    DoS attack?
