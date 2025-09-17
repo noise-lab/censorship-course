@@ -66,18 +66,55 @@ For this activity:
 7. Consider how cultural context, ambiguity in policies, and political 
    factors might influence moderation decisions.
 
-## Sentiment Analysis: Perspectives API
+## Content Moderation Options
 
-The [Perspective API](https://www.perspectiveapi.com/) aims to help online
-communities detect and filter out toxic content. It is a machine learning
-model that can be used to score the likelihood that a comment is toxic. The
-model is trained on a variety of data sources, including Wikipedia talk page
-comments, and is able to distinguish between different types of toxicity, such
-as threats, obscenity, and identity-based hate.
+### Option 1: Claude Web Interface
 
-1. Download and install the Perspectives library and try it on various text
-   input. Here are some [instructions for getting started](https://developers.perspectiveapi.com/s/docs-get-started?language=en_US). 
-   You can also try the API directly from the website.
+Claude, Anthropic's AI assistant, provides sophisticated content moderation capabilities that leverage semantic understanding and can handle multiple languages and content types. Unlike traditional rule-based systems, Claude can understand context, nuance, and intent in content moderation tasks.
+
+**Access**: Use Claude directly through the web interface at [claude.ai](https://claude.ai) - no API key required.
+
+**Activity Steps**:
+1. Create an account at [claude.ai](https://claude.ai)
+2. Design prompts that ask Claude to evaluate content for moderation categories like toxicity, hate speech, misinformation, or platform-specific violations
+3. Test various content examples including clear violations, borderline cases, context-dependent content, and multilingual examples
+
+**Example Prompt**:
+```
+Please evaluate the following content for moderation. Classify it as ALLOW or BLOCK based on these categories:
+- Hate speech or harassment
+- Threats or violence
+- Spam or misleading information
+
+Content: [INSERT TEXT HERE]
+
+Provide your decision and brief reasoning.
+```
+
+### Option 2: Claude API with Jupyter Notebook
+
+For students with API access, experiment with Anthropic's content moderation cookbook.
+
+**Access Requirements**:
+- API key from [console.anthropic.com](https://console.anthropic.com)
+- University students can apply for free credits through Anthropic's Student Builder Program
+- New users receive small free credits for testing
+
+**Setup**:
+```bash
+pip install anthropic jupyter notebook
+git clone https://github.com/anthropics/anthropic-cookbook.git
+cd anthropic-cookbook/misc
+jupyter notebook building_moderation_filter.ipynb
+```
+
+**Experiments**: Customize moderation categories, test batch processing, and compare automated vs. manual results.
+
+### Option 3: Perspective API
+
+The [Perspective API](https://www.perspectiveapi.com/) aims to help online communities detect and filter out toxic content. It is a machine learning model that can be used to score the likelihood that a comment is toxic. The model is trained on a variety of data sources, including Wikipedia talk page comments, and is able to distinguish between different types of toxicity, such as threats, obscenity, and identity-based hate.
+
+1. Download and install the Perspectives library and try it on various text input. Here are some [instructions for getting started](https://developers.perspectiveapi.com/s/docs-get-started?language=en_US). You can also try the API directly from the website.
 2. You might try its effectiveness on the following:
     - Full sentences vs. phrases
     - Words or phrases with two meanings
