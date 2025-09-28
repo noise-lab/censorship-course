@@ -19,7 +19,7 @@
 
 [OONI](https://www.usenix.org/system/files/conference/foci12/foci12-final12.pdf)
 
-[Towards Grounding Censorship Circumvention in Empiricism](https://www1.icsi.berkeley.edu/~sadia/papers/oakland2016.pdf)
+[Towards Grounding Censorship Circumvention in Empiricism](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7546542)
 
 
 #### Real World Resistance
