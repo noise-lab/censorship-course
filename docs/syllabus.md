@@ -38,7 +38,12 @@ required.
 
 ## Grading
 
-Grading is based on:
+| Component | Weight |
+|-----------|--------|
+| Group Research Project | 35% |
+| Reading Responses | 25% |
+| Presentation | 25% |
+| Participation | 15% |
 
 - **Reading Responses (25%).** Each week, you will write a short
   reaction piece on the topic of the assigned work. You must address the
