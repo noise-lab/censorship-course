@@ -11,9 +11,9 @@ lecture. The intention of asynchronous videos will be to reserve class
 meeting time for more interactive activities: discussion, data analysis
 activities, etc.
 
-**Class meetings.**The course will meet twice a week for 90-minute
-**class meetings**, or (in alternate format), three times a week over three weeks, 
-for three hours per meeting.
+**Class meetings.** The course will meet regularly for **class meetings**
+according to the format and schedule specified for your particular offering
+(frequency and duration will vary by term and format).
 
 Each class meeting will have **one of the following activities**.
 
@@ -49,6 +49,14 @@ Grading is based on:
   Writeups are due before the topic is covered for
   that week, to allow for others to read, summarize, and comment.
   (Grading is 0/1.)
+  **Important:** Reading responses and lab activities will be graded primarily
+  for completion. While we encourage the use of AI tools to assist with
+  research and writing (with proper acknowledgment and explanation of your
+  prompting approach), the key learning objective is understanding the
+  underlying concepts. We reserve the right to test your understanding of
+  reading and lab topics through various means including pop quizzes in class,
+  oral examinations, presentations, or other assessment methods to ensure you
+  have grasped the fundamental concepts.
 - **Presentation (25%).** Each student (or group) will present to the
   class concerning the topic of the week. The presentation can be short,
   but it should be informed and teach the class something that is not on
@@ -136,6 +144,31 @@ severity of the offense, you risk being dismissed altogether from the course.
 No collaboration is permitted on quizzes or exams. All work submitted for the
 project must properly cite ideas and work that are not those of the students
 in the group.
+
+## Use of AI Tools and Large Language Models
+
+I acknowledge and even expect that you will use large language models (LLMs)
+and other AI tools for assistance in completing assignments. This is perfectly
+acceptable and encouraged. However, you are expected to understand the output
+these tools generate and think critically about their limitations.
+
+AI-assisted research and writing can improve efficiency, but only if you understand
+its outputs and can evaluate their validity. Just as you cannot rely on any single
+source without verification, these tools do you no good if you cannot critically
+assess, fact-check, and build upon their output with your own analysis and insights.
+
+Therefore, you are allowed to use AI tools to help with research, drafting, and
+analysis as long as you are confident that you understand the material well enough
+to engage with it critically yourself. This approach reflects the real world, where
+you will need to know how to use these tools effectively while maintaining your
+ability to think independently and critically about complex topics.
+
+Given that this course examines censorship and information control—including the
+very AI systems you may be using—I encourage you to reflect on the implications
+of your tool use and consider it as part of your learning about these topics.
+
+When using AI tools, please acknowledge their use in your submissions and be
+prepared to explain and defend any arguments, analysis, or research you present.
 
 ## Kindness, Respect, and Free Expression
 
