@@ -21,36 +21,36 @@ and a hands-on laboratory activity.
 
 More details are in the [course syllabus](syllabus.md).
 
-A planned agenda for each lecture is in the [agenda](agenda.md).
-
 ## Schedule
 
 
-| **Class**                 | **Topic**                               | **Reading** | **Activity**                                   |
-|---------------------------|-----------------------------------------|-------------|------------------------------------------------|
-| 1                         | The What and Why of Information Control | 1           | [DNS](activities/dns.md)                       |
-| *Attacks on Integrity*    |                                         |             |                                                |
-| 2                         | DNS and TCP/IP Manipulation             | 2.1         | [DoH/DNSSEC](activities/dnssec.md)                 |
-| 3                         | BGP and Web Manipulation                | 2.2         | [BGP](activities/bgp.md)                       |
-| 4                         | Throttling and Rate Limiting            | 2.3         | [Throttling](activities/throttling.md)         |
-| 5                         | How Common is Information Control?      | 2.4         | [Transparency](activities/transparency.md)     |
-| 6                         | Measuring Censorship                    | 2.5-2.6     | [Measurement](activities/measurement.md)       |
-| *Attacks on Availability* |                                         |             |                                                |
-| 7                         | Denial of Service Attacks               | 3.1-3.3     | [Galileo](activities/ddos.md)     |
-| 8                         | Reflection and Amplification            | 3.4         | [Reflection](activities/reflection.md)         |
-| *Attacks on Attention*    |                                         |             |                                                |
-| 9                         | Content Moderation                      | 4           | [Moderation](activities/moderation.md)         |
-| 10                        | Personalization and Filter Bubbles      | 5.1-5.2     | [Automation](activities/automation.md)         |
-| 11                        | Flooding and Propaganda                 | 5.3-5.4     | [Bubbles](activities/bubbles.md)               |
-| 12                        | Disinformation                          | 5.5         | [Disinformation](activities/disinformation.md) |
-| *Law and Policy*          |                                         |             |                                                |
-| 13                        | Copyright, etc.                         | 6.1         | [Copyright](activities/copyright.md)           |
-| 14                        | Net Neutrality and Prioritization       | 6.2         | [Prioritization](activities/prioritization.md)                                               |
-| 15                        | Zero Rating                             | 6.3         | [Zero Rating](activities/zero-rating.md)       |
-| *Defenses*                |                                         |             |                                                |
-| 16                        | VPNs and Tor                            | 7.1-7.3     | [Tor](activities/tor.md)                       |
-| 17                        | Other Circumvention                     | 7.4         |                                                |
-| 18                        | AI and Censorship |             | [LLM](activities/llm.md)                                               |
+| **Class**                                | **Topic**                               | **Reading** | **Activity**                                        |
+|------------------------------------------|-----------------------------------------|-------------|:----------------------------------------------------|
+| *From Censorship to Information Control* |                                         |             |                                                     |
+| 1                                        | Information Control: What, Why, and How | 1           | [Stack](activities/full-stack.md)                   |
+| *Technical Controls*                     |                                         |             |                                                     |
+| 2                                        | DNS Manipulation                        | 2.2.1       | [DNS](activities/dns.md)                            |
+| 3                                        | Transport Layer Manipulation            | 2.2.2       | [DNSSEC](activities/dnssec.md)                      |
+| 4                                        | BGP and Web Manipulation                | 2.2.3-2.2.4 | [BGP](activities/bgp.md)                            |
+| 5                                        | Throttling and Rate Limiting            | 2.3.1       | [Throttling](activities/throttling.md)              |
+| 6                                        | Denial of Service                       | 2.3.2       | [Galileo](activities/ddos.md)                       |
+| *Platform Controls*                      |                                         |             |                                                     |
+| 7                                        | Flooding and Propaganda                 | 3.1-3.2.1   | [Sentiment Analysis](activities/automation.md)      |
+| 8                                        | Disinformation                          | 3.2.2       | [Disinformation](activities/disinformation.md)      |
+| 9                                        | Content Moderation                      | 3.3         | [Moderation Policies](activities/moderation.md)     |
+| 10                                       | Personalization                         | 3.4         | [Bubbles](activities/bubbles.md)                    |
+| *Regulatory and Financial Controls*      |                                         |             |                                                     |
+| 11                                       | Copyright, Section 230, CFAA    <br/>   | 4.1-4.2     | [Copyright (*)](activities/copyright.md)            |
+| 12                                       | Net Neutrality and Open Internet        | 4.3         | [Prioritization](activities/prioritization.md)      |
+| 13                                       | Financial Barriers to Speech            | 4.4         | [Zero Rating](activities/old/zero-rating-debate.md) |
+| *Measuring Information Controls*         |                                         |             |
+| 14                                       | Measuring Protocol Censorship           | 5.1-5.3     | [Measurement](activities/measurement.md)            |
+| 15                                       | Transparency Reports                    | 5.4         | [Transparency](activities/transparency.md)          |
+| *Circumventing Information Controls*     |                                         |             |                                                     |
+| 16                                       | Virtual Private Networks                | 6.1         | [VPN](activities/vpn.md)                            |
+| 17                                       | Tor                                     | 6.2         | [Tor](activities/tor.md)                            |
+| *Looking Ahead*                          |                                         |             |                                                     | 
+| 18                                       | AI and Online Speech                    |             |                                                     |
 
 ## Resources
 

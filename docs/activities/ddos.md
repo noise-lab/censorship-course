@@ -17,18 +17,19 @@ are targeted by powerful opponents, but Project Galileo offers its services to
 them through trusted partners, without implying endorsement from all partner
 organizations. The goal is to ensure that the internet can continue to be used
 as a tool for spreading and expanding ideas, without being hindered by
-malicious traffic.
+malicious traffic. You can read more about project Galileo in [this retrospective](https://blog.cloudflare.com/celebrating-11-years-of-project-galileo-global-impact/)
+that the comany wrote in 2025.
 
 ## Part 1: Investigate Project Galileo
 
-1. Visit the Project Galileo website and read the information about the
+1. Visit the [Project Galileo](https://www.cloudflare.com/galileo/) website and read the information about the
    program. 
 2. What is the goal of Project Galileo?
 3. What are the types of services that Project Galileo offers?
 4. Who are the partners of Project Galileo?
 
 
-## Part 2: Discussion
+## Part 2: Discussion: "The Protector Becomes the Censor"
 
 1. What are some of the reasons that an organization might be targeted by a
    DoS attack?

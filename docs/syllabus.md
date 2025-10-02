@@ -11,8 +11,9 @@ lecture. The intention of asynchronous videos will be to reserve class
 meeting time for more interactive activities: discussion, data analysis
 activities, etc.
 
-**Class meetings.**The course will meet twice a week for 90-minute
-**class meetings**.
+**Class meetings.** The course will meet regularly for **class meetings**
+according to the format and schedule specified for your particular offering
+(frequency and duration will vary by term and format).
 
 Each class meeting will have **one of the following activities**.
 
@@ -37,17 +38,30 @@ required.
 
 ## Grading
 
-Grading is based on:
+| Component | Weight |
+|-----------|--------|
+| Group Research Project | 35% |
+| Reading Responses | 25% |
+| Presentation | 25% |
+| Participation | 15% |
 
-- **Reading Responses (25%).** Each week, you will write a 500-word
+- **Reading Responses (25%).** Each week, you will write a short
   reaction piece on the topic of the assigned work. You must address the
   following in your writeup:
-  1.  What is a summary of the reading?
+  1.  (Optional) What is a summary of the reading?
   2.  What questions did you have after reading?
 
   Writeups are due before the topic is covered for
   that week, to allow for others to read, summarize, and comment.
   (Grading is 0/1.)
+  **Important:** Reading responses and lab activities will be graded primarily
+  for completion. While we encourage the use of AI tools to assist with
+  research and writing (with proper acknowledgment and explanation of your
+  prompting approach), the key learning objective is understanding the
+  underlying concepts. We reserve the right to test your understanding of
+  reading and lab topics through various means including pop quizzes in class,
+  oral examinations, presentations, or other assessment methods to ensure you
+  have grasped the fundamental concepts.
 - **Presentation (25%).** Each student (or group) will present to the
   class concerning the topic of the week. The presentation can be short,
   but it should be informed and teach the class something that is not on
@@ -141,21 +155,29 @@ in the group.
 I acknowledge and even expect that you will use large language models (LLMs)
 and other AI tools for assistance in completing assignments. This is perfectly
 acceptable and encouraged. However, you are expected to understand the output
-these tools generate.
+these tools generate and think critically about their limitations.
 
-AI-assisted coding improves efficiency, but only if you understand its outputs.
-Just as I would not be able to evaluate an LLM-produced essay in philosophy if
-I didn't understand the subject matter, these tools do you no good if you cannot
-understand, evaluate, improve, debug, and iterate on their output.
+AI-assisted research, writing, and coding can improve efficiency, but only if you
+understand its outputs and can evaluate their validity. Just as you cannot rely on
+any single source without verification, these tools do you no good if you cannot
+critically assess, fact-check, understand, evaluate, improve, debug, and build upon
+their output with your own analysis and insights.
 
-Therefore, you are allowed to use AI tools to help automate anything you are
-confident that you understand well enough to implement manually yourself. This
-approach best simulates the real world, where you will inevitably need to know
-how to use these tools well and to your advantage, but you will ultimately be
-responsible for understanding the software and code that you produce.
+Therefore, you are allowed to use AI tools to help with research, drafting, coding,
+and analysis as long as you are confident that you understand the material well enough
+to engage with it critically yourself. This approach reflects the real world, where
+you will need to know how to use these tools effectively while maintaining your
+ability to think independently and critically about complex topics, and where you will
+ultimately be responsible for understanding the software, code, and arguments that you
+produce.
+
+Given that this course examines censorship and information control—including the
+very AI systems you may be using—I encourage you to reflect on the implications
+of your tool use and consider it as part of your learning about these topics.
 
 When using AI tools, please acknowledge their use in your submissions and be
-prepared to explain and defend any code or solutions you submit.
+prepared to explain and defend any code, solutions, arguments, analysis, or research
+you submit.
 
 ## Kindness, Respect, and Free Expression
 
