@@ -13,12 +13,28 @@ DNS in some fashion.
 
 ## Part 1: DNS Basics
 
-1. Find (or install) the software tool `dig` on your machine.
+1. Find (or install) the software tool `dig` on your machine (on Windows, use `nslookup` or `Resolve-DnsName` in PowerShell).
 2. Use `dig` to look up the IP address of:
 
    - google.com
    - www.cs.uchicago.edu
-   
+
+   Example commands:
+   ```bash
+   dig google.com
+   dig www.cs.uchicago.edu
+
+   # Use +short for concise output
+   dig +short google.com
+   dig +short www.cs.uchicago.edu
+
+   # Look up IPv4 (A) and IPv6 (AAAA) records
+   dig A google.com
+   dig AAAA google.com
+   dig +short A www.cs.uchicago.edu
+   dig +short AAAA www.cs.uchicago.edu
+   ```
+
    What do you notice about the differences in these responses.
 
 3. If you have a Virtual Private Network (VPN) installed, enable it to change
