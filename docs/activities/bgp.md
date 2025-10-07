@@ -21,7 +21,11 @@ available from the RouteViews server to the University of Chicago.
 
 1. Using a command like `dig`, find the IP address for the University of Chicago web server.
 2. Log in to one of the [Routeviews
-   servers](https://www.routeviews.org/routeviews/index.php/collectors/).
+   collectors](https://www.routeviews.org/routeviews/index.php/collectors/) using telnet. For example:
+   ```bash
+   telnet route-views.chicago.routeviews.org
+   ```
+   (You can choose any collector from the [full list](https://www.routeviews.org/routeviews/index.php/collectors/).)
 3. At the Routeviews collector prompt use the command `show ip bgp <IP
    address>` to list all of the routes to the University of Chicago.
    
