@@ -40,7 +40,17 @@ Try to explore some of the available advertised paths and routes.
 ## BGP Security: Route Hijacks
 
 Note that the information above is not authenticated and could thus be easily
-spoofed. 
+spoofed.
 
-How might a censor use route hijacks to disrupt Internet connectivity?
-How might you go about detecting (or preventing) BGP route hijacks?
+**Discussion Questions:**
+
+1. Review the [Pakistan Telecom YouTube hijack case from February 2008](https://www.ripe.net/publications/news/industry-developments/youtube-hijacking-a-ripe-ncc-ris-case-study). In this incident, Pakistan Telecom attempted to censor YouTube within Pakistan by advertising a more specific prefix (208.65.153.0/24) than YouTube's legitimate prefix (208.65.153.0/22), but the route announcement leaked globally.
+
+   Think about the routing data you just examined for the University of Chicago:
+   - What would the BGP routing table data have looked like during the Pakistan Telecom hijack for someone querying YouTube's IP addresses?
+   - How would the AS path information differ from normal operation?
+   - Why was the more specific /24 prefix preferred over YouTube's legitimate /22 prefix?
+
+2. How might a censor use route hijacks to disrupt Internet connectivity?
+
+3. How might you go about detecting (or preventing) BGP route hijacks?
