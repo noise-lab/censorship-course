@@ -3,7 +3,7 @@
 * DNS 
    * Overview
    * Manipulation
-   * Hands-On (DNS, DNSSEC)
+   * Hands-On (DNS, Secure DNS)
 * Notes/Discussion from Reading Responses:
    * Centralization / De-Centralization 
      * How can we balance decentralization, anonymity, etc. with the need for

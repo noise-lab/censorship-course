@@ -30,7 +30,7 @@ More details are in the [course syllabus](syllabus.md).
 | 1                                        | Information Control: What, Why, and How | 1           | [Stack](activities/full-stack.md)                   |
 | *Technical Controls*                     |                                         |             |                                                     |
 | 2                                        | DNS Manipulation                        | 2.2.1       | [DNS](activities/dns.md)                            |
-| 3                                        | Transport Layer Manipulation            | 2.2.2       | [DNSSEC](activities/dnssec.md)                      |
+| 3                                        | Transport Layer Manipulation            | 2.2.2       | [Secure DNS](activities/secure-dns.md)              |
 | 4                                        | BGP and Web Manipulation                | 2.2.3-2.2.4 | [BGP](activities/bgp.md)                            |
 | 5                                        | Throttling and Rate Limiting            | 2.3.1       | [Throttling](activities/throttling.md)              |
 | 6                                        | Denial of Service                       | 2.3.2       | [Galileo](activities/ddos.md)                       |
