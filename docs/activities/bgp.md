@@ -30,7 +30,8 @@ other things) the list of autonomous systems corresponding to each advertised
 route.  
 
 **Going Further.** Those autonomous systems are listed as numbers, which you can look up
-using `whois -h whois.cymru.com as<#>`.  Try to explore some of the available
+using tools like [HackerTarget AS IP Lookup](https://hackertarget.com/as-ip-lookup/) or
+`whois -h whois.cymru.com as<#>`.  Try to explore some of the available
 advertised paths and routes.
 
 ## BGP Security: Route Hijacks
