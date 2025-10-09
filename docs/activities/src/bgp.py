@@ -2,10 +2,21 @@
 """
 BGP RouteViews Analysis Tool
 
-This script connects to a RouteViews collector, retrieves BGP routing information
-for a specified IP address, and generates markdown tables showing:
-1. ASN to Organization mapping
-2. Complete AS paths with hop-by-hop details
+This script automates BGP route analysis by performing the following steps:
+
+1. Connects to a RouteViews collector via telnet (default: route-views.chicago.routeviews.org)
+2. Queries BGP routing table for a specified IP address (default: 142.251.32.14 - YouTube)
+3. Extracts all AS paths from the BGP output
+4. Identifies unique Autonomous System Numbers (ASNs) in the paths
+5. Looks up organization information for each ASN using whois.cymru.com
+6. Generates a markdown table mapping ASNs to organizations
+7. Generates a detailed AS path table showing hop-by-hop routing information
+
+The script outputs markdown-formatted tables that can be used for analysis and teaching.
+
+Output includes:
+- ASN to Organization mapping table (sorted by ASN)
+- AS Path details table showing the complete path for each route (prefix, hop 1, hop 2, etc.)
 """
 
 import subprocess
@@ -198,13 +209,27 @@ def generate_path_table(as_paths: List[Tuple[str, List[int]]], asn_info: Dict[in
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Query RouteViews BGP data and generate analysis tables',
+        description="""Query RouteViews BGP data and generate analysis tables.
+
+This script automates BGP route analysis by:
+  1. Connecting to a RouteViews collector via telnet
+  2. Querying the BGP routing table for a specified IP address
+  3. Extracting all AS paths from the BGP output
+  4. Identifying unique Autonomous System Numbers (ASNs)
+  5. Looking up organization information for each ASN via whois.cymru.com
+  6. Generating a markdown table mapping ASNs to organizations
+  7. Generating a detailed AS path table with hop-by-hop routing information
+        """,
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   %(prog)s                                    # Query YouTube IP from Chicago collector
-  %(prog)s 1.1.1.1                           # Query specific IP
-  %(prog)s --collector route-views.oregon.routeviews.org 8.8.8.8
+  %(prog)s 1.1.1.1                           # Query specific IP (e.g., Cloudflare DNS)
+  %(prog)s --collector route-views.oregon.routeviews.org 8.8.8.8  # Different collector and IP
+
+Output:
+  - ASN to Organization mapping table (sorted by ASN)
+  - AS Path details table showing complete routing paths (prefix, hop 1, hop 2, etc.)
         """
     )
     parser.add_argument(
