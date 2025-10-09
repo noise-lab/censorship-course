@@ -56,3 +56,11 @@ spoofed.
 2. How might a censor use route hijacks to disrupt Internet connectivity?
 
 3. How might you go about detecting (or preventing) BGP route hijacks?
+
+---
+
+## Automation Tool
+
+For those interested in automating this analysis, we've provided a Python script that performs all the steps above: connecting to RouteViews, extracting AS paths, looking up ASN information, and generating markdown tables.
+
+See [`src/bgp.py`](src/bgp.py) for a tool that automates this entire process. Run `python3 src/bgp.py --help` for usage information.
