@@ -19,15 +19,17 @@ You can explore the data in a variety of ways, including:
 In this brief hands on, you will log in to RouteViews and explore the routes
 available from the RouteViews server to the University of Chicago.
 
-1. Using a command like `dig`, find the IP address for the University of Chicago web server.
+1. Using a command like `dig`, find the IP address for the University of Chicago web server and for YouTube (e.g., `youtube.com`).
 2. Log in to one of the [Routeviews
    collectors](https://www.routeviews.org/routeviews/index.php/collectors/) using telnet. For example:
    ```bash
    telnet route-views.chicago.routeviews.org
    ```
    (You can choose any collector from the [full list](https://www.routeviews.org/routeviews/index.php/collectors/).)
+
+   **Working with a partner?** Try using two different RouteViews collectors to compare the routing information from different vantage points on the Internet.
 3. At the Routeviews collector prompt use the command `show ip bgp <IP
-   address>` to list all of the routes to the University of Chicago.
+   address>` to list all of the routes to the University of Chicago and to YouTube.
    
 The output includes a significant amount of information, including (among
 other things) the list of autonomous systems corresponding to each advertised
