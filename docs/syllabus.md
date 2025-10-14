@@ -63,12 +63,20 @@ required.
   oral examinations, presentations, or other assessment methods to ensure you
   have grasped the fundamental concepts.
 - **Presentation (25%).** Each student (or group) will present to the
-  class concerning the topic of the week. The presentation can be short,
-  but it should be informed and teach the class something that is not on
+  class concerning the topic of the week. The presentation should plan for
+  approximately 20 minutes of material, though with questions
+  and discussion, it can sometimes take up to an hour of class time.
+  The presentation should be informed and teach the class something that is not on
   the syllabus. It can be a technical primer, current event overview,
-  paper summary, etc. You should clear your presentation topic and
-  slides draft the end of the week before you are due to present. Group order
-  will be signup-based, then at random among remaining topics and slots.
+  paper summary, case study, hands-on activity, or discussion topic.
+  Format is flexible: you can use slides, lead a hands-on activity, or
+  facilitate a discussion/debate with breakout rooms. The presentation
+  does not need to be pre-recorded (unlike the final project video).
+  You should clear your presentation topic and slides draft by the end of
+  the week before you are due to present. Group order will be signup-based,
+  then at random among remaining topics and slots. Note: Some overlap with
+  lecture material is acceptable; focus on case studies, specific examples,
+  or aspects not covered in the main lecture.
 - **Group research project (35%).** You should complete an original
   research project as part of the course, addressing an open question
   related to Internet censorship or online discourse. You should have a
