@@ -1,5 +1,8 @@
 # Project
 
+!!! info "Past Project Examples"
+    Looking for inspiration? Check out the [**YouTube playlist of past project presentations**](https://www.youtube.com/watch?v=EaYnI9bIfQg&list=PLpherdrLyny8jJX-r0hK9u0e3ocKCdBMZ) to see examples from previous years.
+
 ## Proposal
 
 Your proposal can be a \"skeletal\" version of your final
@@ -72,8 +75,8 @@ Your final project deliverable should be:
     collected, processed, and analyzed the data to a level that a reader
     should understand what you did, and so forth.  
 -   **A brief video summarizing your project and main findings.** This
-    can be (and should be!) short!  Examples from past years are online
-    as a playlist.  I intend to use these to (1) Put them into a
+    can be (and should be!) short!  Examples from past years are available in
+    [this YouTube playlist](https://www.youtube.com/watch?v=EaYnI9bIfQg&list=PLpherdrLyny8jJX-r0hK9u0e3ocKCdBMZ).  I intend to use these to (1) Put them into a
     playlist and host a watch party (if/when there is interest); (2)
     showcase the class; (3) show them as examples in future years.
 
