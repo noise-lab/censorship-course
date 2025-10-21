@@ -22,13 +22,10 @@ Large language models like ChatGPT (OpenAI), Claude (Anthropic), and others can 
    - Full sentences vs. isolated phrases
 
 3. Design prompts that ask the LLM to evaluate content. For example:
-   ```
-   Please evaluate the following content for toxicity, hate speech,
-   threats, or harassment. Classify it as ALLOW or BLOCK and explain
-   your reasoning.
 
-   Content: [INSERT TEXT HERE]
-   ```
+   > Please evaluate the following content for toxicity, hate speech, threats, or harassment. Classify it as ALLOW or BLOCK and explain your reasoning.
+   >
+   > Content: [INSERT TEXT HERE]
 
 4. Test and analyze:
    - How do results compare across different LLMs?
