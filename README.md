@@ -10,4 +10,3 @@ Course website and other content for the Internet Censorship course.
   - `activities/` - In-class activities
   - `syllabus.md` - Course syllabus
   - `readings.md` - Course readings
-- `archive/` - Older versions of the course
