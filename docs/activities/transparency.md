@@ -87,3 +87,6 @@ Think about the following questions:
 * What information is missing?
 * What information would you like to know more about?
 * Who are the intended audience(s) for the report?
+* What patterns do you notice across different platforms?
+* How have transparency reports evolved over time?
+* What incentives do platforms have to be transparent (or not)?
