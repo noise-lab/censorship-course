@@ -71,6 +71,6 @@ of reports.
 
 Finally, explore the data about the use of circumvention tools.
 
-1. Visit the [Circumvention
-   Charts](https://explorer.ooni.org/chart/circumvention) page.
-2. What is this data telling you?   
+1. Visit the [OONI Measurement Aggregation Toolkit (MAT)](https://explorer.ooni.org/chart/mat) page.
+2. Select circumvention-related tests from the "Test Name" dropdown (such as Psiphon Test, Tor Test, or Tor Snowflake Test), or select "Anonymization and circumvention tools" from the "Website Categories" filter.
+3. What is this data telling you?   
