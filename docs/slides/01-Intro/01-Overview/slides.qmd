@@ -1,0 +1,251 @@
+---
+title: "From Censorship to Information Control"
+subtitle: "Internet Censorship and Online Speech"
+author: "Nick Feamster · University of Chicago"
+date: last-modified
+---
+
+## "The Net Interprets Censorship as Damage" {.center}
+
+> "The Net interprets censorship as damage and routes around it."
+> — John Gilmore, quoted in *Time*, **December 6, 1993**
+
+A founding myth of the open Internet. The rest of this course asks: **was it ever
+true, and is it true now?**
+
+::: {.notes}
+Open on the 1993 quote. Ask the room: what's the context — commercial walled gardens
+(Prodigy, AOL, CompuServe) dismantling walls to join the public Internet. Do you still
+believe it? What's the biggest threat to it today? This sets up the whole arc: the
+Internet went from walled gardens → open Net → re-centralized platforms. See
+censorship-book Ch. 1.
+:::
+
+## What This Course Is About
+
+We study how governments, platforms, and private actors **shape and curtail what
+people can publish, access, and see** online — and how people push back.
+
+- The **mechanisms**: technical, platform-based, legal, and economic
+- The **measurement**: how we detect and quantify control
+- The **circumvention**: how users route around it
+
+::: {.notes}
+This is an electives course built around the companion book. Research/reading/discussion
+heavy, with a technical spine and a final project. Point them at the syllabus.
+:::
+
+## From "Censorship" to "Information Control" {.smaller}
+
+The book's central reframing (Ch. 1): conventional **censorship** — outright blocking —
+is only the crudest form. The real phenomenon is broader:
+
+::: {.vignette}
+**Internet information control is any attempt to control or curtail the publication of,
+access to, or visibility of information online — any *tax* on access to information.**
+:::
+
+- Not just a **ban or block** — also **friction** (slowing, burying) and **flooding**
+  (drowning out)
+- A **sociotechnical** phenomenon: code *and* law *and* economics *and* norms
+
+::: {.notes}
+This is the thesis of the course. Most modern control isn't a firewall that says
+"BLOCKED" — it's a tax: make the content slower, harder to find, or buried under noise.
+Plausible deniability for the censor. See §1 framing in the book. We'll keep returning
+to "tax on access."
+:::
+
+## Why Control Information?
+
+::: {.columns}
+::: {.column width="50%"}
+- **Political** — stability, preventing collective action, shaping outcomes
+- **National security** — real or claimed
+:::
+::: {.column width="50%"}
+- **Religious / moral / social** — offense, "values"
+- **Economic** — trade, productivity, protecting incumbents
+:::
+:::
+
+The same technical mechanism serves very different motives — which is why we study
+**means** and **motives** separately.
+
+::: {.notes}
+Book §1.1 "The Reasons for Information Control." The point: a throttle is a throttle
+whether the motive is an election or a moral panic. Separating mechanism from motive is
+an analytical move we use all term.
+:::
+
+## Roberts's Taxonomy: Fear, Friction, Flooding
+
+- **Fear** — make people afraid to publish or view (arrests, surveillance, intimidation)
+- **Friction** — make content *harder* to reach (throttling, blocking, buried results)
+- **Flooding** — *dilute* the discourse with distraction, propaganda, and noise
+
+Modern control leans on **friction and flooding** — quieter, deniable, and effective
+for the majority.
+
+::: {.notes}
+Margaret Roberts (*Censored*, 2018) is the spine of how we'll talk about modern control.
+Fear is the old model; friction and flooding are the modern, porous model. "Porous"
+censorship is effective *because* it has holes — direct repression causes backlash;
+inconveniencing most people is enough.
+:::
+
+## The Many Forms of Control (the Course Roadmap) {.smaller}
+
+The book's §1.2 forms are the chapters — and our lectures:
+
+| Form | What it controls | Book |
+|---|---|---|
+| **Technical controls** | protocols, routing, the flow of data | Ch. 2 |
+| **Platform controls** | feeds, ranking, moderation, propaganda | Ch. 3 |
+| **Legal & economic controls** | law, copyright, net neutrality, money | Ch. 4 |
+| **Measuring** information controls | how we *know* | Ch. 5 |
+| **Taking back control** | VPNs, Tor, circumvention | Ch. 6 |
+
+::: {.notes}
+This slide is the map of the whole course, and it's literally the book's table of
+contents. Each later deck is one row. Tell them where we're going so the individual
+lectures have a home.
+:::
+
+## How Control Is Implemented (Technical) {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Protocol interference**
+
+- IP filtering
+- **DNS** manipulation / poisoning
+- TCP connection resets
+- HTTP(S) redirection / SNI filtering
+:::
+::: {.column width="50%"}
+**Infrastructure & platform**
+
+- DNS registries / registrars
+- Certificate authorities, CDNs
+- Social media, search engines
+:::
+:::
+
+Points of control sit all along the path — **access ISPs, transit, CDNs, platforms,
+and the endpoint itself**.
+
+::: {.notes}
+A preview of Ch. 2–3. Don't go deep here — just establish that there are many points of
+control between Alice and Bob, and the censor can act at any of them. We'll spend weeks
+on these.
+:::
+
+## Non-Technical Control Is Just as Real
+
+- **Self-censorship** — fear of backlash; pervasive and nearly undocumented
+- **Law & policy** — copyright takedowns (DMCA §512), intermediary-liability regimes
+  (CDA §230 and its global counterparts), platform-transparency law (EU **DSA**)
+- **Economic** — demonetization, payment cutoffs, infrastructure deplatforming
+
+::: {.notes}
+Book §1.2 and Ch. 4. The legal/economic lever is often *more* powerful than the
+technical one — a payment processor or a CA can deplatform faster than a firewall. Set
+up the Legal chapter here.
+:::
+
+## How Widespread Is It? {.center}
+
+Censorship and information control are not a fringe phenomenon — they are practiced in
+**dozens of countries**, including electoral democracies, and increasingly run on
+**centralized infrastructure**.
+
+::: {.notes}
+Transition slide into the live data. The old slide said ">60 countries / Freedom on the
+Net." We refresh that with current shutdown data on the next slide rather than citing a
+stale number.
+:::
+
+## A 2026 Vignette: Shutdowns Keep Climbing {.smaller}
+
+::: {.vignette}
+Access Now's **KeepItOn** coalition documented **313 internet shutdowns across 52
+countries in 2025** — the highest annual count it has recorded — with **conflict** the
+leading trigger for the third year running, and **70 shutdowns coinciding with grave
+human-rights abuses** in 21 countries. *(Report released March 31, 2026.)*
+:::
+
+Shutdowns are the **bluntest** instrument — and they're rising. Most control is subtler.
+
+::: {.notes}
+This is the freshest, verified hook — swap it each year (see coverage-notes). The
+teaching point: even as control gets subtle (friction/flooding), the crudest tool —
+the full shutdown — is at an all-time high, concentrated in conflict and elections.
+Tools that track this: internetshutdowns.in, OONI, Censored Planet. Source: Access Now
+KeepItOn 2024 annual report.
+:::
+
+## We Can Measure It
+
+![India shutdown tracker, *internetshutdowns.in* — regional, ongoing](images/slide020_img021.png)
+
+Crowdsourced and infrastructure measurement — **OONI**, **Censored Planet**, **Google
+Transparency Report**, shutdown trackers — turn anecdotes into evidence.
+
+::: {.notes}
+Preview of Ch. 5 (Measurement). The whole field exists because control is often designed
+to look like ordinary failure — measurement is how we tell censorship from a bad day on
+the network. We'll do hands-on OONI and RouteViews later.
+:::
+
+## The Trend: From Protocols to Platforms
+
+- Early censorship: **block the protocol** (IP/DNS/keyword filtering)
+- Modern control: **shape the platform** — ranking, recommendation, moderation,
+  **personalization** ("filter bubbles"), and **information operations** (sock-puppets,
+  astroturfing, disinformation)
+- Underneath both: **centralization** of infrastructure raises takedown risk
+
+::: {.notes}
+The arc of the course and the book: control moved up the stack from pipes to platforms.
+Centralization (a few CDNs, CAs, app stores, social platforms) is what makes modern
+takedown both easy and deniable. Zuckerberg's "squirrel dying in front of your house"
+line is the filter-bubble hook if you want it.
+:::
+
+## Why Bother, If It's Circumventable?
+
+Most control is **porous** — VPNs, Tor, homophones, decoy routing all defeat it. So why
+do states invest in it?
+
+- Because **friction works on the majority** — small costs shift most behavior
+- Because it offers **plausible deniability** — "just a network problem"
+- **Direct repression backfires;** quiet friction does not
+
+::: {.notes}
+The course's central puzzle, stated plainly. Resolve it with the "tax" framing: you
+don't need a perfect wall, just a toll most people won't pay. The motivated few get
+through (Ch. 6, circumvention) — and that's often acceptable to the censor.
+:::
+
+## Course Logistics {.smaller}
+
+- **The book is the spine** — each lecture maps to a chapter; reading is posted ahead
+- **Before class:** submit reading-response questions; we work through them together
+- **Assessment:** participation & discussion, in-class activities, and a **research
+  project** (proposal → interim → final)
+- **All assignment release and due dates are on the schedule from day one** — and we
+  stick to them
+- **Questions:** post in the **public channel** (fastest; peers help too) — DMs have no
+  response-time guarantee. Office hours by appointment.
+
+::: {.notes}
+These logistics bullets directly answer last year's feedback: concrete published
+deadlines, clearer expectations, and a communication-channel policy. Point them at the
+syllabus' Communication & Response Times section and the schedule.
+:::
+
+# Let's Get Started {.center}
+
+Next: **Technical Controls** — why are Internet protocols so easy to manipulate?
+*(censorship-book Ch. 2)*

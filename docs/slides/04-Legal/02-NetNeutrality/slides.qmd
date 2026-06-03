@@ -1,0 +1,314 @@
+---
+title: "Net Neutrality and the Open Internet"
+subtitle: "Internet Censorship and Online Speech"
+author: "Nick Feamster · University of Chicago"
+date: last-modified
+---
+
+## The Network Should Not Pick Winners {.center}
+
+> A neutral network carries every application's bits the same way — it does not
+> **block**, **throttle**, or **sell prioritization** to favor one source over another.
+
+The principle is simple. The regulation has been anything but — repealed,
+reinstated, and struck down across three administrations.
+
+::: {.notes}
+Open with the principle, not the law. Net neutrality is the policy expression of
+the end-to-end argument: the network is a dumb pipe; intelligence lives at the
+edges. The whole lecture is about why such a simple idea has produced 15+ years of
+regulatory whiplash, and how it connects to information control. See censorship-book
+Ch. 4, §4.3.
+:::
+
+## Why This Belongs in a Censorship Course
+
+An ISP sits on the **path between every user and everything they read**. If it can
+discriminate among sources, it holds a **point of control**.
+
+- **Blocking** a source is the bluntest form of information control
+- **Throttling** is **friction** — a *tax on access* to disfavored content
+- **Paid prioritization** lets the richest content buy reach; everyone else is
+  relatively slowed
+
+The same levers a regulator polices for *competition* are levers for **speech**.
+
+::: {.notes}
+Tie back to the course thesis (Roberts: Fear / Friction / Flooding). Throttling is
+textbook friction — you don't have to ban a site, you just make it slow enough that
+most people give up. Net neutrality rules are one of the few legal instruments that
+directly constrain that friction. Keep the framing on *information control as a tax
+on access*.
+:::
+
+# First, the Internet's Business Model {.center}
+
+## How Networks Interconnect {.smaller}
+
+The Internet is **tens of thousands of independently operated networks** (autonomous
+systems) that interconnect. Two basic money relationships:
+
+::: {.columns}
+::: {.column width="50%"}
+**Customer–Provider**
+
+One AS *pays* another for reachability to some set of destinations.
+:::
+::: {.column width="50%"}
+**Settlement-Free Peering**
+
+Two ASes *swap traffic for free* because both benefit — essentially bartering.
+:::
+:::
+
+Net neutrality fights happen at these **interconnection points** — so we have to
+keep the *economics* and the *speech* questions separate.
+
+::: {.notes}
+This is the foundation the book builds the whole section on (§4.3, Internet business
+model figure). Most students think of "the Internet" as one network; correct that.
+The key tension later: a congested *peering link* looks identical to *throttling*
+from the user's seat, but one is an economics dispute and the other is information
+control. Preferences are implemented with BGP local-preference manipulation.
+:::
+
+# The Regulatory History {.center}
+
+## The 2015 Open Internet Order {.smaller}
+
+In **March 2015** the FCC reclassified broadband ISPs as **Title II common
+carriers** — regulating them like a public utility. The **bright-line rules**:
+
+- **No blocking** of lawful content
+- **No throttling** of lawful traffic
+- **No paid prioritization** — no selling a "fast lane"
+- **No unreasonable interference** or disadvantage; plus **transparency**
+
+...with carve-outs for **"reasonable network management"** (security, congestion).
+
+::: {.notes}
+Title II is the hook everything hangs on: it is the statutory authority that lets the
+FCC impose the bright-line rules. Note the rules don't ban *all* prioritization — an
+ISP may prioritize all video over all bulk transfer. What's barred is *picking among
+competitors*: FaceTime over Skype, or Netflix over a rival. That distinction matters
+for the censorship angle.
+:::
+
+## A Microscope on ISPs — and a Blind Spot {.smaller}
+
+The 2015 order trained a microscope on **ISPs**. But it left **most of the
+ecosystem untouched**:
+
+- **CDNs, clouds, search, social platforms** were *outside* the FCC's remit
+- Discrimination, prioritization, and blocking remained **fair game** above the
+  ISP layer
+
+The order policed the *pipes* while the real consolidation was moving **up the
+stack**.
+
+::: {.notes}
+This is the book's "barking up the wrong tree" point. The most acute modern threats
+to open access — deplatforming, ranking, app-store removal — sit with a handful of
+platforms and clouds the order never reached (Ch. 3). Foreshadow: even if NN rules
+were airtight, they'd miss where information control actually concentrates today.
+:::
+
+## Repeal, Reinstate, Repeat {.smaller}
+
+Net neutrality is a **political football** — the classification flips with the party
+controlling the FCC:
+
+| Year | Action |
+|---|---|
+| **2015** | FCC adopts Open Internet Order (Title II) |
+| **2017** | FCC repeals it ("Restoring Internet Freedom") |
+| **2024** | FCC reinstates Title II net neutrality |
+| **2025** | A federal court strikes the reinstatement down |
+
+::: {.notes}
+The whiplash is the story. Each FCC majority "vacillates" (the Sixth Circuit's word).
+The point for students: a rule that can be reversed every four years is a weak
+foundation for a *right* — which is partly why advocates moved to legislation and to
+the states. Set up the 2025 vignette next.
+:::
+
+## The Rules Are Struck Down (2025) {.smaller}
+
+::: {.vignette}
+On **January 2, 2025**, the **Sixth Circuit** in *Ohio Telecom Association v. FCC*
+**vacated** the FCC's 2024 net neutrality order. Applying the Supreme Court's 2024
+*Loper Bright* decision (which ended **Chevron deference**), the court read the
+statute itself and held broadband is a lightly regulated **"information service,"**
+not a Title II **"telecommunications service"** — so the FCC **lacks authority** to
+impose the bright-line rules. The court said this "means we can end the FCC's
+vacillations."
+:::
+
+Federal net neutrality is, for now, **dead** — but **state laws** (e.g.,
+**California's 2018 Act**, upheld by the Ninth Circuit) survive.
+
+::: {.notes}
+This is the freshest verified hook — swap it as the law moves (see coverage-notes).
+Two teaching points: (1) Post-Chevron, courts no longer defer to the FCC's
+classification, so the regulatory ping-pong may finally stop — in the *deregulatory*
+direction. (2) The same ruling weakens federal *preemption* of states, so California
+and Washington's mirror laws keep ISPs largely in line nationwide anyway. Source:
+6th Cir. opinion, Jan 2, 2025; CRS LSB11264.
+:::
+
+# The Hard Case: Congestion vs. Censorship {.center}
+
+## "Was Comcast Blocking Netflix?" (2014) {.smaller}
+
+In **2014**, users saw streaming video crawl at peak hours. The popular claim — even
+**John Oliver** ran with it — was that ISPs were **blocking** Netflix.
+
+The reality was **more complicated**: congestion can occur at *many* points along
+the path —
+
+- ISP ↔ transit-provider **interconnections**
+- *inside* a transit provider's network
+- transit ↔ content-provider links
+
+::: {.notes}
+The 2014 episode is the book's centerpiece for teaching the difference between a
+*speech* problem and an *economics* problem. The accusation ("blocking") was the
+language of censorship; the cause turned out to be an interconnection/peering
+dispute. We're going to follow the measurement evidence and see it wasn't where
+everyone assumed.
+:::
+
+## The Evidence: Congestion in Transit, Not the ISP {.smaller}
+
+![Median download throughput across transit provider **Cogent** in NYC, by ISP (2013–2014). Throughput collapses, then jumps sharply once interconnects are upgraded.](images/slide011_img012.png)
+
+Measurement Lab tests *appeared* to show ISP congestion — but the bottleneck was in a
+**transit provider (Cogent)**, and the cross-AS test path made it hard to localize.
+
+::: {.notes}
+Walk the plot: sustained low throughput through 2013–early 2014, then a step-change
+recovery once links were augmented. The subtlety the book stresses: the M-Lab test
+traversed multiple ASes end-to-end, so it measured the *worst* hop, not the ISP. And
+Cogent was itself prioritizing retail over wholesale traffic during congestion —
+behavior easy to mistake for ISP throttling.
+:::
+
+## Two Sides of a Classic Peering Dispute {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Netflix's view**
+
+By paying transit (Cogent), it *already paid* to reach Comcast's **"eyeballs."**
+Comcast let the interconnects **congest** by not upgrading them.
+:::
+::: {.column width="50%"}
+**Comcast's view**
+
+Netflix can **congest any link at will** and **choose its transit** — so balancing
+traffic across paths is *Netflix's* job.
+:::
+:::
+
+Resolved in the **open market**: Netflix paid Comcast to **augment capacity**. The
+market, arguably, **worked**.
+
+::: {.notes}
+This is the crux distinction the section wants students to leave with: a *peering /
+interconnection dispute* is about **economics** (who pays to upgrade a link), not
+about **blocking, throttling, or paid prioritization** in the speech sense. Related,
+but distinct. The deal that settled it (Netflix paying Comcast directly) is exactly
+the "paid interconnection" that confuses people into calling it a NN violation.
+:::
+
+## Why the 2014 Disputes Faded {.smaller}
+
+Incentives **realigned**. Today an access ISP has every reason to **provision links
+well** to the big content providers:
+
+- ISP customers **depend on** Netflix, Amazon, Google, YouTube
+- Much ISP **infrastructure and content** now lives on those same clouds
+- An ISP whose customers **can't reach the sites they want has no business**
+
+So peering disputes like 2014 are **largely dead for now** — even without
+regulation.
+
+::: {.notes}
+The book's market-incentives argument. It's the strongest counter to "we need NN
+rules to stop throttling": in the US, ISP behavior has actually been pretty good
+*absent* federal rules, because the economics now favor cooperation. Push students:
+is good behavior driven by incentives durable, or just contingent? Where could it
+break? (No competition in last-mile; vertically integrated ISP-owned content.)
+:::
+
+# Bringing It Together {.center}
+
+## The Many Faces of "Net Neutrality" {.smaller}
+
+The phrase bundles **very different things** — only some are about speech:
+
+::: {.columns}
+::: {.column width="50%"}
+**Information-control levers**
+
+- No **blocking**
+- No **throttling**
+- No **paid prioritization**
+:::
+::: {.column width="50%"}
+**Economic / administrative**
+
+- Title II **classification** itself
+- Telecom **access fees**, USF
+- **Outage reporting**, privacy rules
+- Peering / interconnection **economics**
+:::
+:::
+
+...all very different from the rules **Google, Meta, or app stores** operate under.
+
+::: {.notes}
+Disentangle the bundle. When people argue about "net neutrality" they're often
+arguing about different things at once: the speech-relevant bright-line rules vs. the
+public-utility regulatory apparatus vs. interconnection economics. For *this* course,
+only the bright-line rules sit squarely in the information-control frame.
+:::
+
+## Where the Threat Actually Lives Now {.smaller}
+
+The bright-line rules target the **ISP**. But the leverage to **block access to
+large swaths of content** has moved **up the stack**:
+
+- A few **cloud hosts, CDNs, search engines, app stores, and social platforms**
+- These can make **one decision** that removes content for millions
+- That's the **consolidation** story of Ch. 3 — and it's *outside* net neutrality
+
+Net neutrality polices the **pipe**; modern information control sits at the
+**platform**.
+
+::: {.notes}
+Land the synthesis. Net neutrality remains a useful *frame* — "the network shouldn't
+pick winners among applications" — but as a *regulatory instrument* it aims at a layer
+where, in the US, the acute threat has receded. The deplatforming / consolidation
+risk the course cares about lives one layer up, where the bright-line rules don't
+reach. This is the bridge back to the Platform chapter.
+:::
+
+## Summary {.smaller}
+
+- Net neutrality = whether ISPs may **discriminate** among sources via **blocking,
+  throttling, or paid prioritization** — each a soft form of **information control**
+- US regulation **comes and goes**: 2015 → 2017 → 2024 → struck down **Jan 2025**;
+  **state laws** persist
+- The 2014 "Comcast vs. Netflix" fight was a **peering/economics dispute**, *not*
+  blocking — keep the two **distinct**
+- **Market incentives** now push ISPs toward openness; the sharper threats have moved
+  **up the stack** to platforms and clouds
+
+*See censorship-book Ch. 4 Legal and Economic Controls, §4.3 (Net Neutrality).*
+
+::: {.notes}
+The principle outlives the rules: "the network should not pick winners among
+applications" is a durable analytical frame even when the formal regulation is not in
+force. Next deck drills into the *mechanics* of paid prioritization specifically.
+:::

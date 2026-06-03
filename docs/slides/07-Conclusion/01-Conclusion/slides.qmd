@@ -1,0 +1,421 @@
+---
+title: "The Future of Information Control"
+subtitle: "Internet Censorship and Online Speech"
+author: "Nick Feamster · University of Chicago"
+date: last-modified
+---
+
+## From Walls to Currents {.center}
+
+> "The Net interprets censorship as damage and routes around it."
+> — John Gilmore, *Time*, December 6, 1993
+
+Twenty years ago the problem looked simple: the censor built a **wall**, we
+routed around it. This last lecture asks what replaced that world — and who
+decides what comes next.
+
+::: {.notes}
+Bookend the course with the same quote we opened on (Ch. 1). The book's
+conclusion frames the shift: we have moved "from a world of walls to a world of
+currents" — information now flows through channels shaped by algorithms,
+platform policy, economics, and law, not neutral pipes. The firewall didn't
+disappear (the GFW keeps evolving) — it was joined by subtler, more pervasive,
+harder-to-counter techniques. See censorship-book Ch. 7.
+:::
+
+# What We Learned {.center}
+
+## Information Control, Not Just "Censorship"
+
+The course's central reframing: control is any **tax on access to information** —
+a ban, but also **friction** (slow, bury) and **flooding** (drown out).
+
+- **Fear · Friction · Flooding** — Roberts's taxonomy, our through-line
+- Modern control leans on the quiet, deniable end: friction and flooding
+- A **sociotechnical** problem — code *and* law *and* economics *and* norms
+
+::: {.notes}
+Restate the thesis one last time. Most modern control isn't a firewall that says
+BLOCKED — it's a toll most people won't pay. Keep the "tax on access" vocabulary
+from Ch. 1 consistent through the wrap-up.
+:::
+
+## Five Chapters, Five Levers {.smaller}
+
+| Lever | What we saw | Book |
+|---|---|---|
+| **Technical** | DNS manipulation, BGP hijack, DPI, throttling that hides as congestion | Ch. 2 |
+| **Platform** | moderation at impossible scale, the 50 Cent Party, AI arbiters | Ch. 3 |
+| **Legal / economic** | copyright takedowns, net neutrality, zero-rating, demonetization, paywalls | Ch. 4 |
+| **Measurement** | turning invisible control into evidence — OONI, Censored Planet | Ch. 5 |
+| **Circumvention** | VPNs, Tor, domain fronting, decoy routing — and their limits | Ch. 6 |
+
+::: {.notes}
+This is the whole course on one slide — the book's chapter arc. Each row is a
+deck. The key insight from Ch. 3: censorship need not block anything — flooding
+and strategic amplification shape discourse just as well. From Ch. 4: economic
+and legal controls operate below public attention but rival any firewall.
+:::
+
+## Measurement Is Resistance
+
+Control is often **designed to look like ordinary failure** — a slow load, a
+timeout. Measurement is how we tell censorship from a bad day on the network.
+
+- Without it we cannot know the **extent**, hold actors **accountable**, or
+  evaluate **countermeasures**
+- But it carries its own ethics: **researcher and volunteer safety**, and tools
+  that can be **repurposed for surveillance**
+
+::: {.notes}
+Ch. 5's takeaway, stated as a principle students should keep. The measurement
+field exists precisely because modern control is deniable.
+:::
+
+# The Paradox of the Open Internet {.center}
+
+## The Same Openness, Turned Against Itself
+
+At the **protocol layer**, Gilmore's dictum still mostly holds — BGP routes
+around failures, TCP retransmits, DNS resolves.
+
+**Above** the protocol layer, consolidation concentrated power the designers
+never anticipated:
+
+- A handful of **platforms** mediate most online activity
+- A handful of **CDNs** (Cloudflare, Akamai, Fastly) are choke points
+- A handful of **cloud providers** host nearly everything
+
+::: {.notes}
+The book's core paradox: the openness that let these platforms grow also lets
+them exercise unprecedented control. When AWS terminates a customer, Cloudflare
+stops proxying, or Google pulls an app, the effect can be as complete as any
+government firewall — and without constitutional constraints, due process, or
+transparency obligations.
+:::
+
+## Private Power, No Constitution {.smaller}
+
+When **Amazon** drops a customer, **Cloudflare** stops proxying a site, or
+**Google** removes an app — the effect can be as total as any state firewall.
+
+But these are **private companies in competitive markets**. Their decisions face:
+
+- No First Amendment constraint
+- No due-process requirement
+- No transparency obligation
+
+The Internet's freedom was always **more aspiration than guarantee** —
+consolidation revealed how fragile that aspiration was.
+
+::: {.notes}
+This is the punchline of the paradox. The point isn't that platforms are evil —
+it's that we built our public square on infrastructure governed by contract law,
+not constitutional law. Connects directly to the governance question coming up.
+:::
+
+# The Impossible Tradeoffs {.center}
+
+## No Neutral Position {.smaller}
+
+Content moderation at the scale of **billions of users across dozens of legal
+regimes** admits no neutral move:
+
+::: {.columns}
+::: {.column width="50%"}
+- **Remove** content → censorship
+- **Don't remove** → a distribution channel
+- **Inconsistent** rules → arbitrary
+:::
+::: {.column width="50%"}
+- **Consistent** rules at scale → errors guaranteed
+- **Human** moderators → trauma
+- **Automated** systems → opaque, unappealable
+:::
+:::
+
+Defer to local law → **complicit in censorship**. Impose one global standard →
+**cultural imperialism**.
+
+::: {.notes}
+Walk one or two of these pairs out loud. The point from the book: there is no
+position outside the tradeoff. Every choice prioritizes some values over others.
+:::
+
+## Tradeoffs All the Way Down
+
+- **Economic** — paywalls sustain journalism *but* create information
+  inequality; zero-rating expands access *but* distorts competition;
+  demonetization protects advertisers *but* incentivizes self-censorship
+- **Legal** — §230 enabled user content *but* limited accountability; the EU
+  **DSA** adds due process *but* its fines may encourage **over-removal**;
+  copyright protects creators *but* arms takedown abuse
+
+These are **not problems to solve but tensions to manage**. The real question:
+*who* decides, through *what* process, with *what* accountability?
+
+::: {.notes}
+Book §"The Impossible Tradeoffs." Land the framing: not "what's the right
+answer" but "who gets to choose, and are they accountable." That pivots us into
+emerging challenges and governance.
+:::
+
+# Emerging Challenges {.center}
+
+## Generative AI Breaks the Epistemics
+
+When **any** text, image, or voice might be synthetic, the foundations of public
+discourse erode.
+
+- The challenge is no longer just removing harmful content — it's establishing
+  **any basis for distinguishing truth from fabrication**
+- AI is also the **arbiter**: ranking search, personalizing feeds, flagging
+  content — at scales that make human review impossible
+- When an AI system suppresses a result, **no human may be able to explain why**
+
+::: {.notes}
+The book calls generative AI the most significant shift since social media — a
+double hit: it floods the zone with synthetic content *and* it adjudicates
+access opaquely. Tie back to Ch. 3's "AI arbiter."
+:::
+
+## The Encrypted-DNS / ECH Arms Race {.smaller}
+
+Encryption keeps moving the censor's target. **Encrypted Client Hello (ECH)**
+hides the SNI that censors filter on — so the fight moved **down the stack**.
+
+::: {.vignette}
+**China and Iran don't break ECH — they block the encrypted-DNS lookups that
+bootstrap it.** Per a FOCI 2025 study (PETS, July 2025), the Great Firewall
+censors the DNS needed to fetch ECH keys rather than the ECH payload itself; the
+authors circumvented it in all three of China, Iran, and Russia. On **May 23,
+2025**, `quic-go` v0.52.0 shipped **SNI-slicing** to defeat the GFW's QUIC
+SNI-based censorship — the cat-and-mouse continues.
+:::
+
+::: {.notes}
+This is the freshest technical hook and the cleanest illustration of the
+"no stable equilibrium" point from Ch. 6/7. Teaching point: the censor attacks
+the weakest link in the chain (here, DNS bootstrap), not the crypto. Sources:
+gfw.report USENIX Security 25; FOCI 2025 paper foci-2025-0016. Swap forward each
+year as the GFW/ECH state moves.
+:::
+
+## Encryption Itself Is Contested
+
+The same arms race plays out in **law**, not just protocols:
+
+::: {.vignette}
+The EU's **"Chat Control"** (CSA Regulation) sought to mandate client-side
+scanning of messages. After a German-led blocking minority, the Danish
+presidency **dropped mandatory scanning** (Council political agreement, Nov 26,
+2025); in **April 2026** the European Parliament also blocked extending
+voluntary mass-scanning. Mandatory **age verification** and trilogue fights
+remain. *(EFF, Apr 2026.)*
+:::
+
+Cryptographers: **backdoors break security for everyone.** Governments: **we
+need access.** Platforms: caught in the middle.
+
+::: {.notes}
+The encryption-governance dilemma from the merged governance source. Note the UK
+Investigatory Powers Act and Australia's Assistance & Access Act as parallels.
+The win here is real but fragile — flag it as a refresh point.
+:::
+
+## Geopolitics Fragments the Network {.smaller}
+
+The dream of one global Internet is giving way to **nationally-controlled
+networks** — the **"splinternet."**
+
+::: {.columns}
+::: {.column width="50%"}
+**Evidence for**
+
+- National firewalls (China, Russia, Iran)
+- Data-localization laws in 60+ countries
+- Divergent regional rules (DSA, India's IT Rules)
+:::
+::: {.column width="50%"}
+**Evidence against**
+
+- TCP/IP, HTTP, DNS still globally unified
+- Cross-border data still flows
+- Platforms **adapt** rather than split
+:::
+:::
+
+Reality: **technical unity, regulatory fragmentation.**
+
+::: {.notes}
+Russia's "sovereign internet" (RuNet, 2019 law; DPI mandates; disconnection
+tests) and China's Great Firewall + Digital Silk Road are the sharp cases — they
+aren't just blocking, they're exporting an alternative governance *model*. The EU
+is the "third way" (GDPR, DSA, DMA, AI Act) and the Brussels Effect.
+:::
+
+## Even the Shutdown — the Bluntest Tool — Is Rising {.smaller}
+
+::: {.vignette}
+Access Now's **KeepItOn** coalition counted **313 internet shutdowns across 52
+countries in 2025** — its highest annual count (up from **296** in 2024).
+**Conflict** was the leading trigger for the third straight year, and **70
+shutdowns in 21 countries** coincided with grave human-rights abuses.
+*(Report released March 31, 2026.)*
+:::
+
+Even as control gets subtle, the crudest instrument is at an **all-time high**.
+
+::: {.notes}
+The companion data point to the technical-subtlety story: friction and flooding
+rise, *and* full shutdowns hit records — concentrated in conflict and elections.
+Swap this number each year (see coverage-notes). internetshutdowns.in and OONI
+track this live.
+:::
+
+# Who Decides? Internet Governance {.center}
+
+## Governance Was Never Absent
+
+> "The development and application by governments, the private sector and civil
+> society... of shared principles, norms, rules, decision-making procedures, and
+> programmes that shape the evolution and use of the Internet."
+> — World Summit on the Information Society, 2005
+
+The Internet is **not ungoverned — it never was.** The question is *who*, *how*,
+*for whom*, and *with what legitimacy*.
+
+::: {.notes}
+Counter John Perry Barlow's 1996 "Declaration of the Independence of Cyberspace."
+The multi-stakeholder model: governments, private sector, civil society,
+technical community — no single absolute authority, but unequal power in
+practice.
+:::
+
+## The Multi-Stakeholder Model and Its Challengers {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Multi-stakeholder** (today's default)
+
+- **ICANN** — names, numbers, the root zone
+- **IETF** — protocols and standards
+- **RIRs** — IP allocation
+- Plus platforms, civil society
+:::
+::: {.column width="50%"}
+**Multilateral** (Russia, China push)
+
+- **ITU** / UN-style state voting
+- **"Cyber sovereignty"** — each nation controls its space
+- Government-to-government control
+:::
+:::
+
+A control-vs-openness divide playing out in every standards body.
+
+::: {.notes}
+The ICANN .io case is a nice concrete: a "technical" country-code decision (UK
+returning the Chagos / BIOT to Mauritius, 2024) becomes geopolitical and
+economic. Technical decisions are political decisions.
+:::
+
+## Jurisdiction: Global Network, National Laws {.smaller}
+
+- **Right to be Forgotten** (Google Spain, 2014) — EU link removal; but the 2019
+  ruling said **no global** application
+- **Australia v. X/Meta** (2024) — a national takedown order demanding **global**
+  removal of the Sydney church-stabbing video; the court later lifted it
+- **India's IT Rules (2021)** — 36-hour takedowns, traceability that threatens
+  end-to-end encryption, local grievance officers
+
+If one country's law applies globally → **race to the bottom**. If not →
+enforcement fragments.
+
+::: {.notes}
+This is the cross-border enforcement bind. There's no clean answer — most
+restrictive jurisdiction wins, or enforcement becomes geo-fenced and messy.
+Keep it short; the point is the structural tension, not the case details.
+:::
+
+# Paths Forward {.center}
+
+## Directions, Not Solutions {.smaller}
+
+The book offers **directions**, not a fix:
+
+1. **Transparency** — reports, vetted research access, algorithmic explainability
+2. **Technical countermeasures** — circumvention, encryption, decentralization
+   (necessary, not sufficient)
+3. **Smarter regulation** — due process for removals, interoperability mandates,
+   antitrust against consolidation
+4. **Digital literacy** — a core civic competency, not just individual duty
+5. **Public deliberation** — the values our information environment encodes are
+   choices about the society we want
+
+::: {.notes}
+Book §"Paths Forward." Stress #2's caveat: no technical solution addresses
+consolidation, commercialization, or geopoliticization. And #5 is the throughline
+into the final reflection — these are public choices, not engineering defaults.
+:::
+
+## The Problem Is Primarily Human {.center}
+
+The author began thinking censorship was a **technical** problem. He came to see
+it as a **human** one.
+
+> The information environment is not a natural phenomenon but a **constructed**
+> one — shaped by decisions of individuals, organizations, and governments.
+
+Sobering: **no purely technical fix.** Empowering: **different choices can create
+different outcomes.**
+
+::: {.notes}
+The book's "Final Reflection." This is the emotional center of the wrap-up. The
+information environment was built by choices, so it can be rebuilt by choices.
+:::
+
+## What You Carry Out of This Course {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+You now know:
+
+- **How** control works (technically)
+- **Why** it happens (motives)
+- **Who** does it (actors)
+- **How** to measure it
+- **How** to route around it
+:::
+::: {.column width="50%"}
+Carry the harder questions:
+
+- Who *should* decide?
+- Is the splinternet inevitable? Desirable?
+- Can platforms be accountable **without** state control?
+- How do we govern tech that doesn't exist yet?
+:::
+:::
+
+These are **tensions to manage, not problems to solve.**
+
+::: {.notes}
+The discussion-question slide, distilled. Use as the cold-call / open-floor close.
+:::
+
+# The Struggle Continues {.center}
+
+The Internet has always been **contested terrain** — control vs. freedom,
+commerce vs. public value, sovereignty vs. connectivity.
+
+Whether the future looks like the **open network** the pioneers imagined or the
+**controlled environments** authoritarians prefer is **not predetermined.**
+What happens next is up to all of us.
+
+*See censorship-book Ch. 7 Conclusion: The Future of Information Control (whole chapter).*
+
+::: {.notes}
+Final slide. End on the book's last line — the future is a choice made by
+technologists, policymakers, executives, and citizens. Thank the class; point to
+final-project deadlines on the schedule. Stay curious, critical, engaged.
+:::
