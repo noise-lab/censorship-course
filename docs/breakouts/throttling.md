@@ -1,0 +1,60 @@
+---
+lecture: 5
+class: "Throttling and Rate Limiting"
+book_chapter: "2.3.1"
+last_refreshed: 2026-07-06
+---
+
+# Breakout Discussions — Lecture 5: Throttling and Rate Limiting
+
+**Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
+
+Throttling is the book's cleanest example of Molly Roberts's *friction*: the site is not blocked, it is just slow enough that you give up. The chapter is honest that detection is genuinely hard — Wehe results contradict themselves on the same network — and that's precisely why throttling is politically attractive. These breakouts push on accountability and on where "throttling" ends and "everyday network management" begins.
+
+---
+
+## Breakout A: Plausibly Deniable Censorship
+<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+
+**Motion.** *"Throttling is the most dangerous form of Internet censorship precisely because it is deniable — and detection tools like Wehe are too unreliable to hold anyone accountable."*
+
+<!-- current-events:start topic="throttling-during-protests-detection" -->
+**Prep reads (5–10 min).**
+- *[Placeholder — refresh skill will populate with recent news on: documented throttling incidents during protests or elections — Iran, Russia (Twitter/X in 2021), Pakistan, Ethiopia, Kazakhstan, or others; OONI, IODA, or Cloudflare Radar reports]*
+- *[Placeholder — recent event or report on: Wehe, NetBlocks, or academic measurement work on distinguishing throttling from congestion, and any legal or regulatory action citing this evidence]*
+<!-- current-events:end -->
+
+**Discussion prompts.**
+- Russia throttled Twitter for months in 2021 by degrading traffic to any domain containing "t.co." Officially it was "protecting minors." Politically, everyone knew. If both sides know the truth and the tools cannot prove it, does deniability still function? What is deniability *for*?
+- The book describes Wehe as facing "fundamental detection challenges" — same user, same network, contradictory results. If we cannot even measure throttling reliably, what does an evidence-based accountability regime for it even look like? Is this a case where the standard of proof needs to *drop*, not rise?
+- The 2014 US Netflix/ISP dispute was technically peering-congestion, not traffic-shaping — but the effect on users was identical. Does *intent* matter for accountability? Should regulators care about outcomes only, or about mechanisms?
+- Suppose your country's telecom regulator has authority to fine ISPs for throttling. What evidentiary standard would you set: (a) beyond reasonable doubt, (b) preponderance of evidence, (c) shifted burden — ISP must prove congestion, or (d) something else? Defend your choice.
+
+**Bring back.** One accountability mechanism your group thinks could actually work against throttling — measurement, regulation, transparency, market pressure, or something else — and the strongest reason it might fail.
+
+---
+
+## Breakout B: Platform Throttling vs. ISP Throttling
+<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+
+**Motion.** *"When a platform (YouTube, TikTok, X) throttles or down-ranks content, that is worse than an ISP throttling the same content — because there is no regulatory backstop and no exit."*
+
+<!-- current-events:start topic="platform-throttling-vs-isp-throttling" -->
+**Prep reads (5–10 min).**
+- *[Placeholder — refresh skill will populate with recent news on: platform-level throttling / shadow-banning / algorithmic downranking incidents — X throttling links to competitors, YouTube down-ranking specific creators, TikTok "heating" or suppressing topics]*
+- *[Placeholder — recent event or report on: net neutrality developments (US FCC, EU BEREC), or regulatory action on platform algorithmic transparency such as the EU DSA]*
+<!-- current-events:end -->
+
+**Discussion prompts.**
+- The book frames throttling as a network-operator technique using token/leaky buckets. But platforms throttle too, at the application layer — X reportedly added 5-second delays to links pointing at Substack, Bluesky, and Threads in 2023. Same effect on users, different actor. Which is worse, and why?
+- Net neutrality debates assume ISPs are the danger and platforms are the victims. Is that still coherent in 2026, when Meta, Google, and Amazon operate more infrastructure (private fiber, edge networks, CDNs) than most ISPs? Where does the "platform" end and the "ISP" begin?
+- If you were forced to choose *one* regime — either ISPs are subject to strict no-throttling rules and platforms are unregulated, OR platforms are subject to algorithmic-transparency rules and ISPs are unregulated — which would you pick? Why?
+- The book connects throttling to Molly Roberts's concept of *friction*: raise the cost enough and people go elsewhere. When a platform down-ranks a link, that's friction. When an ISP throttles a competitor, that's friction. When your phone's OS demotes a sideloaded app, that's friction. Is there a principled line here, or is friction just friction?
+
+**Bring back.** Your group's ranking (worst to least-bad) of: ISP throttling, platform down-ranking, OS-level app friction, CDN de-platforming.
+
+---
+
+## Instructor notes
+
+These map to §2.3.1's core arguments: throttling is a form of *friction* (Molly Roberts), detection is genuinely hard, and the line between intentional shaping and congestion is porous. Breakout A is the natural pairing with the Wehe discussion — students who took the technical detour on token buckets will engage with the evidentiary-standard question. Breakout B is looser and more current-events-driven; it works well if the class has been circling net-neutrality debates or platform regulation. If time is tight, A is the tighter fit to the book chapter; B is better if you want to bridge forward to later platform-power material.

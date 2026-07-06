@@ -1,0 +1,61 @@
+---
+lecture: 10
+class: "Personalization"
+book_chapter: "3.5"
+last_refreshed: 2026-07-06
+---
+
+# Breakout Discussions — Lecture 10: Personalization
+
+**Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
+
+Section 3.5 frames personalization as information control by omission: the algorithm decides what you never see. The book takes seriously Eli Pariser's filter-bubble worry but also notes that personalization algorithms can be *attacked* (via history poisoning) and that opting out is rarely a real option. Both breakouts test how far a democratic society can go in regulating what is technically a recommendation.
+
+---
+
+## Breakout A: Chronological by Default
+<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+
+**Motion.** *"Major platforms should be legally required to offer a chronological, non-personalized feed as the default for all users, with algorithmic ranking available only as an opt-in."*
+
+<!-- current-events:start topic="chronological-feed-default" -->
+**Prep reads (5–10 min).**
+- *[Placeholder — refresh skill will populate with recent EU DSA enforcement or US state-level proposals mandating non-personalized feed options — including any 2025–2026 enforcement actions against Meta, TikTok, or X for hiding the option.]*
+- *[Placeholder — recent empirical study measuring the engagement, wellbeing, or information-diversity effects of chronological vs. algorithmic feeds.]*
+<!-- current-events:end -->
+
+**Discussion prompts.**
+- The book's argument: personalization "shapes perception through omission and amplification" and operates outside user awareness. A chronological feed removes the omission but not the amplification (a viral post still floods your timeline). Does the mandate solve the actual problem?
+- The DSA already requires very large platforms to offer at least one non-profiling recommender option. Users can find it — but usually don't. Is "available" enough, or does the default carry all the weight? What does research on default effects (organ donation, 401k enrollment) predict here?
+- Chronological feeds have their own pathologies: they reward users who post constantly, they surface stale content, and on a follow-graph they still produce filter bubbles (you follow who you agree with). Is the goal really "chronological" or "not-optimized-for-engagement"? Those are different.
+- Whose free-expression interest is the mandate protecting? The book distinguishes access (what you can see) from selection (what you're shown by default). A creator whose reach depends on the algorithm loses under this mandate. Is that a bug or the point?
+
+**Bring back.** A one-sentence version of the rule your group would ship, plus the biggest downside you'd accept.
+
+---
+
+## Breakout B: TikTok's Algorithm as National Security
+<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+
+**Motion.** *"The US framing of TikTok's recommendation algorithm as a national security threat is legitimate — divestiture or ban is a proportionate response, not protectionism."*
+
+<!-- current-events:start topic="tiktok-divestiture" -->
+<!-- refresh-hint: The TikTok divestiture / ban saga has moved repeatedly since 2024. Look for the current status of any US extension, sale, or court ruling as of the refresh date, plus equivalent moves in the EU, UK, Canada, or Australia. -->
+**Prep reads (5–10 min).**
+- *[Placeholder — refresh skill will populate with the current status of the US TikTok divestiture/ban timeline as of the refresh date, including any executive-order extensions, sale agreements, or Supreme Court follow-ups.]*
+- *[Placeholder — recent reporting or research on whether TikTok's algorithm has been shown to systematically suppress or amplify particular political content (Xinjiang, Hong Kong, Israel/Palestine, US elections).]*
+<!-- current-events:end -->
+
+**Discussion prompts.**
+- The book's framing: any algorithm that directs attention "can be viewed as some type of information control." Does that framing apply symmetrically to TikTok (Chinese-owned), YouTube (US-owned), and Reels (US-owned)? If not, why not?
+- Suppose (hypothetically) a rigorous audit finds TikTok's algorithm behaves indistinguishably from Reels' on politically sensitive content. Does that resolve the national security concern, or is *ownership* itself the threat model?
+- Compare TikTok divestiture to the Brazil-vs-X standoff (Justice Moraes blocking X nationally in 2024). Both are governments using infrastructure-level power against a platform owned in a rival jurisdiction. Is one legitimate and the other not — and by what principle?
+- If the concern is algorithmic influence over US users, would a *transparency* remedy (mandatory algorithm audits, open recommendation logs) work as well as *ownership* change? What are the tradeoffs?
+
+**Bring back.** Your group's verdict on the motion, and the strongest steelman of the position you rejected.
+
+---
+
+## Instructor notes
+
+These map to Section 3.5's core argument that personalization is control-by-omission, and connect back to the Chapter 3 framing that platform power and state power increasingly operate through the same levers. Breakout A is the more conceptually clean debate (defaults, engagement, filter bubbles); Breakout B is the messier, more geopolitically charged one and tends to produce the sharpest disagreements — especially in a mixed international classroom. If time permits, run B second so the class can compare the domestic and foreign framings back-to-back.
