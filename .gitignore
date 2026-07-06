@@ -1,2 +1,8 @@
 .DS_Store
 **/.DS_Store
+
+# Office lock files (created while a doc is open)
+~$*
+
+# Per-machine Claude Code settings
+.claude/
