@@ -2,7 +2,7 @@
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
-Chapter 4.2 argues that copyright was not designed as a censorship regime but routinely functions as one: DMCA notice-and-takedown lets bad-faith claimants suppress lawful speech faster than the speaker can defend it, and automated matchers (Content ID, Rights Manager) cannot perform fair-use analysis. Both breakouts probe where the line between enforcement and censorship actually sits.
+Chapter 4.2 argues that copyright was not designed as a censorship regime but routinely functions as one: [DMCA](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act) notice-and-takedown lets bad-faith claimants suppress lawful speech faster than the speaker can defend it, and automated matchers ([Content ID](https://en.wikipedia.org/wiki/Content_ID_(system)), Rights Manager) cannot perform [fair-use](https://en.wikipedia.org/wiki/Fair_use) analysis. Both breakouts probe where the line between enforcement and censorship actually sits.
 
 ---
 
@@ -21,7 +21,7 @@ Chapter 4.2 argues that copyright was not designed as a censorship regime but ro
 
 **Discussion prompts.**
 - The WSJ 2020 investigation found Google had processed over 4 billion URL removal requests. What error rate is acceptable at that scale? Is 1% false positives 40 million pieces of wrongly-suppressed speech, or is it just the cost of doing business?
-- DMCA Section 512(f) technically allows penalties for knowingly false takedowns, but has almost never been enforced. Would putting real teeth in 512(f) (statutory damages, no scienter requirement, fee-shifting) chill legitimate copyright enforcement — or just chill *abusive* enforcement? Who bears the risk today, and who would bear it under your proposal?
+- DMCA [Section 512(f)](https://www.law.cornell.edu/uscode/text/17/512) technically allows penalties for knowingly false takedowns, but has almost never been enforced. Would putting real teeth in 512(f) (statutory damages, no scienter requirement, fee-shifting) chill legitimate copyright enforcement — or just chill *abusive* enforcement? Who bears the risk today, and who would bear it under your proposal?
 - Content ID is not the DMCA — it is a private contractual system YouTube built to keep Viacom-style lawsuits away. Should platform-built matchers be regulated as if they were DMCA notices, or is that a category error? Would forcing them into the DMCA regime just push platforms to take down more, not less?
 - The Cox verdict ($1B in 2019 for failing to disconnect repeat infringers) points the incentive in one direction; the SIGCOMM peer-review-takedown episode points the other. Design an intermediary-liability rule that survives both incidents.
 
@@ -32,7 +32,7 @@ Chapter 4.2 argues that copyright was not designed as a censorship regime but ro
 ## Breakout B: Sci-Hub, Shadow Libraries, and the Ethics of Bulk Defiance
 <!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
-**Motion.** *"Sci-Hub, LibGen, and other shadow libraries are a legitimate — even necessary — response to a scholarly-publishing system that paywalls publicly funded research."*
+**Motion.** *"[Sci-Hub](https://en.wikipedia.org/wiki/Sci-Hub), [LibGen](https://en.wikipedia.org/wiki/Library_Genesis), and other shadow libraries are a legitimate — even necessary — response to a scholarly-publishing system that paywalls publicly funded research."*
 
 <!-- current-events:start topic="sci-hub-shadow-libraries" -->
 **Prep reads (5–10 min).**
@@ -44,9 +44,9 @@ Chapter 4.2 argues that copyright was not designed as a censorship regime but ro
 
 **Discussion prompts.**
 - Publicly funded research is often paywalled behind $30–$40 per-article fees. Is Sci-Hub civil disobedience, ordinary infringement, or a public-interest utility? Does the answer change if the researcher is at a well-funded U.S. university vs. a hospital in Nairobi?
-- The 2024 Meta and Anthropic rulings held that *training* on copyrighted books was fair use, but settlements have hinged on whether the training corpus was *pirated* (LibGen/Books3). Is it coherent to say Sci-Hub is illegal but training on Sci-Hub is fair use? Who benefits from that gap?
+- The 2024 Meta and Anthropic rulings held that *training* on copyrighted books was fair use, but settlements have hinged on whether the training corpus was *pirated* (LibGen/Books3). Is it coherent to say Sci-Hub is illegal but training on Sci-Hub is fair use? Who benefits from that gap? (See [Bartz v. Anthropic](https://www.courtlistener.com/docket/69058235/bartz-v-anthropic-pbc/) for the underlying case.)
 - The EU Article 17 approach effectively requires platforms to filter uploads against rights-holder databases. Would an "Article 17 for research" — filter every upload against Elsevier's catalog — be a legitimate response, or does it prove the point that copyright at scale becomes a speech regulator?
-- Compare shadow libraries to Napster (shut down), YouTube-DL (initially DMCA'd, then reinstated after EFF pressure), and Google Books (upheld as fair use). What actually predicts whether a system survives — the law, the users' political sympathy, or the defendant's legal budget?
+- Compare shadow libraries to [Napster](https://en.wikipedia.org/wiki/Napster) (shut down), [YouTube-DL](https://en.wikipedia.org/wiki/Youtube-dl) (initially DMCA'd, then reinstated after [EFF](https://www.eff.org/) pressure), and [Google Books](https://en.wikipedia.org/wiki/Authors_Guild,_Inc._v._Google,_Inc.) (upheld as fair use). What actually predicts whether a system survives — the law, the users' political sympathy, or the defendant's legal budget?
 
 **Bring back.** Your group's ranking of these access regimes from most to least legitimate: subscription paywalls, green open-access, gold open-access, Sci-Hub. Justify the top and bottom.
 

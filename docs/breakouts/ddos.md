@@ -2,7 +2,7 @@
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
-The book's DoS section is unusually blunt about two things: (1) DoS is not just an attack, it is a *censorship* mechanism when directed at journalists or activists (see the Great Cannon vs. GreatFire on GitHub); and (2) the defense — Cloudflare, Akamai, Project Galileo — has quietly created a private arbitration system for who deserves to stay online. Both breakouts push on the political economy of DDoS: who launches, who defends, who decides.
+The book's [DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) section is unusually blunt about two things: (1) DoS is not just an attack, it is a *censorship* mechanism when directed at journalists or activists (see the [Great Cannon](https://en.wikipedia.org/wiki/Great_Cannon) vs. [GreatFire](https://en.greatfire.org/) on GitHub); and (2) the defense — [Cloudflare](https://www.cloudflare.com/), Akamai, [Project Galileo](https://www.cloudflare.com/galileo/) — has quietly created a private arbitration system for who deserves to stay online. Both breakouts push on the political economy of DDoS: who launches, who defends, who decides.
 
 ---
 
@@ -20,7 +20,7 @@ The book's DoS section is unusually blunt about two things: (1) DoS is not just 
 <!-- current-events:end -->
 
 **Discussion prompts.**
-- The book opens with Mafiaboy (2000) and Mirai/Dyn (2016) as canonical DDoS events. Both were criminal, both took down speech infrastructure (CNN, Twitter, Reddit). Is a law-enforcement takedown of the *tools* used for such attacks censorship, ordinary law enforcement, or both?
+- The book opens with [Mafiaboy (2000)](https://en.wikipedia.org/wiki/MafiaBoy) and [Mirai/Dyn (2016)](https://en.wikipedia.org/wiki/2016_Dyn_cyberattack) as canonical DDoS events. Both were criminal, both took down speech infrastructure (CNN, Twitter, Reddit). Is a law-enforcement takedown of the *tools* used for such attacks censorship, ordinary law enforcement, or both?
 - Some booter operators have argued in court that their services are "stress-testing tools" and shutting them down chills legitimate security research. Is there a principled line between a stresser and a DDoS-for-hire service? Who gets to draw it?
 - Booter takedowns typically involve seizing domains and hosting — the same techniques used to seize dissident-run sites in other countries. Do the ends justify identical means, or do the means need separate scrutiny?
 - Chapter 1 defined information control broadly, beyond intent-based censorship. If a takedown of a "legitimate" security-testing service also removes a tool that activists were using to test their own infrastructure, does that count? Does the FBI owe anyone an impact assessment?
@@ -32,7 +32,7 @@ The book's DoS section is unusually blunt about two things: (1) DoS is not just 
 ## Breakout B: Cloudflare as the Unelected Speech Arbiter
 <!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
-**Motion.** *"Cloudflare's decisions to drop Daily Stormer, 8chan, and Kiwi Farms proved that DDoS-protection providers cannot be neutral — and Project Galileo confirms they have already picked a side. That should be recognized in law, not left to CEO discretion."*
+**Motion.** *"Cloudflare's decisions to drop [Daily Stormer](https://en.wikipedia.org/wiki/The_Daily_Stormer), [8chan](https://en.wikipedia.org/wiki/8chan), and [Kiwi Farms](https://en.wikipedia.org/wiki/Kiwi_Farms) proved that DDoS-protection providers cannot be neutral — and Project Galileo confirms they have already picked a side. That should be recognized in law, not left to CEO discretion."*
 
 <!-- current-events:start topic="cloudflare-deplatforming-project-galileo" -->
 **Prep reads (5–10 min).**

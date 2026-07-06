@@ -2,14 +2,14 @@
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
-Chapter 6.2 makes two claims that live in tension: (1) Tor's anonymity is only as strong as the infrastructure that hosts its relays and bridges, and (2) the same infrastructure — exit nodes, cloud front-ends for pluggable transports — is precisely where legal and commercial pressure lands. Both breakouts sit on that fault line.
+Chapter 6.2 makes two claims that live in tension: (1) [Tor](https://en.wikipedia.org/wiki/Tor_(network))'s anonymity is only as strong as the infrastructure that hosts its relays and bridges, and (2) the same infrastructure — [exit nodes](https://en.wikipedia.org/wiki/Tor_(network)#Exit_relays), cloud front-ends for [pluggable transports](https://tb-manual.torproject.org/circumvention/) — is precisely where legal and commercial pressure lands. Both breakouts sit on that fault line.
 
 ---
 
 ## Breakout A: Exit Nodes and the Criminal Safe Harbor
 <!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
-**Motion.** *"Operating a Tor exit relay should carry an explicit criminal safe harbor, analogous to Section 230 for platforms — no country should be able to prosecute an operator for traffic they merely forwarded."*
+**Motion.** *"Operating a Tor exit relay should carry an explicit criminal safe harbor, analogous to [Section 230](https://en.wikipedia.org/wiki/Section_230) for platforms — no country should be able to prosecute an operator for traffic they merely forwarded."*
 
 <!-- current-events:start topic="tor-exit-node-legal-liability" -->
 **Prep reads (5–10 min).**
@@ -21,8 +21,8 @@ Chapter 6.2 makes two claims that live in tension: (1) Tor's anonymity is only a
 
 **Discussion prompts.**
 - The book notes that Tor has ~2.5M daily users and depends on volunteer relay operators. If exit-node operators can be raided, prosecuted, or bankrupted, what happens to the size and geographic diversity of the exit-relay pool — and therefore to the anonymity of every Tor user in the world?
-- The Silk Road prosecution went after Ross Ulbricht as an *operator*, not against Tor infrastructure. Ulbricht was later pardoned (2025). What signal does that pardon send to (a) prospective dark-web marketplace operators, (b) prospective exit-relay volunteers, (c) prosecutors deciding whether to charge next time?
-- Compare an exit-relay operator to (i) a coffee-shop offering open Wi-Fi, (ii) a residential ISP, (iii) a Cloudflare-style CDN, (iv) a Signal server operator. The law treats these very differently. Which analogy is closest, and why does the analogy you pick determine the policy answer?
+- The [Silk Road](https://en.wikipedia.org/wiki/Silk_Road_(marketplace)) prosecution went after [Ross Ulbricht](https://en.wikipedia.org/wiki/Ross_Ulbricht) as an *operator*, not against Tor infrastructure. Ulbricht was later pardoned (2025). What signal does that pardon send to (a) prospective dark-web marketplace operators, (b) prospective exit-relay volunteers, (c) prosecutors deciding whether to charge next time?
+- Compare an exit-relay operator to (i) a coffee-shop offering open Wi-Fi, (ii) a residential ISP, (iii) a [Cloudflare](https://en.wikipedia.org/wiki/Cloudflare)-style CDN, (iv) a [Signal](https://en.wikipedia.org/wiki/Signal_(software)) server operator. The law treats these very differently. Which analogy is closest, and why does the analogy you pick determine the policy answer?
 - A safe harbor for exit operators would also protect people running exits *for* dark-web marketplaces, CSAM traffic, and ransomware C2. Is there a version of the safe harbor that carves those out without collapsing back into the current situation? Or is the point that you can't distinguish traffic without destroying the anonymity property?
 
 **Bring back.** Your group's draft of a one-sentence safe-harbor clause — the actual text — that you would defend in front of both the EFF and a prosecutor.
@@ -32,7 +32,7 @@ Chapter 6.2 makes two claims that live in tension: (1) Tor's anonymity is only a
 ## Breakout B: Compelled Takedown of Bridges and Pluggable Transports
 <!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
-**Motion.** *"Cloudflare, AWS, and Azure should refuse any government demand to take down Tor bridges, Snowflake broker infrastructure, or domain-fronted circumvention endpoints — even lawful demands from democracies."*
+**Motion.** *"Cloudflare, AWS, and Azure should refuse any government demand to take down Tor bridges, [Snowflake](https://en.wikipedia.org/wiki/Snowflake_(software)) broker infrastructure, or [domain-fronted](https://en.wikipedia.org/wiki/Domain_fronting) circumvention endpoints — even lawful demands from democracies."*
 
 <!-- current-events:start topic="pluggable-transport-takedowns" -->
 **Prep reads (5–10 min).**
@@ -43,9 +43,9 @@ Chapter 6.2 makes two claims that live in tension: (1) Tor's anonymity is only a
 <!-- current-events:end -->
 
 **Discussion prompts.**
-- The book describes how Google and Amazon disabled domain fronting "under the guise of improving security," effectively pulling the rug out from under meek. Was that a business decision, a security decision, or a censorship decision? Does it matter which — if the effect on Iranian and Chinese users is the same?
+- The book describes how Google and Amazon disabled domain fronting "under the guise of improving security," effectively pulling the rug out from under [meek](https://gitlab.torproject.org/legacy/trac/-/wikis/doc/meek). Was that a business decision, a security decision, or a censorship decision? Does it matter which — if the effect on Iranian and Chinese users is the same?
 - Snowflake ephemeral proxies run in volunteer browsers; the *broker* runs on cloud infrastructure. If a government compels the cloud provider to shut down the broker, Snowflake breaks globally — not just in that country. Is that a proportionate exercise of national jurisdiction, or an extraterritorial takedown by design?
-- Cloudflare hosts Tor bridges, hosts state-media sites, and has publicly grappled with "who should be allowed on the Internet." Is there a principled distinction between Cloudflare refusing service to 8chan (which they did) and Cloudflare refusing to host Tor bridges under Russian legal pressure (which they have not)? Or is it just a question of who is asking?
+- Cloudflare hosts Tor bridges, hosts state-media sites, and has publicly grappled with "who should be allowed on the Internet." Is there a principled distinction between Cloudflare refusing service to [8chan](https://en.wikipedia.org/wiki/8chan) (which they did) and Cloudflare refusing to host Tor bridges under Russian legal pressure (which they have not)? Or is it just a question of who is asking?
 - Iran approved a state-controlled VPN whitelist while blocking Signal. Signal has historically used domain fronting to reach Iranian users. If AWS or Azure caved to a hypothetical Iranian pressure campaign, what's the fallback? Is there one that scales?
 
 **Bring back.** A one-page decision tree your group would give to Cloudflare's trust-and-safety team for handling a government takedown demand aimed at circumvention infrastructure. What are the branches, and what triggers each?
@@ -54,7 +54,7 @@ Chapter 6.2 makes two claims that live in tension: (1) Tor's anonymity is only a
 
 ## Instructor notes
 
-These breakouts map to the "Pluggable Transports" and "Tracking and Deanonymization" section takeaways in Chapter 6.2, and pull threads from Chapter 6.4 (infrastructure) forward. Breakout A tends to divide cleanly along whether students think Tor's marginal utility to journalists and dissidents outweighs its marginal utility to criminals — press them to name the specific tradeoff rather than argue in the abstract. Breakout B is where the "infrastructure consolidation" theme from Lecture 1 pays off; the strongest report-backs will connect the dots between commercial cloud policy, national censorship, and the fragility of the Snowflake/obfs4/meek portfolio.
+These breakouts map to the "Pluggable Transports" and "Tracking and Deanonymization" section takeaways in Chapter 6.2, and pull threads from Chapter 6.4 (infrastructure) forward. Breakout A tends to divide cleanly along whether students think Tor's marginal utility to journalists and dissidents outweighs its marginal utility to criminals — press them to name the specific tradeoff rather than argue in the abstract. Breakout B is where the "infrastructure consolidation" theme from Lecture 1 pays off; the strongest report-backs will connect the dots between commercial cloud policy, national censorship, and the fragility of the Snowflake/[obfs4](https://gitlab.com/yawning/obfs4)/meek portfolio.
 
 <!--
 breakout-metadata:

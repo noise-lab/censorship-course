@@ -2,14 +2,14 @@
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
-Chapters 4.4 and 4.5 argue that money is a censorship instrument. Zero rating does not block content; it just makes some content cheaper to reach, which — as the Kenya and South Africa studies in 4.4 show — durably shifts usage. Demonetization does not remove content; it just removes the ability to earn from it, which pushes creators toward brand-safe topics. In both cases the mechanism is friction, not prohibition.
+Chapters 4.4 and 4.5 argue that money is a censorship instrument. [Zero rating](https://en.wikipedia.org/wiki/Zero-rating) does not block content; it just makes some content cheaper to reach, which — as the Kenya and South Africa studies in 4.4 show — durably shifts usage. Demonetization does not remove content; it just removes the ability to earn from it, which pushes creators toward brand-safe topics. In both cases the mechanism is friction, not prohibition.
 
 ---
 
 ## Breakout A: Free Basics — Access Ladder or Platform Capture?
 <!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
-**Motion.** *"Zero-rating programs like Facebook Free Basics do more harm than good in developing markets: they trade first-time Internet access for durable platform capture, and the trade is not worth it."*
+**Motion.** *"Zero-rating programs like [Facebook Free Basics](https://en.wikipedia.org/wiki/Internet.org) do more harm than good in developing markets: they trade first-time Internet access for durable platform capture, and the trade is not worth it."*
 
 <!-- current-events:start topic="zero-rating-free-basics" -->
 **Prep reads (5–10 min).**
@@ -20,7 +20,7 @@ Chapters 4.4 and 4.5 argue that money is a censorship instrument. Zero rating do
 <!-- current-events:end -->
 
 **Discussion prompts.**
-- India banned Free Basics in 2016 on net-neutrality grounds. The Kenya/South Africa study in the book (Cell C zero-rating WhatsApp; MTN zero-rating Twitter during the 2014 World Cup) showed durable usage shifts *even after* zero rating ended. Was India right? Would a Kenyan or Ghanaian regulator making the same call today be doing users a favor or denying them free access?
+- India ([TRAI](https://en.wikipedia.org/wiki/Telecom_Regulatory_Authority_of_India)) banned Free Basics in 2016 on net-neutrality grounds. The Kenya/South Africa study in the book (Cell C zero-rating WhatsApp; MTN zero-rating Twitter during the 2014 World Cup) showed durable usage shifts *even after* zero rating ended. Was India right? Would a Kenyan or Ghanaian regulator making the same call today be doing users a favor or denying them free access?
 - The counterfactual matters. If the alternative to Free Basics is "no Internet at all for this user this year," is a walled garden a net win? At what price point (in $/GB of open data) does that argument flip?
 - T-Mobile's Binge On zero-rated *categories* of streaming video, not specific vendors — arguably a neutral choice. Was that meaningfully different from Free Basics, or is the harm the same either way? Design the test that distinguishes them.
 - If you accept that zero rating shifts information consumption, does that make it a *censorship* problem, a *competition* problem, or a *development* problem? The three framings imply three very different regulators (FCC-equivalent vs. antitrust vs. USAID/World Bank). Which one has jurisdiction?
@@ -43,10 +43,10 @@ Chapters 4.4 and 4.5 argue that money is a censorship instrument. Zero rating do
 <!-- current-events:end -->
 
 **Discussion prompts.**
-- The 2017 "Adpocalypse" (J&J, Verizon, AT&T pulling ads over extremist adjacency) shifted power decisively from creators to advertisers. Is that a market outcome we should respect, or a governance failure we should correct? Who represents the creator side of that bargain?
+- The 2017 ["Adpocalypse"](https://en.wikipedia.org/wiki/Adpocalypse) (J&J, Verizon, AT&T pulling ads over extremist adjacency) shifted power decisively from creators to advertisers. Is that a market outcome we should respect, or a governance failure we should correct? Who represents the creator side of that bargain?
 - The 2019 LGBTQ creator lawsuit was dismissed on the ground that YouTube is a private actor not bound by the First Amendment — but presented evidence that "transgender" in a video title was systematically demonetized, and that a Google AdSense rep once told a creator an ad was rejected "because of the gay thing." If courts cannot address this, should regulators? Under what statute?
 - The EU DSA already requires Statements of Reasons for content-moderation actions. Should the same regime apply to *demonetization*? Does "explain why you took the ads off my video" translate cleanly across the Atlantic, or is it a First Amendment problem in the U.S.?
-- YouTube's Partner Program is only available in about 104 countries. A creator in Lagos and a creator in Los Angeles can post identical content and only one gets paid. Is that geographic economic censorship, ordinary platform business logic, or something in between? Does the answer change if the creator's audience is global?
+- YouTube's [Partner Program](https://en.wikipedia.org/wiki/YouTube#YouTube_Partner_Program) is only available in about 104 countries. A creator in Lagos and a creator in Los Angeles can post identical content and only one gets paid. Is that geographic economic censorship, ordinary platform business logic, or something in between? Does the answer change if the creator's audience is global?
 
 **Bring back.** Your group's minimum viable "creator due process" package (e.g., notice, criteria, human review, appeal) — and one platform behavior you'd leave alone.
 

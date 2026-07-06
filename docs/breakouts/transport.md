@@ -2,7 +2,7 @@
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
-The transport-layer story in §2.2.2 is a fight over metadata. TCP RSTs, SNI-based filtering, and DPI on the Great Firewall all work because the *envelope* is legible even when the *contents* are encrypted. Encrypted ClientHello (ECH), QUIC, and TLS 1.3 change that. These breakouts ask whether protocol designers should be picking sides — and whether the censor's side has already lost.
+The transport-layer story in §2.2.2 is a fight over metadata. TCP RSTs, SNI-based filtering, and [DPI](https://en.wikipedia.org/wiki/Deep_packet_inspection) on the [Great Firewall](https://en.wikipedia.org/wiki/Great_Firewall) all work because the *envelope* is legible even when the *contents* are encrypted. [Encrypted ClientHello (ECH)](https://blog.cloudflare.com/announcing-encrypted-client-hello/), [QUIC](https://en.wikipedia.org/wiki/QUIC), and [TLS 1.3](https://datatracker.ietf.org/doc/html/rfc8446) change that. These breakouts ask whether protocol designers should be picking sides — and whether the censor's side has already lost.
 
 ---
 
@@ -23,7 +23,7 @@ The transport-layer story in §2.2.2 is a fight over metadata. TCP RSTs, SNI-bas
 - The book's Turkey and Great Firewall examples both depend on the censor seeing *something* in the clear — a DNS query, an SNI, an IP. TLS 1.3 with ECH closes the SNI hole. Is protocol standardization the right venue to make that choice, or is this a policy decision being smuggled into a technical body?
 - Enterprise network admins and school-district filters use the exact same visibility that censors do. Chapter 1 flagged that the tools are the same; only the operator differs. Should ECH ship with a documented enterprise-bypass mode, or is that a backdoor by another name?
 - QUIC runs on UDP and is much harder to reset with a mid-stream injection than TCP. If you were designing GFW v2, what would you do about QUIC? Block it entirely? Force downgrade to TCP? Something else?
-- If protocol design becomes an explicit venue for anti-censorship advocacy, what stops the same body from being captured by governments that want the opposite (see: earlier IETF fights over lawful intercept)? Is a "neutral" IETF even coherent?
+- If protocol design becomes an explicit venue for anti-censorship advocacy, what stops the same body from being captured by governments that want the opposite (see: earlier [IETF](https://www.ietf.org/) fights over lawful intercept)? Is a "neutral" IETF even coherent?
 
 **Bring back.** One design decision (in ECH, QUIC, or DoH) your group would reverse, and why.
 
@@ -46,7 +46,7 @@ The transport-layer story in §2.2.2 is a fight over metadata. TCP RSTs, SNI-bas
 - The book calls this "a continual cat-and-mouse game." What would it take for that game to actually *end*? Does either side have a plausible endgame, or is this a permanent standoff?
 - GFW-style censors have started using machine-learning classifiers on traffic patterns (packet sizes, timing) rather than payload contents. If content is encrypted but *shape* is legible, has encryption really helped? What would "traffic-shape indistinguishability" cost in performance?
 - The book notes that some censors don't beat obfuscation technically — they beat it by *coercing VPN providers* into compliance or by criminalizing their use. If the technical game is a stalemate, does the fight move entirely into the legal/economic layer?
-- Rank these circumvention tools by five-year survivability against a well-resourced censor: commercial VPNs, Tor with obfs4, Shadowsocks, Snowflake, domain fronting via CDNs. Defend the top and the bottom.
+- Rank these circumvention tools by five-year survivability against a well-resourced censor: commercial VPNs, [Tor](https://www.torproject.org/) with [obfs4](https://gitlab.com/yawning/obfs4), [Shadowsocks](https://en.wikipedia.org/wiki/Shadowsocks), [Snowflake](https://snowflake.torproject.org/), [domain fronting](https://en.wikipedia.org/wiki/Domain_fronting) via CDNs. Defend the top and the bottom.
 
 **Bring back.** Your group's prediction on the state of censorship-circumvention in China (or another named censor) in 2030, in one sentence.
 

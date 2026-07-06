@@ -21,18 +21,18 @@ Chapter 3.1–3.3.6 argues that modern information control is often not about re
 
 **Discussion prompts.**
 - The book identifies four behavioral signatures of propaganda campaigns: high volume, high retweet ratio, fast retweets, coordinated timing. Modern engagement-farming influencers exhibit all four. Does that mean they *are* propaganda, or that the signatures no longer discriminate?
-- China's 50 Cent Party and Russia's IRA both employed real humans posting real opinions for money. If the posts are sincere but paid, is that flooding? Astroturfing? Just marketing?
+- China's [50 Cent Party](https://en.wikipedia.org/wiki/50_Cent_Party) and Russia's [IRA](https://en.wikipedia.org/wiki/Internet_Research_Agency) both employed real humans posting real opinions for money. If the posts are sincere but paid, is that flooding? [Astroturfing](https://en.wikipedia.org/wiki/Astroturfing)? Just marketing?
 - Benkler's 2016 finding was that bot amplification did not meaningfully shift users' *source diet* — mainstream media still dominated. Does that finding still hold in a TikTok-dominated 2026 information environment? What would it take to redo that study today?
 - If a platform cannot reliably tell a coordinated campaign from a viral trend, should the default be permissive (let it run) or restrictive (throttle unfamiliar spikes)? Who wins under each default?
 
-**Bring back.** Your group's best operational definition of "coordinated inauthentic behavior" that a platform could actually enforce — and the biggest false-positive case it produces.
+**Bring back.** Your group's best operational definition of "[coordinated inauthentic behavior](https://transparency.meta.com/policies/community-standards/inauthentic-behavior/)" that a platform could actually enforce — and the biggest false-positive case it produces.
 
 ---
 
 ## Breakout B: Labels, Bans, or Nothing — State-Affiliated Media
 <!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
-**Motion.** *"Platforms should label all state-affiliated media accounts (RT, CGTN, VOA, BBC, Al Jazeera, PressTV, etc.) with a uniform disclosure — and neither ban them nor leave them unlabeled."*
+**Motion.** *"Platforms should label all state-affiliated media accounts ([RT](https://en.wikipedia.org/wiki/RT_(TV_network)), [CGTN](https://en.wikipedia.org/wiki/CGTN), VOA, BBC, Al Jazeera, PressTV, etc.) with a uniform disclosure — and neither ban them nor leave them unlabeled."*
 
 <!-- current-events:start topic="state-media-labels" -->
 **Prep reads (5–10 min).**
@@ -43,10 +43,10 @@ Chapter 3.1–3.3.6 argues that modern information control is often not about re
 <!-- current-events:end -->
 
 **Discussion prompts.**
-- The chapter opens with Russian Telegram channels spreading a fabricated "Ukrainian soldiers burning Russian books" video during the 2022 invasion. Would a "state-affiliated" label on the originating account have changed anything about how it spread through pro-Russian networks?
+- The chapter opens with Russian Telegram channels spreading a fabricated "Ukrainian soldiers burning Russian books" video during the [2022 invasion](https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine). Would a "state-affiliated" label on the originating account have changed anything about how it spread through pro-Russian networks?
 - What counts as "state-affiliated"? BBC receives a UK license fee. NPR receives some federal money. Does the label mean the same thing applied to CGTN, RT, VOA, and BBC? Should it?
 - Elon Musk's X removed state-media labels in 2023, arguing they were being applied inconsistently. Was that a principled position or a policy retreat? What would consistent enforcement even look like?
-- Compare three regimes: (a) EU-style forced labeling under the DSA, (b) US-style laissez-faire with occasional deplatforming, (c) the Brazil model where a court orders a platform-wide block. Which produces the most legitimacy? The least collateral damage?
+- Compare three regimes: (a) EU-style forced labeling under the [DSA](https://en.wikipedia.org/wiki/Digital_Services_Act), (b) US-style laissez-faire with occasional deplatforming, (c) the Brazil model where a court orders a platform-wide block. Which produces the most legitimacy? The least collateral damage?
 
 **Bring back.** A one-sentence policy your group would ship if you ran trust & safety at a major platform, and the strongest objection to it.
 

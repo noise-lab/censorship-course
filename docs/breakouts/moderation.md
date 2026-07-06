@@ -9,7 +9,7 @@ Section 3.4 argues that content moderation at scale forces "impossible choices" 
 ## Breakout A: Section 230 — Repeal, Narrow, or Leave Alone?
 <!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
-**Motion.** *"Section 230 of the Communications Decency Act should be substantially narrowed — either to exclude algorithmically amplified content or to condition immunity on demonstrated moderation practices."*
+**Motion.** *"[Section 230](https://en.wikipedia.org/wiki/Section_230) of the Communications Decency Act should be substantially narrowed — either to exclude algorithmically amplified content or to condition immunity on demonstrated moderation practices."*
 
 <!-- current-events:start topic="section-230-reform" -->
 **Prep reads (5–10 min).**
@@ -20,9 +20,9 @@ Section 3.4 argues that content moderation at scale forces "impossible choices" 
 <!-- current-events:end -->
 
 **Discussion prompts.**
-- The book's "entrenchment effect" argument: compliance obligations scale poorly for small platforms. If we narrow 230, who benefits — users? YouTube and Meta? Neither? Consider Mastodon and BlueSky specifically.
-- Cloudflare's 2017 decision to drop Daily Stormer, and its subsequent unease about that power, is a 230-adjacent story: Cloudflare was never a "publisher," but it acted like one for a day. Does 230 reform reach infrastructure providers or only user-facing platforms?
-- Texas HB20 and Florida SB7072 tried to *forbid* viewpoint-based moderation. Most 230 reform proposals try to *require* more moderation. Are these the same problem or opposite problems — and can any single legal regime address both?
+- The book's "entrenchment effect" argument: compliance obligations scale poorly for small platforms. If we narrow 230, who benefits — users? YouTube and Meta? Neither? Consider [Mastodon](https://en.wikipedia.org/wiki/Mastodon_(social_network)) and [BlueSky](https://en.wikipedia.org/wiki/Bluesky) specifically.
+- Cloudflare's 2017 decision to drop [Daily Stormer](https://en.wikipedia.org/wiki/The_Daily_Stormer), and its subsequent unease about that power, is a 230-adjacent story: Cloudflare was never a "publisher," but it acted like one for a day. Does 230 reform reach infrastructure providers or only user-facing platforms?
+- [Texas HB20](https://en.wikipedia.org/wiki/NetChoice_v._Paxton) and [Florida SB7072](https://en.wikipedia.org/wiki/Moody_v._NetChoice) tried to *forbid* viewpoint-based moderation. Most 230 reform proposals try to *require* more moderation. Are these the same problem or opposite problems — and can any single legal regime address both?
 - The book notes that Twitter/Facebook's January 2021 deplatformings of a sitting president were "reactive and ad hoc." Under a narrowed 230, would those decisions have been easier or harder to make? Better or worse?
 
 **Bring back.** Rank the three options (repeal / narrow / leave alone) and identify the one thing your group could not agree on.
@@ -43,10 +43,10 @@ Section 3.4 argues that content moderation at scale forces "impossible choices" 
 <!-- current-events:end -->
 
 **Discussion prompts.**
-- The book cites the "napalm girl" removal by Facebook's human moderators and the Perspective API's brittleness (small wording changes flip toxicity scores) as evidence *both* human and automated systems fail. Do they fail in ways that cancel out when layered, or in ways that compound?
+- The book cites the ["napalm girl" removal](https://en.wikipedia.org/wiki/The_Terror_of_War) by Facebook's human moderators and the [Perspective API](https://www.perspectiveapi.com/)'s brittleness (small wording changes flip toxicity scores) as evidence *both* human and automated systems fail. Do they fail in ways that cancel out when layered, or in ways that compound?
 - YouTube receives 300 hours of video per minute. Spotify receives 100,000 tracks per day. If neither humans nor AI can moderate this responsibly, is the correct policy response to (a) accept the errors, (b) mandate slower upload rates, (c) break up the platforms, or (d) something else?
 - The 2024 study cited in the book found that Gemini, GPT-4, Claude, and Llama disagreed on 36.5% of moderation prompts. If a platform's choice of LLM *is* a moderation policy, should that choice be subject to public consultation? Regulatory approval? Disclosed?
-- YouTube's 2017 "Adpocalypse" — advertisers fleeing after their ads appeared next to extremist content — pushed the platform toward aggressive demonetization, which then swept up LGBTQ+ creators, war reporting, and history channels. Is demonetization moderation, or is it something else?
+- YouTube's 2017 "[Adpocalypse](https://en.wikipedia.org/wiki/Adpocalypse)" — advertisers fleeing after their ads appeared next to extremist content — pushed the platform toward aggressive demonetization, which then swept up LGBTQ+ creators, war reporting, and history channels. Is demonetization moderation, or is it something else?
 
 **Bring back.** Your group's answer to the motion — plus one concrete moderation task where you'd trust an AI over a human, and one where you'd trust a human over an AI.
 
@@ -54,7 +54,7 @@ Section 3.4 argues that content moderation at scale forces "impossible choices" 
 
 ## Instructor notes
 
-These map directly to Section 3.4's "impossible choices framework" and the "entrenchment effect" boxed takeaways. Breakout A gets legal-heavy fast — steer groups toward the practical downstream effects (small platforms, infrastructure providers) rather than 230 doctrine. Breakout B is the ethics-heavy one; the "shrink the platforms" motion is deliberately unpopular so groups have to defend something. Both benefit from students having done the reading on GIFCT and Content ID.
+These map directly to Section 3.4's "impossible choices framework" and the "entrenchment effect" boxed takeaways. Breakout A gets legal-heavy fast — steer groups toward the practical downstream effects (small platforms, infrastructure providers) rather than 230 doctrine. Breakout B is the ethics-heavy one; the "shrink the platforms" motion is deliberately unpopular so groups have to defend something. Both benefit from students having done the reading on [GIFCT](https://gifct.org/) and [Content ID](https://en.wikipedia.org/wiki/Content_ID).
 
 <!--
 breakout-metadata:

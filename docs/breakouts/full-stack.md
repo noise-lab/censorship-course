@@ -20,10 +20,10 @@ The purpose here is not to reach consensus. It is to make explicit the tradeoffs
 <!-- current-events:end -->
 
 **Discussion prompts.**
-- The UK, EU, and Australia all frame these laws as child protection. Chapter 1 argues that when compliance is expensive, verification requirements become "a legal and economic tax on speech." Which framing is right? Can both be true?
+- The UK ([Online Safety Act](https://en.wikipedia.org/wiki/Online_Safety_Act_2023)), EU ([Digital Services Act](https://en.wikipedia.org/wiki/Digital_Services_Act)), and Australia all frame these laws as child protection. Chapter 1 argues that when compliance is expensive, verification requirements become "a legal and economic tax on speech." Which framing is right? Can both be true?
 - Age-verification requires either uploading government ID or submitting to AI-based face-scanning age estimation. What does that do to the population of people willing (or able) to post at all? Is this a *speech* effect, a *privacy* effect, or both?
 - Australia's early data: 4.7 million under-16 accounts removed in the first weeks. Some kids reportedly drew on facial hair to fool the AI estimator. Does that undermine the law's purpose, prove it's working, or neither?
-- Freedom House rates the UK, EU member states, and Australia as "Free." Should we update that assessment? What would it take?
+- [Freedom House](https://en.wikipedia.org/wiki/Freedom_House) rates the UK, EU member states, and Australia as "Free." Should we update that assessment? What would it take?
 
 **Bring back.** One thing your group agreed on, and the sharpest point of disagreement.
 
@@ -42,9 +42,9 @@ The purpose here is not to reach consensus. It is to make explicit the tradeoffs
 <!-- current-events:end -->
 
 **Discussion prompts.**
-- The Nov 2025 Cloudflare outage was caused by a routine internal change, not an attack or a takedown demand. In what sense — if any — is this "censorship"? Chapter 1's framework of "information control" is broader than intent-based censorship. Where does an unintentional systemic failure fit?
+- The Nov 2025 [Cloudflare](https://en.wikipedia.org/wiki/Cloudflare) outage was caused by a routine internal change, not an attack or a takedown demand. In what sense — if any — is this "censorship"? Chapter 1's framework of "information control" is broader than intent-based censorship. Where does an unintentional systemic failure fit?
 - Cloudflare's CEO in 2017: *"I woke up in a bad mood and decided someone shouldn't be allowed on the Internet. No one should have that power."* Nine years later, that power has grown, not shrunk. Is the right response (a) breaking up the infrastructure providers, (b) regulating them as common carriers, (c) building parallel decentralized alternatives, or (d) accepting the tradeoff because centralization has real performance and security benefits?
-- The 2011 Egypt Internet shutdown required coordinating with a handful of ISPs. The 2011 BART cell shutdown required coordinating with even fewer parties. What's the equivalent chokepoint number today in the US? In your country?
+- The [2011 Egypt Internet shutdown](https://en.wikipedia.org/wiki/Blocking_of_websites_in_Egypt) required coordinating with a handful of ISPs. The [2011 BART cell shutdown](https://en.wikipedia.org/wiki/2011_BART_Police_shootings) required coordinating with even fewer parties. What's the equivalent chokepoint number today in the US? In your country?
 - Compare an authoritarian regime's Great Firewall to a Western democracy's dependence on 3–4 CDNs. From a citizen's point of view — access to information — which is more consequential in practice?
 
 **Bring back.** Your group's ranking of the four responses (breakup / common-carrier reg / decentralized alternatives / accept tradeoffs), and why.

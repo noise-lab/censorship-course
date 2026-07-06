@@ -2,7 +2,7 @@
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
-Throttling is the book's cleanest example of Molly Roberts's *friction*: the site is not blocked, it is just slow enough that you give up. The chapter is honest that detection is genuinely hard — Wehe results contradict themselves on the same network — and that's precisely why throttling is politically attractive. These breakouts push on accountability and on where "throttling" ends and "everyday network management" begins.
+Throttling is the book's cleanest example of [Molly Roberts](https://en.wikipedia.org/wiki/Margaret_E._Roberts)'s *friction*: the site is not blocked, it is just slow enough that you give up. The chapter is honest that detection is genuinely hard — [Wehe](https://wehe.meddle.mobi/) results contradict themselves on the same network — and that's precisely why throttling is politically attractive. These breakouts push on accountability and on where "throttling" ends and "everyday network management" begins.
 
 ---
 
@@ -20,9 +20,9 @@ Throttling is the book's cleanest example of Molly Roberts's *friction*: the sit
 <!-- current-events:end -->
 
 **Discussion prompts.**
-- Russia throttled Twitter for months in 2021 by degrading traffic to any domain containing "t.co." Officially it was "protecting minors." Politically, everyone knew. If both sides know the truth and the tools cannot prove it, does deniability still function? What is deniability *for*?
+- [Russia throttled Twitter for months in 2021](https://en.wikipedia.org/wiki/Block_of_Twitter_in_Russia) by degrading traffic to any domain containing "t.co." Officially it was "protecting minors." Politically, everyone knew. If both sides know the truth and the tools cannot prove it, does deniability still function? What is deniability *for*?
 - The book describes Wehe as facing "fundamental detection challenges" — same user, same network, contradictory results. If we cannot even measure throttling reliably, what does an evidence-based accountability regime for it even look like? Is this a case where the standard of proof needs to *drop*, not rise?
-- The 2014 US Netflix/ISP dispute was technically peering-congestion, not traffic-shaping — but the effect on users was identical. Does *intent* matter for accountability? Should regulators care about outcomes only, or about mechanisms?
+- The [2014 US Netflix/ISP dispute](https://en.wikipedia.org/wiki/Net_neutrality_in_the_United_States) was technically peering-congestion, not traffic-shaping — but the effect on users was identical. Does *intent* matter for accountability? Should regulators care about outcomes only, or about mechanisms?
 - Suppose your country's telecom regulator has authority to fine ISPs for throttling. What evidentiary standard would you set: (a) beyond reasonable doubt, (b) preponderance of evidence, (c) shifted burden — ISP must prove congestion, or (d) something else? Defend your choice.
 
 **Bring back.** One accountability mechanism your group thinks could actually work against throttling — measurement, regulation, transparency, market pressure, or something else — and the strongest reason it might fail.
