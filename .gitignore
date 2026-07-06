@@ -4,5 +4,5 @@
 # Office lock files (created while a doc is open)
 ~$*
 
-# Per-machine Claude Code settings
-.claude/
+# Per-machine Claude Code settings (but keep .claude/skills/ tracked)
+.claude/settings.local.json
