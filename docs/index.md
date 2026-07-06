@@ -21,11 +21,14 @@ and a hands-on laboratory activity.
 
 More details are in the [course syllabus](syllabus.md).
 
-## Schedule
+## Class meeting agenda
 
-Class meetings follow one of two agenda templates:
-[80-minute](agenda-template.md) (standard term) or
-[3-hour](agenda-template-summer.md) (summer term).
+Class meetings follow one of two agenda templates depending on the term:
+
+- **[Standard term (80-minute meetings)](agenda-template.md)**
+- **[Summer term (3-hour meetings)](agenda-template-summer.md)**
+
+## Schedule
 
 | **Class**                                | **Topic**                               | **Reading** | **Discussion**                                    | **Activity**                                        |
 |------------------------------------------|-----------------------------------------|-------------|---------------------------------------------------|:----------------------------------------------------|
