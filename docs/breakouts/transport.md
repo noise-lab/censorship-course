@@ -1,10 +1,3 @@
----
-lecture: 3
-class: "Transport Layer Manipulation"
-book_chapter: "2.2.2"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 3: Transport Layer Manipulation
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ The transport-layer story in §2.2.2 is a fight over metadata. TCP RSTs, SNI-bas
 ## Instructor notes
 
 These map to the "Defending against TCP/IP manipulation" subsection and the section takeaway that encryption is "pushing censors toward coarser tools." Breakout A works better with students who have IETF/W3C exposure or who have thought about standards politics. Breakout B is more concrete and better for students who want to argue about specific tools. Consider running B first as a warmup and A as the more philosophical follow-on — the ECH/QUIC debate has more edges once students have named the tradeoffs in the arms race.
+
+<!--
+breakout-metadata:
+  lecture: 3
+  class: "Transport Layer Manipulation"
+  book_chapter: "2.2.2"
+  last_refreshed: 2026-07-06
+-->

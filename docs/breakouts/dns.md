@@ -1,10 +1,3 @@
----
-lecture: 2
-class: "DNS Manipulation"
-book_chapter: "2.2.1"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 2: DNS Manipulation
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ The book's DNS section makes one uncomfortable point again and again: DNS is tri
 ## Instructor notes
 
 These map to the two big takeaways from §2.2.1: (1) DNS is easy to manipulate because it lacks authentication, so the fight has shifted to *who runs the resolver*; and (2) DoH/DNSSEC don't fix the trust problem, they relocate it. Breakout A tends to land harder with students who use Chrome/Firefox daily (the "you already made this choice" beat is uncomfortable). Breakout B is better if you have students with policy or law backgrounds — the Germany case is a rich anchor. If time is short, run A; the Turkey/8.8.8.8 image in the chapter gives it immediate texture.
+
+<!--
+breakout-metadata:
+  lecture: 2
+  class: "DNS Manipulation"
+  book_chapter: "2.2.1"
+  last_refreshed: 2026-07-06
+-->

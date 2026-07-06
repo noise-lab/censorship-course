@@ -1,10 +1,3 @@
----
-lecture: 14
-class: "Measuring Technical Controls"
-book_chapter: "5.2"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 14: Measuring Technical Controls
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ Chapter 5.2 argues that measurement is hard precisely because censorship is hidd
 ## Instructor notes
 
 These breakouts map to the section takeaways on vantage-point tradeoffs (5.2.1–5.2.3) and to the ethics chapter (5.5) — specifically the "paradox of consent" and "co-opted devices" arguments. Breakout A tends to produce sharper disagreement (students split on whether consent is a floor or a ceiling); Breakout B tends to surface the tension between measurement researchers (who benefit from opacity being expensive) and civil-society groups (who benefit from opacity being illegal). If time is tight, A is the more directly technical debate and pairs better with the walkthrough in section 5.2.
+
+<!--
+breakout-metadata:
+  lecture: 14
+  class: "Measuring Technical Controls"
+  book_chapter: "5.2"
+  last_refreshed: 2026-07-06
+-->

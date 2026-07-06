@@ -1,10 +1,3 @@
----
-lecture: 16
-class: "Measuring Legal and Economic Controls"
-book_chapter: "5.4"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 16: Measuring Legal and Economic Controls
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ Chapter 5.4 makes the case that legal and economic controls — takedown demands
 ## Instructor notes
 
 These breakouts map to Chapter 5.4's two hardest measurement problems: the invisibility of legal/economic controls (which the "chilling effects" debate in Breakout A targets) and the aggregation problem in comparative studies (which Breakout B targets). Breakout A is the harder debate — it forces students to grapple with what counts as evidence when the phenomenon is behavioral rather than technical, and it pairs well with the FOSTA/SESTA and GDPR natural-experiment material. Breakout B is the more approachable debate and works well as a bridge to the policy chapter, since it puts pressure on the tools students will actually see cited in the wild.
+
+<!--
+breakout-metadata:
+  lecture: 16
+  class: "Measuring Legal and Economic Controls"
+  book_chapter: "5.4"
+  last_refreshed: 2026-07-06
+-->

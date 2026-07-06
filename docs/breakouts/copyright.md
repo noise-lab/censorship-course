@@ -1,10 +1,3 @@
----
-lecture: 11
-class: "Copyright"
-book_chapter: "4.2"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 11: Copyright
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ Chapter 4.2 argues that copyright was not designed as a censorship regime but ro
 ## Instructor notes
 
 These breakouts map to the Section 4.2 takeaways on DMCA-as-censorship-tool and on automated matching's inability to perform fair-use analysis. Breakout A is the natural home for students who came in wanting to argue about YouTube demonetization (redirect that energy to Lecture 13); keep them on the *takedown* side of the pipeline here. Breakout B tends to divide students along whether they see themselves primarily as future creators (pro-copyright), future researchers (pro-access), or future platform engineers (they will tell you both sides are unworkable). If time is short, Breakout A produces a cleaner report-back; Breakout B produces the better cross-lecture connections to Chapter 4.5 on generative-AI copyright.
+
+<!--
+breakout-metadata:
+  lecture: 11
+  class: "Copyright"
+  book_chapter: "4.2"
+  last_refreshed: 2026-07-06
+-->

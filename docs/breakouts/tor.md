@@ -1,10 +1,3 @@
----
-lecture: 18
-class: "Anonymous Communication"
-book_chapter: "6.2"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 18: Anonymous Communication
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ Chapter 6.2 makes two claims that live in tension: (1) Tor's anonymity is only a
 ## Instructor notes
 
 These breakouts map to the "Pluggable Transports" and "Tracking and Deanonymization" section takeaways in Chapter 6.2, and pull threads from Chapter 6.4 (infrastructure) forward. Breakout A tends to divide cleanly along whether students think Tor's marginal utility to journalists and dissidents outweighs its marginal utility to criminals — press them to name the specific tradeoff rather than argue in the abstract. Breakout B is where the "infrastructure consolidation" theme from Lecture 1 pays off; the strongest report-backs will connect the dots between commercial cloud policy, national censorship, and the fragility of the Snowflake/obfs4/meek portfolio.
+
+<!--
+breakout-metadata:
+  lecture: 18
+  class: "Anonymous Communication"
+  book_chapter: "6.2"
+  last_refreshed: 2026-07-06
+-->

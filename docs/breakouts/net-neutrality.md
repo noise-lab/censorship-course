@@ -1,10 +1,3 @@
----
-lecture: 12
-class: "Net Neutrality"
-book_chapter: "4.3"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 12: Net Neutrality
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ Chapter 4.3 argues that net neutrality is fundamentally about whether ISPs can d
 ## Instructor notes
 
 These breakouts map to Section 4.3's takeaways that (1) blocking/throttling/paid-prioritization are the three levers of ISP-layer information control and (2) the threats have shifted up the stack. Breakout A tends to attract the students who want a clean regulatory answer; Breakout B tends to attract the students who read the technical primer and want to argue about QoS. If the group polarizes too fast on A, push them with the peering-dispute detail from Section 4.3 — most students will not have the distinction between "congestion at an IXP" and "throttling by an ISP" straight, and it usefully complicates the debate. Breakout B sets up Lecture 13 (zero rating) cleanly.
+
+<!--
+breakout-metadata:
+  lecture: 12
+  class: "Net Neutrality"
+  book_chapter: "4.3"
+  last_refreshed: 2026-07-06
+-->

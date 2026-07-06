@@ -1,10 +1,3 @@
----
-lecture: 6
-class: "Denial of Service"
-book_chapter: "2.3.2"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 6: Denial of Service
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ The book's DoS section is unusually blunt about two things: (1) DoS is not just 
 ## Instructor notes
 
 These map to §2.3.2's coverage of Mirai/Dyn, the Great Cannon, and (importantly) the Project Galileo material that closes the section. Breakout A is technically grounded and works well right after the amplification/reflection material — students can debate the takedown while the SYN-cookie and DNS-amp mechanics are still fresh. Breakout B is the more consequential one for the arc of the course: it previews the platform-power and infrastructure-consolidation themes of later chapters. If you have room for only one, run B; it produces the strongest report-backs and connects most cleanly to the Chapter 1 Cloudflare-outage breakout.
+
+<!--
+breakout-metadata:
+  lecture: 6
+  class: "Denial of Service"
+  book_chapter: "2.3.2"
+  last_refreshed: 2026-07-06
+-->

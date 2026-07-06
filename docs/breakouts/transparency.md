@@ -1,10 +1,3 @@
----
-lecture: 15
-class: "Measuring Platform Controls"
-book_chapter: "5.3"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 15: Measuring Platform Controls
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ Chapter 5.3 makes a blunt claim: voluntary transparency reports are self-selecte
 ## Instructor notes
 
 These breakouts map to Chapter 5.3's core argument — that voluntary transparency is structurally limited — and to the DSA subsection at the end of 5.3 plus the DSA-database material in 5.4. Breakout A tends to draw students who care about regulatory design; Breakout B tends to draw students who care about researcher freedom and CFAA history. If students haven't yet read the ethics section, Breakout B is a natural bridge to it, since it re-raises the "who bears the risk" question in a platform context rather than a probe-volunteer context.
+
+<!--
+breakout-metadata:
+  lecture: 15
+  class: "Measuring Platform Controls"
+  book_chapter: "5.3"
+  last_refreshed: 2026-07-06
+-->

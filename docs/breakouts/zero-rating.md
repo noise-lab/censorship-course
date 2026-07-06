@@ -1,10 +1,3 @@
----
-lecture: 13
-class: "Zero Rating and Demonetization"
-book_chapter: "4.4-4.5"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 13: Zero Rating and Demonetization
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ Chapters 4.4 and 4.5 argue that money is a censorship instrument. Zero rating do
 ## Instructor notes
 
 These breakouts map to Section 4.4's takeaways on pricing-as-friction and Section 4.5's takeaways on demonetization as an economic chilling effect that escapes First Amendment review. Breakout A is where students often first realize that "net neutrality" (Lecture 12) and "zero rating" (this lecture) are the same argument seen from opposite ends of the price curve — it is worth naming that explicitly. Breakout B is where the creator-economy students engage most directly; if you have a class heavy on CS/engineering students, push them to design the appeals system they are demanding, not just to demand it. If time permits, the strongest cross-breakout question is: "Is losing revenue different in kind from being taken down, or only in degree?"
+
+<!--
+breakout-metadata:
+  lecture: 13
+  class: "Zero Rating and Demonetization"
+  book_chapter: "4.4-4.5"
+  last_refreshed: 2026-07-06
+-->

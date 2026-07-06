@@ -1,10 +1,3 @@
----
-lecture: 4
-class: "BGP and Web Manipulation"
-book_chapter: "2.2.3-2.2.4"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 4: BGP and Web Manipulation
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ The book's BGP section is a parade of accidents that look like attacks (AS 7007,
 ## Instructor notes
 
 These map to §2.2.3's "all-or-nothing" characterization of BGP as a censorship tool and the Egypt/Pakistan case studies, plus the §2.2.4 point that block pages make censorship user-visible. Breakout A is the more technical debate; Breakout B is the more moral one. If the class has been engaging well with the "who gets to pull the lever" thread from Lecture 1, B lands with more force. If the class is technically inclined and has just read the RPKI/MANRS material, A is the better bet. Either way, the Pakistan Telecom hack (advertising /25s to reclaim traffic) is worth putting on the board — it's a great concrete illustration of how ad hoc BGP defense really is.
+
+<!--
+breakout-metadata:
+  lecture: 4
+  class: "BGP and Web Manipulation"
+  book_chapter: "2.2.3-2.2.4"
+  last_refreshed: 2026-07-06
+-->

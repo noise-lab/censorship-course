@@ -1,10 +1,3 @@
----
-lecture: 5
-class: "Throttling and Rate Limiting"
-book_chapter: "2.3.1"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 5: Throttling and Rate Limiting
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ Throttling is the book's cleanest example of Molly Roberts's *friction*: the sit
 ## Instructor notes
 
 These map to §2.3.1's core arguments: throttling is a form of *friction* (Molly Roberts), detection is genuinely hard, and the line between intentional shaping and congestion is porous. Breakout A is the natural pairing with the Wehe discussion — students who took the technical detour on token buckets will engage with the evidentiary-standard question. Breakout B is looser and more current-events-driven; it works well if the class has been circling net-neutrality debates or platform regulation. If time is tight, A is the tighter fit to the book chapter; B is better if you want to bridge forward to later platform-power material.
+
+<!--
+breakout-metadata:
+  lecture: 5
+  class: "Throttling and Rate Limiting"
+  book_chapter: "2.3.1"
+  last_refreshed: 2026-07-06
+-->

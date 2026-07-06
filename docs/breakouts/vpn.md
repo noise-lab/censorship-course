@@ -1,10 +1,3 @@
----
-lecture: 17
-class: "VPNs"
-book_chapter: "6.1"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 17: VPNs
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -58,3 +51,11 @@ The chapter's core claim is that a VPN's protective value depends on who runs it
 ## Instructor notes
 
 These breakouts map to the "Blocking the VPNs themselves" and "VPNs are not always secure or private" section takeaways in Chapter 6.1. Breakout A tends to surface the "you get what you pay for" argument and the Onavo case study; push groups that recommend a specific paid VPN to justify *why* an audit report resolves the trust problem the book identifies. Breakout B is subtler — students often initially rank outright bans as worst, but the chapter's framing (Iran turning "circumvention" into a surveillance channel) reliably flips at least one group. If time is short, Breakout B connects more directly to the following lecture on Tor and pluggable transports.
+
+<!--
+breakout-metadata:
+  lecture: 17
+  class: "VPNs"
+  book_chapter: "6.1"
+  last_refreshed: 2026-07-06
+-->

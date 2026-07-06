@@ -1,10 +1,3 @@
----
-lecture: 1
-class: "Information Control: What, Why, and How"
-book_chapter: "1"
-last_refreshed: 2026-07-06
----
-
 # Breakout Discussions — Lecture 1: Information Control
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
@@ -66,3 +59,11 @@ These breakouts map directly to two of the "Section takeaways" boxes in Chapter 
 - **B** touches the "globalization of censorship" takeaway — that the mechanisms once associated with authoritarian regimes now exist by default in liberal democracies, and the difference is who chooses to pull the lever.
 
 If time is short, Breakout A tends to produce more heat (students have direct experience with these laws or have friends affected); Breakout B tends to produce more depth (students who've read the technical primer engage with the layer diagram).
+
+<!--
+breakout-metadata:
+  lecture: 1
+  class: "Information Control: What, Why, and How"
+  book_chapter: "1"
+  last_refreshed: 2026-07-06
+-->
