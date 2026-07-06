@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 14: Measuring Technical Controls
+# Breakout Discussions — Measuring Technical Controls
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ Chapter 5.2 argues that measurement is hard precisely because censorship is hidd
 ---
 
 ## Breakout A: Consent, Coercion, and the OONI Probe on Your Phone
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Distributing censorship-measurement software (OONI Probe, VPN reachability testers, side-channel probes) to volunteers in repressive jurisdictions is ethical only if the researchers can guarantee the probe's traffic is legally indistinguishable from ordinary browsing — otherwise informed consent alone is not enough."*
 
 <!-- current-events:start topic="ooni-probe-volunteer-risk" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent news on: arrests, detentions, or prosecutions of users who ran OONI Probe, VPNs, or other network-measurement tools, particularly in Iran, Russia, Belarus, or China.]*
-- *[Placeholder — recent OONI, Censored Planet, or ICLab writeup on methodology changes, deployment tradeoffs, or ethics disclosures for volunteer-based measurement.]*
+- [Search and be fined: New Russian law targets VPN usage and mere access to "extremist" content](https://en.zona.media/article/2025/07/15/searchban) — Mediazona, July 2025. Russia's September 2025 law criminalizes even searching for "extremist" content via a VPN — a threat model that turns any censorship probe running from a volunteer's device into potential evidence.
+- [Russia: Digital Iron Curtain Falls on Internet Freedom Protection Day](https://www.hrw.org/news/2026/03/12/russia-digital-iron-curtain-falls-on-internet-freedom-protection-day) — Human Rights Watch, March 2026. HRW's overview of Russia's 2026 escalation: TSPU deep-packet inspection, 469+ blocked VPN services, and FSB-linked crackdowns tied to the "Scarlet Swan" anti-censorship movement.
+- [Internet Censorship in Iran: Trends and Outlook for 2026](https://amnezia.org/blog/internet-censorship-in-iran-q1-2026-and-forecast) — Amnezia, 2026. Post-January-2026 Iranian filtering with Russian technical assistance; warns that unsafe VPN configurations put users at direct prosecution risk.
+- [Russia blocked OONI Explorer, a large open dataset on Internet censorship](https://ooni.org/post/2024-russia-blocked-ooni-explorer) — OONI, September 2024 (with 2026 update). Roskomnadzor blocked, then partially unblocked, the platform where volunteer measurements are published — the same data trail that a prosecutor could subpoena.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ Chapter 5.2 argues that measurement is hard precisely because censorship is hidd
 ---
 
 ## Breakout B: The Right to a Blocklist
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Governments that filter Internet traffic should be legally required to publish, in machine-readable form, the current list of blocked domains and the legal authority for each entry — the way Turkey has at times done, and the way Germany's NetzDG orders are logged."*
 
 <!-- current-events:start topic="government-blocklist-disclosure" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent news on: government transparency around blocklists, court orders forcing disclosure of blocked-site lists, or FOIA/leaked blocklists in Turkey, India, Russia, Pakistan, or the UK Online Safety Act context.]*
-- *[Placeholder — recent OONI, Access Now KeepItOn, or Citizen Lab report documenting a filtering event where the government refused to confirm what was blocked or why.]*
+- [Russia's internet censorship in 2026: VPN crackdowns, mobile shutdowns, Telegram blocks and the state messenger Max](https://en.zona.media/article/2026/04/07/russian_internet_censorship_2026) — Mediazona, April 2026. Documents how Roskomnadzor uses TSPU deep-packet inspection under the "Sovereign Internet" law to filter opaquely, with no public list of what's blocked and providers themselves prosecuted when traffic slips through.
+- [Throttling of Social Media in Türkiye During Protests: An Analysis of OONI Data](https://ooni.org/post/2025-turkiye-throttling-social-media/) — OONI, November 2025. Filtering events Turkish authorities never officially confirmed, reconstructed from probe measurements — exactly the gap a disclosure mandate would close (or paper over).
+- [Rising repression meets global resistance: Internet shutdowns in 2025](https://www.accessnow.org/wp-content/uploads/2026/03/KeepItOn-Internet-Shutdowns-2025-Annual-Report.pdf) — Access Now / #KeepItOn, March 2026. 313 shutdowns across 52 countries in 2025 — most imposed with no legal authority cited, no target list published, and no post-hoc accountability.
+- [Russia appears to block social media platform Bluesky amid wider internet restrictions](https://therecord.media/russia-cracks-down-bluesky-internet) — The Record (Recorded Future News), April 2026. Roskomnadzor added Bluesky to its registry of banned sites with no public explanation; the block was only surfaced by third-party OONI measurements and RKS Global — illustrating what mandatory disclosure would (and would not) reveal.
 <!-- current-events:end -->
 
 **Discussion prompts.**

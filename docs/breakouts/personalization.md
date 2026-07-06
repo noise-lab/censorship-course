@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 10: Personalization
+# Breakout Discussions — Personalization
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ Section 3.5 frames personalization as information control by omission: the algor
 ---
 
 ## Breakout A: Chronological by Default
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Major platforms should be legally required to offer a chronological, non-personalized feed as the default for all users, with algorithmic ranking available only as an opt-in."*
 
 <!-- current-events:start topic="chronological-feed-default" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent EU DSA enforcement or US state-level proposals mandating non-personalized feed options — including any 2025–2026 enforcement actions against Meta, TikTok, or X for hiding the option.]*
-- *[Placeholder — recent empirical study measuring the engagement, wellbeing, or information-diversity effects of chronological vs. algorithmic feeds.]*
+- [TikTok's "addictive design" provisionally found to be a breach of the DSA](https://www.lexology.com/library/detail.aspx?g=e5614b5f-acd0-43db-a674-9b21153bef1f) — Lexology, February 2026. The Commission's Feb 6 2026 preliminary finding that TikTok's infinite scroll + autoplay + personalized recommender creates Article 34 systemic risks — signaling mandated design changes.
+- [The Regulation of Recommender Systems Under the DSA: A Transition from Default to Multiple and Dynamic Controls?](https://dsa-observatory.eu/2024/11/22/the-regulation-of-recommender-systems-under-the-dsa-a-transition-from-default-to-multiple-and-dynamic-controls/) — DSA Observatory, 2024. Argues platforms have taken a "minimalist" reading of Article 27 — offering non-profiling feeds nominally but not by default.
+- [Commission fines X EUR 120 million under the Digital Services Act](https://digital-strategy.ec.europa.eu/en/news/commission-fines-x-eu120-million-under-digital-services-act) — European Commission, December 2025. First DSA fine hits X on transparency and dark-pattern design; concrete precedent for a default-feed mandate.
+- [DSA Enforcement is the New Regulatory Shock: Mapping the First Wave of Platform Risk in 2026](https://atlasinstitute.org/dsa-enforcement-is-the-new-regulatory-shock-mapping-the-first-wave-of-platform-risk-in-2026/) — Atlas Institute, 2026. Cross-platform survey of DSA proceedings against TikTok, X, AliExpress; frames "design mandates" as the next enforcement wave.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,15 +30,17 @@ Section 3.5 frames personalization as information control by omission: the algor
 ---
 
 ## Breakout B: TikTok's Algorithm as National Security
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"The US framing of TikTok's recommendation algorithm as a national security threat is legitimate — divestiture or ban is a proportionate response, not protectionism."*
 
 <!-- current-events:start topic="tiktok-divestiture" -->
 <!-- refresh-hint: The TikTok divestiture / ban saga has moved repeatedly since 2024. Look for the current status of any US extension, sale, or court ruling as of the refresh date, plus equivalent moves in the EU, UK, Canada, or Australia. -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with the current status of the US TikTok divestiture/ban timeline as of the refresh date, including any executive-order extensions, sale agreements, or Supreme Court follow-ups.]*
-- *[Placeholder — recent reporting or research on whether TikTok's algorithm has been shown to systematically suppress or amplify particular political content (Xinjiang, Hong Kong, Israel/Palestine, US elections).]*
+- [What the TikTok Deal Means for the App's Future in the US](https://www.bloomberg.com/news/articles/2025-12-19/oracle-led-tiktok-us-deal-how-sale-would-resolve-saga) — Bloomberg, December 2025. Details the Oracle/Silver Lake/MGX consortium deal; algorithm to be "copied and retrained" on US-only data, ByteDance retaining 19.9%.
+- [Trump signs order paving way for TikTok deal to avoid U.S. ban](https://www.cbsnews.com/news/trump-tiktok-deal-oracle-bytedance/) — CBS News, September 2025. The September 25 2025 executive order declaring the framework a "qualified divestiture" under PAFACA — the legal move that closed on January 22 2026.
+- [Systematic partisan content skews in TikTok during the 2024 US elections](https://www.nature.com/articles/s41586-026-10447-1) — Nature, May 2026. NYU-Abu Dhabi audit finds TikTok's For-You feed favored Republican content ~12% over Democrat content regardless of seeding — cuts against the "CCP suppression" threat model.
+- [The TikTok Ban Is Also About Hiding Pro-Palestinian Content. Republicans Said So Themselves.](https://theintercept.com/2025/01/09/tiktok-ban-israel-palestine-republicans/) — The Intercept, January 2025. Documents Republican lawmakers' explicit framing of TikTok divestiture as a response to pro-Palestinian content going viral — a competing motive analysis.
 <!-- current-events:end -->
 
 **Discussion prompts.**

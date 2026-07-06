@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 15: Measuring Platform Controls
+# Breakout Discussions — Measuring Platform Controls
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ Chapter 5.3 makes a blunt claim: voluntary transparency reports are self-selecte
 ---
 
 ## Breakout A: Transparency Report or Press Release?
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Voluntary platform transparency reports — from X's post-2017 decline, to Meta's quarterly PDFs, to Reddit's country tables — are primarily reputation management. Meaningful transparency requires DSA-style mandatory, structured disclosure everywhere, or it isn't real."*
 
 <!-- current-events:start topic="platform-transparency-reports" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent coverage of: the state of X's / Meta's / TikTok's transparency reporting, including gaps, delays, or format changes since Musk's acquisition of X and Meta's CrowdTangle shutdown.]*
-- *[Placeholder — recent DSA Transparency Database analysis or enforcement action against a VLOP for insufficient Statements of Reasons, or reporting on how researchers actually use the DSA Research API in practice.]*
+- [X releases first transparency report since Musk takeover](https://thehill.com/policy/technology/4898799-x-transparency-report-elon-musk/) — The Hill, September 2024. X's first post-2017 report — much thinner than Twitter's earlier tables — showed 72,703 government takedown requests with a 71% action rate, but critics flagged it as reputation-repair for the DSA rather than substantive disclosure.
+- [A Year of the DSA Transparency Database: What it (Does Not) Reveal About Platform Moderation During the 2024 European Parliament Election](https://arxiv.org/abs/2504.06976) — Shahi et al., preprint (updated 2026). Empirical audit of 1.58 billion Statements of Reasons across eight platforms; finds incomplete records, vague categories, and implausible submissions (especially from X) despite the mandatory format.
+- [Opacified transparency? Assessing the DSA transparency database via TikTok's moderation during the 2024 Romanian presidential election](https://www.tandfonline.com/doi/full/10.1080/13600869.2026.2654237) — Monaghan et al., International Review of Law, Computers & Technology, 2026. Coins "opacified transparency": the database shows what platforms say they did, but researchers still can't verify whether specific decisions were justified because they can't see the underlying content.
+- [Commission harmonises transparency reporting rules under the Digital Services Act](https://digital-strategy.ec.europa.eu/en/news/commission-harmonises-transparency-reporting-rules-under-digital-services-act) — European Commission, 2025. New Implementing Regulation forces machine-readable templates from 1 July 2025; first harmonised reports were published in February 2026, giving the field its first apples-to-apples cross-platform dataset.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ Chapter 5.3 makes a blunt claim: voluntary transparency reports are self-selecte
 ---
 
 ## Breakout B: Scraping, CFAA, and the Right to Audit
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Independent researchers — journalists, academics, civil-society auditors — should have a legal right to collect public platform data over a platform's objection, up to and including automated scraping, whenever the research addresses a documented public interest. Platforms should not be able to use the CFAA, ToS, or Meta v. Bright Data-style suits to gate algorithm auditing."*
 
 <!-- current-events:start topic="researcher-platform-data-access" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent coverage of: platform lawsuits against researchers or scrapers (Meta v. Bright Data, X v. CCDH, NYU Ad Observatory shutdown), or new CFAA / DMCA rulings affecting research access.]*
-- *[Placeholder — recent story on DSA Article 40 vetted-researcher access disputes, algorithm-audit findings from AlgorithmWatch or Mozilla, or a shutdown of a research dataset (Kaggle, CrowdTangle, Reddit API pricing changes).]*
+- [If at first you don't succeed: Reflections on a rejected Art. 40 DSA data access request](https://dsa-observatory.eu/2026/03/12/if-at-first-you-dont-succeed-reflections-on-a-rejected-art-40-dsa-data-access-request/) — DSA Observatory, March 2026. Dutch researchers waited 80 working days to have their TikTok/Romanian-election data request rejected on 5 of 7 grounds — a concrete look at what "vetted researcher" access actually means in practice.
+- [Meta and TikTok are obstructing researchers' access to data, European Commission rules](https://www.science.org/content/article/meta-and-tiktok-are-obstructing-researchers-access-data) — Science (AAAS), October 2025. Commission's preliminary finding that both VLOPs breached DSA Article 40; in December 2025 X was fined EUR 120M partly for the same failure to allow independent access to public data.
+- [The Stakes of "Publicly Accessible": Researchers' Rights to Data under the DSA](https://verfassungsblog.de/dsa-fine-x-research-data/) — Daphne Keller, Verfassungsblog / Tech Policy Press, December 2025. Argues Article 40(12) is the closest thing to a legal right to scrape public platform data, and connects it back to CrowdTangle's shutdown and the failed NYU Ad Observatory model.
+- [Court Rules in Favor of Bright Data in Meta v. Bright Data Case](https://brightdata.com/blog/web-data/court-rules-in-favor-of-bright-data-in-meta-v-bright-data-case) — Bright Data, 2024 (still the leading US precedent). Judge Chen held Meta's terms don't reach logged-off scraping of public data; a win for commercial scrapers that researchers now cite in their own defense.
 <!-- current-events:end -->
 
 **Discussion prompts.**

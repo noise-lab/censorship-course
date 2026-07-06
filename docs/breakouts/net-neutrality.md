@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 12: Net Neutrality
+# Breakout Discussions — Net Neutrality
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ Chapter 4.3 argues that net neutrality is fundamentally about whether ISPs can d
 ---
 
 ## Breakout A: Common Carrier or Not — Is Title II Still the Right Frame?
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Broadband ISPs should be classified as Title II common carriers and regulated like utilities — the 2015 Open Internet Order was correct, and every repeal since has been a mistake."*
 
 <!-- current-events:start topic="net-neutrality-title-ii" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with the most recent FCC action on broadband classification (reinstatement, repeal, court challenges to the 2024 Open Internet Order, or state-level equivalents like California's SB 822).]*
-- *[Placeholder — recent story on ISP blocking / throttling incidents, ISP-vs-content-provider peering disputes, or empirical net-neutrality measurement studies documenting differential treatment of traffic.]*
+- [Ohio Telecom Ass'n v. FCC (Sixth Circuit opinion)](https://law.justia.com/cases/federal/appellate-courts/ca6/24-3449/24-3449-2025-01-02.html) — U.S. Court of Appeals for the Sixth Circuit, 2 January 2025. The opinion itself: unanimously vacates the 2024 Safeguarding Order, holding broadband is an "information service" and the FCC lacks statutory authority for Title II reclassification post-*Loper Bright*.
+- [No More Deference: Sixth Circuit Relies on Loper Bright to Strike Down Net Neutrality Rules](https://www.congress.gov/crs-product/LSB11264) — Congressional Research Service, 2025. CRS's plain-English explainer of how *Loper Bright* and the *Brand X* precedent interact with the ruling.
+- [Sixth Circuit Ruling on FCC Authority Threatens Consumer Protections and Open Internet](https://publicknowledge.org/sixth-circuit-ruling-on-fcc-authority-threatens-consumer-protections-and-open-internet/) — Public Knowledge, January 2025. Advocacy-side reaction, and the pivot to state-level rules as the remaining vehicle.
+- [Recent Federal Actions Open the Door for Affordable and Reliable State Broadband Regulation](https://www.publicadvocates.cpuc.ca.gov/press-room/commentary/250218-federal-actions-open-door-for-affordable-state-broadband-regulation) — CPUC Public Advocates Office, February 2025. California's read: the Sixth Circuit ruling actually strengthens the state case for enforcing SB 822 and follow-on affordability rules.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ Chapter 4.3 argues that net neutrality is fundamentally about whether ISPs can d
 ---
 
 ## Breakout B: 5G Network Slicing and the "Specialized Services" Loophole
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"5G network slicing and 'specialized services' carve-outs are incompatible with net neutrality in practice — they are paid prioritization by another name."*
 
 <!-- current-events:start topic="5g-network-slicing" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with a recent story on 5G / 6G network slicing deployments by U.S. or EU carriers, enterprise slicing offerings, or slicing tied to specific applications (gaming, AR/VR, cloud services).]*
-- *[Placeholder — recent regulator statement (FCC, BEREC, Ofcom) on how "specialized services" or "reasonable network management" exceptions interact with slicing, or academic measurement of differential treatment on 5G networks.]*
+- [BEREC — 5G topic page](https://www.berec.europa.eu/en/all-topics/5g?language_content_entity=en) — Body of European Regulators for Electronic Communications, 2026. BEREC's evolving position: slicing "seems to leave room" under Regulation 2015/2120, with case-by-case determinations left to national regulators.
+- [CCIA Europe response to BEREC Call for Input on 5G network slicing](https://ccianet.org/wp-content/uploads/2026/02/CCIA-response-to-BEREC-Call-for-Input-for-further-guidance-on-5G-network-slicing.pdf) — Computer & Communications Industry Association, February 2026. Industry filing arguing slicing is compatible with the Open Internet Regulation "where adequate safeguards" prevent pay-to-prioritize deals with content providers.
+- [5G slices are a net neutrality loophole, critics argue](https://www.lightreading.com/regulatory-politics/5g-slices-are-a-net-neutrality-loophole-critics-argue) — Light Reading, 2024. Public-interest critique of slicing as specialized-services relabeling — cites AT&T (gaming), Verizon (video), and T-Mobile (Zoom/Meet) slice trials.
+- [Efficiency and Effectiveness of Net Neutrality Rules in the Mobile Sector (Briglauer & Yoo)](https://www.wu.ac.at/fileadmin/wu/d/ri/regulation/WPs_und_GAs/Briglauer_Yoo_February_2025.pdf) — WU Vienna working paper, February 2025. Empirical/economic analysis of mobile net-neutrality regimes and their interaction with 5G quality-of-service tiers.
 <!-- current-events:end -->
 
 **Discussion prompts.**

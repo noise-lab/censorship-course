@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 17: VPNs
+# Breakout Discussions — VPNs
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ The chapter's core claim is that a VPN's protective value depends on who runs it
 ---
 
 ## Breakout A: Who Actually Owns Your VPN?
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"No consumer VPN whose ultimate corporate parent is opaque should be recommended to journalists, activists, or dissidents — full stop."*
 
 <!-- current-events:start topic="vpn-ownership-consolidation" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent reporting on VPN ownership consolidation: Kape Technologies' acquisitions (ExpressVPN, CyberGhost, Private Internet Access, Zenmate), the Crossrider adware history, and any post-2025 ownership changes or audits.]*
-- *[Placeholder — recent investigation or research report on "free" VPN apps with hidden Chinese, Russian, or Pakistani ownership on Google Play / the App Store, including any recent takedowns or FTC actions.]*
+- [Investigation: Chinese Ownership of Popular Free VPN Apps](https://www.techtransparencyproject.org/articles/spot-check-apple-and-google-still-have-a-chinese-vpn-problem) — Tech Transparency Project, June 2025. Follow-up spot-check finds Turbo VPN, VPN Proxy Master, and other Qihoo-360-linked apps still live on Apple and Google stores after earlier reporting.
+- [Popular VPNs are routing traffic via Chinese companies, including one with link to military](https://www.malwarebytes.com/blog/news/2025/04/popular-vpns-are-routing-traffic-via-chinese-companies-including-one-with-link-to-military) — Malwarebytes Labs, April 2025. Walks through the TTP corporate-structure trace from Innovative Connecting (Singapore) back to sanctioned Qihoo 360.
+- [Your VPN could be giving your browsing data to China, watchdog says](https://www.nbcnews.com/tech/security/vpn-data-china-privacy-rcna211903) — NBC News, April 2025. Mainstream summary with Access Now's Peter Micek on the sanctions-compliance angle for Apple and Google.
+- [What Is Kape Technologies? Essential 2026 Guide](https://www.privacyjournal.net/kape-technologies/) — Privacy Journal, 2026. Documents Kape's 2026 delisting from the London Stock Exchange under Unikmind, ending the last window of public financial disclosure for the ExpressVPN/CyberGhost/PIA/ZenMate parent.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ The chapter's core claim is that a VPN's protective value depends on who runs it
 ---
 
 ## Breakout B: Blocked, Registered, or Banned?
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"A mandatory VPN registration regime (Iran/UAE-style, where 'approved' VPNs route through state-controlled infrastructure) is more dangerous to users than an outright ban (Russia/China-style), because it manufactures the illusion of safety."*
 
 <!-- current-events:start topic="vpn-bans-and-registration" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent news on Russia's Roskomnadzor VPN enforcement escalation, including app-store removals, protocol blocks, and any 2025–2026 amendments to the 2017 law banning circumvention-tool "promotion."]*
-- *[Placeholder — recent reporting on Iran, UAE, Pakistan, or China VPN policy: state-approved VPN whitelists, prosecutions for unauthorized VPN use, App Store removals under CAC pressure, or Pakistan's PTA VPN registration scheme.]*
+- [Russia blocks VPN access to major platforms, moves to charge for mobile VPN traffic](https://meduza.io/en/feature/2026/04/30/russia-blocks-vpn-access-to-major-platforms-moves-to-charge-for-mobile-vpn-traffic) — Meduza, 30 April 2026. Documents the March–April 2026 Digital Development Ministry order requiring platforms to detect and block VPN users or lose "whitelist" status.
+- [Russia's censor body, Roskomnadzor, wants to block 92% of VPN apps by 2030](https://www.techradar.com/vpn/vpn-privacy-security/russias-censor-body-roskomnadzor-wants-to-block-92-percent-of-vpn-apps-by-2030-and-its-investing-20-billion-rubles-a-year-to-build-a-permanent-vpn-censorship-system) — TechRadar, 2026. Details the 20-billion-ruble annual subsidy to the GRCC to build a permanent AI-driven VPN detection system, plus Decree No. 1667 removing the court-order requirement.
+- [Kremlin Struggles to Solve a VPN Problem of Its Own Making](https://carnegieendowment.org/russia-eurasia/politika/2026/05/russia-vpn-usage-political) — Carnegie Endowment, May 2026. Analysis of how 50%+ of Russians 18–45 now use VPNs and what that means for enforcement escalation vs. the September 2025 fine for "promotion" of circumvention tools.
+- [Pakistan restarts VPN licensing in fresh bid to control online space](https://www.techradar.com/vpn/vpn-privacy-security/pakistan-restarts-vpn-licensing-in-fresh-bid-to-control-online-space) — TechRadar, 2025. PTA's "registration-first" whitelist, the five licensed local providers, and the parallel with Iran's tiered post-blackout access model.
 <!-- current-events:end -->
 
 **Discussion prompts.**

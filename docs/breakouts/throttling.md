@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 5: Throttling and Rate Limiting
+# Breakout Discussions — Throttling and Rate Limiting
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ Throttling is the book's cleanest example of Molly Roberts's *friction*: the sit
 ---
 
 ## Breakout A: Plausibly Deniable Censorship
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Throttling is the most dangerous form of Internet censorship precisely because it is deniable — and detection tools like Wehe are too unreliable to hold anyone accountable."*
 
 <!-- current-events:start topic="throttling-during-protests-detection" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent news on: documented throttling incidents during protests or elections — Iran, Russia (Twitter/X in 2021), Pakistan, Ethiopia, Kazakhstan, or others; OONI, IODA, or Cloudflare Radar reports]*
-- *[Placeholder — recent event or report on: Wehe, NetBlocks, or academic measurement work on distinguishing throttling from congestion, and any legal or regulatory action citing this evidence]*
+- [Censorship Chronicles: The systematic suppression of independent media in Russia](https://ooni.org/post/2024-russia-report/) — OONI, 2024. Documents Russia's YouTube throttling — accessible on mobile, blocked on broadband, same ISP — and the ~30% audience loss reported by independent media.
+- [Government Internet Shutdowns Cost $19.7B in 2025](https://www.top10vpn.com/research/cost-of-internet-shutdowns/) — Top10VPN, 2026. Introduces Russia's "16 KB Curtain" — Cloudflare-hosted sites load their first 16 KB and then stall, preserving the appearance of connectivity while breaking the actual service.
+- [What the End of U.S. Net Neutrality Means](https://www.scientificamerican.com/article/what-the-end-of-u-s-net-neutrality-means/) — Scientific American, 2025. Sixth Circuit strikes down the FCC's 2024 Safeguarding Order; David Choffnes (Wehe) argues measurement, not federal rule, is now the accountability layer.
+- [Russia's internet censorship in 2026: VPN crackdowns, mobile shutdowns, Telegram blocks and the state messenger Max](https://en.zona.media/article/2026/04/07/russian_internet_censorship_2026) — Zona Media, April 2026. Roskomnadzor gains statutory authority in March 2026 to centrally reroute traffic and isolate the RuNet from external resources.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ Throttling is the book's cleanest example of Molly Roberts's *friction*: the sit
 ---
 
 ## Breakout B: Platform Throttling vs. ISP Throttling
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"When a platform (YouTube, TikTok, X) throttles or down-ranks content, that is worse than an ISP throttling the same content — because there is no regulatory backstop and no exit."*
 
 <!-- current-events:start topic="platform-throttling-vs-isp-throttling" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent news on: platform-level throttling / shadow-banning / algorithmic downranking incidents — X throttling links to competitors, YouTube down-ranking specific creators, TikTok "heating" or suppressing topics]*
-- *[Placeholder — recent event or report on: net neutrality developments (US FCC, EU BEREC), or regulatory action on platform algorithmic transparency such as the EU DSA]*
+- [EC Issues First Non-Compliance Fine Under the DSA: X Fined €120 Million for Dark Patterns and Transparency Failures](https://www.goodwinlaw.com/en/insights/publications/2025/12/alerts-practices-antc-ec-issues-first-non-compliance-fine-under) — Goodwin Law, December 2025. First DSA non-compliance fine, on paid-verification "reply prioritization" that algorithmically boosts subscribers' visibility.
+- [What the EU's X Decision Reveals About How the DSA Is Enforced](https://www.techpolicy.press/what-the-eus-x-decision-reveals-about-how-the-dsa-is-enforced/) — Tech Policy Press, 2025. Argues the fine is really about *transparency* — ad repository, researcher data access — more than direct throttling of competitors.
+- [What the End of U.S. Net Neutrality Means](https://www.scientificamerican.com/article/what-the-end-of-u-s-net-neutrality-means/) — Scientific American, 2025. With the Sixth Circuit striking down federal no-throttling rules in January 2025, ISPs are now regulated less than platforms — inverting the 2015-era assumption.
+- [How the Digital Services Act enhances transparency online](https://digital-strategy.ec.europa.eu/en/policies/dsa-brings-transparency) — European Commission, 2025. Official framing of the researcher data-access rules that took effect 29 October 2025.
 <!-- current-events:end -->
 
 **Discussion prompts.**

@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 6: Denial of Service
+# Breakout Discussions — Denial of Service
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ The book's DoS section is unusually blunt about two things: (1) DoS is not just 
 ---
 
 ## Breakout A: Booters, Takedowns, and the Definition of Speech
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Law-enforcement takedowns of DDoS-for-hire ('booter') services are pure infrastructure hygiene and have no meaningful censorship dimension."*
 
 <!-- current-events:start topic="booter-service-takedowns-ddos-for-hire" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent news on: FBI, Europol, or NCA takedowns of booter/stresser services (Operation PowerOFF and similar), including domain seizures and arrests]*
-- *[Placeholder — recent event or report on: academic studies of booter customer bases, or research on Mirai-variant botnets, IoT compromises, or amplification attacks (memcached, DNS, NTP)]*
+- [Operation PowerOFF Seizes 53 DDoS Domains, Exposes 3 Million Criminal Accounts](https://thehackernews.com/2026/04/operation-poweroff-seizes-53-ddos.html) — The Hacker News, April 2026. 21-country action week: 53 domains seized, 4 arrests, 75,000 warning messages sent to identified users.
+- [Four arrested in latest 'PowerOFF' DDoS-for-hire takedown](https://therecord.media/ddos-hire-europol-doj-crackdown) — The Record, 2026. DOJ court documents describe an FBI undercover buy: $45/month for 40-minute attacks on three victim IPs.
+- [Aisuru botnet sets new record with 31.4 Tbps DDoS attack](https://www.bleepingcomputer.com/news/security/aisuru-botnet-sets-new-record-with-314-tbps-ddos-attack/) — BleepingComputer, February 2026. The Mirai-descendant Aisuru/Kimwolf botnet, 1–4M compromised IoT devices, sets a new world record in December 2025.
+- [2025 Q4 DDoS threat report](https://blog.cloudflare.com/ddos-threat-report-2025-q4/) — Cloudflare, February 2026. 47.1M total attacks in 2025 (+121% YoY); the "Night Before Christmas" campaign of 902 hyper-volumetric attacks over ~17 days.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ The book's DoS section is unusually blunt about two things: (1) DoS is not just 
 ---
 
 ## Breakout B: Cloudflare as the Unelected Speech Arbiter
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Cloudflare's decisions to drop Daily Stormer, 8chan, and Kiwi Farms proved that DDoS-protection providers cannot be neutral — and Project Galileo confirms they have already picked a side. That should be recognized in law, not left to CEO discretion."*
 
 <!-- current-events:start topic="cloudflare-deplatforming-project-galileo" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent news on: Cloudflare, Akamai, or Fastly decisions to drop or protect controversial sites; Project Galileo eligibility disputes; or CEO Matthew Prince's statements on infrastructure-layer moderation]*
-- *[Placeholder — recent event or report on: sites forced offline by loss of DDoS protection, or academic/legal analyses of infrastructure-provider moderation (Section 230, DSA intermediary-liability rules, common-carrier arguments)]*
+- [Celebrating 12 years of Project Galileo](https://blog.cloudflare.com/celebrating-12-years-of-project-galileo/) — Cloudflare, 2026. 2,900+ protected properties, 38.5B malicious requests blocked Feb 2025–Jan 2026, and attacks on civil society lasting days rather than the usual minutes.
+- [Cyberattacks on Civil Society Hit 7 Times the Rate of Other Websites, Cloudflare Finds](https://www.techtimes.com/articles/318735/20260620/cyberattacks-civil-society-hit-7-times-rate-other-websites-cloudflare-finds.htm) — TechTimes, June 2026. Journalists in exile face 4x the malicious traffic of other journalism orgs; DDoS is 81.7% of the volume.
+- [Cutting a Hydra's Head: Infrastructure-Level Content Moderation and the Case of Kiwi Farms](https://gnet-research.org/2025/12/23/cutting-a-hydras-head-infrastructure-level-content-moderation-and-the-case-of-kiwi-farms/) — GNET, December 2025. Kiwi Farms stayed online during the November 2025 Cloudflare outage — a determined adversary built a stack that no longer needs any single intermediary.
+- [Italy Fines Cloudflare €14 Million for Refusing to Block Pirate Sites](https://torrentfreak.com/italy-fines-cloudflare-e14-million-for-refusing-to-filter-pirate-sites-on-public-1-1-1-1-dns/) — TorrentFreak, January 2026. Matthew Prince's 2026 framing: the same discretion he used to drop Kiwi Farms, he now refuses to use for Italian rightsholders — is that consistency or contradiction?
 <!-- current-events:end -->
 
 **Discussion prompts.**

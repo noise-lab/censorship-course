@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 9: Content Moderation
+# Breakout Discussions — Content Moderation
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ Section 3.4 argues that content moderation at scale forces "impossible choices" 
 ---
 
 ## Breakout A: Section 230 — Repeal, Narrow, or Leave Alone?
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Section 230 of the Communications Decency Act should be substantially narrowed — either to exclude algorithmically amplified content or to condition immunity on demonstrated moderation practices."*
 
 <!-- current-events:start topic="section-230-reform" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent Section 230 reform bills, Supreme Court cases, or state-level laws (Texas HB20, Florida SB7072 successors) that reached a decision or vote in 2025–2026.]*
-- *[Placeholder — recent commentary from EFF, Stanford Cyber Policy Center, or a major platform on the practical effects of a proposed 230 change.]*
+- [Section 230 in 2026: How Platform Immunity Is Changing](https://www.dynamisllp.com/knowledge/section-230-immunity-changes) — Dynamis LLP, 2026. Surveys the Third Circuit TikTok ruling and March 2026 decisions cutting algorithmic recommendation out of Section 230 protection.
+- [Section 230 at 30: Internet's Legal Shield Faces Coordinated Repeal Push and Trial Threats](https://www.themeridiem.com/tech-policy-regulation/2026/2/8/section-230-at-30-internet-s-legal-shield-faces-coordinated-repeal-push-and-trial-threats) — The Meridiem, February 2026. Reports the Durbin-Graham sunset bill and Rep. Gephardt's public reversal on the 1996 law he helped pass.
+- [Sunset and Renew: Section 230 Should Protect Human Speech, Not Algorithmic Virality](https://ash.harvard.edu/articles/sunset-and-renew-section-230-should-protect-human-speech-not-algorithmic-virality/) — Harvard Ash Center, 2026. Argues for the "product vs. speech" distinction — the exact carve-out at issue in the motion.
+- [Yes, Section 230 Should Apply Equally To Algorithmic Recommendations](https://www.techdirt.com/2026/02/23/yes-section-230-should-apply-equally-to-algorithmic-recommendations/) — Techdirt, February 2026. The counterargument: recommendation is editorial and any carve-out collapses into publisher liability that entrenches incumbents.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ Section 3.4 argues that content moderation at scale forces "impossible choices" 
 ---
 
 ## Breakout B: Traumatized Humans or Opaque AI — Pick Your Moderator
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Neither outsourced human moderators nor AI moderation systems are ethically acceptable at current platform scale — the only defensible answer is to shrink the platforms."*
 
 <!-- current-events:start topic="ai-vs-human-moderation" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent reporting on outsourced moderator working conditions (Kenya, Philippines, Colombia lawsuits or organizing efforts) from 2025–2026.]*
-- *[Placeholder — recent audit study of AI moderation errors — hate speech, self-harm, or political content — especially cross-model comparisons (Perspective API, GPT-4, Claude, Gemini).]*
+- [Kenya: Court postpones ruling in two cases against Meta brought by former content moderators](https://www.business-humanrights.org/en/latest-news/kenya-court-postpones-ruling-in-two-cases-against-meta-brought-by-former-content-moderators-delaying-trial-2/) — Business & Human Rights Resource Centre, February 2026. Status update on the Motaung and Arendse/Agada lawsuits: trafficking, unfair dismissal, and union-busting claims against Meta and Sama, ruling adjourned.
+- [Suicide attempts, sackings and a vow of silence: Meta's new moderators face worst conditions yet](https://www.thebureauinvestigates.com/stories/2025-04-27/suicide-attempts-sackings-and-a-vow-of-silence-metas-new-moderators-face-worst-conditions-yet) — Bureau of Investigative Journalism, April 2025. Reporting from Meta's undisclosed Teleperformance site in Accra, Ghana, where moderation moved after Kenya sued.
+- [AI Platforms Are Inconsistent in Detecting Hate Speech](https://www.asc.upenn.edu/ai-platforms-are-inconsistent-detecting-hate-speech) — Penn Annenberg (Fasching & Lelkes), 2025. First large-scale audit of seven moderation systems (Perspective, Claude 3.5, GPT-4o, Mistral, DeepSeek, OpenAI/Mistral endpoints) across 1.3M synthetic sentences — dramatic disagreement on identical content.
+- [Bye Bye perspective api: Lessons for Measurement Infrastructure in NLP, CSS and LLM Evaluation](https://arxiv.org/html/2604.25580v1) — arXiv, 2026. Analyzes Google's decision to shut down Perspective API on Dec 31 2026 and the drift from transparent classifiers to opaque LLM moderation endpoints.
 <!-- current-events:end -->
 
 **Discussion prompts.**

@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 4: BGP and Web Manipulation
+# Breakout Discussions — BGP and Web Manipulation
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ The book's BGP section is a parade of accidents that look like attacks (AS 7007,
 ---
 
 ## Breakout A: Should Governments Mandate RPKI?
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"National regulators should legally require every ISP operating in their jurisdiction to deploy RPKI-based route origin validation, with penalties for non-compliance."*
 
 <!-- current-events:start topic="rpki-bgp-security-mandates" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent news on: FCC, EU, or other regulators moving on BGP security mandates; RPKI deployment progress and holdouts; MANRS adoption; or recent high-profile BGP hijacks/leaks with policy implications]*
-- *[Placeholder — recent event or report on: BGP incidents in 2024-2026 — Rostelecom, China Telecom repeats, cloud-provider hijacks, or Ukraine/Russia routing manipulation]*
+- [FCC Advances BGP Security Rules for Broadband Providers](https://www.bankinfosecurity.com/fcc-advances-bgp-security-rules-for-broadband-providers-a-25476) — BankInfoSecurity, 2024. The FCC's NPRM would require the nine largest US broadband providers to file confidential BGP security plans with ROA goals and timetables.
+- [Dissecting the FCC's Proposal to Improve BGP Security](https://www.kentik.com/blog/dissecting-the-fccs-proposal-to-improve-bgp-security/) — Kentik, 2024. Industry-side reading of the proposal, including the Internet Society's argument that regulation risks slowing the industry-led progress it is trying to catalyze.
+- [Are We Actually There? Assessing RPKI Maturity](https://cacm.acm.org/research/are-we-actually-there-assessing-rpki-maturity/) — Communications of the ACM, 2025. Recent measurement work showing ROV cuts invalid-route propagation by roughly half to two-thirds — meaningful, but not a universal block.
+- [RPKI vs social engineering: A case study in route hijacking](https://blog.lacnic.net/en/rpki-vs-social-engineering-a-case-study-in-route-hijacking/) — LACNIC, 2026. July 2025 hijack that bypassed RPKI entirely by exploiting weak identity verification during customer onboarding — a reminder that crypto only covers the parts it covers.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ The book's BGP section is a parade of accidents that look like attacks (AS 7007,
 ---
 
 ## Breakout B: Kill-Switch Orders and ISP Refusal
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"ISPs served with a government order to withdraw BGP routes or block major services should refuse — even at the cost of their operating license."*
 
 <!-- current-events:start topic="internet-shutdowns-isp-refusal" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent news on: recent national or regional Internet shutdowns — Iran, Pakistan, Ethiopia, Myanmar, India (Kashmir), or others — including any cases where ISPs pushed back or complied]*
-- *[Placeholder — recent event or report on: Access Now's KeepItOn coalition or shutdown-tracking data, telecoms industry principles (GNI, Telecommunications Industry Dialogue), and any legal/civil challenges to shutdown orders]*
+- [When repression meets resistance: internet shutdowns in 2025](https://www.accessnow.org/internet-shutdowns-2025/) — Access Now / #KeepItOn, March 2026. 313 shutdowns in 52 countries in 2025 — the worst year on record — with Myanmar (95), India (65), Pakistan (20), and Iran (11) leading.
+- [Iran: Internet Shutdown Violates Rights, Escalates Risks to Civilians](https://www.hrw.org/news/2026/03/06/iran-internet-shutdown-violates-rights-escalates-risks-to-civilians) — Human Rights Watch, March 2026. The January 2026 21-day blackout under cover of a mass protest crackdown; Iran's telecom minister acknowledged the cost at $35.7M/day.
+- [Iran: Internet shutdown hides violations in escalating deadly crackdown on protesters](https://www.amnesty.org/en/latest/news/2026/01/internet-shutdown-in-iran-hides-violations-in-escalating-protests/) — Amnesty International, January 2026. The framing that shutdowns are not just a rights violation *in service of* atrocities but a rights violation *in themselves*.
+- [Government Internet Shutdowns Cost $19.7B in 2025](https://www.top10vpn.com/research/cost-of-internet-shutdowns/) — Top10VPN / NetBlocks data, 2026. Russia leads the cost-by-country table, driven by sustained throttling of Cloudflare, YouTube, and messaging apps rather than one-shot blackouts.
 <!-- current-events:end -->
 
 **Discussion prompts.**

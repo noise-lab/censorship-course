@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 11: Copyright
+# Breakout Discussions — Copyright
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ Chapter 4.2 argues that copyright was not designed as a censorship regime but ro
 ---
 
 ## Breakout A: Automated Takedown — Should False Claims Carry Real Costs?
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Every party issuing a DMCA takedown (including automated Content ID matches) should face statutory penalties for demonstrably false claims — no more free shots at other people's speech."*
 
 <!-- current-events:start topic="dmca-takedown-abuse" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with a recent news story about DMCA / Content ID abuse: false-positive takedowns, bot-driven mass takedowns, reputation attacks against critics or reviewers, or fresh WSJ-style investigations into the volume of Google removal requests.]*
-- *[Placeholder — recent event or report on YouTube Content ID false matches or Rights-Manager over-removal of fair-use commentary, criticism, education, or parody.]*
+- [YouTube Processed 2.5 Billion Content ID Copyright Claims in 2025](https://torrentfreak.com/youtube-processed-2-5-billion-content-id-copyright-claims-in-2025/) — TorrentFreak, 2026. YouTube's own transparency data: rightsholders monetized 90% of Content ID claims, and >6% of webform DMCA notices were "likely false" — 10x the abuse rate of any other tool.
+- [YouTube Copyright Transparency Report](https://transparencyreport.google.com/youtube-copyright/balanced-ecosystem) — Google, ongoing. Google's own dashboard: 12.8M Content ID disputes, and uploaders won 67% of the ones they contested in 2025.
+- [A Guide to YouTube Removals](https://www.eff.org/issues/intellectual-property/guide-to-youtube-removals) — Electronic Frontier Foundation, updated 2025. EFF's running critique of keyword-based and purely automated takedowns and how Content ID sits outside the DMCA counter-notice regime.
+- [Takedown Hall of Shame](https://www.eff.org/takedowns) — Electronic Frontier Foundation. Ongoing case file of specific abusive takedowns (Fox/"Homeland," SmellyOctopus, etc.) that instructors can use as concrete examples in class.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ Chapter 4.2 argues that copyright was not designed as a censorship regime but ro
 ---
 
 ## Breakout B: Sci-Hub, Shadow Libraries, and the Ethics of Bulk Defiance
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Sci-Hub, LibGen, and other shadow libraries are a legitimate — even necessary — response to a scholarly-publishing system that paywalls publicly funded research."*
 
 <!-- current-events:start topic="sci-hub-shadow-libraries" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent developments on Sci-Hub, LibGen, Anna's Archive, or shadow-library litigation: new injunctions, publisher lawsuits (Elsevier, Wiley, Springer Nature), or country-level access blocks.]*
-- *[Placeholder — recent story on AI-training datasets built from shadow libraries (Books3, LibGen), the Meta/Anthropic training-data cases, or the interaction between shadow libraries and generative-AI copyright litigation.]*
+- [Publishers Ramp Up Pressure vs. Anna's Archive, Sci-Hub, Z-Library & Libgen](https://torrentfreak.com/publishers-ramp-up-pressure-vs-annas-archive-sci-hub-z-library-libgen-250203/) — TorrentFreak, February 2025. Coordinated escalation across jurisdictions — publisher suits, ISP blocks, and CDN/payment-processor pressure aimed at the shadow-library stack.
+- [Anna's Archive Lawsuits: $322M Ruling and Active Cases](https://legalclarity.org/annas-archive-lawsuits-322m-ruling-and-active-cases/) — LegalClarity, 2026. Overview of the Spotify/UMG/Sony/Warner $322M default judgment, the separate 13-publisher $19.5M judgment, and the OCLC WorldCat ruling.
+- [The plausible consequences for Anna's Archive, NVIDIA, and any other AI developer that trained on shadow libraries](https://p4sc4l.substack.com/p/the-plausible-consequences-for-annas) — Substack analysis, 2025. Traces the through-line from Bartz v. Anthropic ($1.5B settlement, September 2025) to the Meta LibGen disclosures to NVIDIA's pending Anna's-Archive claims.
+- [Anna's Archive (Wikipedia)](https://en.wikipedia.org/wiki/Anna's_Archive) — updated 2026. Useful one-page overview of domain seizures (.org, .se), the Spotify metadata scrape, and the interaction with AI-training litigation.
 <!-- current-events:end -->
 
 **Discussion prompts.**

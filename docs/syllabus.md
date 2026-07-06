@@ -21,6 +21,11 @@ Each class meeting will have **one of the following activities**.
     topic of class.
 2.  **Group work:** A short **hands-on lab** activity.
 
+Class meeting time is structured according to the appropriate agenda template:
+
+- [Standard term (80-minute meetings)](agenda-template.md)
+- [Summer term (3-hour meetings)](agenda-template-summer.md)
+
 ## Recommended Background
 
 **Prerequisites:** There are no required prerequisites, although some

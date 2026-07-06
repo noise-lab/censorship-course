@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 13: Zero Rating and Demonetization
+# Breakout Discussions — Zero Rating and Demonetization
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ Chapters 4.4 and 4.5 argue that money is a censorship instrument. Zero rating do
 ---
 
 ## Breakout A: Free Basics — Access Ladder or Platform Capture?
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Zero-rating programs like Facebook Free Basics do more harm than good in developing markets: they trade first-time Internet access for durable platform capture, and the trade is not worth it."*
 
 <!-- current-events:start topic="zero-rating-free-basics" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with a recent story on zero-rating programs in the Global South — Free Basics successor programs, Meta/Google connectivity initiatives, or country-level regulatory action on zero rating (following India's 2016 ban, TRAI orders, or similar rulings in Chile, Netherlands, EU BEREC guidance).]*
-- *[Placeholder — recent empirical study or investigative report on how zero-rating shifts app usage, information diet, or news consumption in a specific country; or on T-Mobile/Verizon-style zero-rating in the U.S. (Binge On, unlimited plans with throttling).]*
+- [Beyond 'zero sum': the case for context in regulating zero rating in the Global South](https://policyreview.info/articles/analysis/beyond-zero-sum-case-context-regulating-zero-rating-global-south) — Internet Policy Review, 2025. Peer-reviewed analysis arguing regulators should distinguish commercial Free-Basics-style arrangements from public-interest zero-rating (education, government services).
+- [NCC's Zero-Rating Education Data Plan Could Avoid Mistakes Made During South Africa and Kenya's Pandemic-Era Rollouts](https://techeconomy.ng/nccs-zero-rating-education-data-plan-could-avoid-mistakes-made-during-south-africa-and-kenyas-pandemic-era-rollouts/) — TechEconomy (Nigeria), 2026. Nigerian Communications Commission's July 2026 consultation on education-only zero rating; explicitly draws on the South Africa/Kenya evidence base in Chapter 4.4.
+- [What is zero-rating?](https://www.berec.europa.eu/en/what-is-zero-rating?language_content_entity=en) — Body of European Regulators for Electronic Communications, 2026. BEREC's post-CJEU position: app-specific zero rating is a "clear violation" of the Open Internet Regulation, updated in the 2022 Guidelines.
+- [Zero rating: a global threat to the open internet](https://www.accessnow.org/zero-rating-global-threat-open-internet/) — Access Now. Access Now's standing position paper framing zero rating as network discrimination and cataloguing country-by-country regulatory responses.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ Chapters 4.4 and 4.5 argue that money is a censorship instrument. Zero rating do
 ---
 
 ## Breakout B: Demonetization as Speech Control — Do Creators Deserve Due Process?
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"YouTube, TikTok, and other platforms owe creators transparent criteria and a meaningful appeals process before demonetizing them — the current 'brand safety' regime is speech control by algorithm and should be regulated as such."*
 
 <!-- current-events:start topic="demonetization-creator-transparency" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with a recent story about YouTube / TikTok / Twitch demonetization actions, algorithmic downranking of specific creators or topics, or the "yellow dot" advertiser-friendly guidelines and their enforcement.]*
-- *[Placeholder — recent report or lawsuit on systematic bias in demonetization (echoing the 2019 LGBTQ creator lawsuit against YouTube), news-creator demonetization, or EU DSA transparency-database data on economic actions against creators.]*
+- [2025 YouTube demonetization for inauthentic content](https://grokipedia.com/page/2025_YouTube_demonetization_for_inauthentic_content) — Overview, 2026. Chronology of YouTube's July 15, 2025 "inauthentic content" policy (renamed from "repetitious content"), the January 2026 sweep that took out 16 channels with 4.7B lifetime views, and the March 2026 expansion to educators and long-form documentary channels.
+- [URBAN STUDIO for Creators — Fair Monetization petition](https://demonetization.org/) — Creator advocacy campaign, 2026. Grounds its demands explicitly in DSA Articles 14, 17, 20, 24, 27, 34–35 and P2B Regulation Articles 4, 11, 12; useful concrete artifact of "what would DSA-style due process actually look like for demonetization?"
+- [Paying Attention to the Algorithm Behind the Curtain: Bringing Transparency to YouTube's Demonetization Algorithms](https://dl.acm.org/doi/abs/10.1145/3555209) — Jiang et al., ACM CSCW, 2022 (with follow-on fairness work through 2024). Peer-reviewed measurement of systematic bias in demonetization decisions — the empirical backbone behind the 2019 LGBTQ-creator complaint.
+- [YouTube 2026: Navigating Copyright, Policy, and the Creator Economy Under Google's Umbrella](https://timescommerce.com/company-reports/youtube-2026-copyright-policy-creator-economy) — Times Commerce, 2026. Industry-side survey of how DSA transparency rules and YouTube's automated demonetization enforcement now interact for VLOP-classified platforms.
 <!-- current-events:end -->
 
 **Discussion prompts.**

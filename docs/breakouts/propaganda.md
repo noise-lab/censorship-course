@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 7: Flooding and Propaganda
+# Breakout Discussions — Flooding and Propaganda
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ Chapter 3.1–3.3.6 argues that modern information control is often not about re
 ---
 
 ## Breakout A: The Line Between Amplification and Astroturf
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"On today's algorithmic platforms, 'organic virality' and 'coordinated propaganda' are indistinguishable in practice — and treating them as separate categories is a policy fiction."*
 
 <!-- current-events:start topic="coordinated-inauthentic-behavior" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent takedowns or investigations of coordinated inauthentic behavior on X, Meta, or TikTok, especially around a 2025–2026 election or geopolitical flashpoint.]*
-- *[Placeholder — recent academic or Stanford Internet Observatory / DFRLab report on how state-linked amplification networks blur into influencer economies.]*
+- [Meta Quarterly Adversarial Threat Report, Q1 2025](https://transparency.meta.com/sr/Q1-2025-Adversarial-threat-report/) — Meta Transparency Center, 2025. Meta's own "kill chain" framing of CIB takedowns, with case studies from Iran, Russia, and cross-platform migration.
+- [How Coordinated Inauthentic Behavior continues on Social Platforms](https://fsi.stanford.edu/news/how-coordinated-inauthentic-behavior-continues-social-platforms) — Stanford FSI, 2025. Stanford researchers document that Russian Doppelganger accounts flagged by Meta remained active on X and TikTok, suggesting cross-platform threat-sharing has collapsed.
+- [Coordinated Inauthentic Behavior on TikTok: Challenges and Opportunities for Detection in a Video-First Ecosystem](https://arxiv.org/abs/2505.10867) — arXiv (ICWSM), 2025. Analyzes 2024 election-cycle CIB on TikTok — synchronized amplification, AI voiceovers, manufactured split-screens — and how behavioral signatures blur into engagement-farming.
+- [Polish presidential election Doppelganger targeting report](https://www.disinfo.eu/disinfo-update-30-04-2025-2/) — EU DisinfoLab, April 2025. 279 Doppelganger posts targeting Poland's May 2025 election with anti-EU / anti-Ukrainian framing; shows the tactic set persisting despite years of takedowns.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ Chapter 3.1–3.3.6 argues that modern information control is often not about re
 ---
 
 ## Breakout B: Labels, Bans, or Nothing — State-Affiliated Media
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Platforms should label all state-affiliated media accounts (RT, CGTN, VOA, BBC, Al Jazeera, PressTV, etc.) with a uniform disclosure — and neither ban them nor leave them unlabeled."*
 
 <!-- current-events:start topic="state-media-labels" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent platform policy changes on state-media labeling (X removed labels in 2023; look for 2025–2026 updates and any reversals or new EU DSA guidance).]*
-- *[Placeholder — recent incident where a state-media account went viral without labeling, or where a labeling scheme was inconsistently applied (e.g., US public media vs. Chinese/Russian state outlets).]*
+- [Holding the line: Auditing the EU's ban of Russian state media 3 years on](https://www.isdglobal.org/digital-dispatch/investigation-holding-the-line-auditing-the-eus-ban-of-russian-state-media-3-years-on/) — Institute for Strategic Dialogue, 2025. Documents that RT, Sputnik, and 30+ sanctioned outlets remain widely accessible across EU member states during the Feb 2025 German and May 2025 Polish elections.
+- [Catch Me If EU Can: How RT and Sputnik Evade EU Content Bans](https://securingdemocracy.gmfus.org/catch-me-if-eu-can-how-rt-and-sputnik-evade-eu-content-bans/) — Alliance for Securing Democracy / GMF, 2025. Maps 308 mirror sites, proxy X/Telegram accounts, and Apple/Spotify podcast feeds that keep RT and Sputnik content flowing to EU audiences.
+- [A 65-language megaphone: how Chinese state-media CGTN is shaping global narratives](https://rsf.org/en/65-language-megaphone-how-chinese-state-media-cgtn-shaping-global-narratives) — Reporters Without Borders, 2025. Describes CGTN's cross-platform reach into 160+ countries and inconsistent labeling on Facebook, Instagram, and YouTube.
+- [How Meta Platforms Ireland may have channeled money to RT and Sputnik via revenue-sharing](https://www.whattofix.tech/publications/bankrolling-sanctioned-entities/) — Whattofix, June 2025. Investigation finding RT Arabic and Sputnik pages remained active in Meta's revenue-share programs long after EU sanctions — a labeling-vs-sanctions collision.
 <!-- current-events:end -->
 
 **Discussion prompts.**

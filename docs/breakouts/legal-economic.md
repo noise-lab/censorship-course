@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 16: Measuring Legal and Economic Controls
+# Breakout Discussions — Measuring Legal and Economic Controls
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ Chapter 5.4 makes the case that legal and economic controls — takedown demands
 ---
 
 ## Breakout A: Can You Measure a Chill?
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"'Chilling effects' — self-censorship, demonetization-driven topic avoidance, creators leaving platforms — should be treated as a measurable form of censorship. Studies that fail to quantify them are undercounting information control, not being appropriately cautious."*
 
 <!-- current-events:start topic="chilling-effects-self-censorship" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent studies on: creator self-censorship on YouTube/TikTok due to demonetization, journalist self-censorship in India/Turkey/Hungary, FOSTA/SESTA follow-on effects on sex workers and harm-reduction sites, or survey research on user self-censorship after high-profile takedowns.]*
-- *[Placeholder — recent Lumen Database analysis, DMCA-abuse study, or news story on a specific creator or newsroom explicitly citing chilling effects for changing what they publish.]*
+- [Jonathon W. Penney, Chilling Effects: Repression, Conformity, and Power in the Digital Age](https://newbooksnetwork.com/chilling-effects) — Cambridge University Press, 2025 (New Books Network interview). Consolidates the empirical case that chilling effects are measurable — via surveys, behavioral traces, and natural experiments — and offers a "conformity theory" framework courts and regulators can use.
+- ["Am I Being Silenced by a Machine?" AI-Driven Content Moderation and the Chilling Effect on Freedom of Expression](https://www.researchgate.net/publication/394554979_Am_I_Being_Silenced_by_a_Machine_AI-Driven_Content_Moderation_and_The_Chilling_Effect_on_Freedom_of_Expression) — Elmimouni et al., 2025. Documents that creators from marginalized groups over-experience automated takedowns and self-censor as a direct result, especially around LGBTQ, political, and public-health topics.
+- [Lumen's Quiet Veto on DMCA Abuse Investigations](https://www.hackingbutlegal.com/p/lumens-quiet-veto-on-dmca-abuse-investigations) — Hacking But Legal, February 2026. A working journalist was denied access to Lumen to investigate a prolific DMCA-abuse sender — a concrete example of how the infrastructure for measuring chilling effects itself narrows.
+- [Toxic By Design: The FTC and FCC's New Plans to Sabotage Content Moderation](https://progresschamber.org/research/toxic-by-design-ftc-fcc-content-moderation-230/) — Chamber of Progress, 2025. Analyzes the FTC's February 2025 RFI on "censorship" and "demonetization," which explicitly treats platform moderation as a suppressive act — a live example of governments trying to weaponize the chilling-effects vocabulary in the opposite direction.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ Chapter 5.4 makes the case that legal and economic controls — takedown demands
 ---
 
 ## Breakout B: Country Rankings — Useful Simplification or Harmful Fiction?
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Country-level information-control rankings — Freedom on the Net, RSF's World Press Freedom Index, V-Dem's Digital Society Project — do more harm than good. They flatten within-country variation, get gamed by governments, and let researchers and journalists substitute a color-coded map for actual analysis."*
 
 <!-- current-events:start topic="country-freedom-rankings-critique" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent coverage of: a Freedom on the Net or RSF ranking release and reactions from ranked governments; academic critiques of country-index methodology; or a case where a country's ranking diverged sharply from measured on-the-ground events (India's decline, Hungary's, the US and UK in Freedom on the Net).]*
-- *[Placeholder — recent OONI, Access Now KeepItOn, or Citizen Lab report showing within-country variation (regional shutdowns, ISP-level differences, event-driven filtering) that a national rank would obscure.]*
+- [Freedom on the Net 2025: An Uncertain Future for the Global Internet](https://freedomhouse.org/report/freedom-net/2025/uncertain-future-global-internet) — Freedom House, November 2025. The 15th consecutive year of decline; US dropped 3 points (still "Free"), Kenya –6, Georgia –4, Bangladesh +5 — a good text to interrogate for what a national score does and doesn't capture.
+- [2026 RSF Index: press freedom at a 25-year low](https://rsf.org/en/2026-rsf-index-press-freedom-25-year-low) — Reporters Without Borders, April 2026. First time more than half the world's countries fall into "difficult" or "very serious"; US down 14 points since 2022 (now 64th); India at 157.
+- [India is 157th Out of 180 Countries on RSF's 2026 World Press Freedom Index](https://m.thewire.in/article/media/india-is-157th-out-of-180-countries-on-rsfs-2026-world-press-freedom-index) — The Wire, May 2026. Government reaction and methodology critique from a country whose ranking has become a diplomatic flashpoint — the case study for whether rankings shape or distort politics.
+- [Rising repression meets global resistance: Internet shutdowns in 2025](https://www.accessnow.org/wp-content/uploads/2026/03/KeepItOn-Internet-Shutdowns-2025-Annual-Report.pdf) — Access Now / #KeepItOn, March 2026. 313 shutdowns across 52 countries, most sub-national (Myanmar 95, India 65) — the clearest recent evidence that national scores erase enormous within-country variation.
 <!-- current-events:end -->
 
 **Discussion prompts.**

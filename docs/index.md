@@ -23,6 +23,9 @@ More details are in the [course syllabus](syllabus.md).
 
 ## Schedule
 
+Class meetings follow one of two agenda templates:
+[80-minute](agenda-template.md) (standard term) or
+[3-hour](agenda-template-summer.md) (summer term).
 
 | **Class**                                | **Topic**                               | **Reading** | **Discussion**                                    | **Activity**                                        |
 |------------------------------------------|-----------------------------------------|-------------|---------------------------------------------------|:----------------------------------------------------|

@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 18: Anonymous Communication
+# Breakout Discussions — Anonymous Communication
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ Chapter 6.2 makes two claims that live in tension: (1) Tor's anonymity is only a
 ---
 
 ## Breakout A: Exit Nodes and the Criminal Safe Harbor
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Operating a Tor exit relay should carry an explicit criminal safe harbor, analogous to Section 230 for platforms — no country should be able to prosecute an operator for traffic they merely forwarded."*
 
 <!-- current-events:start topic="tor-exit-node-legal-liability" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent cases involving Tor exit-relay operator prosecutions, house raids, or civil liability judgments in Germany, Austria, Finland, France, or the U.S., including any EFF or Torservers.net advocacy responses.]*
-- *[Placeholder — recent policy piece or court ruling on intermediary liability as applied to anonymizing relays, including any post-DSA (EU Digital Services Act) enforcement actions against volunteer relay operators.]*
+- [German police raid Tor-linked group in bid to uncover Tor network users](https://cybernews.com/privacy/tor-exit-node-operator-raided-germany/) — Cybernews, August 2024. Essen police raid Article 5 eV, a non-profit that operates Tor exit nodes, under a child-pornography warrant; board member Gero Kühn describes the intimidation effect on volunteer operators.
+- [The Legal FAQ for Tor Relay Operators](https://community.torproject.org/relay/community-resources/eff-tor-legal-faq/) — Tor Project / EFF, updated 2025. The community's reference document on U.S. exposure, DMCA handling, and why operators are advised not to run exits from home.
+- [Tor Exit Guidelines](https://community.torproject.org/relay/community-resources/tor-exit-guidelines/) — Tor Project, 2025. Points to the 2014 Graz (Austria) conviction of an exit-relay operator as an accomplice — the leading cautionary precedent in the EU and still uncontested by any subsequent 2025–2026 ruling.
+- [Staying ahead of censors in 2025: What we've learned from fighting censorship in Iran and Russia](https://blog.torproject.org/staying-ahead-of-censors-2025/) — Tor Project blog, December 2025. Context on how much the network now depends on volunteer exit and bridge capacity as pressure grows on operators worldwide.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ Chapter 6.2 makes two claims that live in tension: (1) Tor's anonymity is only a
 ---
 
 ## Breakout B: Compelled Takedown of Bridges and Pluggable Transports
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Cloudflare, AWS, and Azure should refuse any government demand to take down Tor bridges, Snowflake broker infrastructure, or domain-fronted circumvention endpoints — even lawful demands from democracies."*
 
 <!-- current-events:start topic="pluggable-transport-takedowns" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent reporting on cloud-provider decisions around domain fronting, Snowflake, or meek endpoints — including any 2025–2026 Google/Amazon policy changes, Cloudflare's stance on Tor bridges, or state pressure on Azure fronting used by Signal or Psiphon.]*
-- *[Placeholder — recent measurement study or Tor Project blog post on obfs4 and Snowflake reachability inside China, Iran, or Russia, and how it correlates with cloud-provider infrastructure decisions.]*
+- [Staying ahead of censors in 2025: What we've learned from fighting censorship in Iran and Russia](https://blog.torproject.org/staying-ahead-of-censors-2025/) — Tor Project blog, December 2025. WebTunnel bridges rolled out in 2024 were largely burned by Russia by mid-2025; Snowflake and Conjure now carry more of the load, and both depend on cloud-hosted brokers.
+- [Advancing digital rights in 2026 will take all of us](https://blog.torproject.org/advancing-digital-rights-in-2026/) — Tor Project blog, December 2025. Sets out the 2026 roadmap: Conjure rollout, Snowflake efficiency work, and Tor VPN integration as hedges against pluggable-transport takedowns.
+- [A new wave of blocks in Russia targets VPN apps and Cloudflare subnets](https://www.techradar.com/vpn/vpn-privacy-security/a-new-wave-of-blocks-in-russia-targets-vpn-apps-and-cloudflare-subnets) — TechRadar, 2025. March 2025 Roskomnadzor operation that briefly took out Cloudflare subnets across Russian regions — a preview of what compelled cloud takedowns look like at scale.
+- [Domain fronting has a dwindling future as cloud providers ban the practice](https://cyberscoop.com/domain-fronting-future-amazon-google-microsoft-cloudflare-tor-signal/) — CyberScoop, updated coverage through 2024. Chronicles the Cloudflare (2015) → Google/Amazon (2018) → Microsoft Azure (Jan 2024) → Fastly (2024) takedowns and what remains for Signal and Psiphon.
 <!-- current-events:end -->
 
 **Discussion prompts.**

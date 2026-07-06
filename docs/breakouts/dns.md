@@ -1,4 +1,4 @@
-# Breakout Discussions — Lecture 2: DNS Manipulation
+# Breakout Discussions — DNS Manipulation
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
@@ -7,14 +7,16 @@ The book's DNS section makes one uncomfortable point again and again: DNS is tri
 ---
 
 ## Breakout A: Did DoH Just Move the Chokepoint?
-<!-- breakout id="A" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="A" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Browser-default DNS-over-HTTPS to Cloudflare and Google is a net loss for user autonomy: it hides censorship from your ISP only by handing a global veto to three American companies."*
 
 <!-- current-events:start topic="doh-centralization-court-orders" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent news on: court orders or regulatory demands compelling Cloudflare, Google, Quad9, or NextDNS to block or manipulate DNS responses for specific domains, especially in EU/UK piracy or child-safety cases]*
-- *[Placeholder — recent event or report on: measurement studies or policy analyses of DoH resolver market share, browser defaults, or ISP responses to DoH rollout]*
+- [Italy Fines Cloudflare €14 Million for Refusing to Block Pirate Sites on Public 1.1.1.1 DNS](https://torrentfreak.com/italy-fines-cloudflare-e14-million-for-refusing-to-filter-pirate-sites-on-public-1-1-1-1-dns/) — TorrentFreak, January 2026. AGCOM imposes 1% of global revenue fine after Cloudflare refuses to filter 1.1.1.1; Matthew Prince calls the scheme "DISGUSTING."
+- [Google, Cloudflare, Cisco Lose Pirate Site DNS Blocking Appeal in France](https://torrentfreak.com/google-cloudflare-cisco-lose-pirate-site-dns-blocking-appeal-in-france/) — TorrentFreak, March 2026. Paris Court of Appeal confirms that public DNS resolvers can be compelled to block domains and must pay for the plumbing themselves.
+- [French Court Orders Google DNS to Block Pirate Sites, Dismisses 'Cloudflare-First' Defense](https://torrentfreak.com/french-court-orders-google-dns-to-block-pirate-sites-dismisses-cloudflare-first-defense/) — TorrentFreak, January 2026. Dynamic blocking order covers the 2025/2026 Champions League season and rolls over to any new domains.
+- [A Survey and Evaluation Framework for Secure DNS Resolution](https://arxiv.org/pdf/2509.13797) — arXiv, September 2025. Recent measurement work on DoH resolver consolidation and the privacy tradeoffs of default-on browser resolvers.
 <!-- current-events:end -->
 
 **Discussion prompts.**
@@ -28,14 +30,16 @@ The book's DNS section makes one uncomfortable point again and again: DNS is tri
 ---
 
 ## Breakout B: Court-Ordered Takedowns vs. Un-Censorable Naming
-<!-- breakout id="B" status="stub" refreshed="2026-07-06" -->
+<!-- breakout id="B" status="current" refreshed="2026-07-06" -->
 
 **Motion.** *"Democracies should be able to seize domain names by court order; anyone building 'un-censorable' naming systems (blockchain domains, alternate roots) is enabling fraud and abuse more than dissent."*
 
 <!-- current-events:start topic="domain-seizure-blockchain-naming" -->
 **Prep reads (5–10 min).**
-- *[Placeholder — refresh skill will populate with recent news on: domain seizures by ICE, DOJ, EU regulators, or German courts targeting Cloudflare/Quad9 for piracy blocking, or the 2023 German ruling refusing to compel DNS providers]*
-- *[Placeholder — recent event or report on: ENS, Handshake, Unstoppable Domains, or other alternative naming systems and their use (or abuse) in the wild]*
+- [Latest copyright decision in Germany rejects blocking through global DNS resolvers](https://blog.cloudflare.com/latest-copyright-decision-in-germany-rejects-blocking-through-global-dns-resolvers/) — Cloudflare, 2023. The Cologne Higher Regional Court ruling that DNS resolvers act "purely passive, automatic and neutral" — the framing that the 2026 French and Italian rulings pointedly rejected.
+- [DNS Provider Quad9 Sees Piracy Blocking Orders as "Existential Threat"](https://torrentfreak.com/dns-provider-quad9-sees-piracy-blocking-orders-as-existential-threat/) — TorrentFreak, 2025. The Swiss nonprofit warns that being added to French blocking orders alongside Google and Cloudflare is a survival-level problem for a small resolver.
+- [Blockchain Domain Names Retreat in 2026](https://monstadomains.com/blog/blockchain-domain-names/) — MonstaDomains, 2026. Handshake token down 99% from its 2021 peak, Namecheap ends all Handshake TLD services, and Unstoppable Domains' CEO concedes the space was "a temporary craze."
+- [2026 in Sight: CryptoTLDs, twinTLDs, and Domain Name Portfolio Strategy](https://iptwins.com/2025/09/29/2026-in-sight-cryptotlds-twintlds-and-domain-name-portfolio-strategy/) — IP Twins, 2025. ENS applies for `.ens` through ICANN's 2026 gTLD round — the un-censorable naming project asks to be delegated by the exact authority it was designed to circumvent.
 <!-- current-events:end -->
 
 **Discussion prompts.**
