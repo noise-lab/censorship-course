@@ -1,7 +1,7 @@
 # Project
 
-!!! info "Past Project Examples"
-    Looking for inspiration? Check out the [**YouTube playlist of past project presentations**](https://www.youtube.com/watch?v=EaYnI9bIfQg&list=PLpherdrLyny8jJX-r0hK9u0e3ocKCdBMZ) to see examples from previous years.
+> **Past project examples** — looking for inspiration?
+> Watch the [**YouTube playlist of past project presentations**](https://www.youtube.com/playlist?list=PLpherdrLyny8jJX-r0hK9u0e3ocKCdBMZ) from previous years.
 
 ## Proposal
 
@@ -76,7 +76,7 @@ Your final project deliverable should be:
     should understand what you did, and so forth.  
 -   **A brief video summarizing your project and main findings.** This
     can be (and should be!) short!  Examples from past years are available in
-    [this YouTube playlist](https://www.youtube.com/watch?v=EaYnI9bIfQg&list=PLpherdrLyny8jJX-r0hK9u0e3ocKCdBMZ).  I intend to use these to (1) Put them into a
+    [this YouTube playlist](https://www.youtube.com/playlist?list=PLpherdrLyny8jJX-r0hK9u0e3ocKCdBMZ).  I intend to use these to (1) Put them into a
     playlist and host a watch party (if/when there is interest); (2)
     showcase the class; (3) show them as examples in future years.
 
