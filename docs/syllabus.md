@@ -89,12 +89,10 @@ required.
   presentations will be due the final day of class.
 
   **→ [Full project brief, deliverables, and past examples](assignments/project.md)**
-- **Participation (15%).** Participation has three factors:
+- **Participation (15%).** Participation has two factors:
   1.  Show up. Come to class prepared to discuss the assigned readings
       and any preparation as posted on the course website.
   2.  Participate in the in-class hands-on/lab exercises.
-  3.  Submit pull requests on the (in-progress) book, where each week
-      corresponds to a chapter, also counts towards participation.
 
 ## Late Policy
 
