@@ -2,7 +2,29 @@
 title: "From Censorship to Information Control"
 subtitle: "Internet Censorship and Online Speech"
 author: "Nick Feamster · University of Chicago"
-date: last-modified
+header-includes: |
+  <style>
+    /* No ALL-CAPS anywhere */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6,
+    .reveal .title, .reveal .subtitle,
+    section.title-slide h1, section.title-slide .subtitle {
+      text-transform: none !important;
+      letter-spacing: normal !important;
+    }
+    /* Uniform title sizes (absolute px — unaffected by .smaller) */
+    .reveal h1, .reveal .smaller h1, .reveal section.smaller h1 { font-size: 46px !important; }
+    .reveal h2, .reveal .smaller h2, .reveal section.smaller h2 { font-size: 38px !important; }
+    .reveal h3, .reveal .smaller h3, .reveal section.smaller h3 { font-size: 30px !important; }
+    section.title-slide h1 { font-size: 56px !important; }
+    section.title-slide .subtitle { font-size: 32px !important; }
+    /* Body sizing (a bit bigger than before) */
+    .reveal { font-size: 30px; }
+    .reveal .smaller, .reveal section.smaller { font-size: 0.78em; }
+    .reveal ul, .reveal ol, .reveal p, .reveal blockquote { font-size: 0.88em; }
+    .reveal li { line-height: 1.3; margin-bottom: 0.15em; }
+    .reveal table { font-size: 0.72em; }
+    .reveal pre, .reveal code { font-size: 0.72em; }
+  </style>
 ---
 
 ## "The Net Interprets Censorship as Damage" {.center}
@@ -92,6 +114,84 @@ Margaret Roberts (*Censored*, 2018) is the spine of how we'll talk about modern 
 Fear is the old model; friction and flooding are the modern, porous model. "Porous"
 censorship is effective *because* it has holes — direct repression causes backlash;
 inconveniencing most people is enough.
+:::
+
+## Historical Anchor: The Great Firewall of China {.smaller}
+
+Since the late 1990s: Internet-scale packet filtering + DNS injection + TCP resets. The archetype of state-run censorship.
+
+- **Traditional GFW:** keyword lists, DNS poisoning, IP blackholes, RST injection
+- **Modern GFW (2024–2026):** machine-learning classifiers targeting **QUIC**, **DoH**, and **TLS Encrypted Client Hello** — pushing traffic back to censor-visible flows
+- **Jan 1, 2026:** new PRC public-security law expands police powers over private messaging
+
+::: {.notes}
+Anchor the "conventional censorship" model here — this is what students think of when they hear the word. Then note the twist: GFW has moved *up the stack* to attack the modern anti-censorship protocols themselves. Book §1 refresh and §2.2.2. Iran and North Korea have similar (cruder) architectures; China's is the reference.
+:::
+
+## Democracies Do This Too {.smaller}
+
+Same mechanisms, different justifications.
+
+- **Egypt, Jan 2011:** BGP withdrawals disconnect ~88% of Egyptian networks during the Arab Spring
+- **BART San Francisco, Aug 2011:** cell service cut in four downtown stations to disrupt planned protests
+- **Turkey, 2014→:** repeated DNS blocking of Twitter, Wikipedia, YouTube — protesters spray-painted `8.8.8.8` on walls
+- **India, 2025:** **65 shutdowns** — more than any other democracy (Access Now KeepItOn)
+
+**Freedom House 2025:** roughly **two-thirds** of the world's Internet users live in countries rated "Partly Free" or "Not Free."
+
+::: {.notes}
+This is the "not just authoritarians" beat. Egypt is the canonical technical example; BART is the domestic one that shocks students. Turkey is the retail-scale ISP-DNS story. Then land the FOTN 2025 headline number — this is fresh. Book §1 refresh.
+:::
+
+## Case Study: The 2026 Age-Verification Wave {.smaller}
+
+Liberal democracies, using **regulatory and financial** levers, not firewalls:
+
+- **UK Online Safety Act:** ICO fines **Reddit £14.47M** for relying on self-declared age (2026). Ofcom fines against 4chan, AVS Group, Kick.com for missing age-assurance.
+- **EU Digital Services Act:** common age-verification wallet declared "technically ready" (Apr 2026).
+- **Australia:** world's first nationwide **under-16 social-media ban** (Dec 10, 2025). Platforms fined up to A\$50M. **4.7M under-16 accounts removed** in the first weeks.
+
+Compliance itself becomes a **tax on speech** — you can't publish, or be published, unless you can prove your age.
+
+::: {.notes}
+Today's breakout A anchor. Present the tension: child protection or a speech tax? Both, per Chapter 1. Ofcom fine amounts and Australia numbers are verified. Book §1 refresh.
+:::
+
+## Case Study: Consolidation as Chokepoint {.smaller}
+
+**November 18, 2025 — Cloudflare outage.** A routine database permissions change ballooned a bot-management config file. Result:
+
+- **X**, **ChatGPT**, **Shopify**, **Truth Social**, **NJ Transit** — inaccessible for hours
+- Not an attack. Not a takedown demand. Just one company's internal misconfiguration
+- Cloudflare CEO in 2017: *"I woke up in a bad mood and decided someone shouldn't be allowed on the Internet. No one should have that power."* — 8 years later, that power has **grown**.
+
+::: {.notes}
+Today's breakout B anchor. The state-run firewall is not the only way large amounts of speech go dark. In 2025 the chokepoint is a handful of infrastructure companies — Cloudflare handles ~20% of web traffic. Book §1 refresh + §2.3.
+:::
+
+## Economic Levers: Paywalls, Demonetization, Zero-Rating {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Paywalls (Pew, 2024):**
+
+- **74%** of Americans hit paywalls
+- Only **1%** pay
+- 30% of top-income pay; **8%** of lowest
+:::
+::: {.column width="50%"}
+**Demonetization (YouTube "Adpocalypse"):**
+
+- 2017: advertisers flee sensitive content
+- LGBTQ+, war reporting, current events → demonetized
+- Creators self-censor to stay solvent
+:::
+:::
+
+**Zero-rating** (Facebook Free Basics et al.) — free access to *some* content shapes the whole information diet in 100+ countries.
+
+::: {.notes}
+Book §1 and §4.4–4.5. The economic lever is often the strongest — pricing does the work of blocking. Paywalls stat is one of the most quotable numbers in the book; use it.
 :::
 
 ## The Many Forms of Control (the Course Roadmap) {.smaller}

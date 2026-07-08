@@ -2,7 +2,29 @@
 title: "Disrupting Internet Protocols"
 subtitle: "Internet Censorship and Online Speech"
 author: "Nick Feamster · University of Chicago"
-date: last-modified
+header-includes: |
+  <style>
+    /* No ALL-CAPS anywhere */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6,
+    .reveal .title, .reveal .subtitle,
+    section.title-slide h1, section.title-slide .subtitle {
+      text-transform: none !important;
+      letter-spacing: normal !important;
+    }
+    /* Uniform title sizes (absolute px — unaffected by .smaller) */
+    .reveal h1, .reveal .smaller h1, .reveal section.smaller h1 { font-size: 46px !important; }
+    .reveal h2, .reveal .smaller h2, .reveal section.smaller h2 { font-size: 38px !important; }
+    .reveal h3, .reveal .smaller h3, .reveal section.smaller h3 { font-size: 30px !important; }
+    section.title-slide h1 { font-size: 56px !important; }
+    section.title-slide .subtitle { font-size: 32px !important; }
+    /* Body sizing (a bit bigger than before) */
+    .reveal { font-size: 30px; }
+    .reveal .smaller, .reveal section.smaller { font-size: 0.78em; }
+    .reveal ul, .reveal ol, .reveal p, .reveal blockquote { font-size: 0.88em; }
+    .reveal li { line-height: 1.3; margin-bottom: 0.15em; }
+    .reveal table { font-size: 0.72em; }
+    .reveal pre, .reveal code { font-size: 0.72em; }
+  </style>
 ---
 
 ## Why Are the Internet's Protocols So Easy to Manipulate? {.center}
