@@ -158,6 +158,49 @@ all; it's a WhatsApp/Telegram group with no external moderation. Both matter for
 elections. This sets up the regulatory vignette.
 :::
 
+## Weak Signals, Strong Inferences {.smaller}
+
+Recommenders don't need a political signal to place you politically. They
+infer identity from **many weakly correlated traces** — a movie you liked,
+a hobby, a genre — and treat those as **strong evidence** for cluster
+placement.
+
+- **Narayanan (Knight Inst., 2023):** engagement-optimized systems recruit
+  *any* signal correlated with watch time, follows, or shares — regardless
+  of topic
+- Cross-domain correlations become an **engine** for moving users between
+  bubbles on inputs that look apolitical
+- **Ribeiro et al. (FAccT 2020)** trace user migration across YouTube from
+  mainstream commentary → Alt-lite / IDW → Alt-right — a migration pattern
+  consistent with the mechanism (though the YouTube empirical picture
+  remains contested)
+
+::: {.vignette}
+Illustration (from a class discussion): a fandom survey found dislike of
+*The Last Jedi* correlated with more conservative and anti-progressive
+attitudes. The recommender doesn't need to know your politics — knowing
+your movie opinion is already a probabilistic handle. *(Non-peer-reviewed
+fandom survey; use it only for intuition on the mechanism.)*
+:::
+
+::: {.notes}
+This is the *mechanism* behind the TikTok audit on the previous slide. The
+partisan skew Ibrahim et al. observed almost certainly wasn't an explicit
+ideological rule — it's the downstream consequence of many small signals
+being combined into a strong inference about identity and attention.
+Narayanan (2023) is the general primer: recommenders learn latent user
+representations from behavioral traces, and whatever signal predicts the
+optimization target gets recruited, topically related or not. Ribeiro et
+al. supply the empirical migration picture on YouTube; be candid that this
+picture is contested (Ledwich & Zaitsev found the opposite with anonymous
+seeds), which is itself the point: mechanism strength depends on how much
+personalization signal the system already has. The Star Wars vignette is
+an illustration to make the point memorable; do not overclaim from it.
+<!-- CITE TODO: no clean peer-reviewed source proves taste-signal →
+political-cluster migration end-to-end; keep the framing as an inference
+from mechanism + observed migration, not as a proven finding. -->
+:::
+
 ## 2025: Regulators Demand the Algorithm Open Up
 
 ::: {.vignette}
@@ -347,6 +390,57 @@ the tall black bars are *all* sources, but the colored bars (sources with more t
 source ranged ~130:1 (NZ, Switzerland — low diversity) to ~35:1 (US — more diverse).
 Some countries even saw complete filtering of certain queries. "The Internet looks
 very different to different people" — empirically.
+:::
+
+## When the Fix Makes It Worse: Algospeak {.smaller}
+
+Moderation is supposed to *counter* the bubble. Instead it can **deepen**
+it, by pushing creators to adapt.
+
+::: {.columns}
+::: {.column width="52%"}
+- Platforms throttle recommendations on flagged topics (violence,
+  self-harm, sexuality, contested political terms)
+- Creators learn the trigger words and **substitute**: "unalive" for kill,
+  "SA" for sexual assault, "spicy eggplant" for vibrator
+- Popularized as **algospeak** by Taylor Lorenz (*Washington Post*, Apr.
+  2022); Klug, Steen & Yurechko (WWW '23) and Steen, Yurechko & Klug
+  (*Social Media + Society* 2023) confirm the practice is deliberate and
+  strategic
+- When no substitution works, creators **stop making content on the topic
+  at all**
+:::
+::: {.column width="48%"}
+**Not just words — behavior.** Broader creator-adaptation literature:
+
+- **Cotter (2019)** — "playing the visibility game" with an opaque ranker
+- **Karizat et al. (2021)** — folk theories of an "identity strainer"
+  algorithm; users modify behavior accordingly
+- **DeVito (2022)** — transfeminine TikTok creators sometimes elect *not
+  to post* rather than risk demotion
+- **Duffy & Meisner (2023)** — algorithmic (in)visibility as platform
+  governance at the margins
+:::
+:::
+
+::: {.vignette}
+**Second-order filter bubble.** The engagement bubble (what gets ranked up)
+is compounded by a **self-censorship bubble** (what gets made in the first
+place). Moderation intended as a countermeasure produces a **deeper** filter
+bubble than the one it was designed to correct.
+:::
+
+::: {.notes}
+This is the second big update to the 2011 Pariser picture: treat creators as
+adaptive agents, not passive suppliers. Once you do, the platform's
+moderation choices reshape the *supply side* of the content catalog, not
+just its ranking. Roberts' *Behind the Screen* (Yale, 2019) provides the
+upstream infrastructure story — opaque, contractor-driven enforcement
+decisions that creators can only reverse-engineer — which is why the observed
+response is linguistic avoidance rather than appeal. Jake's framing from
+lecture: "moderation intended as a countermeasure produces a deeper filter
+bubble." Land this before Takeaways so students see friction operating on
+*two* layers: what is surfaced, and what is produced at all.
 :::
 
 ## Takeaways {.smaller}

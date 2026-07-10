@@ -28,7 +28,7 @@ refresh loop). The canonical worked example is **`01-Intro/01-Overview/`**.
 |---|---|---|
 | `01-Intro/01-Overview/` | **Ch 1** From Censorship to Information Control (whole) | `class/intro/01-Overview.pptx` |
 | `02-Technical/01-Protocols/` | **Ch 2** Technical Controls — §2.1–2.2 (manipulating / disrupting protocols) | `class/technical/04-Protocols.pptx` |
-| `02-Technical/02-DoS/` | **Ch 2** Technical Controls — §2.3 (disrupting the flow of data; throttling/DoS) | `class/technical/07-DoS.pptx` |
+| `02-Technical/02-Throttling-DoS/` | **Ch 2** Technical Controls — §2.3 (disrupting the flow of data; throttling/DoS) | `class/technical/07-DoS.pptx` |
 | `03-Platform/01-Platform/` | **Ch 3** Platform Controls — §3.1 (platforms as content-manipulation tools) | `class/platform/09-Platform.pptx` |
 | `03-Platform/02-Propaganda/` | **Ch 3** Platform Controls — §3.4 (propaganda) | `class/platform/14-Propaganda.pptx` |
 | `03-Platform/03-Personalization/` | **Ch 3** Platform Controls — §3.7 (personalization) | `class/platform/10-Personalization.pptx` |
