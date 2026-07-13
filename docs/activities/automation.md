@@ -62,14 +62,16 @@ If you have API access (Anthropic offers free credits for students):
    pip install anthropic jupyter notebook
    ```
 
-2. Explore Anthropic's content moderation cookbook:
+2. Explore Anthropic's content moderation cookbook (the repo was renamed from `anthropic-cookbook` to `claude-cookbooks` in 2025):
    ```bash
-   git clone https://github.com/anthropics/anthropic-cookbook.git
-   cd anthropic-cookbook/misc
+   git clone https://github.com/anthropics/claude-cookbooks.git
+   cd claude-cookbooks/misc
    jupyter notebook building_moderation_filter.ipynb
    ```
 
-3. Review Anthropic's [content moderation use case documentation](https://docs.anthropic.com/en/docs/build-with-claude/content-moderation)
+   Notebook on GitHub: [`building_moderation_filter.ipynb`](https://github.com/anthropics/claude-cookbooks/blob/main/misc/building_moderation_filter.ipynb).
+
+3. Review Anthropic's [content moderation use-case guide](https://platform.claude.com/docs/en/about-claude/use-case-guides/content-moderation) (previously at `docs.anthropic.com/.../build-with-claude/content-moderation` before Anthropic reorganized the docs).
 
 ### Experiments to Try
 
@@ -105,5 +107,5 @@ While text moderation focuses on analyzing words, audio and video content requir
 ## Additional Resources
 
 - [Perspective API](https://www.perspectiveapi.com/) - The original inspiration for this activity
-- [Anthropic Content Moderation Guide](https://docs.anthropic.com/en/docs/build-with-claude/content-moderation)
+- [Anthropic Content Moderation Guide](https://platform.claude.com/docs/en/about-claude/use-case-guides/content-moderation)
 - [OpenAI Moderation API](https://platform.openai.com/docs/guides/moderation)
