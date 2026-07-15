@@ -19,22 +19,38 @@
 - 2026-06-03: Reframed deck around the book's §4.1 spine ("law as a tax on access
   to information," Roberts's friction in legal form) rather than the old
   chapter-8 slide order.
+- 2026-06-03: Added **age-gating** slide (new categorical-exclusion lever) with a
+  vignette on **Australia's under-16 social-media ban** — effective **Dec 10,
+  2025**, fines up to **AUD $50M**, no parental-consent exception; eSafety
+  reported ~**4.7M** under-16 accounts removed by mid-Dec 2025. Verified via
+  esafety.gov.au, NPR and CNBC (Dec 10, 2025) and eSafety Jan 16, 2026 update.
+- 2026-06-03: Expanded the "Intermediary Liability Is Not Universal" slide into a
+  **global comparison spectrum** — §230 (immunity) → DSA → **India IT Rules
+  (2021)** (safe harbor lost without fast removal on court/gov order; 36-hr
+  window, since tightened) → **Brazil** (STF struck down Marco Civil Art. 19's
+  court-order-only shield, **8-3 on June 26, 2025**, fault-based "unequivocal
+  knowledge" standard). Noted **Germany's NetzDG repealed/folded into the DSA
+  (Feb 2024)**. Verified via Brazil STF coverage (GNI, TechPolicy.press), India
+  MeitY IT Rules 2021, German DDG (May 2024).
+- 2026-06-03: Added **CFAA / researcher chilling** slide — *Sandvig v. Barr*
+  (2020, TOS violations are not CFAA crimes) and *Van Buren v. United States*
+  (SCOTUS 2021, narrow "exceeds authorized access"); kept book's ~40% avoid /
+  >20% threatened figures. Cross-linked forward to Ch. 5 measurement work.
+- 2026-06-03: Added **state-law implementation-problem** slide (Texas HB20 /
+  Florida SB7072): geolocation imprecision + the viewpoint-vs-policy distinction
+  ("drive a truck through"), Florida's $250k/day candidate-deplatforming fine.
+- 2026-06-03: Split the DMCA slide to distinguish **§1201 anti-circumvention**
+  (jailbreaking, right-to-repair, security research) from **§512
+  notice-and-takedown** — two distinct censorship levers.
 
 ## Suggested missing coverage on broad themes (point 3)
-- **Age-gating / youth bans** (book §4.1): Australia's under-16 social-media ban
-  (effective Dec 10, 2025) is a major new form of categorical exclusion plus an
-  age-verification/privacy problem. Could be its own slide or a short deck.
-- **CFAA and researcher chilling effects** (book §4.1): Sandvig v. Barr, Van
-  Buren v. United States (2021) — relevant to this course's own measurement work
-  (Ch. 5). Dropped here for scope; worth a slide given the audience.
-- **State-level laws in depth** (Texas HB20, Florida SB7072): only touched via
-  Moody. The geolocation/"viewpoint vs. policy" implementation problems are a good
-  technical-meets-legal discussion.
-- **DMCA §1201 anti-circumvention** as distinct from §512 takedowns — its effect
-  on jailbreaking, right-to-repair, and security research deserves more than one
-  bullet.
-- **Global intermediary-liability comparison** (India IT Rules, Germany NetzDG,
-  Brazil) to contrast §230 vs. DSA vs. mandatory-removal regimes.
+- *(All five issue-#7 backlog items integrated 2026-06-03: age-gating, CFAA,
+  DMCA §1201, global comparison, state-law implementation. See updates above.)*
+- **Demonetization as economic censorship** (book §4.1 / later Ch. 4): the DSA
+  slide already flags it as a gap; could anchor a slide in the economics deck.
+- **DMCA §1201 triennial exemptions** (Copyright Office rulemaking): currently a
+  speaker-note only; a short standalone treatment of the repair/security-research
+  exemption cycle could be added if time allows.
 
 ## Next-year refresh notes
 - **Cox v. Sony vignette** (decided 3/25/2026): will become "recent" rather than
@@ -51,6 +67,20 @@
   enforcement actions that would update the §230-carve-out story.
 - VLOP/VLOSE roster can change (designations added/removed) — verify the named
   platforms each year.
+- **Australia under-16 ban (took effect Dec 10, 2025):** restamp the ~4.7M
+  removed-accounts figure and the platform list from eSafety each year; watch for
+  the first enforcement action/fine, court challenges, and whether other
+  countries (UK, EU members, US states) move from "exploring" to "in force."
+- **Brazil Marco Civil Art. 19 (STF, June 26, 2025):** watch for the new
+  fault-based standard's lower-court application and any legislative codification;
+  swap if Congress passes a replacement framework.
+- **India IT Rules:** takedown-clock keeps tightening (36-hr → shorter via
+  amendments incl. 2026 synthetic-media rules) — reverify the current window and
+  scope annually.
+- **CFAA:** Van Buren (2021) is the current ceiling; watch for a follow-on
+  scraping/research case (e.g., post-*hiQ* line) that would update the chilling
+  story. The ~40%/>20% chilling figures are from the book — refresh if a newer
+  survey lands.
 
 ## Curated images
 - **USED** `slide015_img004.png` — EFF "A Critic Uses the DMCA to Avoid

@@ -193,42 +193,145 @@ can't force carriage (remanded for feature-specific analysis; as of mid-2025
 still in district courts). Murthy: government can flag content, but cannot
 threaten — yet the Court never reached the merits. Book §4.1 "jawboning." These
 are the two poles: can the state force platforms to keep speech up, and can it
-pressure them to take speech down?
+pressure them to take speech down? Next slide: even if these laws survived,
+*implementing* them is the hard part.
 :::
 
-## Intermediary Liability Is Not Universal
+## State "No-Viewpoint" Laws: The Implementation Problem {.smaller}
 
-- §230 is a **US** rule — the global baseline varies sharply
-- EU **e-Commerce Directive** → now the **DSA**: conditional liability + duties
-- Some countries' **outdated laws** blur "intermediary" vs. "user," leaving
-  jurisdiction unclear
-- A platform's removal behavior is set by the **strictest** regime it must obey
+**Texas HB20** and **Florida SB7072** (both 2021) ban "viewpoint-based"
+moderation. Even setting the First Amendment aside, they are hard to *operate*:
+
+::: {.columns}
+::: {.column width="50%"}
+**The geolocation problem**
+
+- Laws apply to users **in** Texas / Florida
+- IP geolocation is **imprecise**, worst near borders
+- Users **travel** — does a Texas post stay "Texas" forever?
+:::
+::: {.column width="50%"}
+**The viewpoint-vs-policy problem**
+
+- Is "anti-vaccine-mandate" a **viewpoint** or a **policy** violation?
+- The line is "wide enough to **drive a truck through**"
+- Florida: **$250k/day** fines for deplatforming a candidate
+:::
+:::
 
 ::: {.notes}
-Set up the DSA section and the California/Brussels effect. The key idea: a global
-platform tends to comply with whoever is most demanding, so one jurisdiction's
-rules become everyone's default. Book §4.1.
+This is the technical-meets-legal slide. Two structural problems independent of
+the constitutional fight. (1) Geolocation: these are *state* laws, but the
+Internet has no clean state borders — IP geolocation is inaccurate, especially
+near borders, and users move, so "which state's rules apply to this post" has no
+crisp answer. (2) The viewpoint/policy distinction collapses on contact:
+take COVID vaccine mandates — depending on which label you pick, a platform is
+*required* to leave the same content up or take it down. Florida adds
+$250k/day fines for deplatforming a statewide candidate, raising the stakes of
+getting the classification wrong. Moody (prior slide) said these are presumptively
+the platform's protected speech, but remanded — so the implementation questions
+are still live. Book §4.1 "state-level content moderation laws."
+:::
+
+## Intermediary Liability Is Not Universal {.smaller}
+
+§230 is a **US** rule. The global baseline ranges from broad immunity to
+**mandatory removal on a clock**:
+
+- **US §230:** broad immunity; platforms choose what to moderate
+- **EU DSA** (replaced the e-Commerce Directive; also **superseded Germany's
+  NetzDG** in Feb 2024): conditional liability + transparency duties
+- **India IT Rules (2021):** lose safe harbor unless you **remove flagged
+  content fast** on a court/government order (a 36-hour window, since tightened)
+- **Brazil (June 26, 2025):** Supreme Court struck down Marco Civil Art. 19's
+  "court-order-only" shield — platforms now liable for **"unequivocal" illegal
+  content** they fail to remove
+
+A platform's removal behavior is set by the **strictest** regime it must obey.
+
+::: {.notes}
+The spectrum is the point: §230 (broad immunity) → DSA (conditional + duties) →
+India / Brazil (mandatory removal, no court order needed). India's IT Rules tie
+safe harbor to fast takedown on government/court order (originally 36 hours;
+later amendments tightened it further). Brazil's STF (8-3, June 26 2025) declared
+Marco Civil Art. 19 partly unconstitutional, moving from "remove only on a court
+order" to a fault-based "unequivocal knowledge" standard — much closer to
+notice-and-takedown. Germany's NetzDG, the famous 24-hour-removal law, was
+repealed and folded into the DSA in Feb 2024. Mandatory-removal-on-a-clock
+regimes push hard toward over-removal — the opposite end from §230. Sets up the
+DSA section and the Brussels effect. Book §4.1. Sources: Brazil STF ruling
+(June 26 2025); India MeitY IT Rules 2021; German DDG (May 2024).
+:::
+
+## Age-Gating: Excluding a Whole Audience {.smaller}
+
+A new lever: instead of removing *speech*, remove an entire **class of
+speakers**.
+
+::: {.vignette}
+**December 10, 2025:** Australia's **under-16 social-media ban** took effect —
+the world's first. Platforms (Facebook, Instagram, TikTok, Snapchat, X, YouTube,
+Reddit, Twitch, and more) must take "reasonable steps" to keep under-16s off,
+with fines up to **AUD $50M**. **No parental-consent exception.** By mid-December,
+eSafety reported ~**4.7 million** under-16 accounts removed.
+:::
+
+- A form of **categorical exclusion** from public discourse, not content removal
+- Forces **age verification** → ID checks, face estimation: a **privacy tax**
+- Hard problem: tell a 15-yr-old from a 16-yr-old; circumvented by **VPNs**
+
+::: {.notes}
+Frame age-gating as a distinct censorship form: content-specific rules remove
+particular speech; age bans remove the *speaker* from the forum entirely. Verified
+facts (June 2026): Australia's Online Safety Amendment (Social Media Minimum Age)
+Act took effect Dec 10, 2025; eSafety Commissioner enforces; fines up to AUD $50M;
+notably no carve-out for parental consent (the state overrides the parent). Early
+number: ~4.7M under-16 accounts removed by mid-Dec 2025 (eSafety, reported Jan
+2026). The implementation problem mirrors the state-law slide: age verification
+needs IDs or AI face-estimation (a privacy cost), can't reliably resolve the
+15-vs-16 boundary, and is circumvented by VPNs / borrowed accounts. Tension:
+youth protection vs. youth autonomy and access. The UK, plus Denmark, Norway,
+Spain, France, Italy and several US states are exploring similar rules. Book §4.1
+"age-gating and youth social media restrictions." Refresh the 4.7M figure and
+ban status annually. Sources: eSafety Commissioner; NPR / CNBC (Dec 10 2025).
 :::
 
 # Copyright as a Censorship Tool {.center}
 
 DMCA §512 and the takedown machine
 
-## DMCA §512: Safe Harbor in Exchange for Takedowns {.smaller}
+## DMCA: Two Distinct Levers {.smaller}
 
-The **Digital Millennium Copyright Act (1998)**:
+The **Digital Millennium Copyright Act (1998)** has two parts that censor in
+different ways:
 
-- Bans tools that **circumvent** copyright access controls (§1201)
-- **Title II / §512 safe harbor:** ISPs and hosts are **not liable** for users'
-  infringement — *if* they **act on takedown notices**
-- Notice-and-takedown is **cheap to obey, expensive to contest** → bias toward
-  removal
+::: {.columns}
+::: {.column width="50%"}
+**§512 — Notice-and-Takedown**
+
+- ISPs/hosts get **safe harbor** — *if* they **act on takedown notices**
+- Cheap to obey, expensive to contest → **bias toward removal**
+- The template for the modern takedown economy
+:::
+::: {.column width="50%"}
+**§1201 — Anti-Circumvention**
+
+- Bans tools that **bypass** copyright access controls (DRM)
+- Reaches **jailbreaking, right-to-repair, security research**
+- Censors by criminalizing the *act of analysis*, not the speech
+:::
+:::
 
 ::: {.notes}
-§512 is the template for the modern takedown economy: send a notice, content
-comes down, the burden of restoring it falls on the poster (counter-notice). The
-asymmetry is the censorship risk — it is far easier to take something down than
-to keep it up. Book §4.1.
+Keep these separate. §512 is the takedown machine: send a notice, content comes
+down, burden of restoring it falls on the poster (counter-notice) — the
+asymmetry is the censorship risk. §1201 is different: it makes circumventing DRM
+illegal, which sweeps in legitimate activity — jailbreaking phones, repairing
+your own devices, and security research that has to defeat protections to study
+them. The Copyright Office grants temporary §1201 exemptions every three years
+(e.g., for security research and repair), but the default is prohibition. The
+Felten/SDMI case on the next slides is exactly a §1201 chilling-effect story.
+Book §4.1.
 :::
 
 ## The $1 Billion Question: Cox v. Sony {.smaller}
@@ -277,6 +380,35 @@ hammer because the notice regime defaults to removal. Felten/SDMI is the classic
 academic-freedom case; the SIGCOMM example shows even our own community does it.
 Book §4.1. Fair use protects the speech in principle, but the takedown happens
 first and the fight comes later.
+:::
+
+## The CFAA and the Chilling of Research {.smaller}
+
+The **Computer Fraud and Abuse Act (1986)** bans access "without authorization"
+or "exceeding authorized access" — vague enough to threaten the **measurement
+work in this course**.
+
+- ***Sandvig v. Barr* (2020):** researchers auditing algorithms for
+  discrimination sued preemptively; court held the CFAA does **not** criminalize
+  mere **terms-of-service violations**
+- ***Van Buren v. United States* (2021):** Supreme Court read "exceeds
+  authorized access" **narrowly** — relief for security researchers
+- Yet chilling persists: ~**40%** of security researchers avoid some
+  vulnerability work for fear of legal threats; **>20%** have been threatened
+
+::: {.notes}
+This is the bridge to Ch. 5 (our own measurement chapter). The CFAA's "exceeds
+authorized access" language was, for years, read so broadly that violating a
+site's terms of service might be a federal crime — which directly threatens
+researchers who scrape or probe systems to audit them. Sandvig v. Barr (D.D.C.
+2020): researchers who wanted to test hiring/housing algorithms for bias sued on
+First Amendment grounds; the court said TOS violations alone are not CFAA crimes.
+Van Buren (SCOTUS 2021) then narrowed "exceeds authorized access" so that misusing
+access you legitimately have is not automatically a federal crime. Even so, the
+ambiguity chills work: the ~40% avoid / >20% threatened figures (book §4.1) show
+the law need not convict anyone to suppress accountability research. Tie forward:
+this is exactly the legal terrain our Ch. 5 censorship-measurement methods live
+in. Book §4.1 "Computer Fraud and Abuse Act."
 :::
 
 ## SLAPP: Suing People into Silence {.smaller}
@@ -431,7 +563,9 @@ platforms truly globalize DSA features is still mixed.
 - **Copyright and lawsuits** (DMCA §512, SLAPP) censor through **takedown bias
   and attrition**, not verdicts
 - The **DSA** answers with **transparency**, and its reach goes global via the
-  **Brussels effect**
+  **Brussels effect**; other regimes (India, Brazil) instead **mandate removal**
+- Newer levers exclude *speakers*, not speech — **age-gating** (Australia's
+  under-16 ban) — or chill *research* — the **CFAA**
 - The line between government **persuasion and coercion** (*Murthy*) is still
   unsettled
 

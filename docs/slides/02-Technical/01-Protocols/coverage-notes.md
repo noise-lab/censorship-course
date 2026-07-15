@@ -11,21 +11,35 @@
 - 2026-06-03: Kept the classic, book-anchored case studies (Turkey DNS 2014, China
   Telecom BGP 2010, Pakistan/YouTube 2008, Egypt 2011) as historical spine; refreshed
   them with the book's current framing rather than the old slide order.
+- 2026-06-03: Added a new slide **"Not Every Shutdown Withdraws the Route"** with an
+  Iran **June 2025 "stealth blackout"** `.vignette`, contrasting routes-stay-announced /
+  border-gateway chokepoint (DNS poisoning, TLS interception, protocol whitelisting; VPN
+  searches ~707%) against Egypt-style BGP withdrawal. Framed as Roberts *friction*.
+  Sources: Aryapour, arXiv 2507.14183 (Jul 2025); Filterwatch multi-stakeholder analysis
+  (Oct 2025).
+- 2026-06-03: Quantified the **RPKI "needs wide adoption"** point on the BGP-defenses
+  slide with a verified figure: **~60% of IPv4 routes have valid ROAs** (world average,
+  early–mid 2026), up from ~50–54% a year earlier. Sources: MANRS RPKI growth (Jan 2025),
+  APNIC RPKI stats / Kentik (2025–26); NIST RPKI Monitor (rpki-monitor.antd.nist.gov)
+  tracks it live — re-pull the headline % at refresh time.
+- 2026-06-03: Added a new slide **"A New Transport to Police: QUIC / HTTP-3"** — UDP/443
+  transport, why TCP `RST` injection doesn't apply, SNI-based QUIC blocking (GFW since
+  Apr 2024; Russia TSPU), Russia's ~512 kbps QUIC throttle, and UDP/443 blocking as a
+  blunt fallback. Sources: "Exposing and Circumventing SNI-based QUIC Censorship of the
+  GFW" (USENIX Security 2025, gfw.report; ~58K FQDNs Oct 2024–Jan 2025).
+- 2026-06-03: Gave **encrypted-DNS blocking/fingerprinting** a fuller gesture on the
+  existing DoH slide (DoT port-853 blocked outright; DoH fingerprinted via DPI/active
+  probing; bootstrap-blocking) with an explicit **Ch. 6** cross-link. Sources: OONI
+  DoT/DoH blocking study; China "Shield-Cube"/DNS4CN; Iran ~50% DoT endpoints unreachable.
 
 ## Suggested missing coverage on broad themes (point 3)
-- **Iran's June 2025 "stealth blackout"** (arXiv 2507.14183): prefixes stayed announced
-  in BGP while domestic connectivity collapsed via DNS + VPN-signature dropping on 443.
-  A strong alternative/companion vignette and a nice contrast to Egypt-style BGP
-  withdrawal — could become its own short case study.
-- **Encrypted-DNS arms race**: DoH/DoT *blocking* and fingerprinting (book mentions, deck
-  only gestures). Worth a fuller treatment alongside Ch. 6 circumvention.
-- **RPKI adoption data**: a live figure (e.g., % of routes with valid ROAs) would make the
-  "needs wide adoption" point concrete; currently asserted, not quantified.
 - **Shutdowns as the blunt instrument**: Access Now KeepItOn reports **313 shutdowns / 52
   countries in 2025** (released Mar 31 2026) — belongs in the Intro deck but could be
-  referenced here when motivating BGP-level cutoffs.
-- **QUIC / HTTP/3** filtering is only implied; the Russia case throttled QUIC separately
-  (512 kbps) — a dedicated slide could cover UDP-based transport censorship.
+  referenced here when motivating BGP-level cutoffs. *Deferred here: lives more naturally
+  in the Intro deck; the new Iran/Egypt contrast already motivates BGP-level cutoffs.*
+- *(Integrated 2026-06-03 — see "Current-events updates made": Iran June 2025 stealth
+  blackout; encrypted-DNS blocking/fingerprinting; RPKI ROA-coverage figure; QUIC/HTTP-3
+  filtering.)*
 
 ## Next-year refresh notes
 - **Russia YouTube throttling vignette** (July 2024 / Jan 2025 figures): will go stale if
@@ -36,8 +50,17 @@
   report (expect ~Mar 2027).
 - **ECH-blocking framing**: fast-moving; confirm which states block ECH and whether ECH is
   default-on in Chrome/Firefox at refresh time.
-- Stronger alternative vignette flagged but not used: **Iran stealth blackout, June 2025**
-  — swap in if the Russia case ages out.
+- **Iran stealth-blackout vignette** (June 2025, arXiv 2507.14183): now ON the deck as its
+  own slide. Tied to a single 2025 conflict — at refresh, check for a newer "routes-up,
+  users-cut" case and confirm the ~707% VPN-search figure / Filterwatch analysis still
+  stand; the Egypt 2011 contrast is evergreen, so the slide survives even if the vignette
+  is swapped.
+- **RPKI ROA-coverage figure** (~60% IPv4, world avg, early–mid 2026): re-pull the live
+  headline from NIST RPKI Monitor (rpki-monitor.antd.nist.gov) or MANRS/APNIC each year;
+  it trends up, so the "still ~40% unprotected" framing may need softening over time.
+- **QUIC/HTTP-3 slide**: GFW SNI-QUIC blocking (Apr 2024) and the Chrome-Initial-size
+  circumvention are a live cat-and-mouse — confirm current GFW behavior and Russia's QUIC
+  throttle rate at refresh; verify whether ECH-over-QUIC has shifted the front line.
 
 ## Curated images
 - **Used** `slide004_img001.png` — clean hierarchical DNS-resolution diagram; teaches the

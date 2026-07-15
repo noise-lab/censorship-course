@@ -138,7 +138,9 @@ Book §3.1 section takeaway #3. The Brazil episode is the verified anchor: block
 ran 30 Aug–8 Oct 2024, lifted once X paid fines, named a legal rep, and removed
 specific accounts. The point: formal legal channels + informal mass reporting
 now do what firewalls used to. Ask the room: is a court-ordered platform block
-"censorship"? Who decides?
+"censorship"? Who decides? The legal hook in both cases is **safe-harbor /
+intermediary liability** — comply or lose it. That mechanism (Section 230, the
+EU DSA) is the subject of Ch. 4; flag the forward pointer here.
 :::
 
 # The Pressure to Automate {.center}
@@ -198,6 +200,37 @@ Source slides 18–27. Teaching point: fingerprinting is precise and
 privacy-preserving (store the hash, not the image) but **database-bound** and
 **context-free**. It answers "have we seen this exact thing before?" — great for
 known CSAM or copyrighted audio, useless for novel content, parody, or fair use.
+:::
+
+## Case Study: GIFCT — One Hash, Every Platform {.smaller}
+
+The **Global Internet Forum to Counter Terrorism** (GIFCT), founded **2017** by
+Facebook, Microsoft, Twitter, and YouTube, runs a **shared hash database** of
+terrorist/violent-extremist content.
+
+::: {.columns}
+::: {.column width="50%"}
+- **408,000** distinct items; **33** member platforms (2024 transparency report)
+- One platform's takedown decision **propagates to all** members
+:::
+::: {.column width="50%"}
+- Scope crept from ISIS imagery to broader "violent extremism" — **mission creep**
+- *How* content is added, by whom, and **what appeal exists** stay largely opaque
+:::
+:::
+
+**Centralization = takedown risk:** a single, unaccountable database can erase a
+voice **across the whole web at once** — with no notice and no appeal.
+
+::: {.notes}
+Book §content-moderation, GIFCT passage. This is the syllabus's "centralization =
+takedown risk, no appeal" case study. Verified (Jun 2026): founded 2017; 2024
+GIFCT Annual & Transparency Report reports 408,000 distinct hashed items and 33
+member platforms. Civil-liberties critics (Brennan Center, Statewatch, EDRi)
+flag the opacity of inclusion criteria and the absence of a due-process appeal.
+The teaching point mirrors the earlier centralization slide: fingerprinting is
+precise, but a *shared* database turns one firm's judgment into a web-wide
+deletion. Cross-link: intermediary-liability / DSA framing in Ch. 4.
 :::
 
 ## Family 2: ML Prediction (Statistical Match) {.smaller}
@@ -357,6 +390,35 @@ flags, can't see why, can't appeal to any neutral rule. And auditing is cheap �
 yet platforms don't disclose which model moderates you. Accountability gap.
 :::
 
+## The Model Is Also the *Target* {.smaller}
+
+Generative AI doesn't only **moderate** content — it **produces** the content
+that must now be moderated, and regulators are treating it that way.
+
+::: {.vignette}
+**Grok, 2026:** after X's Grok generated non-consensual sexualized "deepfake"
+images, the **European Commission opened DSA proceedings on Jan 26, 2026**, and
+**Ireland's DPC opened a GDPR inquiry on Feb 17, 2026**. X's response was to
+restrict Grok image generation to **paying subscribers** — turning a safety
+control into a **paywall**.
+:::
+
+The same **safe-harbor** the platform relies on becomes the **lever**: comply
+with the regulator's risk-mitigation demands, or lose it. *(intermediary
+liability / Section 230 / DSA — see Ch. 4)*
+
+::: {.notes}
+Backlog item 2 — verified (Jun 2026). EC press release IP/26/203, formal DSA
+proceedings against X over Grok-generated illegal content incl. possible CSAM,
+26 Jan 2026; Irish Data Protection Commission statutory inquiry under GDPR, 17
+Feb 2026 (also UK Ofcom signal and California AG probe). Note the double point:
+(1) the *moderator* is now the *thing being moderated*; (2) X's fix — gating
+image generation behind a paid tier — is itself the stratification story from
+the next slide (paid vs free as a tax on access; cf. zero rating). Cross-link to
+Ch. 4 here: DSA/Section 230 is exactly where state pressure leverages
+safe-harbor.
+:::
+
 ## Content Moderation Is Genuinely Hard {.smaller}
 
 - The universe of offending content is **infinite**
@@ -364,7 +426,8 @@ yet platforms don't disclose which model moderates you. Accountability gap.
 - Even **humans disagree and err** — so models trained on human labels inherit
   the disagreement *and* are **attackable**
 - Stratified access: **paid tiers** get better synthesis — a "tax on access" by
-  ability to pay (cf. zero rating)
+  ability to pay (cf. **zero rating**). When X gated Grok behind a subscription,
+  even a *safety* control became a paywall
 
 ::: {.notes}
 Book takeaways across both sections. Don't let students leave thinking "platforms

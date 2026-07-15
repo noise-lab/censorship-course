@@ -16,22 +16,33 @@
 - 2026-06-03: Refreshed VPN-spike examples to Nigeria 2021 Twitter ban (persisted
   post-2022), India 2020 TikTok, and Pakistan 2024–25 X restrictions (HTTPS-layer
   blocking), per book §6.1.
+- 2026-06-03: Added **Snowflake & Conjure** slide ("The 2025 Front Line") with dated
+  vignette — in its "most challenging year" Tor made **Snowflake the most-used obfuscation
+  tool in Iran** (upgraded to Manifest V3, staging-server stress tests) and **deployed
+  Conjure** (DNS/AMP-cache registration, unused-ISP-address-space decoys), with wider
+  Conjure rollout slated next. Source: Tor Project blog, "Staying Ahead of Censors in 2025"
+  (blog.torproject.org/staying-ahead-of-censors-2025). Snowflake mechanics (volunteer
+  WebRTC browser proxies, ephemeral, broker rendezvous over domain fronting) per
+  snowflake.torproject.org / EFF. NOT yet in the book — flagged for next edition.
+- 2026-06-03: Added **Encrypted DNS as a Circumvention Layer** slide (DoH/DoT, port-53
+  poisoning, 1.1.1.1/8.8.8.8) — Iran 2022 Mahsa Amini (Signal/Outline/Lantern) and Russia
+  post-2022; key caveat that it falls to SNI inspection / IP blocking and only "buys time."
+  Per book §6.1 (hounsel2019/2020, tai2025irblock, ramesh2023russia-ukraine).
+- 2026-06-03: Added **I2P: Garlic Routing for Internal Services** half-slide — garlic
+  routing vs. onion routing (bundled "cloves"), separate inbound/outbound tunnels, no exit
+  relay / outproxy bottleneck, Tor-vs-I2P rule of thumb. Per book §6.2.
+- 2026-06-03: Added **Who Pays for Circumvention?** slide integrating the economics/
+  sustainability item — generalizes the decoy-router incentive problem to bridges, exit
+  relays, and Snowflake's borrowed-browser model (donated public good; economic not
+  cryptographic problem). Per book §6.4 incentives discussion + §6.1 free-VPN point.
 
 ## Suggested missing coverage on broad themes (point 3)
-- **Snowflake & Conjure** (newer pluggable transports): Snowflake's volunteer-browser-proxy
-  model and Conjure's use of unused ISP address space are increasingly central to the 2025
-  Russia/Iran fight and worth one slide if pluggable transports get expanded.
-- **I2P / garlic routing** mechanics: currently only a table row; a half-slide on garlic
-  routing vs. onion routing and inbound/outbound tunnels would deepen the "beyond Tor" point.
-- **Encrypted DNS (DoH/DoT) as a circumvention layer**: the book (§6.1) treats this at
-  length (Iran 2022 Mahsa Amini, Russia post-2022); deck only gestures at it via Pakistan.
-  Could be its own slide tying to the Measurement/Technical chapters.
-- **Economics/incentives of circumvention infrastructure**: who pays for bridges, exit
-  relays, decoy routers? The decoy-routing incentive problem could generalize into a
-  broader "sustainability of circumvention" discussion.
-- **Threat-model exercise**: an in-class activity matching personas (diaspora journalist,
-  domestic activist, casual streamer) to tool portfolios would operationalize the chapter's
-  central takeaway.
+- **Threat-model exercise** (DEFERRED — in-class activity, not a slide): an activity matching
+  personas (diaspora journalist, domestic activist, casual streamer) to tool portfolios would
+  operationalize the chapter's central takeaway. Belongs in the agenda/handout, not the deck.
+- (Integrated 2026-06-03: Snowflake & Conjure, I2P / garlic routing, Encrypted DNS as a
+  circumvention layer, and economics/sustainability of circumvention infrastructure — see
+  "Current-events updates made" above.)
 
 ## Next-year refresh notes
 - **Russia VPN vignette** (Feb 2026 figures): numbers will move fast — re-verify the
@@ -43,6 +54,14 @@
 - **WebTunnel / pluggable-transport status**: the obfs4 → meek → WebTunnel → Conjure line
   moves yearly; verify which transport is currently load-bearing in Russia/Iran via the Tor
   Project blog before teaching.
+- **Snowflake & Conjure 2025 vignette**: the "most-used in Iran" claim and "Conjure rollout
+  next" status are from the Tor Project's 2025 retrospective — re-verify against the next
+  annual Tor anti-censorship post (Conjure rollout should have a status update; Snowflake's
+  primacy may shift to WebTunnel/Conjure). Watch for a wartime Iran-blackout or Russia
+  allowlist event that could become the lead vignette.
+- **Encrypted-DNS slide**: stable as mechanics, but ECH/encrypted-SNI adoption is the moving
+  edge — add a line when ECH is widely deployed/blocked. Iran 2022 and Russia post-2022 will
+  read as older over time; swap for a fresher DNS-manipulation event if one is verifiable.
 - **VPN-ban spike examples** (Nigeria/India/Pakistan): replace with the most recent
   high-profile national platform ban if one occurs.
 - Stronger alternative vignette flagged but not used: **Iran wartime internet blackouts

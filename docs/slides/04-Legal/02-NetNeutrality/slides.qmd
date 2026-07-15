@@ -63,6 +63,42 @@ directly constrain that friction. Keep the framing on *information control as a 
 on access*.
 :::
 
+## The Lineage: From Common Carriage to End-to-End {.smaller}
+
+Net neutrality didn't appear in 2015 — it inherits **two older traditions**:
+
+::: {.columns}
+::: {.column width="50%"}
+**Common carriage (law)**
+
+Carriers that serve the public — the **telegraph**, then the **telephone** under
+the **1934 Communications Act, Title II** — must carry all traffic on
+**non-discriminatory** terms.
+:::
+::: {.column width="50%"}
+**End-to-end argument (engineering)**
+
+**Saltzer, Reed & Clark (1984):** keep the network **simple**; put intelligence at
+the **edges**. A "dumb pipe" *can't* pick winners by design.
+:::
+:::
+
+Title II is the **legal lever**; end-to-end is the **technical reason** the lever
+fits broadband.
+
+::: {.notes}
+This is the intellectual genealogy the "why Title II?" debate hangs on. The legal
+side: common-carriage obligations are centuries old (innkeepers, ferries), formalized
+for telecom in the 1934 Act — the telephone company can't refuse to connect your call
+because it dislikes who you're calling. The engineering side: Saltzer/Reed/Clark's
+1984 "End-to-End Arguments in System Design" is the canonical statement that the
+network should stay dumb and general-purpose. Reclassifying broadband as Title II in
+2015 was an attempt to map the old common-carrier duty onto the modern dumb pipe. The
+fight over classification is really a fight over whether broadband is "the phone
+network" (carriage) or "an information service" (content). Sources: Saltzer/Reed/Clark,
+ACM TOCS 1984; Communications Act of 1934, Title II.
+:::
+
 # First, the Internet's Business Model {.center}
 
 ## How Networks Interconnect {.smaller}
@@ -178,6 +214,47 @@ and Washington's mirror laws keep ISPs largely in line nationwide anyway. Source
 6th Cir. opinion, Jan 2, 2025; CRS LSB11264.
 :::
 
+## Elsewhere, the Rules Are Statute, Not Ping-Pong {.smaller}
+
+Other jurisdictions anchored openness in **legislation**, not a flippable agency
+classification:
+
+::: {.columns}
+::: {.column width="50%"}
+**EU — Open Internet Regulation**
+
+**Regulation (EU) 2015/2120** enshrines non-discriminatory traffic treatment.
+**BEREC** guidelines (updated **June 2022**, after EU Court rulings) treat
+application-specific **zero-rating as a violation**.
+:::
+::: {.column width="50%"}
+**India — TRAI 2016**
+
+The **Prohibition of Discriminatory Tariffs** regulation (**Feb 2016**) banned
+**differential pricing by content** — effectively killing Facebook's **Free Basics**.
+:::
+:::
+
+Pricing is an information-control lever too: **zero-rating** taxes *some* content less,
+nudging usage — *see the zero-rating deck (Ch. 4)*.
+
+::: {.notes}
+The comparative contrast students should take away: the US bound net neutrality to an
+FCC *classification* (Title II vs. information service), which flips with each
+administration — hence the ping-pong. The EU instead wrote it into a *statute*
+(Regulation 2015/2120), so the baseline is stable and the fights are at the margins
+(what counts as a permitted "specialized service," whether a given zero-rating plan is
+application-agnostic). After the 2021 EU Court of Justice rulings against Telekom
+Deutschland and Vodafone, BEREC's June 2022 guidelines treat application-specific
+zero-rating as incompatible with the regulation. India went further and earlier: TRAI's
+Feb 2016 differential-pricing ban outlawed content-based price discrimination outright,
+which ended Free Basics there after a large public campaign. Tie back to the course
+frame: zero-rating is friction-by-pricing — a *tax on access* to non-favored content —
+which is why it belongs in a censorship course and why the zero-rating deck treats its
+mechanics. Sources: Regulation (EU) 2015/2120 and BEREC guidelines update, 9 June 2022;
+TRAI Prohibition of Discriminatory Tariffs for Data Services Regulations, 2016.
+:::
+
 # The Hard Case: Congestion vs. Censorship {.center}
 
 ## "Was Comcast Blocking Netflix?" (2014) {.smaller}
@@ -255,12 +332,21 @@ well** to the big content providers:
 So peering disputes like 2014 are **largely dead for now** — even without
 regulation.
 
+**But the argument is contingent.** It assumes the **last mile is competitive**. Where
+a household has **one realistic broadband provider**, that ISP can degrade access with
+**no market penalty** — and a **vertically integrated** ISP that *owns competing
+content* has a reason to.
+
 ::: {.notes}
-The book's market-incentives argument. It's the strongest counter to "we need NN
-rules to stop throttling": in the US, ISP behavior has actually been pretty good
-*absent* federal rules, because the economics now favor cooperation. Push students:
-is good behavior driven by incentives durable, or just contingent? Where could it
-break? (No competition in last-mile; vertically integrated ISP-owned content.)
+The book's market-incentives argument — and its load-bearing assumption. It's the
+strongest counter to "we need NN rules to stop throttling": in the US, ISP behavior has
+actually been pretty good *absent* federal rules, because the economics now favor
+cooperation. But press students on the premise: "the market disciplines the ISP" only
+works if customers can *switch*. In much of the US the last mile is a monopoly or
+duopoly, so the exit threat is weak — this is the structural reason markets may not
+protect openness. Add vertical integration (an ISP that also sells streaming has a
+motive to slow rivals) and the incentive story can flip. Good behavior driven by
+incentives is contingent, not guaranteed.
 :::
 
 # Bringing It Together {.center}

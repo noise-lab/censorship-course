@@ -157,6 +157,27 @@ circumvent. A censorship event can permanently shift behavior. Pakistan is instr
 strict HTTPS-layer interference, yet VPN adoption stayed elevated for months. Book §6.1.
 :::
 
+## Encrypted DNS as a Circumvention Layer
+
+Plaintext DNS (UDP **port 53**) is the *easiest* layer to censor — a resolver just
+returns the wrong answer or none. **DoH / DoT** encrypt the lookup to a third-party
+resolver (**1.1.1.1**, **8.8.8.8**), so the local network can't read or rewrite it.
+
+- **Iran, 2022** (Mahsa Amini protests): users flocked to DoH-capable apps — Signal,
+  Outline, Lantern — as authorities forged DNS answers
+- **Russia, post-2022 invasion**: encrypted DNS + VPNs + Tor surged together
+- **But**: once a censor moves to **SNI inspection or IP blocking**, DNS encryption no
+  longer hides the destination — it **buys time**, not immunity
+
+::: {.notes}
+Book §6.1 "Encrypted DNS as a circumvention layer." The teaching point is calibration:
+DoH/DoT raise the cost of the *simplest* interference (DNS poisoning) and are decisive in
+fast-moving events, but they are a partial measure — the destination still leaks in the TLS
+SNI and the IP header. ECH/encrypted-SNI is the next move; cross-link to the Technical
+chapter (DNS manipulation) and the Measurement chapter. Hounsel et al. showed DoH costs
+little in page-load time, which is why browsers ship it by default.
+:::
+
 ## The Cat-and-Mouse Game, Concretely
 
 ::: {.vignette}
@@ -279,6 +300,38 @@ transports and auto-selects; it absorbed huge surges during Myanmar's 2021 coup 
 "Other Anonymous Communication Systems."
 :::
 
+## I2P: Garlic Routing for Internal Services {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Built for *inside* the network**
+
+- I2P aims to connect **pseudonymous endpoints to each other**, not to fetch the clearnet
+- **No exit relay** to target — internal services (file sharing, mail, IRC) are hard to block
+- Reaching the clearnet needs scarce volunteer **outproxies** (slow, enumerable)
+:::
+::: {.column width="50%"}
+**Garlic routing vs. onion routing**
+
+- Bundle **multiple messages** into one encrypted **"garlic clove"** → harder traffic
+  confirmation
+- Separate **inbound and outbound tunnels** (not Tor's symmetric circuits): one compromised
+  tunnel reveals only one direction
+:::
+:::
+
+**Rule of thumb:** reading censored clearnet → **Tor**; running a forum/mirror that must
+survive aggressive blocking → **I2P**.
+
+::: {.notes}
+Book §6.2 "Other Anonymous Communication Systems." This deepens the I2P row in the portfolio
+table. Garlic routing is a variant of onion routing: cloves bundled together so an observer
+can't tell which encrypted unit belongs to which conversation. The inbound/outbound tunnel
+split is the other key contrast with Tor's symmetric circuits. The strengths/weaknesses
+mirror Tor's almost exactly — the differentiator is the *hidden-by-default*, no-exit-relay
+design, which is why I2P shines for internal services and is poor for clearnet reading.
+:::
+
 # Information Hiding {.center}
 
 *When even the **existence** of circumvention traffic is incriminating.*
@@ -298,6 +351,44 @@ Two families: scramble into apparent randomness, or imitate a real protocol. Web
 (late 2024) blends into TLS and became vital in Russia — then most bridges were blocked by
 mid-2025, forcing Tor to distribute bridge addresses over Telegram. This is the
 cat-and-mouse game inside the cat-and-mouse game. Book §6.2 "Pluggable Transports."
+:::
+
+## Snowflake and Conjure: The 2025 Front Line {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Snowflake** — *don't be a fixed target*
+
+- Route through **volunteer browsers** running a WebRTC proxy
+- Proxies are **ephemeral**: when one dies, the client renews with another
+- A single short-lived address is **not worth blocking**
+:::
+::: {.column width="50%"}
+**Conjure** — *hide in the address space*
+
+- Use **unused IP space inside cooperating ISPs** as decoy endpoints
+- Blocking one address barely dents it; **no proxy list** to enumerate
+- A refraction/decoy-style transport, now an actual deployment
+:::
+:::
+
+::: {.vignette}
+**Tor, 2025.** In its "most challenging year," Tor's anti-censorship team made
+**Snowflake the most-used obfuscation tool in Iran** (upgraded to MV3, stress-tested on a
+staging server) and **deployed Conjure** with new DNS/AMP-cache registration. Conjure's
+wider rollout is slated to begin next. *(Source: Tor Project blog, "Staying Ahead of
+Censors in 2025.")*
+:::
+
+::: {.notes}
+This is the freshest, best-sourced pluggable-transport hook — verify yearly against the Tor
+Project blog (the obfs4 → meek → WebTunnel → Snowflake/Conjure line moves). Snowflake's whole
+point is that there is *no stable proxy to enumerate*: the rendezvous broker (over domain
+fronting) hands the client a fresh volunteer browser, P2P over WebRTC. Conjure generalizes
+decoy routing — it consumes a station inside an ISP but uses dark/unused address space so
+the censor can't enumerate endpoints without breaking real traffic. Note the through-line to
+the Decoy Routing section: Conjure is refraction networking that actually shipped. Not in the
+book yet — flag for the next edition.
 :::
 
 ## Domain Fronting
@@ -413,6 +504,30 @@ Book §6.4.
 Decoy routing is technically the most elegant idea in the chapter and the least deployed.
 The blocker is incentives, not cryptography: an ISP gains nothing by helping users abroad.
 As software routers speed up, an on-path middlebox deployment may become feasible. Book §6.4.
+:::
+
+## Who Pays for Circumvention?
+
+The decoy-router incentive problem is one case of a **general sustainability question**:
+circumvention infrastructure is mostly a **donated public good**.
+
+- **Tor bridges, exit relays** — run by volunteers and nonprofits who absorb bandwidth,
+  abuse complaints, and legal exposure
+- **Snowflake** — borrows *strangers'* browsers and home bandwidth, a few seconds at a time
+- **Decoy routers** — would burden ISPs whose own customers see **no benefit**
+- VPNs invert it: someone pays a subscription — or **you pay with your data**
+
+The hardest problems here are **economic, not cryptographic**.
+
+::: {.notes}
+This ties together the recurring incentive thread (decoy routing §6.4, the "free VPN = you're
+the product" point §6.1, Snowflake's volunteer model). The pedagogical move: ask *who bears
+the cost* of each tool. Volunteer-run infrastructure (relays, bridges, Snowflake proxies) is
+chronically under-resourced and depends on grant funding (e.g., OTF) plus donated bandwidth;
+exit-relay operators take on real legal/abuse risk. Decoy routing fails precisely on
+incentives. The takeaway: a tool's long-run survival depends as much on a sustainable funding
+and operations model as on its threat model. Cross-link to the legal/governance discussion in
+Ch. 7.
 :::
 
 ## The Whole Chapter in One Picture {.smaller}

@@ -14,28 +14,49 @@
   threats blocked **May 2024–Mar 2025**, **+241% YoY**, journalism orgs hardest hit
   (Cloudflare 2025 Impact Report, June 2025). Replaces a generic "defenses" closer with
   the book's who-gets-protected governance question.
+- 2026-06-03: Added **"The Classification Arms Race in 2026: SNI vs. ECH"** slide.
+  Verified: Firefox ECH default since **v119 (Oct 2023)**, Chrome **v117+**; **Cloudflare**
+  default ECH **Oct 2024**; **Russia (Roskomnadzor/TSPU)** began dropping ECH ClientHellos
+  **Nov 5, 2024**, triggered by the shared outer SNI `cloudflare-ech.com` (one filter rule
+  caught all of it); **China** censors the DNS ECH relies on instead (blocked ESNI in 2020).
+  Sources: Cloudflare ECH announcement; CDT "Do Not Stick Out" (2025); gfw.report USENIX
+  Security 2025. Integrates backlog item 3.
+- 2026-06-03: Added **"Case Study: Russia's Sovereign Internet Throttle"** slide.
+  Verified: **March 2021** Roskomnadzor Twitter throttle (100% mobile / 50% desktop;
+  matched `t.co` → over-throttled Reddit/Microsoft), first documented selective on-demand
+  state throttling — **Xue et al., ACM IMC 2021**; **2025** WhatsApp throttled ~**70–80%**
+  via DPI under the RuNet/TSPU sovereign-internet regime, steering users to state **Max**
+  messenger (**HRW**, July 2025; intellinews). Integrates backlog item 2; doubles as a
+  concrete instance of the SNI-classification over-blocking weakness.
+- 2026-06-03: Added **"Low-Rate and Layer-7 DoS"** slide (after the asymmetry slide).
+  Verified: **~93% (92.88%)** of mitigated attack traffic against **journalism orgs** was
+  **Layer-7 HTTP**, per Cloudflare's **Project Galileo** report (window **May 2024–Mar
+  2025**, released **June 2025**) — same source as the 108.9 B / +241% governance figures.
+  Integrates backlog item 1; reinforces the asymmetry/indistinguishability theme.
+- 2026-06-03: Strengthened the **net-neutrality forward-pointer** (backlog item 4): the
+  Netflix/peering vignette now carries an explicit on-slide line that the case is resolved
+  in the **net-neutrality deck (Ch. 4)** as a commercial interconnection fight, not
+  censorship. One-line cross-link, no new slide.
 - 2026-06-03: Kept canonical anchors that the book treats as core history: **Mirai/Dyn
   (Oct 21, 2016)**, **Great Cannon (2015)**, **Spamhaus DNS amplification (2013)**,
   **Netflix/peering "throttling" (~2014)**. These are taught as history, not as "current
   events," so they don't go stale.
 
 ## Suggested missing coverage on broad themes (point 3)
-- **Throttling-detection hands-on (Wehe):** agenda Lecture 4 pairs throttling with a
+- **Throttling-detection hands-on (Wehe) (DEFERRED):** agenda Lecture 4 pairs throttling with a
   hands-on detection lab. A short demo deck or appendix walking through Wehe's
   replay-with/without-tunnel methodology and its noise problems would land the
   epistemics point harder than slides alone.
-- **ECH / Encrypted ClientHello status:** the classification arms race hinges on this.
-  A one-slide "state of SNI encryption in 2026" (browser/CDN rollout, where it's blocked)
-  would date well as an annual refresh target.
-- **Net-neutrality bridge:** the Netflix/peering nuance is introduced here but resolved in
-  Ch. 4. Worth an explicit forward-pointer / shared example so the two decks reinforce.
-- **Low-rate / application-layer DoS (Layer 7):** Cloudflare data shows ~93% of attacks on
-  journalism orgs are L7. Current deck mentions low-rate DoS in notes only; a dedicated
-  slide could connect to the asymmetry theme.
-- **Sovereign-internet / RuNet throttling:** Russia's selective slowdowns (e.g., the 2021
-  Twitter throttling and 2025 WhatsApp/FaceTime call interruptions) are a strong
-  state-throttling case study not yet on a slide.
-- **Botnets deep-dive:** book defers botnet mechanics to the next chapter; ensure the
+- ~~**ECH / Encrypted ClientHello status**~~ — DONE 2026-06-03 (dedicated SNI-vs-ECH slide).
+  Keep as an *annual refresh* target: re-verify browser/CDN defaults and which states block
+  ECH (Russia/China) each year.
+- ~~**Net-neutrality bridge**~~ — DONE 2026-06-03 (explicit on-slide forward-pointer to Ch. 4
+  on the Netflix/peering vignette).
+- ~~**Low-rate / application-layer DoS (Layer 7)**~~ — DONE 2026-06-03 (dedicated L7 slide;
+  Cloudflare ~93% journalism-org L7 figure).
+- ~~**Sovereign-internet / RuNet throttling**~~ — DONE 2026-06-03 (Russia case-study slide:
+  2021 Twitter throttle + 2025 WhatsApp throttle).
+- **Botnets deep-dive (DEFERRED):** book defers botnet mechanics to the next chapter; ensure the
   Platform/abuse deck picks up Mirai-style IoT botnets so this thread isn't dropped.
 
 ## Next-year refresh notes
@@ -49,6 +70,17 @@
   Impact Report figures annually; verify the window and percentage each time.
 - **Turkey throttling call-out:** verify it remains current in the next KeepItOn report;
   substitute the year's most prominent social-media-throttling state if it shifts.
+- **SNI/ECH slide (Russia TSPU blocking ECH, Nov 2024; Firefox v119 / Chrome v117 / Cloudflare
+  Oct 2024 defaults):** re-verify each year — browser/CDN ECH defaults, whether Cloudflare
+  still uses a shared `cloudflare-ech.com` outer SNI (the single-signature weakness), and
+  which states block ECH. Update if China starts censoring ECH directly.
+- **RuNet case-study slide (Twitter 2021, WhatsApp ~70–80% 2025):** the 2021 Twitter case
+  (Xue et al., IMC 2021) is a durable scholarly anchor; the WhatsApp figure will age —
+  refresh with the latest Russian throttling/ban status (Max messenger adoption, any full
+  WhatsApp/Telegram ban) from the next HRW/Access Now reporting.
+- **Cloudflare L7 figure (~93% / 92.88% of journalism-org attacks are Layer 7, May 2024–Mar
+  2025):** refresh with each Project Galileo / Radar report; same source/window as the
+  108.9 B / +241% Galileo governance stat, so update both together.
 - **Stronger alternative vignettes flagged but not used:** Nepal's Sept 2025 block of 26
   platforms; Iran's Jan 2026 near-total blackout during protests — both better fit a
   *shutdowns* deck than this throttling/DoS one, so held in reserve.

@@ -15,20 +15,35 @@
   thesis-progress slides) with the book's "pricing as friction / tax on access"
   framing. Kept the two natural experiments (Cell C WhatsApp 3×, MTN Twitter 2014) as
   the empirical core.
+- 2026-06-03: Added "India Bans Free Basics (2016)" slide — TRAI **Prohibition of
+  Discriminatory Tariffs for Data Services Regulations**, **Feb 8, 2016** ("no
+  discriminatory tariffs on the basis of content"), which killed Free Basics and
+  Airtel Zero. Framed as the developing-world net-neutrality precedent predating the
+  US/EU rulings. (Verified via TRAI regulation coverage / Wikipedia "Net neutrality in
+  India" / IFF.)
+- 2026-06-03: Added "Paid Prioritization's Next Form: 5G Slicing" slide — **T-Mobile
+  T-Priority** full commercial launch **Feb 20, 2025**, "first commercially available
+  5G network-slicing service," up to **5×** average-user resources; **AT&T "Turbo"**
+  **$7/mo** data prioritization (2024). Forward-looking but grounded in shipped
+  deployments. (Verified via T-Mobile Newsroom, UrgentComm, Fierce Network.)
+- 2026-06-03: Integrated **app-store / payment-rail prioritization** and **CDN/cloud
+  "free tier" = de facto zero rating of hosting** into the existing "Threat Moved Up
+  the Stack" slide (two new bullets) rather than new slides — book already frames the
+  shift to "platforms, cloud hosts, and CDNs."
+- 2026-06-03: Refreshed zero-rating affordability empirics on "What Is Zero Rating?" —
+  A4AI: a **2GB** plan ≈ **5.8%** of average monthly income (5GB ≈ 10.1%) across
+  low/middle-income countries, vs. the UN/A4AI **"1 for 2"** target; no low-income
+  country has met it. (Verified via Alliance for Affordable Internet, a4ai.org.)
 
 ## Suggested missing coverage on broad themes (point 3)
-- **India's 2016 Free Basics ban** (TRAI differential-pricing prohibition) — mentioned
-  only in a speaker note; could be a slide as the developing-world net-neutrality
-  precedent and a counterpoint to the EU/US framing.
-- **App-store / payment-rail prioritization** as the modern "up the stack" analog of
-  fast lanes (Apple/Google fee tiers, payment-processor deplatforming) — ties §4.3 to
-  the platform chapter; currently only gestured at.
-- **CDN and cloud "free tier" effects** — Cloudflare/AWS as de facto zero-rating of
-  hosting; who gets fast, cheap delivery and who doesn't. No deck covers this.
-- **Sponsored-data / 5G network-slicing** — paid prioritization's likely next form;
-  worth a forward-looking slide once a verified deployment example exists.
-- **Updated zero-rating field data** — our Kenya/South Africa study is ~2014–2018;
-  an A4AI/GSMA affordability-report refresh would modernize the empirics.
+- *(All five backlog items from issue #7 integrated as of 2026-06-03 — see "Current-
+  events updates made" above. Two as new slides: India 2016 ban, 5G slicing. Three
+  integrated in place: app-store/payment-rail + CDN/cloud free tier on the "up the
+  stack" slide; A4AI affordability refresh on "What Is Zero Rating?".)*
+- **Sponsored-data (deeper)** — the slicing slide uses T-Priority/AT&T Turbo; a
+  classic *sponsored-data* example (carrier billing the content provider, à la AT&T
+  Sponsored Data) could be added if a current, web-verifiable deployment surfaces.
+  Deferred for now to keep the deck lean.
 
 ## Next-year refresh notes
 - **US net-neutrality vignette (Jan 2, 2025 Sixth Circuit / "no rules in force as of
@@ -41,6 +56,13 @@
   US status changes.
 - **Binge On** as the US zero-rating example is dated (~2016); replace if a current US
   carrier zero-rating offer becomes the better-known case.
+- **5G slicing slide (T-Priority Feb 20, 2025; AT&T Turbo $7/mo 2024)** — re-verify
+  yearly; swap in the first *content-provider* slice if/when one ships (that's the
+  net-neutrality flashpoint). Watch for content-provider premium slices.
+- **A4AI affordability figure (2GB ≈ 5.8%, 5GB ≈ 10.1% of income; "1 for 2")** —
+  refresh from the latest a4ai.org affordability data each year; numbers drift.
+- **India 2016 TRAI ban** — stable historical precedent; no refresh needed, but watch
+  for any TRAI move to *relax* differential-pricing rules.
 
 ## Curated images
 - **Used** `slide008_img007.png` — the MTN/Twitter time series (Avg MB/device, red

@@ -116,6 +116,26 @@ censorship is effective *because* it has holes — direct repression causes back
 inconveniencing most people is enough.
 :::
 
+## Shared Vocabulary (We Reuse This All Term) {.smaller}
+
+| Term | Working definition |
+|---|---|
+| **Censor** | Any actor — state, platform, ISP, private party — that controls information |
+| **Point of control** | A place on the path (ISP, transit, CDN, CA, platform, endpoint) where a censor can act |
+| **Tax on access** | Any cost — block, delay, burial, noise — imposed on reaching information |
+| **Porous** | Control that has holes by design; works on the majority, not the motivated few |
+| **Fear / Friction / Flooding** | Roberts's three levers: scare, slow, or drown out |
+
+These terms recur in every deck — pin them now.
+
+::: {.notes}
+This is the reusable reference slide — the same vocabulary anchors Ch. 2–6. Cold-call:
+give me a point of control between you and a blocked site. Note that "censor" is
+deliberately broad (not just the state) — a CDN or a payment processor is a censor in
+our usage. "Porous" is the key word for the central puzzle slide later. See
+censorship-book §1.1–1.2.
+:::
+
 ## Historical Anchor: The Great Firewall of China {.smaller}
 
 Since the late 1990s: Internet-scale packet filtering + DNS injection + TCP resets. The archetype of state-run censorship.
@@ -244,14 +264,21 @@ on these.
 ## Non-Technical Control Is Just as Real
 
 - **Self-censorship** — fear of backlash; pervasive and nearly undocumented
-- **Law & policy** — copyright takedowns (DMCA §512), intermediary-liability regimes
-  (CDA §230 and its global counterparts), platform-transparency law (EU **DSA**)
+- **Law & policy** — copyright takedowns (DMCA §512); **intermediary liability**
+  (US **CDA §230** and its global counterparts, EU **DSA**) — *we take this up in
+  Ch. 4 / the Legal deck*
 - **Economic** — demonetization, payment cutoffs, infrastructure deplatforming
 
 ::: {.notes}
 Book §1.2 and Ch. 4. The legal/economic lever is often *more* powerful than the
-technical one — a payment processor or a CA can deplatform faster than a firewall. Set
-up the Legal chapter here.
+technical one — a payment processor or a CA can deplatform faster than a firewall.
+This is the explicit forward-pointer to the Legal chapter: §230 is the rule that
+platforms are *not* liable for user content (and may moderate in good faith). It's
+under heavy pressure in 2025–26 — the Supreme Court has repeatedly declined to revisit
+it (Oct 2025), but state courts are narrowing it via product-design theories (a Calif.
+jury found platforms liable for addictive teen-harm design, March 24 2026; Mass. SJC
+let a similar Meta claim proceed, April 10 2026). The EU DSA is the contrasting
+must-act-on-notice regime. We do all of this in the Legal deck — don't litigate it now.
 :::
 
 ## How Widespread Is It? {.center}
@@ -282,7 +309,34 @@ This is the freshest, verified hook — swap it each year (see coverage-notes). 
 teaching point: even as control gets subtle (friction/flooding), the crudest tool —
 the full shutdown — is at an all-time high, concentrated in conflict and elections.
 Tools that track this: internetshutdowns.in, OONI, Censored Planet. Source: Access Now
-KeepItOn 2024 annual report.
+KeepItOn 2025 annual report.
+:::
+
+## The "Globalization" of Censorship {.smaller}
+
+Control is no longer an authoritarian niche — the **infrastructure and the playbook
+travel** (book §1.3):
+
+- **China's model as export** — Freedom House (*Freedom on the Net 2025*) reports **at
+  least 80 countries** have adopted Chinese surveillance/filtering technology; global
+  Internet freedom has declined for the **15th straight year**
+- **Centralized filtering scales** — once a country has chokepoints, blocking and
+  shutdowns become technically trivial to replay
+- **Democracies adopt the tools too** — legal pressure, infrastructure
+  **consolidation** (a few CDNs, CAs, app stores), and private moderation
+
+::: {.vignette}
+The same mechanisms that let **Egypt** flip off the Internet in 2011 are now *ubiquitous*
+— centralized control means a shutdown is technically feasible almost anywhere.
+:::
+
+::: {.notes}
+Book §1.3 ("The Globalization of Internet Censorship"). Key move: separate the *technology*
+from the *regime*. The Great Firewall was the prototype; the prototype is now a product
+line — Freedom House's "80 countries" figure (Freedom on the Net 2025) is the verified
+hook. Tie back to consolidation (Cloudflare/Dyn): centralization is what makes the
+export effective and what makes Western shutdowns feasible. Don't moralize — the point is
+mechanism diffusion. See coverage-notes for the source.
 :::
 
 ## We Can Measure It

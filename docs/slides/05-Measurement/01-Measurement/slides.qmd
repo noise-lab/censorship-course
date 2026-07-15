@@ -237,11 +237,20 @@ a clue, not proof.
   others ~80% of tested domains
 - Targets: **gambling, pornography, P2P, social media, video**
 
+**Encrypted DNS** (DoH / DoT) raises the cost of this manipulation — so censors now
+measurably **block the encrypted resolvers** too *(see Ch. 2 / the Circumvention deck)*.
+
 ::: {.notes}
 Book §5.2, Figure (iris-results). Note the *within-country* variation — it's not a
 national monolith; individual resolvers differ wildly. That's either a measurement
 artifact or a real manifestation of porous censorship. Honest answer from the study: we
-don't fully know. Good moment to model scientific humility.
+don't fully know. Good moment to model scientific humility. Encrypted-DNS tie-in: DoH/DoT
+hide the plaintext lookups that DNS injection targets, so they're a circumvention move —
+which is why measurement studies now track *blocking of the encrypted resolvers
+themselves*. Recent work (e.g., Li et al. 2024) found ~6% of encrypted DNS queries
+censored globally but ~36% from inside China; DoT/DoH/DoQ are widely blocked in censored
+regions. Cross-link to Ch. 2 (encrypted DNS mechanics) and Ch. 6 (circumvention) — don't
+re-teach the protocol here.
 :::
 
 ## Measuring TCP/IP: The Vantage-Point Problem
@@ -312,11 +321,37 @@ domain vs. same IP vs. same URL) it infers the *granularity* of blocking. This i
 most ethically contested tool in the chapter — flag it now.
 :::
 
-## Other Measurement Platforms
+## Measurement Meets Real Infrastructure {.smaller}
+
+These techniques now map **state censorship systems** at scale:
+
+- **China's Great Firewall** — measured as a **multi-layered** system (DNS, TCP/IP,
+  HTTP/S, SNI), continuously profiled by tools like **GFWeb**
+- **Iran** — filtering at **multiple layers** of the stack, blocking **millions** of
+  domains
+- **Kazakhstan** — the state pushed its **own root CA** onto users to run a
+  nationwide **HTTPS man-in-the-middle**, until browsers **blocklisted** the cert *(2019; again Dec 2020)*
+
+::: {.notes}
+Book §5.2 (web-filtering subsection) names all three. The teaching point: the remote
+side-channel methods scale up to characterize entire national systems. GFW is not one
+box but layered filtering at DNS/TCP/HTTP/SNI. Iran (Tai et al., 2025) operates at
+multiple layers and blocks millions of domains. Kazakhstan is the vivid one: in July 2019
+the state told citizens to install the "Qaznet" root certificate and then MITM'd HTTPS
+to ~37 domains (Google, Facebook, Mail.ru); Chrome, Firefox, and Safari blocklisted the
+cert, and again when Kazakhstan retried in December 2020 (Raman et al., IMC 2020;
+Mozilla, 2020). Kazakhstan is the cleanest real-world example of a *rogue root CA* —
+cross-link to the Technical chapter's HTTPS/TLS material.
+:::
+
+## Other Measurement Platforms {.smaller}
 
 - **Censored Planet** — remote, continuous, side-channel measurement at global scale
 - **ICLab** — VPS-based probes across many countries
 - **OONI** — volunteer probes + open data
+
+Censored Planet packages the methods we just saw as named techniques:
+**Satellite/Iris** (DNS), **Augur** (TCP/IP, the IP-ID side channel), **Hyperquack** (HTTP/S).
 
 Each trades off **representativeness**, **coverage**, and **risk to people** differently.
 **There is no single best vantage point.**
@@ -326,7 +361,12 @@ Book §5.1 takeaways. VPS-based (ICLab) is safe and easy but not representative 
 residential users — a datacenter in a country isn't a home connection in a rural area.
 Volunteer probes (OONI) are representative but raise recruitment and safety issues.
 Side-channel (Censored Planet) needs no in-country consent but lives in an ethical gray
-zone. The choice is a values trade-off, not a purely technical one.
+zone. The choice is a values trade-off, not a purely technical one. The named techniques
+map onto exactly the methods earlier in this deck: Satellite/Iris compare open vs. trusted
+resolvers (the DNS-consistency idea); Augur is the IP-ID idle/spooky scan for TCP/IP;
+Hyperquack injects keywords into HTTP/S to known-behavior servers. Censored Planet has run
+since Aug 2018 and collected tens of billions of measurements from ~95,000 vantage points
+weekly (censoredplanet.org). One slide, three techniques, all already taught.
 :::
 
 # Measuring Platform & Legal Controls {.center}
@@ -466,7 +506,7 @@ for traffic their device sends — they might have malware; their browser alread
 hundreds of third-party domains. The web's architecture is *itself* consequentialist.
 :::
 
-## Toward Ethical Norms
+## Toward Ethical Norms {.smaller}
 
 No bright-line rules — but four guiding principles:
 
@@ -476,11 +516,22 @@ No bright-line rules — but four guiding principles:
 - **Harm minimization** — choose URLs, vantage points, and data handling carefully
 - **Community dialogue** — norms evolve with the technology and the politics
 
+Salganik's *Bit by Bit* offers compatible scaffolding: **respect for persons**,
+**beneficence**, **justice**, **respect for law & public interest** *(Belmont + Menlo)*.
+
 ::: {.notes}
 Book §5.5 "Moving Forward." Land here: responsible measurement is governed by judgment,
 not a checklist. Restricting to *infrastructure* machines (ISP resolvers, CDN nodes) is
 the most common harm-mitigation move — they arguably aren't individual human subjects.
-End with humility: researchers should be modest about risks they can't foresee.
+Matthew Salganik's *Bit by Bit: Social Research in the Digital Age* (2018) names four
+principles for exactly this kind of consent-hard digital research: respect for persons
+(autonomy/consent), beneficence (balance risk and benefit), justice (fair distribution of
+risk and benefit), and respect for law and public interest. The first three come from the
+1979 Belmont Report; the fourth is the 2011 Menlo Report's extension for ICT research.
+They map cleanly onto the book's four: beneficence ↔ proportionality/harm-min, respect for
+persons ↔ the consent debate, respect for law & public interest ↔ transparency/dialogue.
+Use Salganik as the named framework students can cite. End with humility: researchers
+should be modest about risks they can't foresee.
 :::
 
 ## Key Takeaways {.smaller}
@@ -489,6 +540,8 @@ End with humility: researchers should be modest about risks they can't foresee.
 - **No single right answer** (DNS) and **no single best vantage point** (probes/VPS/side
   channels) — credible studies **distinguish blocking from breakage** and **report
   conservatively**
+- These methods now map **whole national systems** — China's layered GFW, Iran,
+  Kazakhstan's rogue-CA HTTPS interception
 - **Triangulate**: OONI + Google + transparency data corroborate each other
 - **Platform/legal/economic** controls need different tools — **DSA** is a step toward
   mandatory, structured transparency

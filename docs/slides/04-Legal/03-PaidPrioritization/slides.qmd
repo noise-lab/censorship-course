@@ -190,20 +190,53 @@ keep US ISPs honest *for now*. But that's exactly why the threat has moved — r
 the next slide.
 :::
 
-## The Threat Moved Up the Stack
+## The Threat Moved Up the Stack {.smaller}
 
 The book's key reframing: the most acute threats to open access are **no longer the ISPs**.
 
 - They've shifted to **consolidated platforms** — cloud hosts, CDNs, app stores,
   search engines, social media, streaming
+- **App stores & payment rails** are the modern "fast lane": Apple/Google **fee
+  tiers** and **payment-processor cutoffs** decide who reaches users — discrimination
+  moved from the *pipe* to the *checkout* (see Ch. 3 / the platform decks)
+- **CDN & cloud "free tiers"** are de facto **zero rating of hosting**: a Cloudflare/
+  AWS free tier makes blessed sites **fast and cheap to serve**; everyone else pays
 - A **small number of companies** can now block access to **vast amounts** of content
-- Net neutrality watched the **pipes**; the **chokepoints are now the platforms** (Ch. 3)
 
 ::: {.notes}
 Tie back to the platform chapter. Net neutrality put a microscope on ISPs while
 leaving the rest of the ecosystem — where discrimination was already happening —
-untouched. The lesson for 2026: fight the last war (ISP fast lanes) and you miss
-the platform consolidation that's the real lever now.
+untouched. The two added bullets are the "up the stack" analogs of the §4.3
+mechanisms: app-store/payment-rail tiering is paid prioritization at the checkout
+(same winner-picking, different layer); CDN/cloud free tiers are zero rating on the
+*hosting* side (the platform, not the carrier, decides whose bits are cheap to
+deliver). The lesson for 2026: fight the last war (ISP fast lanes) and you miss the
+platform consolidation that's the real lever now.
+:::
+
+## Paid Prioritization's Next Form: 5G Slicing {.smaller}
+
+Fast lanes never died — they **moved into the radio**. **5G network slicing** carves
+one network into logical lanes with guaranteed performance.
+
+- **T-Mobile's T-Priority** (full commercial launch **Feb 20, 2025**) is billed as the
+  **first commercially available** 5G network slice — first responders get up to
+  **5× the resources** of an average user during congestion
+- **AT&T "Turbo"** (2024): **$7/month** to prioritize a subscriber's traffic
+- Today's slices serve **public safety / enterprise**; the open question is whether
+  **content-provider** slices (a paid "premium lane" for a chosen app) follow
+
+::: {.notes}
+Forward-looking, but grounded in shipped deployments — no speculation about
+nonexistent products. Slicing is paid prioritization made architectural: instead of
+DPI-throttling a rival, you sell a guaranteed lane. The current uses (first
+responders, enterprise FWA) are uncontroversial; the net-neutrality question is the
+*next* step — a slice sold to a content provider so its app gets guaranteed
+performance, which is exactly the application-specific discrimination the bright-line
+rules targeted. With no US rules in force (2025), nothing formally forbids it.
+Sources: T-Mobile Newsroom / UrgentComm (T-Priority commercial launch Feb 20, 2025,
+"first commercially available 5G network-slicing service," 5× resources);
+Fierce Network (AT&T Turbo, $7/mo data prioritization, 2024).
 :::
 
 # Zero Rating {.center}
@@ -225,10 +258,19 @@ An ISP charges by **data used** — but **doesn't meter** traffic to certain ser
   **video streaming**
 - US example: **T-Mobile's Binge On** (streaming video exempt from the data cap)
 
+Why it bites: a **2GB** mobile plan still costs ~**5.8%** of average monthly income
+across low/middle-income countries — far above the UN/A4AI **"1 for 2"** target
+(1GB ≤ 2%); **no low-income country has ever met it**.
+
 ::: {.notes}
 The mechanism is purely economic — no DPI required to "block" anything. The book's
 one-liner: zero rating "does not forbid users from reaching content, but it makes
 some content meaningfully cheaper to use and therefore more likely to be used."
+The affordability figure is the live 2026 number that makes the "tax on access"
+framing concrete: when full access is genuinely unaffordable, a free slice is
+decisive. Source: Alliance for Affordable Internet (A4AI), "1 for 2" / "Journey
+from 1 to 5" affordability target — 2GB at 5.8% and 5GB at 10.1% of average monthly
+income; target adopted by the UN Broadband Commission.
 :::
 
 ## Facebook's "Free Basics"
@@ -245,6 +287,29 @@ This is the canonical case. The design itself nudges consumption toward a curate
 slice of the Internet and away from everything else — a pricing-shaped filter on
 what information people encounter. India famously *banned* it in 2016 on net-
 neutrality grounds.
+:::
+
+## India Bans Free Basics (2016) {.smaller}
+
+::: {.vignette}
+On **February 8, 2016**, India's regulator **TRAI** issued the **Prohibition of
+Discriminatory Tariffs for Data Services Regulations** — "**no service provider
+shall offer or charge discriminatory tariffs for data services on the basis of
+content**." It killed **Free Basics** and Airtel Zero outright.
+:::
+
+The first major **developing-world** net-neutrality precedent — and it bans zero
+rating on the **price** side, where the EU later did on the **commercial-discrimination**
+side. The market Free Basics was built *for* rejected it.
+
+::: {.notes}
+This is the canonical developing-world counterpoint, and it predates both the US
+pendulum and the EU/CJEU rulings. The book mentions the India ban in passing; here
+it earns a slide as precedent. The framing worth landing: a country with genuinely
+expensive data — exactly the "walled garden may beat nothing" case — still chose to
+prohibit it, on the view that a curated free slice skews the information ecosystem.
+Source: TRAI, Prohibition of Discriminatory Tariffs for Data Services Regulations,
+2016 (Feb 8, 2016); Rs 50,000/day penalty, emergency-services carve-out.
 :::
 
 ## Walled Garden, or Gateway Drug? {.smaller}
@@ -361,9 +426,10 @@ is generally permitted. Verify/swap the EU case each year. Source: CJEU C-367/24
   promotion ends.
 - **Walled garden vs. gateway** depends on the **counterfactual**; in high-cost
   markets the answer is genuinely mixed.
-- **The rules are unstable and divergent** — struck down in the US (2025), barred in
-  the EU (2025).
-- **The real chokepoints moved up the stack** to consolidated platforms.
+- **The rules are unstable and divergent** — banned in India (2016), struck down in
+  the US (2025), barred in the EU (2025).
+- **The real chokepoints moved up the stack** — to platforms, app-store/payment
+  rails, CDNs — and **5G slicing** is paid prioritization's next architectural form.
 
 ::: {.notes}
 Land the through-line: control doesn't need a firewall. A price difference most

@@ -131,9 +131,49 @@ censor can't tell what your traffic is, it can't single it out.
 This table is the spine of the throttling section and the bridge to
 circumvention (Ch. 6). Note the trajectory: as DNS, SNI, and payloads encrypt,
 classification gets harder. **Encrypted ClientHello (ECH)** is the live front
-in 2025–26. Circumvention targets the *identification* step, not the shaping —
-once you're in the throttled queue, you have no say in how packets are
-forwarded.
+in 2025–26 — its own slide follows. Circumvention targets the *identification*
+step, not the shaping — once you're in the throttled queue, you have no say in
+how packets are forwarded.
+:::
+
+## The Classification Arms Race in 2026: SNI vs. ECH {.smaller}
+
+The whole throttling stack rests on **reading the hostname**. **ECH (Encrypted
+ClientHello)** encrypts it — so the fight has moved from *reading* SNI to
+*detecting and dropping* ECH itself.
+
+::: {.columns}
+::: {.column width="50%"}
+**Rolled out**
+
+- **Firefox** (default since v119, Oct 2023) and **Chrome** (v117+) support ECH
+- **Cloudflare** turned ECH on by default for its sites in **Oct 2024**
+:::
+::: {.column width="50%"}
+**Being fought**
+
+- **Russia** began **dropping** Cloudflare ECH handshakes within a month (**Nov 5, 2024**, via TSPU)
+- The shared outer name `cloudflare-ech.com` made **one filter rule** block all of it
+- **China** never needed to: it censors the **DNS** that ECH depends on
+:::
+:::
+
+The lesson: **encrypting one field doesn't end the arms race** — censors target
+whatever new pattern the defense creates.
+
+::: {.notes}
+This is the requested "state of SNI/ECH in 2026" slide. Verified facts:
+Firefox enabled ECH by default in v119 (Oct 2023); Chrome support from v117;
+Cloudflare made ECH default in Oct 2024. Russia's Roskomnadzor began blocking
+ECH ClientHellos via TSPU on Nov 5, 2024 — triggered specifically by the ECH
+extension plus the SNI `cloudflare-ech.com` (the shared *outer* SNI that nearly
+all ECH traffic used, so a single signature caught everything). China didn't
+bother censoring ECH directly because it already censors the DNS lookups ECH
+relies on (and blocked ESNI back in 2020). Teaching point: anonymity sets
+matter — when only one provider deploys a privacy feature, the feature itself
+becomes the fingerprint. Sources: Cloudflare ECH announcement; CDT "Do Not
+Stick Out" (2025); gfw.report USENIX Security 2025. Forward-pointer to
+circumvention, Ch. 6.
 :::
 
 ## Shaping: Leaky Bucket vs. Token Bucket {.smaller}
@@ -183,9 +223,12 @@ The censor's real advantage is **deniability**:
 **Throttling ≠ congestion.** Around 2014, U.S. subscribers blamed ISPs for
 "throttling" **Netflix**. The real cause was mostly a **peering dispute** —
 letting an interconnection link congest, not deploying a shaper. Same user
-experience, very different mechanism. *(censorship-book §2.3; ties to net
-neutrality, Ch. 4.)*
+experience, very different mechanism. *(censorship-book §2.3.)*
 :::
+
+We resolve this Netflix/peering case in the **net-neutrality deck (Ch. 4)** —
+where the *commercial* fight over who pays for interconnection, not censorship,
+is the real story.
 
 ::: {.notes}
 This is the central epistemics problem of the lecture: you usually *can't
@@ -218,6 +261,40 @@ international condemnation, regimes move to *targeted* throttling/blocking of
 specific apps — quieter, more deniable, still effective on the majority. Turkey,
 Iran, and others throttle around protests and elections. Source: Access Now
 KeepItOn 2025 annual report (released Mar 31, 2026).
+:::
+
+## Case Study: Russia's "Sovereign Internet" Throttle {.smaller}
+
+The clearest national-scale example of *selective* throttling as policy.
+
+::: {.vignette}
+**March 2021:** Roskomnadzor announced it was **slowing Twitter** — "100% of
+mobile, 50% of desktop" — to pressure compliance with takedown demands. The
+**first** documented case of a state throttling a **specific service on
+demand** (Xue et al., **IMC 2021**). The shaper matched the string **`t.co`**,
+so it accidentally slowed *anything* containing it (Reddit, Microsoft).
+
+**2025:** under the **RuNet "sovereign internet"** law, Russia throttled
+**WhatsApp** — by **up to ~70–80%**, per the Internet Protection Society, using
+**DPI** — as a soft precursor to a full ban, steering users to the state-run
+**Max** messenger. *(HRW, July 2025.)*
+:::
+
+A **state-scale traffic shaper** (TSPU), aimed at one app, deniable as "the app
+is just slow" — friction as national policy.
+
+::: {.notes}
+This is the requested RuNet state-throttling case study, and it does double
+duty: it makes the classification-arms-race concrete. Verified facts: March
+2021, Roskomnadzor throttled Twitter on 100% of mobile / 50% of desktop —
+analyzed by Diwen Xue et al., "Throttling Twitter," ACM IMC 2021, the first
+study of nationwide selective throttling. Crucial teaching detail: the censor
+classified by matching `t.co` in SNI/DNS, which over-matched and slowed Reddit,
+Microsoft, etc. — over-blocking, exactly the classification weakness from the
+SNI table. 2025: Russia throttled WhatsApp ~70–80% via DPI under the sovereign-
+internet (TSPU) regime, pushing the state "Max" messenger (HRW report, July
+2025; intellinews). Connect to the KeepItOn macro-trend: targeted, deniable,
+DPI-driven. Source the IMC paper for the methodology-minded.
 :::
 
 ## Throttling at Home: A Private "Tax on Access" {.smaller}
@@ -284,6 +361,36 @@ is the deepest: defense always costs more than attack. Spoofing works because
 UDP and the initial TCP SYN need no proof of identity. Indistinguishability is
 what makes scrubbing imperfect. Keep these three in mind; every defense
 attacks one of them.
+:::
+
+## Low-Rate and Layer-7 DoS: Asymmetry Without Volume {.smaller}
+
+You don't need a flood. **Application-layer (Layer 7)** attacks send *few*,
+*small*, *valid-looking* requests that each force **expensive** work — a search,
+a login, a database query, a TLS handshake.
+
+- **Low-rate** by design → slips under volumetric alarms and **mimics real
+  users** (indistinguishability)
+- Pure **asymmetry**: a cheap request → costly server work, no botnet required
+- Hardest to scrub precisely *because* it looks legitimate
+
+::: {.vignette}
+Cloudflare's Project Galileo report (May 2024–Mar 2025) found **~93%
+(92.88%)** of mitigated attack traffic against **journalism organizations** was
+**Layer-7 HTTP** — sophisticated floods that mimic real readers, not raw
+bandwidth. *(Cloudflare, June 2025.)*
+:::
+
+::: {.notes}
+Requested L7 / low-rate slide; ties straight to the asymmetry/indistinguish-
+ability themes one slide earlier and sets up the Galileo governance slide. The
+book explicitly flags low-rate DoS ("even more difficult to detect") and
+application-layer attacks on HTTP/TLS/DNS. The teaching point: the scary
+attacks on at-risk targets are NOT the record-setting Tbps headlines — they're
+quiet L7 floods indistinguishable from real users. Verified: Cloudflare's 2025
+Project Galileo / Radar reporting put L7 HTTP at 92.88% of mitigated attacks on
+journalism orgs (window May 1 2024–Mar 31 2025). Same report as the 108.9 B /
++241% figures on the later governance slide — one coherent source.
 :::
 
 ## SYN Flood: Asymmetry in TCP {.smaller}

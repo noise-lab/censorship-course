@@ -14,16 +14,26 @@
 - 2026-06-03: Governance examples refreshed to current framing — ICANN .io / Chagos
   return to Mauritius (2024); Australia v. X/Meta Sydney stabbing takedown (2024);
   India IT Rules 2021; EU DSA/DMA/AI Act "Brussels Effect"; Russia RuNet.
+- 2026-06-03: AI epistemics slide — added **C2PA Content Credentials** as a partial,
+  not-a-fix countermeasure (in-browser verify.contentauthenticity.org; native signing
+  on Pixel 10 / Galaxy S25; OpenAI C2PA+SynthID; **EU AI Act Art. 50** disclosure
+  enforcement begins Aug 2026). Provenance authenticates the manifest, not the truth;
+  unsigned content is the common case. Source: contentauthenticity.org "State of
+  Content Authenticity 2026"; EU AI Act Art. 50. (Backlog item 1.)
+- 2026-06-03: NEW slide "Data Localization Has an Economics" — cloud sovereignty as a
+  tax on access; **EU–U.S. Data Privacy Framework** survived *Latombe* (EU General
+  Court, 2025-09-03) but is on **CJEU appeal C-703/25 P** (no hearing as of mid-2026);
+  "Schrems III" risk. Sources: IAPP, Freshfields (2025–26). (Backlog item 2.)
+- 2026-06-03: NEW slide "New Models for *Platform* Governance" — Meta Oversight Board
+  (~200 decisions / ~320 recs over 5 yrs per Dec 2025 report; account-level review pilot
+  2026; Meta funding committed through 2028, reported 2026-06); Bluesky composable
+  moderation (labelers); Mastodon federation. Sources: Oversight Board H2-2025 / 5-year
+  report; Bluesky "Moderation Architecture" docs; MediaPost (2026-06). (Backlog item 3.)
+- 2026-06-03: Expanded the **paywalls** clause on "Tradeoffs All the Way Down" from one
+  word to the informed-rich / misinformation-poor framing, with a cross-link to the
+  Ch. 4 Legal-Economic deck (no new slide). (Backlog item 4.)
 
 ## Suggested missing coverage on broad themes (point 3)
-- A dedicated slide on **data localization economics** (cloud sovereignty, EU–US data
-  transfer frameworks) — currently only mentioned under splinternet.
-- **Meta Oversight Board / Bluesky composable moderation / Mastodon federation** as
-  concrete "emerging governance models" — dropped for length; could be one slide.
-- **AI content provenance** (C2PA, watermarking) as a partial answer to the synthetic-
-  media epistemics problem — the deck poses the problem but not the countermeasures.
-- **Paywalls and information inequality** deserve more than one clause given the book's
-  emphasis; could pull from Ch. 4 deck.
 - The course has no standalone **internet-governance deck**; this conclusion absorbs it.
   If governance grows, consider splitting it into its own section deck under 07.
 
@@ -37,6 +47,14 @@
   age-verification mandate, or collapse) will likely resolve before next term; update.
 - **Australia v. X/Meta** and **ICANN .io**: confirm final dispositions; both were
   unresolved/precedent-setting when cited.
+- **C2PA provenance vignette**: fast-moving. EU AI Act Art. 50 enforcement (Aug 2026),
+  device/model adoption (Pixel/Galaxy/OpenAI), and the "verify in-browser" UX will all
+  shift; re-confirm next term.
+- **Data Privacy Framework slide**: track CJEU appeal C-703/25 P and any noyb "Schrems
+  III" filing — a strike-down would change the example from "survived" to "struck down."
+- **Platform-governance models slide**: confirm Oversight Board scope (account-level
+  pilot, funding-through-2028) and that Bluesky/Mastodon are still the canonical
+  composable/federated examples; decision/recommendation counts climb each report.
 
 ## Curated images
 - Used: **none.** The extracted images/ are almost entirely (a) the BitTorrent

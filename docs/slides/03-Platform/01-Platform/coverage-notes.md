@@ -17,6 +17,26 @@
 - 2026-06-03: Retired the standalone "spam is an old problem" arc; folded into one
   "why automate" slide that reframes security-style filtering as now adjudicating
   *speech*.
+- 2026-06-03: Added **GIFCT case study** slide ("One Hash, Every Platform") as the
+  "centralization = takedown risk, no appeal" anchor. Verified figures from the
+  **2024 GIFCT Annual & Transparency Report**: 408,000 distinct hashed items, 33
+  member platforms; founded 2017 by Facebook/Microsoft/Twitter/YouTube. Opacity of
+  inclusion criteria + absence of appeal per Brennan Center / Statewatch / EDRi.
+- 2026-06-03: Added **"The Model Is Also the Target"** slide — generative AI as a
+  moderation *target*, now web-verifiable. Sources: European Commission **DSA
+  formal proceedings against X over Grok, 26 Jan 2026** (press release IP/26/203);
+  **Ireland DPC GDPR inquiry, 17 Feb 2026**. Includes the detail that X restricted
+  Grok image generation to **paying subscribers**, which doubles as the
+  stratification example. (Backlog item 2 — previously deferred for fuzzy dates,
+  now shipped.)
+- 2026-06-03: Added explicit **Section 230 / DSA (Ch. 4)** cross-links where state
+  pressure leverages safe-harbor: one line on the new Grok slide + speaker-note
+  pointers on the Brazil/India state-pressure slide and the GIFCT slide. (Backlog
+  item 3.)
+- 2026-06-03: Expanded the **economic-stratification** bullet on "Content
+  Moderation Is Genuinely Hard" to name the concrete Grok-paywall instance and the
+  zero-rating parallel (book ai-arbiter §"stratification of access"). (Backlog
+  item 4, integrated rather than given its own slide to stay lean.)
 
 ## Suggested missing coverage on broad themes (point 3)
 - **Propaganda / disinformation deck** (book Propaganda + Disinformation sections):
@@ -24,18 +44,17 @@
   collusion), Benkler's *Network Propaganda* finding (bots did not displace
   mainstream sources in 2016), deepfakes (Argentina 2023), and LLM-at-scale
   propaganda. Currently only previewed here — deserves its own deck.
-- **GIFCT and the shared-hash database** as cross-platform governance: who decides
-  what enters the terrorism hash database, and the lack of appeal — a strong
-  "centralization = takedown risk" case study.
-- **Generative AI as a moderation *target*, not just a moderator** (e.g., the Grok
-  NCII-deepfake controversy and Ofcom/EU Online Safety Act responses, early 2026).
-  Verified that regulators opened probes, but precise per-regulator dates were
-  fuzzy at authoring time — left out of slides to avoid stating unverifiable
-  dates; revisit when primary timelines firm up.
-- **Section 230 / intermediary liability and the DSA** belong to Ch. 4 but should
-  be explicitly linked from here (state pressure → safe-harbor leverage).
-- **Economic stratification of AI access** (paid vs. free tiers as a tax on
-  access; parallel to zero rating) — mentioned on one bullet; could expand.
+- *(INTEGRATED 2026-06-03)* GIFCT shared-hash database — now its own case-study
+  slide.
+- *(INTEGRATED 2026-06-03)* Generative AI as a moderation *target* — Grok slide
+  added with verified EC/DPC dates.
+- *(INTEGRATED 2026-06-03)* Section 230 / DSA cross-links — added as on-slide line
+  + speaker-note pointers (kept as pointers, not a slide; the substance is Ch. 4).
+- *(INTEGRATED 2026-06-03)* Economic stratification of AI access — expanded on the
+  "Genuinely Hard" slide with the Grok-paywall instance.
+- **Grok/Online Safety Act (UK Ofcom) and California AG** — *deferred*: Ofcom only
+  "signaled" an investigation and the CA AG probe is early; ship once those have
+  firm dockets/dates. The EC + Ireland actions carry the slide for now.
 
 ## Next-year refresh notes
 - **Pew AI-Overviews vignette (Jul 2025):** will read as dated by ~2027; check for
@@ -49,8 +68,14 @@
   durable.
 - **India IT Rules fact-check unit:** status was litigated; verify current legal
   standing before re-asserting "comply or lose safe harbor."
-- **Grok/Online Safety Act:** strong candidate vignette once dates are
-  pinned — flagged but deliberately not used this year.
+- **Grok DSA/GDPR vignette (Jan–Feb 2026):** now SHIPPED. Track outcomes — EC
+  DSA proceedings (IP/26/203, 26 Jan 2026) and Ireland DPC inquiry (17 Feb 2026)
+  may produce findings/fines or fold in UK Ofcom + California AG. Update with the
+  resolution and add a hard number if the "3M images in 11 days" figure is
+  confirmed by a primary source (currently press-reported).
+- **GIFCT figures (2024 report: 408k items, 33 members):** refresh from the next
+  GIFCT Annual & Transparency Report; the mission-creep / no-appeal framing is
+  durable regardless of the headline count.
 
 ## Curated images
 - **USED** `slide009_img008.png` — Table 3, breakdown of notable algorithmic

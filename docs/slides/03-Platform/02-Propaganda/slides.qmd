@@ -101,13 +101,22 @@ you didn't want seen.
 - No backlash, so **nothing to galvanize opposition**
 - Harder to circumvent — there's no wall to climb over
 
+**China's "50-cent army"** is the canonical case: King, Pan & Roberts (2017,
+*APSR*) reverse-engineered an estimated **~448M** fabricated posts/year and found
+they overwhelmingly **cheerlead and distract** — they almost never *argue* with
+critics, and surge around events with **collective-action potential**.
+
 ::: {.notes}
 This is the paradox from the book. Removing content leaves fingerprints; adding
-content does not. China's "50-cent army" is the canonical example — paid or
-directed commenters who don't argue with dissidents, they change the subject.
-King, Pan & Roberts found the 50c posts overwhelmingly *cheerlead and distract*
-rather than rebut. The goal is to redirect attention away from anything that
-could spark collective action.
+content does not. The 50-cent army — paid or directed commenters — don't argue
+with dissidents, they change the subject. King, Pan & Roberts (APSR 2017,
+"Strategic Distraction, Not Engaged Argument") is the empirical anchor: from a
+leaked archive of known 50c posts they estimate ~448M fabricated posts a year,
+and the content is overwhelmingly positive cheerleading and distraction, timed to
+events that could spark crowds (e.g., the Shanshan riots, the Urumqi explosion).
+The key teaching point: flooding's purpose is *distraction, not rebuttal* — you
+redirect attention rather than win the debate. Source: King, Pan & Roberts, APSR
+111(3):484–501, 2017.
 :::
 
 ## Why Flooding Is So Dangerous {.smaller}
@@ -223,7 +232,33 @@ Stress that "bot" is overloaded. The most effective operations are often
 human-directed, not fully automated. And we genuinely don't understand the
 *downstream effects* well — exposure does not equal persuasion. Keep students
 skeptical of breathless "bots swung the election" claims; the honest answer is
-the effects are not fully understood.
+the effects are not fully understood. The next slide makes this empirical.
+:::
+
+## Exposure ≠ Persuasion {.smaller}
+
+The honest scientific answer on whether influence operations *change minds* is:
+**we mostly don't have evidence that they do.**
+
+- **Eady et al. (2023, *Nature Communications*)** linked survey panels to actual
+  Twitter feeds for the 2016 Russian **IRA** campaign
+- Exposure was **highly concentrated**: just **1%** of users saw **~70%** of IRA
+  content, mostly already-partisan Republicans
+- IRA content was **dwarfed** by domestic news and politicians
+- **No measurable relationship** between exposure and changes in **attitudes,
+  polarization, or voting**
+
+::: {.notes}
+This slide exists to inoculate against the "bots swung the election" narrative.
+The most careful study we have (Eady, Paskhalis, Zilinsky et al., Nat. Comms.
+2023) finds that IRA exposure was concentrated among people already inclined to
+agree, was a tiny share of the overall information diet, and shows no detectable
+persuasion effect. Be precise about what this does and does *not* say: it is *not*
+"influence operations are harmless." Flooding's goals — distraction, disorientation,
+demobilization, eroding trust — are not the same as persuasion, and are much harder
+to measure. The takeaway is epistemic humility plus a sharper question: ask what
+effect an operation is actually trying to produce before claiming it succeeded.
+Source: Nat. Comms. 14, 62 (2023), doi:10.1038/s41467-022-35576-9.
 :::
 
 # Disinformation {.center}
@@ -379,6 +414,36 @@ ground truth, and adversaries adapt (infrastructure can be changed once it's a
 known tell). Same arms-race dynamic as spam.
 :::
 
+## Detection at Platform Scale: CIB {.smaller}
+
+Infrastructure detection profiles *senders*; platforms instead hunt the
+**network** — **coordinated inauthentic behavior (CIB)**.
+
+- The tell is **coordination**, not content: clusters of accounts acting in
+  concert behind fake personas (the 2012 signatures, at graph scale)
+- **Meta** reported dismantling **20** new covert influence operations in **2024**;
+  since 2017 the top origins are **Russia (39), Iran (31), China (11)**
+- External teams (**Stanford Internet Observatory**, **Graphika**) corroborate via
+  open-source network analysis
+
+Same arms race as spark/infra: once a coordination signature is known,
+operators adapt.
+
+::: {.notes}
+This complements the infrastructure-detection arc with the approach platforms
+actually use at scale. "Coordinated inauthentic behavior" is Meta's term of art —
+they don't adjudicate truth, they look for *coordination and inauthenticity*
+(fake personas acting together). That sidesteps the definition problem on the
+next slide by targeting behavior rather than content — exactly the #bias insight
+from 2012, now at network scale. Numbers: Meta's 2024 Adversarial Threat reports
+total ~20 networks removed for the year; cumulative since 2017, Russia is the top
+origin (39 operations), then Iran (31) and China (11). Graphika and the (now
+wound-down) Stanford Internet Observatory publish independent network analyses.
+Honest caveat: CIB enforcement is contested — what counts as "inauthentic"
+coordination vs. ordinary organizing is itself a hard line. Sources: Meta
+Adversarial Threat Reports 2024 (transparency.meta.com).
+:::
+
 ## The Hard Part Is Definition {.smaller}
 
 Detection is downstream of a problem we can't fully solve:
@@ -421,6 +486,34 @@ and Meta reports: AI rarely invents *new* tactics; it scales the old ones (volum
 fake personas, fast coordinated timing). Source links in coverage-notes.
 :::
 
+## Deepfakes Meet Elections {.smaller}
+
+::: {.vignette}
+Two days before the **Jan 2024 New Hampshire primary**, thousands of voters got a
+robocall with an **AI-cloned voice of President Biden** telling Democrats *not* to
+vote. The FCC issued a **\$6M** forfeiture against operative **Steve Kramer** and
+fined the carrier (**Lingo Telecom**, \$1M settlement); the FCC also moved to ban
+AI-voice robocalls. *A NH jury later **acquitted** Kramer of voter-suppression
+charges (July 2025).*
+:::
+
+The lesson isn't "deepfakes swept the 2024 elections" — the documented harms were
+**narrow**. It's that generative AI **collapses the cost** of a convincing fake to
+near zero, and the **legal response is fragmented** across agencies and statutes.
+
+::: {.notes}
+2024 was billed as the global "deepfake election." The reality was more modest
+than the hype — most consequential incidents were isolated, and detection/labeling
+caught many. The NH Biden robocall is the cleanest U.S. case to teach: cheap,
+fast, voter-suppressive, and prosecuted under an *old* statute (Truth in Caller
+ID Act) plus FCC authority — not a bespoke "deepfake law." Note the split outcome:
+$6M FCC fine but a criminal acquittal in 2025, which shows how poorly existing law
+fits. Tie back to the deck's thesis: the danger is cost collapse for the levers
+flooding already uses (volume, personas), and to the Eady slide: a viral fake is
+not the same as a changed vote — measure the actual harm. Sources: NPR May 23,
+2024; FCC forfeiture Sept 26, 2024; acquittal reporting July 2025.
+:::
+
 ## Grooming the Chatbots {.smaller}
 
 A newer flooding target: not humans, but the **models themselves**.
@@ -441,6 +534,37 @@ mainstream coverage (a data void). The verified facts (the network exists, the
 NewsGuard number, the rebuttal exists) are what we assert; the causal claim is open.
 :::
 
+## The Regulatory Response: The EU DSA {.smaller}
+
+If flooding evades laws built to *remove* specific content, what does regulation
+even look like? The EU's answer targets **process and risk**, not individual posts.
+
+- The 2022 **Code of Practice on Disinformation** was **integrated into the Digital
+  Services Act** as a **Code of Conduct** — endorsed **Feb 2025**, auditable from
+  **July 2025**
+- It binds the largest platforms (**VLOPs/VLOSEs**: Meta, Google/YouTube, TikTok,
+  Microsoft, X-adjacent) to commitments on ads, fake accounts, fact-checking, and
+  **systemic-risk** reporting
+- Note the tension: it regulates **systems and disclosure**, sidestepping the
+  "who decides what's true" trap — but draws its own **free-expression** objections
+
+*Full treatment in the Legal chapter — see Ch. 4 / the DSA deck.*
+
+::: {.notes}
+This closes the loop the flooding section opened: the book stresses flooding is
+"largely invisible to legal frameworks built around removal of specific harmful
+content." The DSA is the leading attempt to regulate the *aggregate* rather than
+the post. Mechanism to convey: instead of "take down this lie," it imposes
+risk-assessment, transparency, and audited commitments on Very Large Online
+Platforms / Search Engines. The Code of Practice on Disinformation (2018, strengthened
+2022) was formally folded into the DSA as a Code of Conduct — Commission + European
+Board for Digital Services endorsed it Feb 13, 2025; commitments become auditable
+from July 1, 2025. Keep this to a pointer — the Legal chapter (Ch. 4) does the deep
+dive, including the free-expression critique that the U.S. would treat much of this
+as compelled-speech / First Amendment problems. Sources: EC digital-strategy.ec.europa.eu;
+EFCSN Feb 13, 2025.
+:::
+
 ## Takeaways {.smaller}
 
 - **Flooding** controls information by **drowning**, not blocking — and may be the
@@ -449,8 +573,10 @@ NewsGuard number, the rebuttal exists) are what we assert; the causal claim is o
   falsehood
 - The behavioral signatures (high volume, retweet ratio, fast/coordinated posting)
   were measurable in **2012** and recur today, now **AI-accelerated**
-- **Disinformation** is detectable from **infrastructure**, but **definition** is the
-  real bottleneck
+- **Exposure ≠ persuasion** — be skeptical of "bots swung the election"; flooding's
+  real aim is **distraction and demobilization**, not changing votes
+- Detectable from **infrastructure** and **coordination (CIB)**, but **definition**
+  is the real bottleneck — and law (the **EU DSA**) is only starting to catch up
 
 ## Coming Up
 

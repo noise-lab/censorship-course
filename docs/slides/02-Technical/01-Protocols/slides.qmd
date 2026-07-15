@@ -177,13 +177,22 @@ disagreeing is censorship. This is the IRIS / Censored Planet methodology.
 **DNSSEC** signs records cryptographically; **ODoH** splits *who* is asking from
 *what* is asked. Both are unevenly deployed.
 
+**Censors push back:** **DoT** (port 853) is **blocked outright**; **DoH**
+(hidden in 443) needs **DPI / active probing** to fingerprint resolver IPs, or
+the censor just **blocks the bootstrap** so encrypted DNS never starts. *(See
+Ch. 6 — circumvention arms race.)*
+
 ::: {.notes}
 The big modern point (book §2.2): DoH solves on-path manipulation but creates a *trust*
 and *centralization* problem. Old model: compel thousands of ISP resolvers. New model:
 compel Google or Cloudflare once. Germany 2023 — copyright holders tried to force
 Cloudflare to block sites at the DNS layer; the court refused on overblocking grounds,
 but that fight is the future. DNSSEC = integrity; DoH = confidentiality; they're
-complementary, not the same thing.
+complementary, not the same thing. The arms-race line is verified: DoT on 853 is trivially
+port-blocked; DoH hides in 443 so censors fingerprint it with DPI/active probing and
+blacklist resolver IPs (OONI), or block the DNS *bootstrap* so encrypted DNS can't even
+start (China's "Shield-Cube"/DNS4CN; Iran ~50% of DoT endpoints unreachable). Iran's June
+2025 stealth blackout used exactly this DNS-layer choke. Full treatment lives in Ch. 6.
 :::
 
 # Transport: TCP/IP {.center}
@@ -309,15 +318,48 @@ leaky** — hard to keep inside one country.
   collateral-damage risk** — reserved for total blockades.
 
 **Defenses:** **RPKI** + route-origin validation (sign your prefixes),
-**monitoring** for anomalous paths, **MANRS** norms — all need *wide* adoption
-to help.
+**monitoring** for anomalous paths, **MANRS** norms — but they only help with
+*wide* adoption. As of **early–mid 2026, ~60% of IPv4 routes have valid ROAs**
+(world average), up from ~50% a year earlier — better, but still leaky.
 
 ::: {.notes}
 Egypt 2011 is the archetypal shutdown-by-routing — and a democracy-adjacent reminder that
 this isn't only authoritarian states (BART cut cell service in SF the same year). Contrast
 with DNS: you can switch resolvers to beat DNS censorship; if BGP withdraws your route,
 there is *no route* — change ISPs or leave the country. RPKI is the main defense but
-adoption is partial, so gaps remain. See §2.2.
+adoption is partial, so gaps remain. The ~60% IPv4 ROA-coverage figure (MANRS/APNIC,
+world average, early 2026; ~54% in early 2025 per Kentik/MANRS — NIST RPKI Monitor tracks
+it live) makes the "needs wide adoption" point concrete: a route with no ROA can't be
+validated, so ~40% of prefixes still can't be protected by origin validation. See §2.2.
+:::
+
+## Not Every Shutdown Withdraws the Route {.smaller}
+
+Egypt pulled its prefixes from BGP — the network *vanished* and the world could
+see it. A newer model hides the shutdown **without touching BGP**.
+
+::: {.vignette}
+**Iran's "stealth blackout," June 2025.** During the June 2025 conflict, Iran's
+networks **stayed announced in global BGP** — externally it looked online — yet
+domestic users were cut off at a **centralized border gateway** via DNS
+poisoning, TLS interception, and **protocol whitelisting** (dropping VPN-signature
+traffic on 443). VPN-related searches reportedly spiked **~707%**.
+*(Aryapour, arXiv 2507.14183, Jul 2025; Filterwatch multi-stakeholder analysis,
+Oct 2025.)*
+:::
+
+This is **friction by design**: no route withdrawal to detect, deniable as
+"the Internet is just slow." Contrast with Egypt's blunt BGP cut.
+
+::: {.notes}
+The teaching contrast: Egypt 2011 = coarse, *visible* BGP withdrawal (routes gone, RouteViews
+shows it). Iran June 2025 = a "new model" — keep the routes up so you look connected, but
+disconnect users at a national chokepoint with DNS/TLS/whitelisting. The 2019 Iran shutdown
+*did* use BGP-style cutoffs and took >24h; the 2025 version is faster, centralized, and far
+harder to attribute. Ties directly to Roberts's *friction* (degrade, deny deniably) and to
+the throttling slide. Source: arXiv 2507.14183 (Aryapour, Jul 2025) and the Filterwatch /
+Miaan multi-stakeholder analysis (Oct 2025). Good companion to the Egypt slide; swap to the
+front of the BGP discussion if it ages better than Egypt. See §2.2.
 :::
 
 # Applications: Blocking Web Pages {.center}
@@ -360,6 +402,29 @@ closes each window, censors move to coarser, more collateral-prone tools — and
 increasingly, *up the stack* to platforms (Ch. 3). SNI was the last cleartext field;
 ECH closes it; blocking ECH is the current front line. Good place to foreshadow
 circumvention (Ch. 6).
+:::
+
+## A New Transport to Police: QUIC / HTTP-3 {.smaller}
+
+**QUIC** carries most **HTTP-3** traffic over **UDP/443**, not TCP — so the old
+**`RST`-injection** trick (a TCP move) doesn't apply.
+
+- Censors adapted: **decrypt the QUIC Initial packet**, read the **SNI**, and
+  drop the flow — China's Great Firewall added **SNI-based QUIC blocking** in
+  **April 2024**; Russia's TSPU boxes do it too
+- Or just **degrade UDP/443**: Russia throttled QUIC to **~512 kbps** separately
+  from its YouTube throttling
+- A cruder fallback: **block UDP/443 entirely**, forcing browsers back to TCP
+
+::: {.notes}
+The point: a new transport is a new battleground. QUIC moved the web onto UDP, dodging the
+TCP-reset playbook, so censors rebuilt their tooling around it. Verified facts: the GFW began
+SNI-based QUIC censorship around April 7, 2024, decrypting QUIC Initial packets to read the
+SNI (USENIX Security 2025, gfw.report; ~58K FQDNs blocked Oct 2024–Jan 2025). A nice
+circumvention hook for Ch. 6: the GFW didn't reassemble QUIC Initials split across multiple
+UDP datagrams, and Chrome's Sept 2024 change to larger Initials defeated it — until they
+adapt again. Russian TSPU devices also parse QUIC SNI and throttled QUIC to ~512 kbps. Tie
+back to the SNI thread (TLS slide) and forward to the throttling and circumvention decks.
 :::
 
 # Throttling: Friction, Not a Wall {.center}

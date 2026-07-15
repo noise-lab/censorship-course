@@ -15,24 +15,46 @@
   framing; folded in the book's five-step investigation walkthrough, the platform/
   legal/economic measurement sections, and the Lumen/DSA/natural-experiment material that
   the original 2017-era pptx predated.
+- 2026-06-03: Added new slide **"Measurement Meets Real Infrastructure"** (after Encore)
+  covering China's multi-layered GFW (GFWeb), Iran's multi-layer filtering blocking
+  millions of domains, and **Kazakhstan's state HTTPS interception** via a rogue **Qaznet
+  root CA** (nationwide HTTPS MITM, July 2019; retried Dec 2020; browsers blocklisted the
+  cert). Verified via Raman et al. "Investigating Large Scale HTTPS Interception in
+  Kazakhstan" (IMC 2020, dl.acm.org/doi/10.1145/3419394.3423665); Mozilla policy blog
+  (blog.mozilla.org/netpolicy/2020/12/18/kazakhstan-root-2020/); Kazakhstan MITM
+  (en.wikipedia.org/wiki/Kazakhstan_man-in-the-middle_attack). Book §5.2 cites GFWeb
+  (Hoang 2024), Iran (Tai 2025), Kazakhstan (Raman 2020). Also added a key-takeaways bullet.
+- 2026-06-03: Folded **Censored Planet methodology depth** into the "Other Measurement
+  Platforms" slide — named **Satellite/Iris** (DNS, open-vs-trusted resolvers),
+  **Augur** (TCP/IP IP-ID side channel), **Hyperquack** (HTTP/S keyword injection), mapping
+  each onto the techniques already taught earlier in the deck. Verified via Censored Planet
+  docs (docs.censoredplanet.org) and Sundara Raman et al. "Censored Planet" (ACM CCS 2020,
+  dl.acm.org/doi/10.1145/3372297.3417883). No new slide.
+- 2026-06-03: Named **Salganik's *Bit by Bit*** four-principle ethics framework
+  (respect for persons, beneficence, justice, respect for law & public interest —
+  Belmont 1979 + Menlo 2011) as scaffolding on the "Toward Ethical Norms" slide,
+  complementing the book's proportionality/transparency/harm-min/dialogue framing.
+  Verified via bitbybitbook.com/en/1st-ed/ethics/principles/. No new slide.
+- 2026-06-03: Added an **encrypted DNS (DoH/DoT) measurement tie-in** to the DNS-prevalence
+  slide with a one-line cross-link to Ch. 2 / the Circumvention deck — censors now
+  measurably block the encrypted resolvers themselves (Li et al. 2024: ~6% of encrypted
+  DNS queries censored globally, ~36% from inside China; DoT/DoH/DoQ widely blocked in
+  censored regions). Verified via FOCI/PETS 2025–2026 papers and the 2021 WWW
+  "Understanding the Impact of Encrypted DNS on Internet Censorship" line of work. No new slide.
 
 ## Suggested missing coverage on broad themes (point 3)
-- **Modern GFW / Iran / Kazakhstan measurement**: the book cites GFWeb, Iran multi-layer
-  filtering (millions of domains), and Kazakhstan state HTTPS interception (rogue root CA
-  / MITM). None are on slides yet — a strong "measurement meets real infrastructure" slide.
 - **Encore demo / same-origin policy mechanics**: could add a live or animated example of
-  onload/onerror as a one-bit side channel; currently text-only.
+  onload/onerror as a one-bit side channel; currently text-only. *(Deferred 2026-06-03:
+  lean target; text treatment is sufficient and a live demo is a class exercise, not a slide.)*
 - **Statistical detection depth**: the original deck had max-likelihood / hypothesis-
   testing slides (IP ID acceleration as a stationary i.i.d. random variable). Dropped for
   lean-ness; revisit if the audience is technical and wants the detection math.
-- **Salganik's principles-based ethics framework** (respect for persons, beneficence,
-  justice, respect for law/public interest) — original slide 43. The ethics section uses
-  the book's proportionality/transparency/harm-min/dialogue framing instead; could add
-  Salganik (*Bit by Bit*) as the named scaffolding.
+  *(Deferred 2026-06-03: out of scope for the backlog pass; keep the one-line "detection
+  is statistical" treatment.)*
 - **Zero-rating / demonetization case detail**: Chen-Feamster-Calandro South Africa/Kenya
   natural experiments and YouTube "Adpocalypse" are in §5.4 but only named on slides.
-- **Censored Planet methodology depth** (Satellite/Iris for DNS, Augur for TCP/IP, Hyperquack
-  for HTTP/S) — currently only named as a platform; could get its own slide.
+  *(Deferred 2026-06-03: not in the backlog; the legal/economic slide already names the
+  natural-experiment method, which is the teaching point.)*
 
 ## Next-year refresh notes
 - **Uganda 2026 vignette**: verify whether a fresher election-time block (any country)
@@ -45,6 +67,15 @@
   reporting (or under new policy), update the durability point.
 - **OONI "200+ countries / since 2012 / millions of measurements"**: low churn but
   re-confirm the headline numbers from ooni.org.
+- **Kazakhstan rogue-CA dates (2019 / Dec 2020)**: stable historical facts; only update if
+  Kazakhstan (or another state) mounts a fresh nationwide rogue-root-CA / HTTPS-MITM push
+  that becomes the better live example. The teaching point (state rogue CA) stays regardless.
+- **Encrypted-DNS censorship stats (Li et al. 2024: ~6% global / ~36% in China)**: a
+  research figure, not a headline; re-pull a fresher FOCI/PETS measurement each term if a
+  cleaner global number appears. ECH (Encrypted Client Hello) blocking in RU/IR/CN is the
+  emerging frontier — promote it if it matures.
+- **Censored Planet scale ("tens of billions of measurements / ~95,000 vantage points
+  weekly")**: in speaker notes only; re-confirm from censoredplanet.org if cited on-slide.
 
 ## Curated images
 - **USED** `slide008_img006.png` — Google Transparency Report traffic collapse, Uganda

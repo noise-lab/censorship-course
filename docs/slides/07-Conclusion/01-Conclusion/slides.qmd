@@ -166,8 +166,9 @@ position outside the tradeoff. Every choice prioritizes some values over others.
 
 ## Tradeoffs All the Way Down
 
-- **Economic** — paywalls sustain journalism *but* create information
-  inequality; zero-rating expands access *but* distorts competition;
+- **Economic** — **paywalls** fund quality journalism *but* sort readers into
+  the **informed-rich and the misinformation-poor** (free content skews to the
+  sensational); zero-rating expands access *but* distorts competition;
   demonetization protects advertisers *but* incentivizes self-censorship
 - **Legal** — §230 enabled user content *but* limited accountability; the EU
   **DSA** adds due process *but* its fines may encourage **over-removal**;
@@ -178,8 +179,12 @@ These are **not problems to solve but tensions to manage**. The real question:
 
 ::: {.notes}
 Book §"The Impossible Tradeoffs." Land the framing: not "what's the right
-answer" but "who gets to choose, and are they accountable." That pivots us into
-emerging challenges and governance.
+answer" but "who gets to choose, and are they accountable." On paywalls, push the
+information-inequality point harder than the book's one line: a "tax on access"
+in the Ch. 1 sense — reliable reporting goes behind a paywall while free,
+ad-driven, outrage-optimized content stays open, so the people least able to pay
+get the least reliable information (see the Ch. 4 / Legal-Economic deck). That
+pivots us into emerging challenges and governance.
 :::
 
 # Emerging Challenges {.center}
@@ -195,10 +200,25 @@ discourse erode.
   content — at scales that make human review impossible
 - When an AI system suppresses a result, **no human may be able to explain why**
 
+::: {.vignette}
+**Provenance is a partial answer, not a fix.** **C2PA Content Credentials** —
+cryptographically signed manifests you can check in-browser at
+`verify.contentauthenticity.org` — now ship natively from the **Pixel 10** and
+**Galaxy S25**, and OpenAI is layering C2PA with SynthID (2026). The **EU AI Act
+Art. 50** machine-readable-disclosure rules begin enforcement **Aug 2026**. But
+provenance proves *who signed and that the bits are unaltered* — **not that the
+content is true**, and absent credentials prove nothing.
+:::
+
 ::: {.notes}
 The book calls generative AI the most significant shift since social media — a
 double hit: it floods the zone with synthetic content *and* it adjudicates
-access opaquely. Tie back to Ch. 3's "AI arbiter."
+access opaquely. Tie back to Ch. 3's "AI arbiter." The C2PA add answers the
+obvious student question ("can't we just watermark it?"): provenance/watermarking
+is a real, deploying countermeasure, but it authenticates the manifest, not the
+claim, and unsigned content is the common case. Sources: contentauthenticity.org
+"State of Content Authenticity 2026"; EU AI Act Art. 50 (enforcement Aug 2026).
+This will date fast — swap adoption/enforcement specifics each year.
 :::
 
 ## The Encrypted-DNS / ECH Arms Race {.smaller}
@@ -276,6 +296,36 @@ aren't just blocking, they're exporting an alternative governance *model*. The E
 is the "third way" (GDPR, DSA, DMA, AI Act) and the Brussels Effect.
 :::
 
+## Data Localization Has an Economics {.smaller}
+
+The splinternet isn't only firewalls — it's **where bytes are allowed to rest.**
+"**Cloud sovereignty**" turns data location into law, market structure, and a
+**tax on access.**
+
+- Localization mandates force in-country data centers → **higher cost**, fewer
+  providers, advantage to incumbents that can afford to comply
+- Cross-border transfer turns on **legal frameworks**, not cables
+
+::: {.vignette}
+The **EU–U.S. Data Privacy Framework** — the legal basis for moving Europeans'
+data to U.S. clouds — **survived its first court challenge** (EU General Court,
+*Latombe*, **Sept 3, 2025**), but is **on appeal to the CJEU** (C-703/25 P, no
+hearing set as of mid-2026). A "**Schrems III**" strike-down would again strand
+transatlantic data flows — exactly the uncertainty driving EU "**sovereign
+cloud**" demand. *(IAPP; Freshfields, 2025–26.)*
+:::
+
+::: {.notes}
+This promotes the one-clause "data-localization laws in 60+ countries" from the
+splinternet slide into its own teaching point: regulatory fragmentation has a
+*price*, and that price is itself a form of information control — a tax on
+access in the Ch. 1 sense. The DPF/Schrems saga is the live example: Privacy
+Shield (Schrems II, 2020) was struck down, the DPF replaced it (2023), and its
+durability is again before the courts. Note the FISA §702 / PCLOB-independence
+worries underneath the appeal. Refresh: track C-703/25 P and any noyb "Schrems
+III" filing. Sources: IAPP and Freshfields coverage of *Latombe* (Sept 2025).
+:::
+
 ## Even the Shutdown — the Bluntest Tool — Is Rising {.smaller}
 
 ::: {.vignette}
@@ -340,6 +390,41 @@ A control-vs-openness divide playing out in every standards body.
 The ICANN .io case is a nice concrete: a "technical" country-code decision (UK
 returning the Chagos / BIOT to Mauritius, 2024) becomes geopolitical and
 economic. Technical decisions are political decisions.
+:::
+
+## New Models for *Platform* Governance {.smaller}
+
+Governance is also being re-invented **above** the infrastructure layer — three
+live experiments in *who decides* what stays up:
+
+::: {.columns}
+::: {.column width="50%"}
+- **Meta Oversight Board** — an external "court" Meta funds but doesn't control;
+  **~200 decisions, ~320 recommendations** in 5 years (Dec 2025), expanding to
+  **account-level** review in 2026
+- **Bluesky** — **composable moderation**: independent **labelers** tag content;
+  *clients/users* choose which to apply
+:::
+::: {.column width="50%"}
+- **Mastodon** — **federation**: thousands of independently-run servers, each
+  with its own rules and block-lists; no central authority
+- The trade: **legitimacy / user choice** vs. **inconsistency** and weak
+  defenses against well-resourced abuse
+:::
+:::
+
+Each shifts the lever — **outsource it, unbundle it, or distribute it** — but
+none escapes the impossible tradeoffs.
+
+::: {.notes}
+The concrete "emerging governance models" the conclusion gestures at. Map each to
+the earlier tradeoff slide: the Oversight Board *outsources* the decision to a
+quasi-judicial body (still Meta-funded — Meta committed funding through 2028,
+reported June 2026); Bluesky *unbundles* it so moderation is a marketplace of
+labelers rather than one network-wide ban; Mastodon *distributes* it across
+federated instances. None is a neutral position — they relocate the tradeoff, not
+dissolve it. Sources: Oversight Board H2-2025 / 5-year report; Bluesky
+"Moderation Architecture" docs; MediaPost (funding through 2028, June 2026).
 :::
 
 ## Jurisdiction: Global Network, National Laws {.smaller}

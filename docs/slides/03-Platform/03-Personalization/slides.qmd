@@ -57,7 +57,9 @@ is different:** it shapes what you see *quietly*, in the background.
 - It works through **omission and amplification**, not a "BLOCKED" page
 
 This is a textbook case of **friction**: not a wall, but a quiet **tax on access** to
-the information you didn't get recommended.
+the information you didn't get recommended. The driver is **economic**: an ad-funded
+feed is paid to **maximize attention**, and reinforcing content holds attention best —
+so bubble formation is a *business model*, not a bug *(see Ch. 4, Economic Controls)*.
 
 ::: {.notes}
 Tie back to the Roberts taxonomy from the Intro deck: Fear / Friction / Flooding.
@@ -65,6 +67,12 @@ Personalization is friction (content is *harder* to reach because it's buried or
 surfaced) and it sets up flooding (data voids, later). The key analytic claim from the
 book: personalization is information control *because* the user can't observe what was
 filtered. No backlash, no martyr, full deniability — "it's just the algorithm."
+
+Item 2 cross-link: name the *root cause* out loud. The feed is optimized for engagement
+because engagement is what's monetized — every reinforcing recommendation is an attention
+trade the platform is economically rewarded for. That's why "just turn off the algorithm"
+is naive: the incentive, not the code, is the problem. This is the hand-off to the
+economic-controls material in Ch. 4 — don't develop it here, just plant the pointer.
 :::
 
 ## Personalization Is Ubiquitous
@@ -201,6 +209,46 @@ political-cluster migration end-to-end; keep the framing as an inference
 from mechanism + observed migration, not as a proven finding. -->
 :::
 
+## The "Rabbit Hole": Contested Evidence {.smaller}
+
+Does the **YouTube** recommender *push* users toward extremism? The research is
+genuinely **mixed** — a cautionary tale about over-reading any single audit.
+
+::: {.columns}
+::: {.column width="50%"}
+**Evidence for a pull**
+
+- Watch-time optimization can *learn* to surface radicalizing content
+- A PNAS sock-puppet audit (Haroon et al., 2023) found recommendations grow
+  **more congenial** and **more problematic** deeper in the trail
+:::
+::: {.column width="50%"}
+**Evidence against**
+
+- Other audits find the algorithm favors **mainstream** sources and even
+  **dampens** extremist content
+- "Rabbit holes" are often driven by **user choice / subscriptions**, not the
+  feed alone
+:::
+:::
+
+The honest read: **congenial, yes; an automatic extremism escalator, not shown.**
+
+::: {.notes}
+This is the item-4 slide and it pairs with the TikTok passive-signal slide before it.
+The teaching goal is epistemic humility, not a verdict. The strong "YouTube radicalizes
+people" claim (popular ~2018-2019, e.g. the Tufekci "rabbit hole" framing) has been
+substantially complicated. Verified anchors: Haroon et al., PNAS 2023, "Auditing
+YouTube's recommendation system..." (100k sock puppets) found congenial and increasingly
+*problematic* recommendations deeper in the trail, but did NOT find meaningful increases
+in ideological *extremity*. Counter-work (e.g. Hosseinmardi et al.; naturalistic PNAS
+2022/2024 studies) finds limited polarization effects and a strong role for subscriptions
+and off-platform choices. Why so mixed? The algorithm changes constantly and outsiders
+can't see it — the same measurement problem as the next slide. Don't let students walk
+away thinking the science is settled in either direction.
+Sources: pnas.org/doi/10.1073/pnas.2213020120; pnas.org/doi/10.1073/pnas.2318127122.
+:::
+
 ## 2025: Regulators Demand the Algorithm Open Up
 
 ::: {.vignette}
@@ -215,12 +263,29 @@ effect **October 29, 2025**. *(Source: European Commission press release IP/25/2
 The fight is now explicitly about **algorithmic transparency** — can outsiders even
 *measure* the bubble?
 
+**US, a different lever:** New York's **SAFE for Kids Act** lets minors be shown
+**algorithmic feeds only with parental consent** (default to chronological); proposed
+rules were out for comment through **Dec. 2025**. A separate NY law (signed **Dec. 2025**)
+mandates **warning labels** on addictive-feed features for under-18 users.
+
 ::: {.notes}
 This is the freshest verified hook (swap annually — see coverage-notes). Teaching point:
 the policy response to personalization-as-control is to force *measurability*. You can't
 regulate what you can't observe, and platforms tightly control access to exactly the data
 that would let researchers audit recommendation. The DSA Article 40 data-access regime is
 the live battleground. This connects forward to the Legal chapter (Ch. 4, DSA).
+
+Item-5 balance (don't let the deck read EU-only): the US has no DSA-style transparency
+mandate, but states are regulating the *feed itself*. Verified: NY's SAFE for Kids Act
+(signed 2024) restricts "addictive" algorithmic feeds for minors — under-18s get a
+non-personalized (e.g. chronological) feed unless a parent consents; AG Letitia James'
+proposed rules were in public comment through Dec. 1, 2025 and take effect 180 days after
+final rules. A companion NY law (S4505/A5346, signed Dec. 2025) requires Surgeon-General-
+style warning labels on autoplay/infinite-scroll/algorithmic-feed features for minors.
+Contrast the levers: EU = transparency/data-access (audit the algorithm); US state laws =
+design mandates (restrict the algorithm for kids). Both face First Amendment / litigation
+headwinds in the US — flag that the status may move; see coverage-notes.
+Sources: ag.ny.gov SAFE for Kids NPRM (2025); nysenate.gov S4505/A5346 (Dec. 2025).
 :::
 
 # Can We Measure the Bubble? {.center}
@@ -314,12 +379,30 @@ From the 2012 study (caveat: a decade old, worth revisiting):
 *discoverable* — and rank changes alone decide what most users ever click.
 :::
 
+**Does it still replicate?** Later audits find the *magnitude* of profile
+personalization is **smaller** than the 2011-era hype: Hannak et al. measured **~12%**
+of results differing, driven mainly by **login + location** — and donated-search studies
+put the room for a profile "bubble" at **under ~2 of 10** results. The durable finding is
+**geography/location**, not a personal ideological enclosure.
+
 ::: {.notes}
 Headline: geography was the bigger lever, and even when the *set* of results was stable,
 *ranking* shifted — and ranking is destiny, since almost no one leaves page one. So
 "censorship by ranking" doesn't require removing anything. Stress the caveat that this is
-old data; Google has changed a lot. The durable lesson is the framing, not the 2012
-percentages.
+2012 data; Google has changed a lot.
+
+Item-3 strengthening (the deck's weakest dated figure): rather than just caveat "it's
+old," anchor it to verified follow-up work so students see where the field landed.
+Hannak et al. ("Measuring Personalization of Web Search") found on average ~11.7% of
+results differ from personalization, dominated by being logged in and by IP/location, not
+by deep profile history. Robertson et al. (2018) and large donated-search analyses
+similarly find the space for a profile-driven "filter bubble" is small (often <2 results
+of 10 for person queries). Net: the *geography* result is the robust one; the strong
+"the algorithm builds you a personal ideological bubble" reading is weak in search
+(stronger on engagement feeds — see the TikTok/YouTube slides). This keeps the >85%
+top-10-by-geography number honest by pairing it with the modern, smaller profile-effect
+estimates. Sources: Hannak et al. (arXiv:1706.05011 / cbw.sh); donated-search audits
+(arXiv:1812.10943).
 :::
 
 # Personalization Can Be Attacked {.center}
@@ -363,7 +446,39 @@ syndrome), then own the search results for it. This is flooding/manipulation in 
 Roberts sense. A 2025 arXiv study (Data Voids and Warning Banners on Google Search)
 found Google shows a warning banner for only ~1% of queries — voids largely go
 unflagged. Generative-AI chatbots reproduce some disinformation for the same reason:
-they answer into voids.
+they answer into voids — developed on the next slide.
+:::
+
+## Chatbots: The New Surface for Voids {.smaller}
+
+Generative-AI assistants are becoming the **default answer layer** — and they
+**answer into data voids**, where little authoritative content exists to ground them.
+
+- **NewsGuard (Mar. 2025):** audited **10 leading chatbots** (ChatGPT, Gemini,
+  Copilot, Grok, Perplexity, Meta AI, others); they repeated false claims seeded by
+  the pro-Kremlin **"Pravda" network** about **one-third** of the time
+- The seeded sites exist largely **to be scraped** by models, not read by humans —
+  void-filling aimed at the **training/retrieval pipeline**
+
+::: {.vignette}
+**Manipulation or just gaps?** A *HKS Misinformation Review* (2025) reanalysis argues the
+chatbots cite these sources mostly on **narrow, obscure queries** — i.e., the references
+reflect **data voids**, not successful "LLM grooming." The mechanism is the same one
+we've seen all lecture: **own the void, own the answer.**
+:::
+
+::: {.notes}
+Item-1 slide. Frame chatbots as the *newest* personalization/curation surface: instead of
+ranking ten links, the model returns one synthesized answer — so the void problem gets
+worse, because there's no result list to inspect and no obvious "I didn't see X." Verified
+anchors: NewsGuard's March 2025 audit of 10 chatbots found ~33% repetition of Pravda-
+network falsehoods (france24/axios coverage; NewsGuard special report). The crucial nuance
+— and why the vignette is a *question* — is the Harvard Kennedy School Misinformation
+Review 2025 piece ("LLMs grooming or data voids?"), which argues the chatbots surface
+these sources mainly on narrow/obscure prompts, consistent with data voids rather than
+deliberate manipulation. Either way it lands the section thesis: a chatbot answering into
+a void reproduces whatever filled it. Tie back to the Golebiewski & boyd data-void slide
+just before this. Keep it honest: don't assert "AI is groomed by Russia" as settled.
 :::
 
 ## Data Voids in News Portals {.smaller}
