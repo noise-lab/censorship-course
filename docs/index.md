@@ -23,6 +23,8 @@ More details are in the [course syllabus](syllabus.md).
 
 ## Class meeting agenda
 
+Notes on what was covered in each meeting are in the [agenda](agenda.md) (one file per term; the current term is [Autumn 2026](agenda/2026-autumn.md)).
+
 Class meetings follow one of two agenda templates depending on the term:
 
 - **[Standard term (80-minute meetings)](agenda-template.md)**
