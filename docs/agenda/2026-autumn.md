@@ -65,3 +65,44 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * For: encryption, and cases like Turkey where a large public resolver helped users get around local blocking
     * Against: one operator can refuse to resolve a name for everyone, and most users would never know why a page failed to load
     * The recording did not capture the group discussion or report-back
+
+### Meeting 3 (Tue Oct 6)
+
+(The recording begins partway into the reading-response recap.)
+
+* **Reading-response themes**
+    * The same mechanism serves protection and censorship: a firewall at a school, a hospital, or a national border looks identical to the user whose connection fails. How do we disambiguate protection from censorship?
+    * Encryption removes the fine-grained signals a censor used to have, so the response is coarser: block all encrypted traffic, or a whole site rather than one page. Is that a win?
+    * As traffic concentrates in fewer content delivery networks and hosting providers, each chokepoint becomes more powerful
+    * The arms race: if the censor can always find another way, is it worth raising the cost? This is where the course's wider framing returns: when blocking gets expensive, control shifts to friction, flooding, and platforms
+    * About half the class had responses in by Tuesday; updates before Thursday are welcome and still shape the discussion
+* **TCP mechanics (for the questions asked)**
+    * The three-way handshake: SYN (synchronize), SYN-ACK, ACK. Drawn as two machines, client on the left, server on the right
+    * It is the Two Generals problem: nobody ever learns whether the final ACK arrived. The sender simply starts sending data. Teardown (FIN, acknowledgments in both directions) has the same property
+    * A reset (RST) aborts a connection or refuses one. Normal uses: a SYN sent to a port with no listener gets a reset ("go away"); a killed process; any fast teardown
+    * Forged resets: the Great Firewall watches for a SYN to a blocked destination and sends a reset to the client, which aborts regardless of what the server later replies
+    * "Ignoring the Great Firewall of China" (Cambridge, 2006): if the client simply ignores resets, the connection proceeds. It worked because the firewall was stateless, sending a reset and forgetting the connection. The firewall later reset both ends
+    * Injecting a duplicate or a reset requires being **on the path**: a router or other equipment between client and server, which in practice means a government or an ISP. The forged packet must carry a plausible sequence number; sequence numbers are visible in the clear (TLS does not encrypt TCP headers) and can be brute-forced if necessary
+    * The economics: an on-path censor only has to win a race, sending its packet before the real reply, so the manipulation is cheap once the vantage point exists
+* **Why transport-layer manipulation is becoming less attractive**
+    * Encryption hides content, and shared hosting (one cloud or CDN address serving many sites) means an IP address no longer identifies a site
+    * Censors answer with **website fingerprinting**: even encrypted, a page has a characteristic number of objects and sizes and a characteristic timing, which together act as a fingerprint of the site being visited
+    * Questions from the room: oblivious DNS does not help here (it protects the lookup, not the transfer sizes); padding traffic with extra data does help and is the standard defense, with a large research literature behind it
+    * Net: on-path manipulation needs a vantage point plus fingerprinting; friction, flooding, and platform-level controls are easier. Techniques for detecting TCP manipulation return in the measurement unit
+* **Breakout B (short): is the cat-and-mouse game winnable?**
+    * Prep-read tour: QUIC, a newer transport developed by Google and used by Chrome, encrypts more of the connection setup and can split a connection across paths, which raises new censorship questions. Tor's pluggable transports exist to protect the initial connection to the network, which is the sensitive moment for any VPN-like tool; each transport (obfs4, then Snowflake) gets fingerprinted in turn, and Russia recently blocked Snowflake. VPNs move the trust problem to the provider
+    * Report-back: censors have many tools and take the path of least resistance, which can be economic or legal rather than technical. The asymmetry runs both ways: a circumventing user must hide every aspect of their traffic while the censor needs to spot one anomaly, but the censor must close every channel while the user needs one that works
+    * Can traffic evade increasingly good machine-learning detection? Open question; flagged as a project direction (pit detection models against generative evasion). The role of AI in this race was deferred
+* **DNSSEC (secure DNS, as distinct from encrypted DNS)**
+    * The resolver walks the hierarchy: root, then the `.edu` servers, then the `uchicago.edu` servers; each step is a referral
+    * With DNSSEC each referral is signed. A signature is made with a private key and checked with the matching public key; the referral carries the next zone's key, signed by the zone above it. This is **integrity**, not confidentiality: encrypted DNS hides queries, DNSSEC proves answers were not altered
+    * The chain starts at the root key, which ships with the operating system or software. Same root-of-trust question as certificates: you have to start by trusting something
+    * What it defends against: an on-path forged answer cannot carry a valid signature, so it is rejected. What it does not: a compromised root key, or a bad key added to the root store. Keys have been added to and removed from operating-system root stores over the years. This is a quieter form of consolidation: whoever holds a root key controls everything below it
+    * Demo: the operating system's keychain lists the root certificates it trusts; most users never look
+* **Hands-on: `dig` with DNSSEC**
+    * `dig +dnssec` shows the signature records (RRSIG). `+trace` shows the full iteration from the root, with each referral, its signature, and a DS record pointing at the next zone's key
+    * UChicago's domain is now signed, which it was not a year ago; so is a major news site. Deployment is far broader than when the exercise was written. Task: find a domain that is not signed
+* **Parked for Thursday**
+    * Why DNS manipulation is so much more common than routing (BGP) manipulation, and the other BGP questions from this week's responses
+* **Logistics**
+    * Presentations start in about two weeks; sign up if you have not
