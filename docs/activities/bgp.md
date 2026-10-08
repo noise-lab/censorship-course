@@ -19,6 +19,12 @@ You can explore the data in a variety of ways, including:
 In this brief hands on, you will log in to RouteViews and explore the routes
 available from the RouteViews server to the University of Chicago.
 
+0. Make sure you have `telnet`. Recent versions of macOS do not ship it:
+   ```bash
+   brew install telnet          # macOS (Homebrew)
+   sudo apt install telnet      # Debian / Ubuntu
+   ```
+   On Windows, enable the "Telnet Client" feature or use PowerShell's `Test-NetConnection`. If you cannot install it, `nc <collector> 23` works the same way, and the [RouteViews Looking Glass](https://lg.routeviews.org/) runs the same commands from a browser.
 1. Using a command like `dig`, find the IP address for the University of Chicago web server and for YouTube (e.g., `youtube.com`).
 2. Log in to one of the RouteViews collectors using telnet. For example:
    ```bash
@@ -76,7 +82,7 @@ available from the RouteViews server to the University of Chicago.
    | `route-views.perth.routeviews.org` | Perth (WA-IX) |
    | `route-views.sydney.routeviews.org` | Sydney (Equinix SYD1) |
 
-   This list is taken from the collector menu of the [RouteViews Looking Glass](https://lg.routeviews.org/), which is the current authoritative list (the old collectors page on routeviews.org is gone; an [archived copy](https://web.archive.org/web/20251008090448/https://www.routeviews.org/routeviews/index.php/collectors/) is on the Internet Archive). If you do not have `telnet` (recent macOS: `brew install telnet`, or use `nc <collector> 23`), the Looking Glass runs the same `show ip bgp` command from your browser.
+   This list is taken from the collector menu of the [RouteViews Looking Glass](https://lg.routeviews.org/), which is the current authoritative list (the old collectors page on routeviews.org is gone; an [archived copy](https://web.archive.org/web/20251008090448/https://www.routeviews.org/routeviews/index.php/collectors/) is on the Internet Archive).
 
    **Working with a partner?** Try using two different RouteViews collectors to compare the routing information from different vantage points on the Internet.
 3. At the Routeviews collector prompt use the command `show ip bgp <IP
