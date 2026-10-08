@@ -76,7 +76,7 @@ available from the RouteViews server to the University of Chicago.
    | `route-views.perth.routeviews.org` | Perth (WA-IX) |
    | `route-views.sydney.routeviews.org` | Sydney (Equinix SYD1) |
 
-   This list is taken from the collector menu of the [RouteViews Looking Glass](https://lg.routeviews.org/), which is the current authoritative list (the old collectors page on routeviews.org is gone). If you do not have `telnet` (recent macOS: `brew install telnet`, or use `nc <collector> 23`), the Looking Glass runs the same `show ip bgp` command from your browser.
+   This list is taken from the collector menu of the [RouteViews Looking Glass](https://lg.routeviews.org/), which is the current authoritative list (the old collectors page on routeviews.org is gone; an [archived copy](https://web.archive.org/web/20251008090448/https://www.routeviews.org/routeviews/index.php/collectors/) is on the Internet Archive). If you do not have `telnet` (recent macOS: `brew install telnet`, or use `nc <collector> 23`), the Looking Glass runs the same `show ip bgp` command from your browser.
 
    **Working with a partner?** Try using two different RouteViews collectors to compare the routing information from different vantage points on the Internet.
 3. At the Routeviews collector prompt use the command `show ip bgp <IP
