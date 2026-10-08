@@ -20,12 +20,23 @@ In this brief hands on, you will log in to RouteViews and explore the routes
 available from the RouteViews server to the University of Chicago.
 
 1. Using a command like `dig`, find the IP address for the University of Chicago web server and for YouTube (e.g., `youtube.com`).
-2. Log in to one of the [Routeviews
-   collectors](https://www.routeviews.org/routeviews/index.php/collectors/) using telnet. For example:
+2. Log in to one of the RouteViews collectors using telnet. For example:
    ```bash
    telnet route-views.chicago.routeviews.org
    ```
-   (You can choose any collector from the [full list](https://www.routeviews.org/routeviews/index.php/collectors/).)
+   Other collectors that work the same way (pick one near a place you are curious about):
+   ```
+   route-views2.routeviews.org             (Oregon)
+   route-views.ny.routeviews.org           (New York)
+   route-views.eqix.routeviews.org         (Equinix Ashburn)
+   route-views.sfmix.routeviews.org        (San Francisco)
+   route-views.linx.routeviews.org         (London)
+   route-views.sg.routeviews.org           (Singapore)
+   route-views.sydney.routeviews.org       (Sydney)
+   route-views.napafrica.routeviews.org    (Johannesburg)
+   route-views.rio.routeviews.org          (Rio de Janeiro)
+   ```
+   The full, current list is the collector menu on the [RouteViews Looking Glass](https://lg.routeviews.org/). If you do not have `telnet` (recent macOS: `brew install telnet`, or use `nc <collector> 23`), the Looking Glass runs the same `show ip bgp` command from your browser.
 
    **Working with a partner?** Try using two different RouteViews collectors to compare the routing information from different vantage points on the Internet.
 3. At the Routeviews collector prompt use the command `show ip bgp <IP
