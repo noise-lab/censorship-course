@@ -106,3 +106,16 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * Why DNS manipulation is so much more common than routing (BGP) manipulation, and the other BGP questions from this week's responses
 * **Logistics**
     * Presentations start in about two weeks; sign up if you have not
+
+### Meeting 4 (Thu Oct 8)
+
+*Plan, written before class. It will be replaced with what was actually covered once the recording is transcribed.*
+
+* **Reading-response discussion:** the BGP questions parked on Tuesday. How routing works (prefixes, AS paths, most-specific prefix wins), why censors prefer DNS to BGP (precision, operational risk, cost), which defenses survive government pressure, and what collateral damage does to a blocking policy
+* **Lecture: BGP and web manipulation** (book 2.2.3–2.2.4)
+    * Route hijacks: Pakistan Telecom and YouTube (2008). Route withdrawals: Egypt (2011)
+    * Defenses: RPKI route origin validation, MANRS, BGPsec; where the trust anchors sit
+    * Web manipulation: HTTP keyword filtering, injected block pages, SNI filtering; block pages as the one place a censor identifies itself
+* **Hands-on: RouteViews** ([activity](../activities/bgp.md)): real routing tables for uchicago.edu and youtube.com from a public collector; what the table looked like during the Pakistan hijack
+* **Breakout B: should an ISP refuse a shutdown order?** ([breakout](../breakouts/bgp.md))
+* **For Tuesday:** week-3 reading response by 9 am; read 2.3.1 on throttling
