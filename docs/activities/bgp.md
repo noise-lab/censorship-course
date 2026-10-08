@@ -24,19 +24,59 @@ available from the RouteViews server to the University of Chicago.
    ```bash
    telnet route-views.chicago.routeviews.org
    ```
-   Other collectors that work the same way (pick one near a place you are curious about):
-   ```
-   route-views2.routeviews.org             (Oregon)
-   route-views.ny.routeviews.org           (New York)
-   route-views.eqix.routeviews.org         (Equinix Ashburn)
-   route-views.sfmix.routeviews.org        (San Francisco)
-   route-views.linx.routeviews.org         (London)
-   route-views.sg.routeviews.org           (Singapore)
-   route-views.sydney.routeviews.org       (Sydney)
-   route-views.napafrica.routeviews.org    (Johannesburg)
-   route-views.rio.routeviews.org          (Rio de Janeiro)
-   ```
-   The full, current list is the collector menu on the [RouteViews Looking Glass](https://lg.routeviews.org/). If you do not have `telnet` (recent macOS: `brew install telnet`, or use `nc <collector> 23`), the Looking Glass runs the same `show ip bgp` command from your browser.
+   Every collector accepts the same telnet login and the same `show ip bgp` commands. Pick one near a place you are curious about (the `route-viewsN` ones peer with networks all over the world and sit in Oregon):
+
+   | Collector | Location |
+   |---|---|
+   | `route-views.chicago.routeviews.org` | Chicago (Equinix CH1) |
+   | `route-views.ny.routeviews.org` | New York (DE-CIX New York) |
+   | `route-views.eqix.routeviews.org` | Ashburn, Virginia (Equinix) |
+   | `cix.atl.routeviews.org` | Atlanta (CIX-ATL) |
+   | `route-views.telxatl.routeviews.org` | Atlanta (Digital Realty) |
+   | `route-views.mwix.routeviews.org` | Indianapolis (FD-IX) |
+   | `route-views.flix.routeviews.org` | Miami (FL-IX) |
+   | `route-views.isc.routeviews.org` | Palo Alto (PAIX) |
+   | `route-views.sfmix.routeviews.org` | San Francisco (SFMIX) |
+   | `pacwave.lax.routeviews.org` | Los Angeles (Pacific Wave) |
+   | `route-views.nwax.routeviews.org` | Portland (NWAX) |
+   | `route-views2.routeviews.org` … `route-views8.routeviews.org` | Multi-hop collectors, University of Oregon |
+   | `route-views.gorex.routeviews.org` | Guam (GOREX) |
+   | `pitmx.qro.routeviews.org` | Querétaro, Mexico (PIT Chile MX) |
+   | `crix.sjo.routeviews.org` | San José, Costa Rica (CRIX) |
+   | `route-views.peru.routeviews.org` | Lima (Peru IX) |
+   | `route-views.chile.routeviews.org` | Santiago (NIC.cl) |
+   | `pit.scl.routeviews.org` | Santiago (PIT Chile) |
+   | `ix-br2.gru.routeviews.org` | São Paulo (IX.br) |
+   | `route-views.rio.routeviews.org` | Rio de Janeiro (IX.br) |
+   | `route-views.fortaleza.routeviews.org` | Fortaleza, Brazil (IX.br) |
+   | `route-views.linx.routeviews.org` | London (LINX) |
+   | `amsix.ams.routeviews.org` | Amsterdam (AMS-IX) |
+   | `decix.fra.routeviews.org` | Frankfurt (DE-CIX) |
+   | `locix.fra.routeviews.org` | Frankfurt (LOCIX) |
+   | `netnod.mmx.routeviews.org` | Malmö, Sweden (Netnod) |
+   | `namex.fco.routeviews.org` | Rome (NAMEX) |
+   | `interlan.otp.routeviews.org` | Bucharest (InterLAN-IX) |
+   | `route-views.soxrs.routeviews.org` | Belgrade (SOX Serbia) |
+   | `route-views.uaeix.routeviews.org` | Dubai (UAE-IX) |
+   | `iraq-ixp.bgw.routeviews.org` | Baghdad (IRAQ-IXP) |
+   | `route-views.gixa.routeviews.org` | Accra (GIXA) |
+   | `ixpn.los.routeviews.org` | Lagos (IXPN) |
+   | `route-views.kixp.routeviews.org` | Nairobi (KIXP) |
+   | `route-views.napafrica.routeviews.org` | Johannesburg (NAPAfrica) |
+   | `route-views.bdix.routeviews.org` | Dhaka (BDIX) |
+   | `route-views.bknix.routeviews.org` | Bangkok (BKNIX) |
+   | `decix.jhb.routeviews.org` | Johor Bahru, Malaysia (DE-CIX) |
+   | `route-views.sg.routeviews.org` | Singapore (Equinix) |
+   | `iix.cgk.routeviews.org` | Jakarta (IIX) |
+   | `getafix.mnl.routeviews.org` | Manila (GetaFIX) |
+   | `route-views.phoix.routeviews.org` | Quezon City, Philippines (PhOpenIX) |
+   | `hkix.hkg.routeviews.org` | Hong Kong (HKIX) |
+   | `kinx.icn.routeviews.org` | Seoul (KINX) |
+   | `route-views.wide.routeviews.org` | Tokyo (DIX-IE) |
+   | `route-views.perth.routeviews.org` | Perth (WA-IX) |
+   | `route-views.sydney.routeviews.org` | Sydney (Equinix SYD1) |
+
+   This list is taken from the collector menu of the [RouteViews Looking Glass](https://lg.routeviews.org/), which is the current authoritative list (the old collectors page on routeviews.org is gone). If you do not have `telnet` (recent macOS: `brew install telnet`, or use `nc <collector> 23`), the Looking Glass runs the same `show ip bgp` command from your browser.
 
    **Working with a partner?** Try using two different RouteViews collectors to compare the routing information from different vantage points on the Internet.
 3. At the Routeviews collector prompt use the command `show ip bgp <IP
