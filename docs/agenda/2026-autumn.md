@@ -135,3 +135,20 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * Two variants to discuss: a complete shutdown, and the greyer case of a single prefix that is harder to notice
     * The recording did not capture the small-group discussion or the report-back
 * **For Tuesday:** week-3 reading response by 9 am; read 2.3.1 on throttling
+
+### Meeting 5 (Tue Oct 13, on Zoom)
+
+*Plan, written before class. It will be replaced with what was actually covered once the recording is transcribed.*
+
+* **Housekeeping:** class is on Zoom; week-3 reading responses; project proposals due Friday October 23; presentation sign-ups; give Anna Lorimer read access to your response repository
+* **Reading-response follow-ups:** what a traffic shaper actually does to packets (dropping, buffers, who sets the policy, who gets the slow queue); the hostname arms race (why SNI is plaintext, Encrypted ClientHello, how encrypted DNS gets blocked, whether stronger encryption pushes censors toward broader techniques)
+* **Lecture: throttling and rate limiting** (book 2.3.1)
+    * Degrading instead of blocking: throttling as friction and a tax on access; rate limiting as a legitimate tool that becomes censorship by target and motive
+    * How a traffic shaper works: classify, then shape; identification by DNS, SNI, and deep packet inspection, and each method's weakness
+    * The classification arms race in 2026: SNI versus Encrypted ClientHello; Russia blocking ECH handshakes, China censoring the DNS that ECH depends on
+    * Leaky bucket versus token bucket; dropping a few packets and letting TCP slow itself down
+    * Why throttling is hard to catch: deniability, Wehe and its noisy results, the 2014 Netflix peering dispute
+    * Throttling as policy: the 2025 shutdown trend toward targeted slowdowns; Russia's 2021 Twitter throttle and 2025 WhatsApp throttle; X's link delays as private friction
+* **Hands-on: Wehe** ([activity](../activities/throttling.md)): test your own network and phone for application-specific throttling, repeat, and compare
+* **Breakout A: plausibly deniable censorship** ([breakout](../breakouts/throttling.md)): what evidentiary standard and what accountability mechanism could work against throttling
+* **For Thursday:** denial of service (2.3.2); questions already raised about DDoS defense and who gets protected are taken up then
