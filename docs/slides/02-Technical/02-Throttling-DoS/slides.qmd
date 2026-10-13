@@ -179,25 +179,28 @@ circumvention, Ch. 6.
 ## Shaping: Leaky Bucket vs. Token Bucket {.smaller}
 
 ::: {.columns}
-::: {.column width="50%"}
-**Leaky bucket**
+::: {.column width="48%"}
+**Leaky bucket** (Turner, 1986)
 
-- Drains at a **constant rate** ρ — "drip, drip, drip"
-- Output **never** exceeds the drain rate
-- Smooths bursts; full bucket → **drop packets**
+![](images/leaky-bucket.png){width="100%"}
+
+- Bucket of size β; regulator drains at a **constant rate** ρ
+- Output **never** exceeds ρ; full bucket → **drop packets**
 :::
-::: {.column width="50%"}
+::: {.column width="4%"}
+:::
+::: {.column width="48%"}
 **Token bucket**
 
-- Tokens refill at rate ρ, up to a cap β
-- Spend a token to send → allows **controlled bursts**
-- Average rate bounded by ρ; burst bounded by β
+![](images/token-bucket.png){width="100%"}
+
+- Tokens arrive at rate ρ, up to a cap β; spend one to send
+- **Controlled bursts** up to β; long-run rate bounded by ρ
 :::
 :::
 
-Both rely on **finite queues**. When a queue fills, packets are dropped — and
-**TCP reads loss as congestion and slows down**, which is exactly what the
-shaper wants.
+Both rely on **finite queues**: when one fills, packets drop, and
+**TCP reads loss as congestion and slows itself down** — exactly what the shaper wants.
 
 ::: {.notes}
 Keep this conceptual, not mathematical. Key contrast: leaky bucket = strict
