@@ -183,3 +183,19 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * From the chat: what is morally worse, throttling or blocking, depends on which is more effective at restricting information, which needs data. Agents and token limits throw a wrench into that comparison
 * **Not covered:** the denial-of-service half of the deck (Thursday); Breakout A on plausibly deniable censorship. No exam flags were given
 * **For Thursday (in person):** denial of service (2.3.2). Class will open with a breakout on the questions left hanging today: agents versus throttling, and throttling versus blocking
+
+### Meeting 6 (Thu Oct 15)
+
+*Plan, written before class. It will be replaced with what was actually covered once the recording is transcribed.*
+
+* **Housekeeping:** week-4 reading response (book 3.1–3.3.6) due Tuesday October 20 at 9 am; project proposals due Friday October 23; student presentations begin Tuesday
+* **Opening breakout** on the two questions left from Tuesday: can AI agents defeat throttling, or do they become the next thing throttled; and is throttling worse than blocking, or only harder to detect
+* **Lecture: Denial of Service** (book 2.3.2)
+    * Exhausting a finite resource: network, connections, server; distributed attacks and botnets
+    * Why it is hard to defend: asymmetry, spoofing, indistinguishability; low-rate and application-layer attacks
+    * SYN floods and SYN cookies; reflection and amplification through open resolvers
+    * When denial of service becomes censorship infrastructure: the Great Cannon (2015); Mirai and Dyn (2016) and centralization
+    * Defenses, and why protection concentrates in a few providers
+* **Hands-on: Project Galileo** ([activity](../activities/ddos.md))
+* **Discussion:** should DDoS protection be a common-carrier obligation? From [the DoS breakouts](../breakouts/ddos.md) (Breakout B)
+* **Next:** flooding and propaganda (book 3.1–3.3.6), with the first student presentation
