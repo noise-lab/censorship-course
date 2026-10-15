@@ -186,16 +186,32 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 ### Meeting 6 (Thu Oct 15)
 
-*Plan, written before class. It will be replaced with what was actually covered once the recording is transcribed.*
+*The recording begins at about 4:05 pm, partway through the report-back of the opening breakout. Housekeeping and the breakout itself were not captured; the dates announced are the ones posted in Slack.*
 
-* **Housekeeping:** week-4 reading response (book 3.1–3.3.6) due Tuesday October 20 at 9 am; project proposals due Friday October 23; student presentations begin Tuesday
-* **Opening breakout** on the two questions left from Tuesday: can AI agents defeat throttling, or do they become the next thing throttled; and is throttling worse than blocking, or only harder to detect
-* **Lecture: Denial of Service** (book 2.3.2)
-    * Exhausting a finite resource: network, connections, server; distributed attacks and botnets
-    * Why it is hard to defend: asymmetry, spoofing, indistinguishability; low-rate and application-layer attacks
-    * SYN floods and SYN cookies; reflection and amplification through open resolvers
-    * When denial of service becomes censorship infrastructure: the Great Cannon (2015); Mirai and Dyn (2016) and centralization
-    * Defenses, and why protection concentrates in a few providers
-* **Hands-on: Project Galileo** ([activity](../activities/ddos.md))
-* **Discussion:** should DDoS protection be a common-carrier obligation? From [the DoS breakouts](../breakouts/ddos.md) (Breakout B)
-* **Next:** flooding and propaganda (book 3.1–3.3.6), with the first student presentation
+* **Housekeeping (not on the recording):** week-4 reading response (book 3.1–3.3.6) due Tuesday October 20 at 9 am; project proposals due Friday October 23; student presentations begin Tuesday
+* **Opening breakout, report-back: can AI agents defeat throttling?**
+    * It depends on what the agent does. A summarization agent (the model reads the news and summarizes it) raises hallucination and even malicious-summarization worries. A prefetching agent that pulls the pages you read into a local cache is a different thing: the set of sites a person actually consumes is small, storage is cheap, and an agent could fetch that slice of the web overnight. Throttling a site the user never visits live loses much of its effect
+    * A student reported that ChatGPT describes its retrieval as using its own caches, so a throttled site may already be cached either locally or at the model provider. The instructor's open question: if friction stops working, does censorship swing back toward blocking, after the Roberts argument that friction beats blocking?
+    * Paywalls as a related form of access control. Hard paywalls (Bloomberg, legal news services) block everything behind a login. Soft, client-side paywalls (New York Times, Wall Street Journal) usually return the whole article and hide it with JavaScript, so a scraper or an agent gets the full text. Publishers built them that way on purpose so search engines would index the articles and send paying readers; agents that read straight through the paywall changed the calculus, and the question has surfaced in litigation. Flagged as a good research-project area
+    * A student argued that an agent on your own machine uses your IP address and speaks the same HTTP, so it is throttled exactly as you are; a cloud agent uses a different address, but the censor can throttle that the way it throttles VPN providers. The instructor agreed agents are no less likely to be throttled, perhaps more, but noted that if the interaction is asynchronous (ask for a digest, come back later) the delay matters less
+* **Lecture: Denial of service** (book 2.3.2; this week's "crossover episode" with the Wednesday security class, kept short because the reading covers the mechanics)
+    * Throttling slows things down at the client; denial of service slows the service for everybody. The focus here is denial of service launched by censors
+    * Ways to deny service: saturate network capacity, or overload the server by exhausting its memory or CPU. A distributed attack recruits thousands of machines each sending a little traffic, focused on one victim like a magnifying glass focusing sunlight
+    * Amplification: a small request produces a large reply, the classic case being a small DNS query to a resolver. Reflection: spoof the source address so the large reply lands on the victim instead of the attacker. Analogy: mailing a business a postcard with your enemy's return address so they receive the catalogs. Multiply by thousands of compromised machines
+    * Reading-response questions answered in class
+        * Is there a packet type that cannot cause denial of service? No. Anything with a finite resource (network capacity, CPU, memory, storage) can be exhausted. Example: a firewall installed to stop bad traffic becomes the target; exhaust its memory and everything behind it goes dark
+        * Can a defense be designed so the defender never does more work than the attacker? That is the idea behind nearly every defense
+        * Can packet captures tell a DDoS from ordinary congestion? Very hard
+        * Has anyone run denial of service against a censor, given that deep packet inspection is expensive? The firewall point applies: an on-path censorship box that falls over takes down everyone behind it, so it is not obviously useful. The instructor called his own answer glib and the question a good one. A student asked whether a foreign adversary could cut China off by attacking the Great Firewall; in principle maybe, but how it is provisioned is not well understood
+        * How hard is it to verify the source of traffic? An attacker who never needs the reply can lie about the source address. Egress filtering: the router at the edge of a network such as UChicago's drops outgoing packets whose source is not in its own address block. It relies on every network being a good citizen and costs money, so many do not do it, and once spoofed traffic leaves the leaf network it is very hard to filter. Ingress filtering (drop incoming traffic that claims to come from our own addresses) is somewhat more effective but does not protect against other spoofed addresses
+        * A student asked whether any regulation requires such filtering. The instructor knows of none from governments; it exists as a published best common practice
+    * The Great Cannon (about ten years ago, named by the researchers who documented it). The Great Firewall's usual move is to sniff traffic and inject TCP resets. The Great Cannon instead injected JavaScript into responses to users outside China who loaded content from Baidu; the injected script made those browsers send requests to GitHub, which hosted circumvention projects, and to GreatFire.org. The censor recruited outside browsers as its attack machines
+    * Not covered: SYN floods and SYN cookies, Mirai and the Dyn outage, and the defenses slides. The security-course lecture covers the first two for students in both courses
+* **Project Galileo**
+    * The standard defense against volumetric attack is more capacity: host the site in more places or with more bandwidth, which costs money. Hypothetical: a university site such as a free-expression forum is a plausible target and is not provisioned for terabits per second
+    * Cloudflare, a content delivery network, started Project Galileo in 2014: if Cloudflare decides a site is worthy and it is under attack, it gets denial-of-service protection for free. The question is who decides
+    * Reading-response questions put to the class: who decides which sites get defended; the risk of relying on a few big providers; how Cloudflare decides who gets protection free; whether Galileo protects groups outside the mainstream (the instructor thinks yes, and the hands-on asks you to check); whether defense that requires Cloudflare-scale capacity is in tension with free speech
+    * Hands-on, about six minutes in groups ([activity](../activities/ddos.md)): who is protected, are they mainstream, what it takes to join, and whether a personal website could. Imagine being the Cloudflare employee making the call
+    * Report-back (90 seconds, largely not captured): one student suggested a tiered approach where those who can pay do and others are protected free. The instructor said the discussion is to be continued
+* **Not reached:** the whole-class discussion on DDoS protection as a common-carrier obligation ([Breakout B](../breakouts/ddos.md))
+* **Next:** flooding, propaganda, and disinformation (book 3.1–3.3.6), with the first student presentation
