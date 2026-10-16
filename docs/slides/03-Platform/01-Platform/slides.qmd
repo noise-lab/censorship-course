@@ -202,6 +202,63 @@ privacy-preserving (store the hash, not the image) but **database-bound** and
 known CSAM or copyrighted audio, useless for novel content, parody, or fair use.
 :::
 
+## Spectral Fingerprinting: Match the Sound, Not the File {.smaller}
+
+::: {.columns}
+::: {.column width="62%"}
+<!-- recovered from ppt-archive/class/platform/09-Platform.pptx slide 20 -->
+![](images/spectral-fingerprint-match.png){width="100%"}
+:::
+::: {.column width="38%"}
+- A torrent **named** "Lean On Me" is only a claim; the filename, bitrate,
+  and container can all differ from the label's master
+- The platform renders the audio to a **spectral fingerprint** and compares it
+  against a **reference** fingerprint of the licensed track
+- Same spectral shape ⇒ **same work**: the match survives re-encoding,
+  trimming, and renaming
+- The catch: there has to **be** a reference. A new recording, a parody, or a
+  cover is invisible to this family
+:::
+:::
+
+::: {.notes}
+Recovered from the original pptx (slide 20); the build that swept a playhead
+across both tracks is gone, so walk the picture: top is the downloaded file,
+bottom is the reference, and the point is that the two spectral envelopes line
+up peak for peak. This is how Audible Magic and YouTube's Content ID find
+copyrighted audio without ever reading the filename. Then turn to the
+limitation list from the previous slide: database-bound, context-free.
+:::
+
+## Perceptual vs. Cryptographic Hashing {.smaller}
+
+::: {.columns}
+::: {.column width="58%"}
+<!-- recovered from ppt-archive/class/platform/09-Platform.pptx slide 23 (embedded figure; original deck's notes cite the bertolami.com perceptual-hashing post) -->
+![](images/slide023_img022.png){width="100%"}
+:::
+::: {.column width="42%"}
+- A **cryptographic** hash (SHA-256) scatters similar inputs: one changed
+  pixel gives an unrelated digest. Good for integrity, useless for "is this
+  the same picture?"
+- A **perceptual** hash keeps *neighbors as neighbors*: a resized, recolored,
+  or recompressed copy lands near the original
+- That locality is what lets **PhotoDNA** match known abuse imagery from a
+  hash database without storing the images
+- It is also the attack surface: push the image just far enough to cross the
+  threshold and the match fails
+:::
+:::
+
+::: {.notes}
+Figure from the original pptx (slide 23). Left: cryptographic hashing, where
+the source-to-hash map is deliberately scrambled. Right: perceptual hashing,
+where the map preserves order, so near-duplicates stay near. Tie to the
+three-step recipe on the fingerprinting slide (greyscale, downsample, DCT):
+each step throws away detail an adversary could perturb and keeps the coarse
+structure. Then the honest caveat: thresholds are tunable, and so are evasions.
+:::
+
 ## Case Study: GIFCT — One Hash, Every Platform {.smaller}
 
 The **Global Internet Forum to Counter Terrorism** (GIFCT), founded **2017** by
