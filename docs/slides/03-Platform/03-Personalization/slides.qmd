@@ -101,6 +101,32 @@ you a different reality on "Egypt," "vaccines," or a ballot measure. Benign and
 political personalization are the same code path.
 :::
 
+## Benign Personalization: Where You Are {.smaller}
+
+::: {.columns}
+::: {.column width="60%"}
+<!-- recovered from ppt-archive/class/platform/10-Personalization.pptx slide 12 -->
+![The same query, "Old Navy," issued from Santa Barbara and from Amherst (Google, 2013). The orange boxes mark the location-specific blocks.](images/old-navy-two-locations.png)
+:::
+::: {.column width="40%"}
+- Same query, two cities: each page gets a **nearest-store** block inserted
+- The rest of the page is nearly identical; location only **added** something
+- Nobody objects to this. It is useful.
+- Hold the picture in mind: the **same code path** produces the next one
+:::
+:::
+
+::: {.notes}
+Walk the picture; the original built in PowerPoint, this one is static. Left:
+Santa Barbara, and the first organic result grows a State Street address and
+phone number. Right: Amherst, and a whole "Places near Amherst, MA" block
+appears with three stores in Holyoke, Springfield, and Enfield. Everything else
+on the page is the same. This is the benign baseline the next slides argue
+against: the signal is just the IP address, and the effect is an insertion the
+user can see. Ask the room whether anyone would call this censorship. Nobody
+will, and that is the point of the slide that follows.
+:::
+
 ## From Benign to Political
 
 A search for **Old Navy** returning your nearest store is harmless personalization.
@@ -119,6 +145,33 @@ This is the core conceptual slide. Personalization sits on a continuum with cens
 there's no bright line. The censor doesn't have to remove content — making it
 un-surface for the people who'd care is enough. Note that the *user's lack of awareness*
 is what makes it powerful: undocumented friction is the most effective friction.
+:::
+
+## "Egypt": Two Users, Two Realities {.smaller}
+
+::: {.columns}
+::: {.column width="60%"}
+<!-- recovered from ppt-archive/class/platform/10-Personalization.pptx slide 14 -->
+![The same query, "egypt," for two users on the same day in August 2013, during the post-coup violence in Cairo.](images/egypt-search-two-users.png)
+:::
+::: {.column width="40%"}
+- Left: BBC and TIME coverage of the crackdown, the army chief, deaths in Cairo
+- Right: the tourism authority, the CIA Factbook, travel guides
+- Same query, same day, no "personalized" label on either page
+- The right-hand user is not blocked from the news; they simply **never learn it exists**
+:::
+:::
+
+::: {.notes}
+This is the Old Navy picture again with the stakes raised, so put it right next
+to that one in your head. Same query, same week (mid-August 2013, the Rabaa
+dispersal and the prison deaths are in the left-hand snippets). One user gets a
+news page; the other gets a holiday page. Nothing was removed from the index,
+and nothing on either page says "we filtered this for you." Narrate the
+missing signal: the right-hand user has no cue that a different page exists.
+That absence is what makes personalization a form of information control
+rather than a convenience, and it is why Bobble, later in the deck, is built
+around showing people the results they did not get.
 :::
 
 ## Filter Bubbles and Echo Chambers {.smaller}
@@ -333,6 +386,35 @@ what shows up on page one, where it ranks, and — when something doesn't appear
 This is the concrete instantiation of "what results am I not seeing?"
 :::
 
+## Bobble: How the Measurement Works {.smaller}
+
+::: {.columns}
+::: {.column width="60%"}
+<!-- recovered from ppt-archive/class/platform/10-Personalization.pptx slide 23 -->
+![Bobble architecture: the user's own query goes to Google as usual; the plugin also hands the search term to the Bobble server, which replays it from PlanetLab nodes around the world and returns their result sets for comparison.](images/bobble-architecture.png)
+:::
+::: {.column width="40%"}
+- The user searches Google normally through the **browser plugin**
+- The plugin forwards the **search term** to the Bobble server
+- The server **replays** the query from PlanetLab nodes worldwide, each with its own location and a clean profile
+- Their results come back and are **diffed** against the user's page
+:::
+:::
+
+::: {.notes}
+Walk the two loops in the diagram (the original animated them one arrow at a
+time; here it is static). Loop one, top left: the user's query goes to Google
+and the results come back, exactly as they would without Bobble. Loop two,
+bottom: the plugin also sends the search term to the Bobble server, which
+fans it out to PlanetLab machines in other countries and other networks,
+collects the result pages those vantage points get, and returns the set to the
+plugin. Everything the other vantage points saw but the user did not is what
+gets highlighted on the previous slide's UI. Two design choices to call out:
+the replays are from clean, logged-out vantage points, so differences isolate
+geography and profile; and the server stores the user's own results too, which
+is what makes the nine-month dataset on the next slides possible.
+:::
+
 ## What Causes the Differences? {.smaller}
 
 ::: {.columns}
@@ -403,6 +485,62 @@ of 10 for person queries). Net: the *geography* result is the robust one; the st
 top-10-by-geography number honest by pairing it with the modern, smaller profile-effect
 estimates. Sources: Hannak et al. (arXiv:1706.05011 / cbw.sh); donated-search audits
 (arXiv:1812.10943).
+:::
+
+## Logged In vs. Out: Same Set, Different Order {.smaller}
+
+::: {.columns}
+::: {.column width="62%"}
+<!-- recovered from ppt-archive/class/platform/10-Personalization.pptx slide 32 -->
+![Controlled Bobble experiment over seven days: Jaccard similarity of the result sets (left) and edit distance of their order (right), each comparison against a no-cookies baseline.](images/bobble-login-same-set-different-order.png)
+:::
+::: {.column width="38%"}
+- Three comparisons: no-cookies vs. no-cookies (noise floor), logged in, and logged out with cookies
+- Left: Jaccard index stays near **1.0**; the *set* of results barely moves
+- Right: a logged-in session is about **1.5 positions** of reordering, roughly 7x the noise floor
+- Ranking, not removal, is the lever
+:::
+:::
+
+::: {.notes}
+This is the chart behind the "order more than set" bullet on the previous
+slide, so narrate it rather than reading the numbers. Left panel: three lines
+pinned at the top of the axis, Jaccard around 0.97 to 1.0, meaning a logged-in
+user and an anonymous user get essentially the same ten links. Right panel:
+the same three comparisons measured as edit distance, and now the logged-in
+line sits around 1.5 while the no-cookies baseline sits near 0.2. Profile
+personalization in 2012 Google was mostly a reshuffle. Then make the point
+that matters for this course: a reshuffle is enough. Almost nobody clicks past
+the top three, so moving a result from position two to position eight is, for
+most users, the same as removing it, and it leaves no trace to complain about.
+:::
+
+## One Ballot Measure, Two Result Pages {.smaller}
+
+::: {.columns}
+::: {.column width="58%"}
+<!-- recovered from ppt-archive/class/platform/10-Personalization.pptx slide 18 -->
+![The query "Proposition 39" (California, November 2012 ballot) from Los Angeles and from Atlanta. The boxed SFGate editorial against the measure appears only on the Georgia page.](images/prop39-california-vs-georgia.png)
+:::
+::: {.column width="42%"}
+- Prop 39 closed a multistate corporate tax loophole; the Georgia searcher is a bystander, the California one votes
+- Both pages are mostly "yes" endorsements and ads
+- The one **"No on Prop 39"** editorial surfaces only from Georgia, far down the page
+- Today a finding; next section, a weapon
+:::
+:::
+
+::: {.notes}
+Use this as the bridge into the attack section. The screenshots are from the
+Bobble team in fall 2012: the same query, one vantage point set to Los Angeles
+and one to Atlanta. Trace the red lines: the SFGate editorial opposing the
+measure is boxed on the Georgia page and absent from the California page, the
+page shown to the people who actually vote on it. Nobody decided to hide the
+"no" argument from Californians; a ranking model did, as a side effect of
+local relevance. Two things to say before moving on. First, this is why the
+Bobble "geography dominates" finding is political and not just a curiosity.
+Second, flip the frame: if a ranking model will quietly do this on its own,
+what happens when someone feeds it signals on purpose? That is the next slide.
 :::
 
 # Personalization Can Be Attacked {.center}
