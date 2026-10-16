@@ -162,6 +162,30 @@ window you observed.
 
 DNS · TCP/IP · Web — *(censorship-book §5.2)*
 
+## Where a Censor Can Intervene
+
+::: {.columns}
+::: {.column width="60%"}
+<!-- recovered from ppt-archive/class/measurement/02-Measurement.pptx slide 5 -->
+![](images/filtering-types-by-layer.png)
+:::
+::: {.column width="40%"}
+- One fetch of `twitter.com` crosses **three layers**: DNS lookup, TCP handshake, HTTP request
+- **Domains**: NXDOMAIN, dropped query, or an injected answer
+- **IP addresses**: RST injection or a silently dropped SYN
+- **URLs**: RST, dropped GET, or an HTTP 302 to a block page
+:::
+:::
+
+::: {.notes}
+Recovered from the original pptx; the callouts used to fly in one layer at a time, so walk
+the picture top to bottom. The greyed exchange behind the callouts is the normal fetch:
+DNS query and answer, SYN and SYN-ACK, GET and 200 OK. Each callout is the censor's menu
+at that layer, and each item leaves a different fingerprint: an NXDOMAIN looks like a
+typo, an injected RST looks like a flaky server, a 302 is the only one that admits what it
+is. The next three parts of the deck measure each layer in turn.
+:::
+
 ## Measuring DNS Manipulation: The Hard Part
 
 **Strawman:** look up a domain from many resolvers; flag answers that disagree with the
@@ -301,6 +325,22 @@ blocked in China). Ethics preview: the book restricts reflectors to *infrastruct
 machines to avoid implicating individuals — that's the bridge to the ethics section.
 :::
 
+## Idle Scan: The Two Blocked Cases
+
+<!-- recovered from ppt-archive/class/measurement/02-Measurement.pptx slide 21 -->
+![Left: reflector-to-site blocked, the RSTs are dropped but the site keeps retransmitting SYN-ACKs, so the counter jumps by more than one. Right: site-to-reflector blocked, the SYN-ACK never arrives and the counter moves only for the probe (Ensafi et al.)](images/idle-scan-blocking-cases.png){width=82%}
+
+::: {.notes}
+Companion to the no-blocking figure two slides back. Walk both panels with the same
+numbered steps: probe the reflector (1), send the spoofed SYN (2), watch what comes back
+(3), probe again (4). Left panel: the site answers with SYN-ACKs, the reflector tries to
+RST them, the RSTs are dropped on the way out, and the site retransmits, so the reflector
+keeps sending RSTs and the IP ID climbs by two or more. Right panel: the SYN-ACK is
+dropped inbound, the reflector never sends anything, and the IP ID rises only by the one
+packet it sends to us. Three outcomes, three counter signatures; the hypothesis test on
+the earlier slide is how you tell them apart under background noise.
+:::
+
 ## Measuring Web Filtering: Encore {.smaller}
 
 **Encore** makes the user's **browser** the vantage point. A site running Encore serves
@@ -319,6 +359,49 @@ Encore doesn't need to read the response (the same-origin policy forbids that); 
 needs success/failure, which onload/onerror provide. By varying what it loads (same
 domain vs. same IP vs. same URL) it infers the *granularity* of blocking. This is the
 most ethically contested tool in the chapter — flag it now.
+:::
+
+## How Encore Works
+
+<!-- recovered from ppt-archive/class/measurement/02-Measurement.pptx slide 31 -->
+![](images/encore-cross-origin-request.png){width=72%}
+
+- A browser in Iran fetches an ordinary page from the **origin** site, which carries Encore's script
+- The script asks the browser to load one object **cross-origin** from the **measurement target**
+- The censor sits only on the second path; whether that request **loads or fails** is the measurement
+
+::: {.notes}
+Recovered from the original pptx. Three parties: the vantage point (any browser that
+happens to visit the origin), the origin site that serves the Encore snippet, and the
+measurement target behind the censor. The top pair of arrows is a normal page load. The
+bottom arrow is the trick: a cross-origin GET for something small like a favicon. The
+original slide ended with a red circle and the word "How?", which the next slide answers:
+the same-origin policy forbids reading the response, but resource embedding is allowed,
+and onload/onerror tell the script whether it succeeded.
+:::
+
+## Encore: Inferring What Is Blocked
+
+::: {.columns}
+::: {.column width="60%"}
+<!-- recovered from ppt-archive/class/measurement/02-Measurement.pptx slide 34 -->
+![](images/encore-inference-by-layer.png)
+:::
+::: {.column width="40%"}
+- Same drawing as before, now read from the measurer's side
+- **Many images, same domain** fail → the **domain** is blocked
+- **Many images, same IP** fail → the **IP address** is blocked
+- A **URL in an iframe** fails while others load → **URL** filtering
+:::
+:::
+
+::: {.notes}
+Recovered from the original pptx; the three yellow arrows used to appear one click at a
+time. The point is that Encore gets only one bit per request, so it recovers the
+granularity of blocking by choosing what to request: vary the domain while holding the IP
+fixed, vary the IP while holding the domain fixed, and load a full page in an iframe to
+test a single URL. Map each arrow back to the callout it points at on the earlier
+"Where a Censor Can Intervene" slide.
 :::
 
 ## Measurement Meets Real Infrastructure {.smaller}
