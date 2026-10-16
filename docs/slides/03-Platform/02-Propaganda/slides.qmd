@@ -91,6 +91,26 @@ circumvention it's meant to prevent. Flooding avoids this backfire entirely.
 See §3.2, "Flooding as the uncensored Internet."
 :::
 
+## The Backfire, Measured on Twitter {.smaller}
+
+<!-- recovered from ppt-archive/class/platform/14-Propaganda.pptx slide 9 (Roberts, *Censored*, 2018) -->
+![](images/slide009_img008.png){width="100%"}
+
+- The day Instagram was blocked (dashed line), **NYT Chinese** and **Apple Daily** gained followers at four times their usual rate
+- Across *all* Chinese-language Twitter, follow relationships ran **~33,750 above** the pre-block trend by November
+- The wall was aimed at one app; the people who climbed it reached **everything** behind it
+
+::: {.notes}
+Walk the picture left to right (the original built nothing; narrate it). Left: two
+blocked news outlets' Twitter follower sign-ups per day, with a spike exactly at the
+Sept 29, 2014 Instagram block. Right: the cumulative excess of follow relationships
+over the expected trend for all Chinese-language Twitter, ~33,750 extra by Nov 1. The
+teaching point: the block targeted Instagram, but a VPN opens the whole uncensored
+Internet, so blocking one thing "gives" the motivated half access to everything.
+That collateral access is what makes flooding attractive to a regime. Source:
+Roberts, *Censored* (Princeton, 2018), ch. 2.
+:::
+
 ## Flooding Is the "Uncensored" Internet
 
 In an ironic sense, flooding is what an **uncensored** environment looks like —
@@ -356,6 +376,24 @@ sock-puppet endorsements). Polluting a user's profile changes how *future*
 results rank for them — a bridge to the personalization/filter-bubble lecture.
 :::
 
+## A Taxonomy of Manipulation
+
+<!-- recovered from ppt-archive/class/platform/14-Propaganda.pptx slide 33 -->
+![](images/manipulation-taxonomy.png){width="82%" fig-align="center"}
+
+Three **levers** (rows) crossed with three **stages** of the information supply chain (columns).
+
+::: {.notes}
+This is the grid behind the previous slide's "three things." Rows are the levers a
+manipulator pulls: the choice set (what exists to choose from), the presentation
+(ordering, layout), or the content itself. Columns are where in the pipeline the
+lever is pulled: production (newsrooms), dissemination (social networks), discovery
+(search). Walk one row: changing the choice set is a newsroom spiking a story, Weibo
+deleting a post, or a search engine returning a different top ten to different users.
+Note the N/A cell: search engines don't (yet) fabricate content, though AI Overviews
+blur that. Ask students where the 50-cent army sits: content, dissemination.
+:::
+
 # Detecting Disinformation {.center}
 
 Can unwanted content be caught the way we caught spam?
@@ -379,6 +417,49 @@ disinformation spreads, in some sense it's already too late — content-level
 debunking arrives after the damage.
 :::
 
+## The Spam Precedent: SNARE (2009) {.smaller}
+
+::: {.columns}
+::: {.column width="55%"}
+<!-- recovered from ppt-archive/class/platform/14-Propaganda.pptx slide 41 (Hao et al., USENIX Security 2009) -->
+![](images/snare-confusion-matrix.png){width="100%"}
+:::
+::: {.column width="45%"}
+- **Network-level features only** (sender's AS, neighbor distance, time of day, message length) fed to a RuleFit classifier
+- Catches **70%** of spam with a **0.44%** false-positive rate
+- Comparable to hand-maintained blacklists, **fully automated**
+- Never reads the message: the sender's *infrastructure* gives it away
+:::
+:::
+
+::: {.notes}
+The confusion matrix from SNARE (Hao, Syed, Feamster, Gray, Krasser; USENIX Security
+2009). The arrow in the original pointed at the 0.44% false positives, the number that
+matters: automated infrastructure features matched manual blacklists without ever
+looking at content. This is the result the disinformation project tries to replicate.
+Make the analogy explicit before the next slide: spam is to IP reputation as
+disinformation is to domain, certificate, and hosting features.
+:::
+
+## Where the Infrastructure Leaves Tells {.smaller}
+
+<!-- recovered from ppt-archive/class/platform/14-Propaganda.pptx slide 45 (Hounsel et al., FOCI 2020) -->
+![](images/disinfo-infrastructure-pipeline.png){width="100%"}
+
+- Every website, honest or not, must **register a domain**, **get a certificate**, and **deploy hosting** before it publishes a word
+- Those three stages happen **before content exists**, so they can be observed early and without reading anything
+- Publication and distribution are where content-based detection works, and where it is already too late
+
+::: {.notes}
+The timeline of a website's life, with the three boxed stages being the ones the
+project measures. The box in the original was the slide's one build, highlighting
+that domain, certificate, and hosting features are all available before the first
+article is published. That is the early-warning argument: content moderation acts at
+the last two stages, after the damage. Source: Hounsel, Holland, Kaiser, Borgolte,
+Feamster & Mayer, "Identifying Disinformation Websites Using Infrastructure
+Features," FOCI 2020.
+:::
+
 ## Infrastructure Signals of Disinformation {.smaller}
 
 Dataset: **769** disinformation sites (FactCheck, Snopes, PolitiFact, NewsGuard…)
@@ -400,6 +481,33 @@ The features are deliberately content-agnostic — they don't read the article. 
 nice surprise: legitimate news orgs have *long* SAN lists (lots of shared certs),
 which itself is a signal. The WordPress gap is the most intuitive one. The point
 isn't any single feature but the aggregate fingerprint.
+:::
+
+## Two Infrastructure Tells {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+<!-- recovered from ppt-archive/class/platform/14-Propaganda.pptx slide 48 (Hounsel et al., FOCI 2020) -->
+![Domain lifespan](images/slide048_img052.png){width="92%"}
+:::
+::: {.column width="50%"}
+<!-- recovered from ppt-archive/class/platform/14-Propaganda.pptx slide 50 (Hounsel et al., FOCI 2020) -->
+![Subject Alternate Names per certificate](images/slide050_img054.png){width="92%"}
+:::
+:::
+
+- **Age:** most disinformation domains are under **five years** old; news domains cluster around **twenty**
+- **SAN count:** real news organizations share certificates across **hundreds** of names; disinformation sites rarely do
+
+::: {.notes}
+Two CDFs from the dataset on the previous slide (769 disinformation sites vs. 533 news
+sites, plus an "other" control). Left: domain lifespan. Read the red curve: almost no
+news site is younger than ten years, half are older than twenty. The black curve is
+the opposite. Right: the number of Subject Alternate Names on the site's certificate.
+The surprise is that legitimate news has *long* SAN lists (shared certificates across
+many properties), so a long SAN list is a signal of legitimacy, not sloppiness. Both
+are cheap to compute and content-free; both are also things an adversary could age
+or buy once they are known tells. Source: Hounsel et al., FOCI 2020.
 :::
 
 ## It Works — Mostly {.smaller}
