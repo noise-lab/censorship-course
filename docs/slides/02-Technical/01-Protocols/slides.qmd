@@ -114,6 +114,28 @@ speed of light would allow from the real root server in LA. That timing anomaly 
 tell.
 :::
 
+## Three Places to Forge a DNS Answer {.smaller}
+
+<!-- recovered from ppt-archive/class/technical/04-Protocols.pptx slide 7 -->
+![](images/dns-injection-points.png){width="78%" fig-align="center"}
+
+- **(1) The ISP's resolver** — if the censor controls it, it simply answers wrong
+- **(2) On-path injection** — a box between the resolver and the root races the
+  real reply with a forged one (the red arrow); first answer wins
+- **(3) A fake root** — the national network answers root queries itself, so
+  every referral beneath it is poisoned
+
+::: {.notes}
+Static figure recovered from the original deck; walk the three numbered points in
+order. (1) is the Turkey story coming next — the resolver you were handed by DHCP
+lies. (2) is the "faster than light" tell from the previous slide: the injected
+answer arrives before the real one because the injector is closer. (3) is the
+nuclear option — a fake root inside the national network, so even a user who picks
+a different resolver gets poisoned referrals unless that resolver sits outside the
+country. Ask: which of the three does switching to 8.8.8.8 defeat? Only (1), and
+only if 8.8.8.8 itself is reachable and un-injected.
+:::
+
 ## DNS Censorship in the Wild: Turkey, 2014
 
 In **March 2014**, Turkish ISPs redirected users trying to reach **Twitter** to
@@ -215,6 +237,28 @@ the stream. Both are forgeable by an on-path device because nothing is signed. D
 deeper than this — they get the full version in a networking course.
 :::
 
+## Blocking Needs a Topological Chokepoint
+
+<!-- recovered from ppt-archive/class/technical/04-Protocols.pptx slide 18 -->
+![](images/firewall-chokepoint.png){width="88%" fig-align="center"}
+
+- If the network is a graph, a firewall is a **cut** that splits it into a
+  censored side and an uncensored side
+- Every packet between Alice and Bob must cross the cut — that is what makes
+  inspection and injection possible
+- National censorship works because a country's international links are **few**;
+  the same tooling (Snort, iptables, Blue Coat) runs on an enterprise perimeter
+
+::: {.notes}
+Static figure; the original animated the bounced arrow. The point to land: on-path
+censorship is a *topology* problem before it is a technology problem. A censor needs
+a place where all the traffic passes — the international gateways. Countries with
+one or two border ASes (Iran, Ethiopia) can do this cheaply; countries with hundreds
+of peering points (the US) structurally cannot, which is a big part of why US
+"censorship" happens at platforms instead (Ch. 3). Foreshadow: the reset injector on
+the next slide sits exactly at this cut.
+:::
+
 ## TCP Reset Injection
 
 An **on-path firewall** inspects traffic, spots forbidden content, and injects a
@@ -233,6 +277,35 @@ server with a forged reset. That's why ignoring RSTs worked early on (both ends 
 honor it). Mention the firewall as a *topological chokepoint*: censorship at scale needs
 a cut in the graph separating "censored" from "uncensored." Snort, iptables, Blue Coat
 are the tooling.
+:::
+
+## The Forged Reset Gives Itself Away {.smaller}
+
+::: {.columns}
+::: {.column width="58%"}
+<!-- recovered from ppt-archive/class/technical/04-Protocols.pptx slide 19 (packet trace from Clayton, Murdoch & Watson, "Ignoring the Great Firewall of China", 2006) -->
+![](images/tcp-reset-trace.png){width="100%"}
+
+*Trace: Cambridge client → Chinese web server, request containing `falun`
+(Clayton, Murdoch & Watson, 2006).*
+:::
+::: {.column width="42%"}
+- The real server's `SYN,ACK` arrives with **TTL = 39**
+- The `RST`s arrive with **TTL = 47** — a different hop count, so a different sender
+- Three resets with guessed sequence numbers (1, 1461, 4381), so one lands wherever the client is in the stream
+- The genuine `200 OK` still arrives afterward — the block only works if the client *honours* the RST
+:::
+:::
+
+::: {.notes}
+This is the evidence behind the previous slide. Read the trace top to bottom with
+them: handshake, the GET with the trigger keyword, then the burst of resets, then the
+real page. Two tells that the resets are forged: the TTL mismatch (the injector is
+eight hops closer than the server) and the resets arriving *before* the server could
+possibly have seen the request. The sequence-number spray is the firewall hedging:
+it does not know exactly which byte the client expects next, so it sends several.
+That is why "just ignore RSTs" worked — and why later injectors got smarter (Weaver
+et al. 2009 on forged-reset detection).
 :::
 
 ## Defending TCP/IP: Encryption Moves the Battle {.smaller}
@@ -275,6 +348,51 @@ router accepts whatever its neighbor says, and propagates it. That's the whole
 vulnerability.
 :::
 
+## BGP in One Picture {.smaller}
+
+::: {.columns}
+::: {.column width="60%"}
+<!-- recovered from ppt-archive/class/technical/04-Protocols.pptx slide 23 (route-table overlay stripped) -->
+![](images/bgp-route-advertisement.png){width="100%"}
+:::
+::: {.column width="40%"}
+- Each cloud is an **autonomous system** with its own routers
+- Neighbouring ASes keep a BGP **session** between border routers
+- **Route advertisements** (green) flow one way: *"I can reach this prefix"*
+- **Traffic** (blue) flows the other way, along the reverse of the advertisements
+- Each AS re-advertises what it heard — **transitive trust**, no verification
+:::
+:::
+
+::: {.notes}
+Static figure; the original built it up cloud by cloud and then overlaid a routing
+table (destination / next-hop / AS path), which is dropped here — describe it instead.
+Walk it: the hosts on the right live in the top-right AS; it advertises their prefix
+to its neighbours; they pass it on; traffic from the bottom-left AS follows the chain
+of advertisements back. Then ask: what stops the bottom-right AS from advertising a
+prefix it does not own? Nothing. That is the next two slides.
+:::
+
+## An Address Is a Network Prefix Plus a Host
+
+<!-- recovered from ppt-archive/class/technical/04-Protocols.pptx slide 16 -->
+![](images/ipv4-prefix-bits.png){width="70%" fig-align="center"}
+
+- An IPv4 address is 32 bits; routers do not keep 2^32^ entries — they route on the
+  **network prefix** (here the first 16 bits: `128.135.0.0/16`)
+- The `/N` says how many leading bits are the network; a `/16` covers 2^16^
+  addresses, a `/24` covers 256
+- Routers prefer the **most specific** (longest) matching prefix — a `/24` beats
+  a `/22`, a `/25` beats a `/24`
+
+::: {.notes}
+Static figure, built in the original from octets to the network/host split. This is
+the one piece of addressing students need for the hijack stories: BGP advertises
+*prefixes*, and longest-prefix match is the tiebreaker. Say it twice: "more specific
+wins." It explains why Pakistan's /24 beat YouTube's /22 everywhere it propagated,
+and why YouTube answered with two /25s. Do not go further into subnetting.
+:::
+
 ## Route Hijacking: China Telecom, 2010
 
 ![China Telecom (AS 4134) advertises Verizon's prefix; the shorter bogus path wins at AT&T while Level 3 keeps the legitimate route.](images/slide028_img019.png)
@@ -308,6 +426,34 @@ global YouTube outage, because BGP doesn't respect borders. Longest-prefix-match
 mechanism: a /24 always beats a /22, a /25 beats a /24. It's "an absolute hack" that
 YouTube split its prefix to reclaim traffic. Lesson: BGP censorship is **coarse and
 leaky** — hard to keep inside one country.
+:::
+
+## The YouTube Hijack at the AS Level {.smaller}
+
+::: {.columns}
+::: {.column width="58%"}
+<!-- recovered from ppt-archive/class/technical/04-Protocols.pptx slide 30 -->
+![](images/pakistan-youtube-hijack.png){width="100%"}
+:::
+::: {.column width="42%"}
+- YouTube (AS 36561) announces `208.65.153.0/22` to RETN, Linx and on
+- Pakistan Telecom (AS 17557) announces the more-specific `/24` to its
+  upstream **PCCW (AS 3491)**, which re-advertises it worldwide
+- Longest-prefix match: wherever the `/24` arrives, it wins — traffic curls back
+  into Pakistan (dark green)
+- The red bursts are the intended audience: Pakistani customers who were
+  supposed to be the *only* ones black-holed
+:::
+:::
+
+::: {.notes}
+Static figure from the original deck (the AS-level diagram the book's narrative
+describes). Trace it: start at YouTube bottom-right, follow the legitimate /22 up
+through RETN and Linx to PCCW; then show Pakistan Telecom's /24 entering PCCW from
+below. PCCW's failure to filter its customer's announcement is the single point where
+this could have been stopped — modern route filtering (and RPKI, next slide) is
+exactly that check. Ask the room: whose fault is the outage, Pakistan Telecom's or
+PCCW's? Both, and that ambiguity is why BGP security is a collective-action problem.
 :::
 
 ## BGP as a Kill Switch — and Its Defenses {.smaller}
