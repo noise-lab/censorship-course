@@ -80,6 +80,9 @@ the payload is encrypted. A **passive observer can see who is talking to whom.**
 A **proxy** outside the censor's firewall breaks that line of sight — you talk to the
 proxy, the proxy talks to the blocked site.
 
+<!-- recovered from ppt-archive/class/circumvention/16-Circumvention.pptx slide 4 -->
+![The censored user reaches a proxy on the public Internet; the firewall sees only the hop to the proxy.](images/proxy-outside-firewall.png){width="62%"}
+
 ::: {.notes}
 Establish the core idea before naming VPNs. Encryption hides the *payload*, not the
 *routing headers* — and traffic analysis can even infer content from encrypted flows. A
@@ -212,10 +215,37 @@ forwards — so an observer can't link an incoming message to an outgoing one.
 - ...but **cannot link** a sent message to a received one
 - Chain mixes into a **mixnet**: even one honest mix preserves anonymity
 
+<!-- recovered from ppt-archive/class/circumvention/16-Circumvention.pptx slide 52 -->
+![A mix cascade: many inputs, batched and re-encrypted, then on to the next mix.](images/mix-cascade.png){width="58%"}
+
 ::: {.notes}
 The mix is the conceptual ancestor of onion routing. Its anonymity comes from *batching +
 delay*, which is exactly why a basic mix is fine for email but terrible for the web.
 Inserting random delays and padding foils correlation. Book §6.2.
+:::
+
+## A Mix in One Picture
+
+::: {.columns}
+::: {.column width="62%"}
+<!-- recovered from ppt-archive/class/circumvention/16-Circumvention.pptx slide 51 -->
+![](images/chaum-mix-design.png)
+:::
+::: {.column width="38%"}
+- Each sender wraps the message for the **recipient**, then wraps that for the **mix**
+- The mix strips its layer, **batches and reorders**, then forwards
+- Random values **r** stop an observer from re-encrypting and matching
+- Everyone sees who sent and who received; **nobody can pair them up**
+:::
+:::
+
+::: {.notes}
+Walk the picture (the original animated in one sender at a time): A, C, and D each send
+{r, {r', M}_pk(B), B}_pk(mix). The mix decrypts the outer layer, discards r, waits for a
+batch, shuffles, and forwards {r', M}_pk(B) to B. The adversary watching both sides sees
+three messages in and three out but cannot match them, because the ciphertexts changed and
+the order did. Then the cascade banner on the previous slide: chain several mixes and one
+honest mix is enough. Book §6.2.
 :::
 
 ## Tor: Low-Latency Onion Routing
@@ -230,6 +260,22 @@ The design move that makes Tor usable: avoid expensive public-key ops at every h
 setting up symmetric keys during circuit construction. Second-generation onion routing,
 running ~20 years, ~2.5M users. Note the red dashed hop — exit-to-destination is *not*
 Tor-encrypted, which is where exit-node and DNS-leak risks live. Book §6.2.
+:::
+
+## Choosing a Tor Circuit
+
+<!-- recovered from ppt-archive/class/circumvention/16-Circumvention.pptx slide 63 -->
+![Shields mark guard relays; exit signs mark relays whose exit policy allows traffic out. The highlighted path is one circuit.](images/tor-circuit-selection.png){width="82%"}
+
+- Clients start **every** circuit with their chosen **guard**; only some relays permit **exit**
+- Many streams are **multiplexed** over one circuit; circuits are **rotated** periodically
+
+::: {.notes}
+Walk the picture: the client (left) always enters through its guard (shield), picks a middle
+relay, and leaves through a relay whose exit policy allows the destination (exit sign). The
+guard is fixed for months so that a client that keeps rebuilding circuits does not
+eventually land on a malicious entry; exits are the relays that take on abuse complaints.
+Book §6.2.
 :::
 
 ## Tor's Threat Model and Its Limits {.smaller}
@@ -258,6 +304,32 @@ deanonymized. >40% of exit-relay traffic once went to Google's 8.8.8.8 — a cor
 gift. Sybil attacks (flooding the network with malicious relays) and link-level
 adversaries (controlling ASes/IXPs) round out the threat model. Book §6.2 "Tracking and
 Deanonymization."
+:::
+
+## Node-Level vs. Link-Level Adversaries {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+<!-- recovered from ppt-archive/class/circumvention/16-Circumvention.pptx slide 66 -->
+![](images/tor-node-level-adversary.png)
+
+**Node-level:** run or compromise relays. Watching the **guard and the destination** at once is enough to correlate; flooding the network with relays (**Sybil**) raises the odds.
+:::
+::: {.column width="50%"}
+<!-- recovered from ppt-archive/class/circumvention/16-Circumvention.pptx slide 67 -->
+![](images/tor-link-level-adversary.png)
+
+**Link-level:** sit at a fixed place in the topology, an **AS or IXP**, and see every circuit that crosses it. A few networks carry a disproportionate share of Tor traffic.
+:::
+:::
+
+::: {.notes}
+Two pictures the original deck built up step by step; narrate them. Left: the adversary
+does not need to break any crypto, just to observe the first and last hop of the same
+circuit; the Sybil variant is to run enough relays that this happens by chance. Right: an
+adversary with a fixed vantage point in the AS graph (a tier-1, an IXP) can see both ends of
+many circuits without running a single relay, and traffic is concentrated in a few such
+places. Book §6.2 "Tracking and Deanonymization."
 :::
 
 ## Onion Services and the "Dark Web"
@@ -444,6 +516,76 @@ infrastructure-free — are the template. Task mapping hashes a message ID to "t
 "search blue flowers on Flickr." Book §6.3, Burnett2010:collage.
 :::
 
+## Infranet vs. Collage in One Picture {.smaller}
+
+::: {.columns}
+::: {.column width="47%"}
+<!-- recovered from ppt-archive/class/circumvention/16-Circumvention.pptx slide 90 -->
+![](images/infranet-dedicated-host.png)
+
+**Infranet:** Alice's requests hide in ordinary browsing of an **unblocked, cooperating** host; the host hides replies in images. Deniable, but the host is **dedicated infrastructure**.
+:::
+::: {.column width="53%"}
+<!-- recovered from ppt-archive/class/circumvention/16-Circumvention.pptx slide 91 -->
+![](images/collage-ugc-hosts.png)
+
+**Collage:** Bob embeds the message in photos and posts them to **Flickr or YouTube**; Alice fetches them like any other user. **No dedicated infrastructure**, and redundancy makes it robust.
+:::
+:::
+
+::: {.notes}
+Same cast, two designs. Infranet (2002) needs a web server that is in on the scheme, which
+is exactly what a censor can enumerate and block. Collage (2010) moves the drop site to
+user-generated-content hosts that already serve billions of images, so blocking the channel
+means blocking Flickr. Book §6.3.
+:::
+
+## Collage: Task Mapping {.smaller}
+
+::: {.columns}
+::: {.column width="36%"}
+<!-- recovered from ppt-archive/class/circumvention/16-Circumvention.pptx slide 96 -->
+![](images/collage-task-mapping.png)
+:::
+::: {.column width="64%"}
+How does Alice know **where to look** without anyone telling her?
+
+- **Hash** the message identifier (a URL) and hash each **task** onto the same ring
+- A task is an innocuous action: *search for blue flowers on Flickr*, *watch JohnDoe's videos*
+- The identifier maps to the **closest tasks** on the ring
+- The **sender** publishes vectors where those tasks land; the **receiver** performs the tasks and finds them
+:::
+:::
+
+::: {.notes}
+Consistent hashing applied to steganography. The picture is the final state of a build:
+the identifier hashes to a point on the ring and the nearest task points are chosen. Any
+task can be made deniable because it is a normal thing a user would do on the site; the
+adversary would have to block the search itself. Book §6.3.
+:::
+
+## Collage in Numbers {.smaller}
+
+::: {.columns}
+::: {.column width="60%"}
+<!-- recovered from ppt-archive/class/circumvention/16-Circumvention.pptx slide 100 -->
+![](images/collage-case-study.png)
+:::
+::: {.column width="40%"}
+- A **30 KB** article costs **1.2 MB** to send and **6 MB** to receive, to look like browsing
+- A **140-byte** tweet takes **an hour** to publish across 30 vectors
+- This is why information hiding is a **bootstrapping** channel, not a browsing channel
+:::
+:::
+
+::: {.notes}
+The numbers make the "low bandwidth" point concrete. Overheads of 40x to 200x are the price
+of deniability: the cover traffic has to look like real use of the site. Read the table as
+the trade-off the next slide names, the parrot problem on one side and bandwidth on the
+other. Burnett, Feamster, and Vempala, "Chipping Away at Censorship Firewalls with
+User-Generated Content" (USENIX Security 2010).
+:::
+
 ## Why Information Hiding Stays Niche
 
 **"The Parrot Is Dead."** Faithfully *imitating* a real protocol is **harder than
@@ -481,6 +623,27 @@ the relay is the network itself. Walk the flow: client connects normally → sen
 Book §6.4.
 :::
 
+## Decoy Routing, Step by Step
+
+::: {.columns}
+::: {.column width="46%"}
+![Figure after Karlin et al., Curveball (FOCI 2011).](images/slide108_img284.png)
+:::
+::: {.column width="54%"}
+1. Client opens a normal TCP/TLS connection to the **decoy destination**
+2. Client sends the **sentinel**; the decoy router on the path recognizes it
+3. The **decoy proxy** takes over the connection and **resets** the real decoy
+4. From then on the client talks to the **covert destination** through the proxy, while the adversary still sees a flow to the decoy
+:::
+:::
+
+::: {.notes}
+The timeline version of the previous slide's flow. The adversary's column never changes:
+every packet it sees is addressed to the decoy. The one subtle step is 3: the decoy
+destination has to be quietly dropped (a RST) so it does not keep responding and confuse
+the client. Book §6.4.
+:::
+
 ## Decoy Routing: Promise vs. Deployment
 
 ::: {.columns}
@@ -504,6 +667,30 @@ Book §6.4.
 Decoy routing is technically the most elegant idea in the chapter and the least deployed.
 The blocker is incentives, not cryptography: an ISP gains nothing by helping users abroad.
 As software routers speed up, an on-path middlebox deployment may become feasible. Book §6.4.
+:::
+
+## Decoy Routing with Only a Passive Tap {.smaller}
+
+::: {.columns}
+::: {.column width="62%"}
+<!-- recovered from ppt-archive/class/circumvention/16-Circumvention.pptx slide 110 -->
+![](images/decoy-routing-passive-tap.png)
+:::
+::: {.column width="38%"}
+- The client hides a **tag** in ciphertext the ISP tap can recognize
+- The tap **spoofs the server**: it replies "PROXY OK" with the server's sequence numbers
+- The real server is left **hanging**, never seeing a byte it must answer
+- Later requests carry an ack the server **cannot match**, so the server ignores them; the proxy answers instead
+:::
+:::
+
+::: {.notes}
+This is the TapDance design (Wustrow et al., USENIX Security 2014): the ISP needs only a
+mirror port, not an inline box, which is the deployment story the previous slide said was
+missing. Walk the exchange top to bottom. The client's first request is padded so the
+server waits for more; the proxy injects a response with the server's sequence number; the
+client's acks then run ahead of what the server sent, so the server discards them. Refraction
+networking's descendants (Conjure) reuse this passive-tap idea.
 :::
 
 ## Who Pays for Circumvention?
