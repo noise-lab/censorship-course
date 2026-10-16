@@ -397,6 +397,58 @@ rating often moved to paid full-service plans. But "free" still measurably bends
 behavior. Both things are true — that tension is the point.
 :::
 
+## Why Users Turn to Zero Rating {.smaller}
+
+::: {.columns}
+::: {.column width="60%"}
+<!-- recovered from ppt-archive/class/regulatory/13-PaidPrioritization.pptx slide 10 -->
+![Survey respondents in Kenya and South Africa: reasons for using a zero-rated plan (MySpeedTest study).](images/zero-rating-survey-why-use.png){width="100%"}
+:::
+::: {.column width="40%"}
+- **Free access to the blessed set** leads in both countries, and dominates in
+  South Africa
+- **A paid plan is too expensive** is the second reason in Kenya, half as common
+  in South Africa
+- **Just trying it out** is a large share — the gateway story, in the data
+- Friends and family barely register
+:::
+:::
+
+::: {.notes}
+Static figure; the original build is gone, so walk the bars left to right. The
+left pair is the walled-garden pull: the free slice is the attraction. The second
+pair is where "a walled garden may beat nothing" lives — in Kenya a third of users
+say they are on zero rating because the paid plan is out of reach. The third pair
+is the gateway-drug reading: a quarter are sampling. Same survey, both stories.
+Source: our MySpeedTest surveys in Kenya and South Africa (Ch. 4 §4.4).
+:::
+
+## Why Users Don't Rely on It {.smaller}
+
+::: {.columns}
+::: {.column width="60%"}
+<!-- recovered from ppt-archive/class/regulatory/13-PaidPrioritization.pptx slide 11 -->
+![Survey respondents in Kenya and South Africa: reasons for not using a zero-rated plan (MySpeedTest study).](images/zero-rating-survey-why-not.png){width="100%"}
+:::
+::: {.column width="40%"}
+- **Too few apps** is the top complaint in Kenya; South Africans spread their
+  objections more evenly
+- **Stripped-down versions** of apps and **promotions that end** each turn away
+  about a quarter
+- The walled-garden app itself is **hard to navigate**
+- Every bar is a reason users **graduate** to the full, paid Internet
+:::
+:::
+
+::: {.notes}
+The mirror image of the previous slide. Each complaint is a leak in the walled
+garden: users notice the fence (narrow range, limited versions) and leave when the
+promotion stops. Pair this with the Cell C and MTN time series — usage bends toward
+the blessed service while it is free, but most users still prefer the full version
+when they can afford it. That is why the counterfactual decides the policy answer.
+Source: our MySpeedTest surveys in Kenya and South Africa (Ch. 4 §4.4).
+:::
+
 ## A 2025 Vignette: Europe Bars Zero Rating {.smaller}
 
 ::: {.vignette}
