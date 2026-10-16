@@ -418,6 +418,71 @@ from the book: hand them a card you alone can forge; you don't have to remember
 the meeting. SYN cookies are on by default in modern OSes.
 :::
 
+## The SYN Flood in Pictures {.smaller}
+
+::: {.columns}
+::: {.column width="46%"}
+**Normal handshake**
+
+<!-- recovered from ppt-archive/class/technical/07-DoS.pptx slide 14 -->
+![](images/tcp-handshake-timeline.png){width="80%"}
+:::
+::: {.column width="8%"}
+:::
+::: {.column width="46%"}
+**SYN flood**
+
+<!-- recovered from ppt-archive/class/technical/07-DoS.pptx slide 17 -->
+![](images/syn-flood-timeline.png){width="80%"}
+:::
+:::
+
+- **Left:** on the first SYN the server **stores state** (red) and **waits**;
+  the client commits nothing until the very end
+- **Right:** spoofed SYNs keep arriving, each one adds to the half-open queue
+  (the growing red bar), and **no ACK ever comes**
+- When the queue is full, the next *honest* SYN is refused
+
+::: {.notes}
+Two recovered figures from the original deck; the pptx animated the SYN
+arrows one by one, so walk the pictures instead. Left: point at the red
+"Store data" block on the server lifeline, then at the long "Wait." Right:
+every spoofed SYN lands another entry in the queue and the red bar grows.
+Ask the room where the *client's* red block is in the right-hand picture.
+There is none, and that is the whole asymmetry.
+:::
+
+## SYN Cookies: Stateless Until Proven {.smaller}
+
+::: {.columns}
+::: {.column width="34%"}
+<!-- recovered from ppt-archive/class/technical/07-DoS.pptx slide 30 -->
+![](images/syn-cookie-exchange.png){width="78%"}
+:::
+::: {.column width="66%"}
+- The server answers the SYN with a SYN-ACK whose **sequence number *is* the
+  cookie**, then forgets the connection: **no buffer allocated**
+- Only a client that really received that SYN-ACK can echo the cookie back in
+  its ACK; **now** the server allocates state
+- A spoofed SYN therefore costs the server **nothing** but one reply packet
+- What goes in the 32 bits:
+
+<!-- recovered from ppt-archive/class/technical/07-DoS.pptx slide 29 -->
+![](images/syn-cookie-layout.png){width="100%"}
+:::
+:::
+
+::: {.notes}
+Walk the exchange top to bottom: SYN in, SYN-ACK out with the cookie as the
+sequence number, "NO BUFFER ALLOCATED," then the ACK returns the cookie and
+only then is the TCP buffer allocated. The layout: 5 bits of coarse time
+(t mod 32, ticking every 64 s), 3 bits encoding the server MSS (eight
+choices), and 24 bits of keyed hash over the 4-tuple and the time. The
+server can recompute and check the hash without having remembered anything.
+The cost is that TCP options on the original SYN are lost, which is why the
+MSS has to be squeezed into the cookie.
+:::
+
 ## Reflection and Amplification {.smaller}
 
 Make a *small* request produce a *huge* response — aimed at the victim.
@@ -447,6 +512,50 @@ address validation / **ingress filtering** (RFC 2827), close open resolvers,
 rate-limit responses.
 :::
 
+## Amplification in One Picture {.smaller}
+
+<!-- recovered from ppt-archive/class/technical/07-DoS.pptx slide 22 -->
+![](images/dns-amplification.png){width="68%" fig-align="center"}
+
+- A **60-byte** query, with the **victim's address forged** as the source
+- The resolver answers the *victim* with a **3,000-byte** EDNS response:
+  roughly **40×** the attacker's effort, for free
+- The victim sees traffic from a helpful DNS server, never from the attacker:
+  **reflection** hides the source, **amplification** multiplies the volume
+- Smurf (1990s) did the same with one ping to a broadcast address and every
+  host on the LAN replying
+
+::: {.notes}
+Recovered figure. Point at two things: the forged SrcIP on the thin query
+arrow, and the fat response arrow that goes to the victim rather than back
+to the sender. The attacker never receives anything, so it never needs a
+real address. The ×40 is the classic EDNS "ANY" number; memcached in 2018
+reached tens of thousands. The fix is on the next slide: stop the forged
+source at the edge.
+:::
+
+## Ingress Filtering: Stop Spoofing at the Edge {.smaller}
+
+<!-- recovered from ppt-archive/class/technical/07-DoS.pptx slide 26 -->
+![](images/ingress-filtering.png){width="70%" fig-align="center"}
+
+- The customer network on the left owns **204.69.207.0/24**, so the provider's
+  edge router drops any packet from it that claims a different source
+- Kills the **spoofing** that reflection, amplification, and SYN floods all
+  depend on
+- Easy at the **edge**, where the router knows which addresses live behind
+  each port; nearly impossible in the core
+- **RFC 2827 / BCP 38** (2000), still unevenly deployed: it protects *other
+  people's* networks, so the incentive is weak
+
+::: {.notes}
+Recovered figure. The incentive gap is the teaching point: filtering costs the
+edge ISP a little configuration and protects everyone *else*, which is why
+two decades after BCP 38 a large minority of networks still let spoofed
+packets out. That is also a measurement question (how do you even know who
+filters?) and a bridge to Ch. 5.
+:::
+
 ## When DoS Becomes Censorship Infrastructure {.smaller}
 
 DoS is **visible** — so a censor that wants deniability usually prefers
@@ -470,6 +579,28 @@ GFW, but where the firewall injects RSTs to block, the Cannon injects JS to
 attack. Crucially it weaponized *bystanders* — browsers worldwide loading Baidu
 analytics. It reappeared during the Hong Kong protests. First known nation-state
 volumetric DoS against targeted sites for censorship.
+:::
+
+## The Great Cannon, Step by Step {.smaller}
+
+<!-- recovered from ppt-archive/class/technical/07-DoS.pptx slide 37; diagram after Marczak et al. (Citizen Lab, 2015) -->
+![Diagram after Marczak et al., "China's Great Cannon" (Citizen Lab, 2015)](images/great-cannon-steps.png){width="64%"}
+
+- A browser **outside China** loads a page that pulls a Baidu analytics script
+  (`GET hm.baidu.com/h.js`); the on-path Cannon **reroutes** that request
+- It asks: is this a Baidu script, and did a **1-in-50** coin come up? Usually
+  **NO**, and the request goes on to Baidu as normal
+- On **YES**, it replies *instead of* Baidu with injected JavaScript
+- That script makes the browser hammer **GitHub** and GreatFire with requests:
+  the victim is flooded by thousands of innocent users
+
+::: {.notes}
+Walk the picture left to right. The probabilistic 1-in-50 trigger is the
+detail to dwell on: most users saw nothing wrong, so the injection was hard
+to notice, yet across millions of Baidu page loads it produced a flood. The
+Firefox icon is any browser outside the GFW; the China map is the on-path
+box. Attribution: the figure follows the Citizen Lab analysis (Marczak et
+al., 2015).
 :::
 
 ## Whose Browsers Got Hijacked?
