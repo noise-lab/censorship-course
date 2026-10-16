@@ -130,6 +130,31 @@ from the user's seat, but one is an economics dispute and the other is informati
 control. Preferences are implemented with BGP local-preference manipulation.
 :::
 
+## The Business Model, in One Picture {.smaller}
+
+::: {.columns}
+::: {.column width="60%"}
+<!-- recovered from ppt-archive/class/regulatory/12-NetNeutrality.pptx slide 2 -->
+![](images/internet-business-model.png){width="100%"}
+:::
+::: {.column width="40%"}
+- The middle AS **pays** its **provider** ("pay to use") and **gets paid** by its **customer**
+- It **peers** with an equal for **free** — each carries the other's traffic
+- Every arrow is a **business relationship** that also decides which **path** a destination is reached over
+- Preferences are implemented in **BGP** via *local preference*
+:::
+:::
+
+::: {.notes}
+Static recovery of the original drawn diagram; walk it top to bottom. Money flows
+down: the provider is paid, the customer pays, the peer is free. Then show that the
+same arrows determine *which* path to the destination is used — the middle AS prefers
+the route its customer announces (it is paid for that traffic), then the peer (free),
+then the provider (costly). That is why interconnection fights are about economics
+first: every link in this picture is a contract, and a congested one is a contract
+dispute before it is a speech dispute.
+:::
+
 # The Regulatory History {.center}
 
 ## The 2015 Open Internet Order {.smaller}
@@ -275,6 +300,29 @@ The 2014 episode is the book's centerpiece for teaching the difference between a
 language of censorship; the cause turned out to be an interconnection/peering
 dispute. We're going to follow the measurement evidence and see it wasn't where
 everyone assumed.
+:::
+
+## Two Theories of Where the Bottleneck Was {.smaller}
+
+::: {.columns}
+::: {.column width="58%"}
+<!-- recovered from ppt-archive/class/regulatory/12-NetNeutrality.pptx slide 12 (embedded picture) -->
+![](images/slide012_img013.png){width="100%"}
+:::
+::: {.column width="42%"}
+- **Theory 1:** the **interconnection points** between the access ISPs (Comcast, Cablevision) and transit provider **Cogent** are saturated
+- **Theory 2:** congestion is **inside Cogent's own network**, so every ISP behind it suffers alike
+- The two theories **look identical** from a home speed test
+- Telling them apart needs **measurements across many ISPs** sharing the same transit
+:::
+:::
+
+::: {.notes}
+Use this picture to set up the evidence slide that follows. If Theory 1 held, the
+slowdown would track each ISP's Cogent link and differ by ISP; if Theory 2 held, every
+ISP reached through Cogent would degrade together. The next plot shows throughput
+across Cogent for several ISPs at once, which is exactly the comparison needed. Keep
+the point that neither theory is "blocking": both are capacity disputes.
 :::
 
 ## The Evidence: Congestion in Transit, Not the ISP {.smaller}
