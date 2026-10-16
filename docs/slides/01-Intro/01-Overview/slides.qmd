@@ -136,6 +136,20 @@ our usage. "Porous" is the key word for the central puzzle slide later. See
 censorship-book §1.1–1.2.
 :::
 
+## A Brief History of Internet Censorship {.smaller}
+
+<!-- recovered from ppt-archive/class/intro/01-Overview.pptx slide 9 -->
+![](images/censorship-history-timeline.png){width="100%" fig-alt="Timeline 1994–2018: protocol filtering in the 1990s (Internet comes to China, Great Firewall), surveillance in the 2000s (Golden Shield, Google censors then stops censoring search in China), active disruption in the 2010s (Egypt shutdown, Great Cannon, Cloudflare drops Daily Stormer, Google's Chinese search project)"}
+
+- **1990s — protocol filtering:** the Great Firewall is built as the Internet reaches China
+- **2000s — surveillance:** Golden Shield, and Google's 2006–2010 bargain with the censor
+- **2010s — active disruption:** a whole country goes dark (Egypt), the Great Cannon attacks, and a *private* company (Cloudflare) does the deplatforming
+- The line stops in 2018; the next slides pick it up (GFW vs. QUIC/ECH, age verification, consolidation)
+
+::: {.notes}
+Walk the timeline left to right (the original built in three eras). The three grey labels are the arc of the course: first the censor filters packets, then it watches and bargains with platforms, then it actively disrupts and the chokepoints move to private infrastructure. Point at 2017: the first "censorship" event on this line done by a CDN, not a state. Ask what they would add for 2019–2026 before advancing.
+:::
+
 ## Historical Anchor: The Great Firewall of China {.smaller}
 
 Since the late 1990s: Internet-scale packet filtering + DNS injection + TCP resets. The archetype of state-run censorship.
@@ -230,6 +244,20 @@ The book's §1.2 forms are the chapters — and our lectures:
 This slide is the map of the whole course, and it's literally the book's table of
 contents. Each later deck is one row. Tell them where we're going so the individual
 lectures have a home.
+:::
+
+## Conventional Censorship in One Picture {.smaller}
+
+<!-- recovered from ppt-archive/class/intro/01-Overview.pptx slide 16 -->
+![](images/conventional-censorship-alice-bob.png){width="88%" fig-align="center" fig-alt="Alice in a censored network tries to reach Bob in an uncensored network; a censor at the firewall between them blocks traffic, and a censor beside Alice punishes the user"}
+
+- **Alice** sits behind a censored network and wants content from **Bob** outside it
+- The censor at the **firewall** watches the path and **blocks traffic** — the "conventional" model
+- The censor can also reach back and **punish the user** — Roberts's *fear*
+- The rest of the course: the same censor acting more quietly (*friction*, *flooding*), and Alice routing around
+
+::: {.notes}
+Walk the picture; the original animated it in two clicks. Click one: the devil at the firewall and "Block Traffic" — the censor sits on the path and drops or resets Alice's connection to Bob. Click two: the devil moves to Alice's side and the red X appears — the censor punishes the user rather than the packet. Everything that follows is a variation: where on the path the censor sits (next slide), whether it blocks or merely taxes, and how Alice gets around it (Ch. 6).
 :::
 
 ## How Control Is Implemented (Technical) {.smaller}
