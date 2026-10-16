@@ -334,6 +334,37 @@ Felten/SDMI case on the next slides is exactly a §1201 chilling-effect story.
 Book §4.1.
 :::
 
+## Where §512 Notices Come From: Scanning the Swarm {.smaller}
+
+::: {.columns}
+::: {.column width="64%"}
+<!-- recovered from ppt-archive/class/regulatory/11-Legal.pptx slide 24 -->
+![](images/bittorrent-swarm-tracker.png)
+:::
+::: {.column width="36%"}
+- A BitTorrent **tracker** answers "who has this file?" with a list of
+  **peers' IP addresses** and the pieces each one holds
+- An enforcement agent (MarkMonitor, RightsCorp) **joins the swarm**, asks the
+  same question, and logs **IP, time, ISP, file hash**
+- Each logged IP becomes a **§512 notice** to that subscriber's ISP, which is
+  expected to act, up to **disconnection**
+- The "evidence" is an IP address, produced automatically, with no judge in the
+  loop
+:::
+:::
+
+::: {.notes}
+Static picture; the original built up in PowerPoint, so walk it. Peer 1 asks
+the tracker for "High Hopes"; the tracker's table says which peers hold which
+pieces; Peer 1 then pulls pieces from Peers 2 through 5 directly. The
+censorship point is that anyone can join the swarm and get the same table, so
+a scanning agent harvests IP addresses at scale and turns them into notices
+without anyone adjudicating them. That pipeline is where the thousands of
+notices in Cox v. Sony came from, and why an IP address is thin evidence (it is
+a household or a NAT, not a person). Keep the P2P mechanics to a minute; the
+deck is about the legal lever, not the protocol.
+:::
+
 ## The $1 Billion Question: Cox v. Sony {.smaller}
 
 ::: {.vignette}
