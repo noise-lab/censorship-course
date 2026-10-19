@@ -2,7 +2,7 @@
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
-Section 3.5 frames personalization as information control by omission: the algorithm decides what you never see. The book takes seriously [Eli Pariser](https://en.wikipedia.org/wiki/Eli_Pariser)'s [filter-bubble](https://en.wikipedia.org/wiki/Filter_bubble) worry but also notes that personalization algorithms can be *attacked* (via history poisoning) and that opting out is rarely a real option. Both breakouts test how far a democratic society can go in regulating what is technically a recommendation.
+Section 3.7 frames personalization as information control by omission: the algorithm decides what you never see. The book takes seriously [Eli Pariser](https://en.wikipedia.org/wiki/Eli_Pariser)'s [filter-bubble](https://en.wikipedia.org/wiki/Filter_bubble) worry but also notes that personalization algorithms can be *attacked* (via history poisoning) and that opting out is rarely a real option. Both breakouts test how far a democratic society can go in regulating what is technically a recommendation.
 
 ---
 
@@ -54,12 +54,12 @@ Section 3.5 frames personalization as information control by omission: the algor
 
 ## Instructor notes
 
-These map to Section 3.5's core argument that personalization is control-by-omission, and connect back to the Chapter 3 framing that platform power and state power increasingly operate through the same levers. Breakout A is the more conceptually clean debate (defaults, engagement, filter bubbles); Breakout B is the messier, more geopolitically charged one and tends to produce the sharpest disagreements — especially in a mixed international classroom. If time permits, run B second so the class can compare the domestic and foreign framings back-to-back.
+These map to Section 3.7's core argument that personalization is control-by-omission, and connect back to the Chapter 3 framing that platform power and state power increasingly operate through the same levers. Breakout A is the more conceptually clean debate (defaults, engagement, filter bubbles); Breakout B is the messier, more geopolitically charged one and tends to produce the sharpest disagreements — especially in a mixed international classroom. If time permits, run B second so the class can compare the domestic and foreign framings back-to-back.
 
 <!--
 breakout-metadata:
   lecture: 10
   class: "Personalization"
-  book_chapter: "3.5"
+  book_chapter: "3.7"
   last_refreshed: 2026-07-06
 -->

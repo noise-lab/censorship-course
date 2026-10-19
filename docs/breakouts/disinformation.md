@@ -2,7 +2,7 @@
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
-Section 3.3.7 is careful to distinguish misinformation (false, not necessarily malicious) from disinformation (deliberately deceptive) — but flags that intent is nearly impossible to determine from content alone. The book also argues that LLMs and deepfakes change the *economics* of disinformation, not its structure. Both breakouts push on what platforms and regulators can actually do about that.
+Section 3.5 is careful to distinguish misinformation (false, not necessarily malicious) from disinformation (deliberately deceptive) — but flags that intent is nearly impossible to determine from content alone. The book also argues that LLMs and deepfakes change the *economics* of disinformation, not its structure. Both breakouts push on what platforms and regulators can actually do about that.
 
 ---
 
@@ -54,12 +54,12 @@ Section 3.3.7 is careful to distinguish misinformation (false, not necessarily m
 
 ## Instructor notes
 
-These breakouts map to Section 3.3.7's takeaways that (1) intent is rarely observable, so moderation must focus on harm and scale, and (2) short-lived falsehoods still corrode trust. Breakout A is the more current — Meta's January 2025 pivot is fresh and students often have strong priors on both sides. Breakout B is where the technical and legal literacy pay off; students who read the DSA sections of Chapter 3 will engage more deeply. If time is very short, run A only; it produces sharper disagreement.
+These breakouts map to Section 3.5's takeaways that (1) intent is rarely observable, so moderation must focus on harm and scale, and (2) short-lived falsehoods still corrode trust. Breakout A is the more current — Meta's January 2025 pivot is fresh and students often have strong priors on both sides. Breakout B is where the technical and legal literacy pay off; students who read the DSA sections of Chapter 3 will engage more deeply. If time is very short, run A only; it produces sharper disagreement.
 
 <!--
 breakout-metadata:
   lecture: 8
   class: "Disinformation"
-  book_chapter: "3.3.7"
+  book_chapter: "3.5"
   last_refreshed: 2026-07-06
 -->

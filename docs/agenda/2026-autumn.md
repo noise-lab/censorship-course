@@ -188,7 +188,7 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 *The recording begins at about 4:05 pm, partway through the report-back of the opening breakout. Housekeeping and the breakout itself were not captured; the dates announced are the ones posted in Slack.*
 
-* **Housekeeping (not on the recording):** week-4 reading response (book 3.1–3.3.6) due Tuesday October 20 at 9 am; project proposals due Friday October 23; student presentations begin Tuesday
+* **Housekeeping (not on the recording):** week-4 reading response (book 3.1–3.4) due Tuesday October 20 at 9 am; project proposals due Friday October 23; student presentations begin Tuesday
 * **Opening breakout, report-back: can AI agents defeat throttling?**
     * It depends on what the agent does. A summarization agent (the model reads the news and summarizes it) raises hallucination and even malicious-summarization worries. A prefetching agent that pulls the pages you read into a local cache is a different thing: the set of sites a person actually consumes is small, storage is cheap, and an agent could fetch that slice of the web overnight. Throttling a site the user never visits live loses much of its effect
     * A student reported that ChatGPT describes its retrieval as using its own caches, so a throttled site may already be cached either locally or at the model provider. The instructor's open question: if friction stops working, does censorship swing back toward blocking, after the Roberts argument that friction beats blocking?
@@ -214,4 +214,4 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * Hands-on, about six minutes in groups ([activity](../activities/ddos.md)): who is protected, are they mainstream, what it takes to join, and whether a personal website could. Imagine being the Cloudflare employee making the call
     * Report-back (90 seconds, largely not captured): one student suggested a tiered approach where those who can pay do and others are protected free. The instructor said the discussion is to be continued
 * **Not reached:** the whole-class discussion on DDoS protection as a common-carrier obligation ([Breakout B](../breakouts/ddos.md))
-* **Next:** flooding, propaganda, and disinformation (book 3.1–3.3.6), with the first student presentation
+* **Next:** flooding, propaganda, and disinformation (book 3.1–3.4), with the first student presentation

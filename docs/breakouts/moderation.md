@@ -2,7 +2,7 @@
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
-Section 3.4 argues that content moderation at scale forces "impossible choices" — speed vs. accuracy, automation vs. judgment, consistency vs. flexibility, expression vs. safety — and that no technical system resolves them. Both breakouts pick a load-bearing structural question: what legal regime governs the platforms, and who (or what) actually does the moderating.
+Section 3.6 argues that content moderation at scale forces "impossible choices" — speed vs. accuracy, automation vs. judgment, consistency vs. flexibility, expression vs. safety — and that no technical system resolves them. Both breakouts pick a load-bearing structural question: what legal regime governs the platforms, and who (or what) actually does the moderating.
 
 ---
 
@@ -54,12 +54,12 @@ Section 3.4 argues that content moderation at scale forces "impossible choices" 
 
 ## Instructor notes
 
-These map directly to Section 3.4's "impossible choices framework" and the "entrenchment effect" boxed takeaways. Breakout A gets legal-heavy fast — steer groups toward the practical downstream effects (small platforms, infrastructure providers) rather than 230 doctrine. Breakout B is the ethics-heavy one; the "shrink the platforms" motion is deliberately unpopular so groups have to defend something. Both benefit from students having done the reading on [GIFCT](https://gifct.org/) and [Content ID](https://en.wikipedia.org/wiki/Content_ID).
+These map directly to Section 3.6's "impossible choices framework" and the "entrenchment effect" boxed takeaways. Breakout A gets legal-heavy fast — steer groups toward the practical downstream effects (small platforms, infrastructure providers) rather than 230 doctrine. Breakout B is the ethics-heavy one; the "shrink the platforms" motion is deliberately unpopular so groups have to defend something. Both benefit from students having done the reading on [GIFCT](https://gifct.org/) and [Content ID](https://en.wikipedia.org/wiki/Content_ID).
 
 <!--
 breakout-metadata:
   lecture: 9
   class: "Content Moderation"
-  book_chapter: "3.4"
+  book_chapter: "3.6"
   last_refreshed: 2026-07-06
 -->

@@ -2,7 +2,7 @@
 
 **Format.** Break into groups of 4–5. Each group picks **one** of the two breakouts below (or takes both if time allows). Spend ~5 minutes skimming the prep reads, then ~10 minutes debating. A designated reporter brings the group's position — and any dissents — back to the full class for a ~3-minute report-back.
 
-Chapter 3.1–3.3.6 argues that modern information control is often not about removing content but about drowning it out and amplifying selected narratives. The two motions below force groups to draw lines that the book deliberately leaves unresolved: where does organic speech end and coordinated propaganda begin, and what should platforms do when the speaker is a state?
+Chapter 3.1–3.4 argues that modern information control is often not about removing content but about drowning it out and amplifying selected narratives. The two motions below force groups to draw lines that the book deliberately leaves unresolved: where does organic speech end and coordinated propaganda begin, and what should platforms do when the speaker is a state?
 
 ---
 
@@ -60,6 +60,6 @@ These map to two of the "Section takeaways" boxes: the flooding section's argume
 breakout-metadata:
   lecture: 7
   class: "Flooding and Propaganda"
-  book_chapter: "3.1-3.3.6"
+  book_chapter: "3.1-3.4"
   last_refreshed: 2026-07-06
 -->
