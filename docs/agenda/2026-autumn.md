@@ -215,3 +215,20 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * Report-back (90 seconds, largely not captured): one student suggested a tiered approach where those who can pay do and others are protected free. The instructor said the discussion is to be continued
 * **Not reached:** the whole-class discussion on DDoS protection as a common-carrier obligation ([Breakout B](../breakouts/ddos.md))
 * **Next:** flooding, propaganda, and disinformation (book 3.1–3.4), with the first student presentation
+
+### Meeting 7 (Tue Oct 20)
+
+*Plan, written before class. It will be replaced with what was actually covered once the recording is transcribed.*
+
+* **Housekeeping:** week-5 reading response (book 3.5, disinformation) due Thursday October 22 at 9 am; project proposals due Friday October 23; the schedule's chapter-3 section numbers were corrected to match the current book (Tuesday 3.1–3.4, Thursday 3.5)
+* **Reading-response discussion:** whether flooding counts as censorship when nothing is removed; AI as the information arbiter (refusals, closed system prompts, model disagreement, who decides what an AI permits); what AI agents that read everything do to flooding
+* **Student presentation:** personalization and filter bubbles
+* **Lecture: Flooding and propaganda** (book 3.1–3.4)
+    * Roberts's fear, friction, and flooding; censorship by addition rather than subtraction
+    * When blocking backfires: the 2014 Instagram block in China
+    * Flooding as the "uncensored" Internet; China's 50-cent army as distraction, not argument
+    * Why flooding is dangerous and hard to regulate
+    * Behavioral signatures of propaganda campaigns: volume, retweet ratio, retweet speed, coordination
+    * Exposure is not persuasion: what the evidence on the 2016 Russian campaign shows
+* **Breakout: amplification vs. astroturf** ([breakout](../breakouts/propaganda.md), Breakout A): can organic virality and coordinated propaganda be told apart, and what operational definition of coordinated inauthentic behavior could a platform enforce?
+* **Next:** disinformation (book 3.5), detecting it from infrastructure, and the 2024–2026 picture
