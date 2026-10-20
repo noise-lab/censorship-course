@@ -230,5 +230,5 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * Why flooding is dangerous and hard to regulate
     * Behavioral signatures of propaganda campaigns: volume, retweet ratio, retweet speed, coordination
     * Exposure is not persuasion: what the evidence on the 2016 Russian campaign shows
-* **Hands-on: sentiment analysis and content moderation with LLMs** ([activity](../activities/automation.md)): test ChatGPT, Claude, Phoenix, or another model as a moderator on clear violations, borderline cases, sarcasm, and other languages; compare models and prompt phrasings; discuss the limits, circumvention, and biases of LLM moderation. (Replaces the planned amplification-vs-astroturf breakout.)
+* **Breakout: amplification vs. astroturf** ([breakout](../breakouts/propaganda.md), Breakout A): can organic virality and coordinated propaganda be told apart, and what operational definition of coordinated inauthentic behavior could a platform enforce?
 * **Next:** disinformation (book 3.5), detecting it from infrastructure, and the 2024–2026 picture
