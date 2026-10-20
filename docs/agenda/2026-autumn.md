@@ -220,7 +220,7 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 *Plan, written before class. It will be replaced with what was actually covered once the recording is transcribed.*
 
-* **Housekeeping:** week-5 reading response (book 3.5, disinformation) due Thursday October 22 at 9 am; project proposals due Friday October 23; the schedule's chapter-3 section numbers were corrected to match the current book (Tuesday 3.1–3.4, Thursday 3.5)
+* **Housekeeping:** week-5 reading response (book 3.6–3.7, moderation and personalization) due Tuesday October 27 at 9 am; project proposals due Friday October 23; the schedule's chapter-3 section numbers were corrected to match the current book (Tuesday 3.1–3.4, Thursday 3.5)
 * **Reading-response discussion:** whether flooding counts as censorship when nothing is removed; AI as the information arbiter (refusals, closed system prompts, model disagreement, who decides what an AI permits); what AI agents that read everything do to flooding
 * **Student presentation:** personalization and filter bubbles
 * **Lecture: Flooding and propaganda** (book 3.1–3.4)
