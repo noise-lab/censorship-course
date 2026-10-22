@@ -253,13 +253,7 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 * **Housekeeping:** project proposals due Friday October 23 (one shared repository per group, linked from each member's course repository); week-5 reading response (book 3.6–3.7) due Tuesday October 27 at 9 am; the third student presentation (content moderation) is Tuesday
 * **Reading-response discussion** on 3.5: whether disinformation is already illegal; whether the problem is removing false content quickly or going after the systems and people that produce it; whether machines can recognize satire; whether AI labs are doing anything about AI-generated flooding; a current example of manufactured buzz for profit
-* **Lecture: Flooding and propaganda** (book 3.1–3.4, carried over from Tuesday)
-    * Fear, friction, and flooding; censorship by addition
-    * When blocking backfires: the 2014 Instagram block in China
-    * Flooding as the "uncensored" Internet; the 50-cent army as distraction, not argument
-    * Why flooding is dangerous and rarely illegal
-    * Behavioral signatures of a campaign: volume, retweet ratio, retweet speed, coordination; how skewed posting is
-    * Exposure is not persuasion: the evidence on the 2016 Russian campaign
+* **Carried from Tuesday** (book 3.1–3.4, five minutes): why blocking backfires and flooding does not (the 2014 Instagram block in China); the four behavioral signatures of a campaign (volume, retweet ratio, retweet speed, coordination). The remaining flooding slides are posted as reading
 * **Lecture: Disinformation** (book 3.5)
     * What counts: information, false belief, intent; misinformation, satire, and partisan bias are not disinformation
     * Who spreads it and why; effects: misperception, disorientation, distraction
@@ -267,5 +261,6 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * Detecting disinformation from infrastructure the way spam was detected: the SNARE precedent, domain, certificate, and hosting tells, and why they come before content exists
     * Coordinated inauthentic behavior at platform scale, and why definition is the hard part
     * The 2024–2026 picture: AI-generated flooding, grooming the chatbots, and the EU Digital Services Act's answer
-* **Breakout: Community Notes as a replacement for fact-checking** ([breakout](../breakouts/disinformation.md), Breakout A): legitimate governance choice, fig leaf, or something that only works on X?
+* **Hands-on: fake-news-site infrastructure** ([activity](../activities/disinformation.md)): pick domains from a labelled disinformation list and a real newsroom, and compare registration age, hosting, platform, and certificate names with `whois`, `dig`, and the browser
+* **Breakout, as time permits: Community Notes as a replacement for fact-checking** ([breakout](../breakouts/disinformation.md), Breakout A)
 * **Next:** content moderation (book 3.6), with the third student presentation
