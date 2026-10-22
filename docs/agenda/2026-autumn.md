@@ -246,3 +246,26 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * The instructor noted that building discussion into a presentation was a good innovation that other groups are welcome to copy
 * **Not covered:** the flooding and propaganda lecture (book 3.1–3.4: fear, friction, and flooding; the 2014 Instagram block; the 50-cent army; behavioral signatures of campaigns; exposure vs. persuasion) was not reached. The closing block was [Breakout A](../breakouts/propaganda.md), amplification vs. astroturf; the group discussion and any report-back were not captured
 * **Next:** disinformation (book 3.5), with the flooding and propaganda material to be picked up
+
+### Meeting 8 (Thu Oct 22)
+
+*Plan, written before class. It will be replaced with what was actually covered once the recording is transcribed.*
+
+* **Housekeeping:** project proposals due Friday October 23 (one shared repository per group, linked from each member's course repository); week-5 reading response (book 3.6–3.7) due Tuesday October 27 at 9 am; the third student presentation (content moderation) is Tuesday
+* **Reading-response discussion** on 3.5: whether disinformation is already illegal; whether the problem is removing false content quickly or going after the systems and people that produce it; whether machines can recognize satire; whether AI labs are doing anything about AI-generated flooding; a current example of manufactured buzz for profit
+* **Lecture: Flooding and propaganda** (book 3.1–3.4, carried over from Tuesday)
+    * Fear, friction, and flooding; censorship by addition
+    * When blocking backfires: the 2014 Instagram block in China
+    * Flooding as the "uncensored" Internet; the 50-cent army as distraction, not argument
+    * Why flooding is dangerous and rarely illegal
+    * Behavioral signatures of a campaign: volume, retweet ratio, retweet speed, coordination; how skewed posting is
+    * Exposure is not persuasion: the evidence on the 2016 Russian campaign
+* **Lecture: Disinformation** (book 3.5)
+    * What counts: information, false belief, intent; misinformation, satire, and partisan bias are not disinformation
+    * Who spreads it and why; effects: misperception, disorientation, distraction
+    * The manipulation grid: three levers (choice set, presentation, content) at three stages (production, dissemination, discovery)
+    * Detecting disinformation from infrastructure the way spam was detected: the SNARE precedent, domain, certificate, and hosting tells, and why they come before content exists
+    * Coordinated inauthentic behavior at platform scale, and why definition is the hard part
+    * The 2024–2026 picture: AI-generated flooding, grooming the chatbots, and the EU Digital Services Act's answer
+* **Breakout: Community Notes as a replacement for fact-checking** ([breakout](../breakouts/disinformation.md), Breakout A): legitimate governance choice, fig leaf, or something that only works on X?
+* **Next:** content moderation (book 3.6), with the third student presentation
