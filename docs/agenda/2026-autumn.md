@@ -249,7 +249,7 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 ### Meeting 8 (Thu Oct 22)
 
-*The recording begins at about 3:40 pm, partway through housekeeping, and captures the lecture and the start of the hands-on (about 4:32 pm). It ends at about 4:39 pm, while students were working in pairs; the rest of the hands-on and any report-back were not captured.*
+*The recording begins at about 3:40 pm, partway through housekeeping, and captures the lecture and the start of the hands-on (about 4:32 pm). It stops at about 4:39 pm, while students were working in pairs, and a second short recording picks up the last minute of the report-back; most of the report-back was not captured.*
 
 * **Housekeeping**
     * Project proposals are due Friday October 23. The staff will pull them from the repositories and let groups know if anything is missing. Students still looking for a group were asked to say so in class so they could be matched; one student did
@@ -287,6 +287,7 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * Questions to consider: what do these sites look like, and do they look like real news sites? Some make an effort; some do not. The older, human-readership framing of the activity asked whether you would actually go to such a site. One answer from an earlier discussion is that readers rarely see the landing page: a friend posts a direct link on Facebook, the reader lands deep in the site, and that is good enough to fool someone
     * The newer framing: if the future of the web is agents reading pages and handing people a synthesis, a site no longer needs to look good to a human at all. It only needs to exist on the web for ingestion by an agent, so the question becomes how to think about sites built to be eaten by bots rather than read by people
     * The instructor said the activity will be modernized for next year: the dead sites in the dataset will be refreshed, and discussion questions about sites that exist to be ingested by agents and LLMs rather than read by humans will be added, since this is only getting more relevant
-    * The report-back was not captured by the recording
+    * Only the end of the report-back was recorded. One pair described a site that is almost entirely cat content, with a political article slipped in now and then: a site built for engagement (clickbait and algorithmic reach) that carries the occasional payload. The instructor noted this as a tactic they had heard of but not studied. Another pair reported a site whose content had turned into bizarre filler, a reminder that many of these domains have changed hands
+    * Next meeting is content moderation, with the third student presentation and breakouts
 * **Not covered:** the four behavioral signatures of a flooding campaign; the "who spreads it and why" slide beyond the Macedonian profit-seekers; the detection slides (SNARE, infrastructure tells); coordinated inauthentic behavior; the AI-generated flooding and Digital Services Act slides beyond the one-line mention above. [Breakout A](../breakouts/disinformation.md) on Community Notes versus fact-checking was not run
 * **Next:** content moderation (book 3.6), with the third student presentation and the LLM sentiment-analysis hands-on; a comparison of platforms' content-moderation policies is planned for the same week
