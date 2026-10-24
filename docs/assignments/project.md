@@ -86,4 +86,61 @@ Your final project deliverable should be:
 (if you must) as a paper skeleton for
 your report. 
 
+## Grading (100 points)
 
+The project is 35% of the course grade and is scored out of 100 points against
+the brief above: 15 for the proposal, 85 for the final deliverable. Points
+reward *understanding* and an honest, complete account of what you did, not
+polish. The writeup is graded from its text, so put the numbers, figures, and
+citations in the paper itself rather than pointing at a notebook.
+
+### Part 1: Proposal (15 points, graded for completion)
+
+A complete, good-faith proposal earns all 15 points. The proposal exists so the
+instructor can catch scope, data, and ethics problems early, not to judge the
+idea. Vague sections get a comment and a request to firm them up, not a
+deduction, unless the section is missing. One proposal per team; every member
+should have a copy (or a pointer to it) in their own repo.
+
+| # | Section | Points | What counts as present |
+|---|---|---|---|
+| 1 | Title and team | 1 | A title; every member's full name and CNetID; team of 2–3, or a justification for a different size. |
+| 2 | Project summary | 3 | States the problem, why it matters (with at least one citation: paper, news story, software, or anecdote), and what action could follow from the results and who could take it. |
+| 3 | Related work | 3 | Organized thematically rather than as a list; references included (e.g. BibTeX); says how your work extends what you cite. |
+| 4 | Preparation and prerequisites | 3 | Measurement projects: the data you have, the data you still need, the results you expect, and how you would present them. Systems projects: what you will build and which existing code base, if any, you will extend. |
+| 5 | Evaluation | 3 | Names specific evaluation techniques or metrics, not just "we will evaluate it." |
+| 6 | Ethics | 2 | At least a paragraph on the ethical implications of the work, possible bias, and whether that bias affects the fairness of any proposed solution. |
+
+The interim check-in (how it's going, obstacles, an outline, a meeting in
+office hours) receives feedback, not points.
+
+### Part 2: Final deliverable (85 points)
+
+| Component | Points | What earns full marks |
+|---|---|---|
+| **Introduction** | 10 | States the problem in the first page; explains why it matters with citations; names who can act on the results and what they could do. |
+| **Related work** | 10 | Thematic subsections or paragraphs, not a list; each theme states how your work differs from or extends it; every in-text citation resolves to a complete bibliography entry. |
+| **Method / Data** | 15 | Measurement projects: what data, how it was collected (dates, vantage points, tools, sample sizes), how it was processed and filtered, and how it was analyzed, at a level a reader could reproduce. Systems projects: what was built, its architecture, which existing code base was extended, and how it was tested. Code and data are released, or the paper says why not. |
+| **Results / Evaluation** | 15 | The evaluation matches what the proposal promised, or the paper explains the change. Results are specific: figures and tables with labelled axes, captions, and the actual numbers pasted in. Each claim in the text points to a figure, table, or number. Null or negative results are reported as such. |
+| **Ethics and limitations** | 8 | Ethical implications specific to *your* data or system (consent, risk to users in censored regions, bias), plus concrete limitations of the method and data and what would be needed to strengthen the claim. |
+| **Clarity, formatting, team roles** | 7 | ACM format via the paper skeleton or the Overleaf template; roughly 4–6 pages (longer only if it needs to be); abstract; numbered sections; author list; a short statement of who did what. |
+| **Video** | 10 | A short video (a few minutes; link or file in the repo) that states the question, the method, and the main finding, and is understandable without reading the paper. |
+| **Reflection & AI-verification** | 10 | A "Reflection" section or appendix that reports (a) at least one thing you tried that did not work and what you did instead, (b) what surprised you in **your own** data or system, and (c) if you used an LLM, at least one claim you checked against your data, a primary source, or a running system, and what you found. Include an AI-usage appendix (prompts, how you verified the output) if you used one. Generic prose that could describe any project earns little. |
+| **Extra credit: submission-ready artifact** | +10 | Either a public dataset or code release with a README that explains how to reproduce the paper's figures, or a writeup that is ready to submit to a named workshop (its format, its page limit, complete). |
+
+### Requirements that gate the score
+
+- **Deadlines.** The proposal and the final paper and video are due on the
+  dates posted on the course site; the syllabus late policy (96-hour grace
+  balance for the term) applies.
+- **Evidence in the text.** Cite figures, tables, and numbers so a grader can
+  find your evidence in the paper. A correct, specific two-sentence answer
+  beats a page of vague prose.
+- **Per-team variation is expected.** Teams choose different questions, data,
+  and systems. You are graded on whether the analysis is correct for what you
+  chose, not against a fixed answer.
+- **AI use.** Encouraged, with acknowledgment and an explanation of how you
+  prompted and verified it (see the Reflection item).
+- **Defendable live.** Any team member may be asked to explain or reproduce
+  any part of the project in office hours, in class, or during the
+  presentation, per the syllabus.
