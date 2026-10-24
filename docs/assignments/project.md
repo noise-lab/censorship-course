@@ -104,7 +104,7 @@ should have a copy (or a pointer to it) in their own repo.
 
 | # | Section | Points | What counts as present |
 |---|---|---|---|
-| 1 | Title and team | 1 | A title; every member's full name and CNetID; team of 2–3, or a justification for a different size. |
+| 1 | Title and team | 1 | A title; every member's full name (the author list); team of 2–3, or a justification for a different size. |
 | 2 | Project summary | 3 | States the problem, why it matters (with at least one citation: paper, news story, software, or anecdote), and what action could follow from the results and who could take it. |
 | 3 | Related work | 3 | Organized thematically rather than as a list; references included (e.g. BibTeX); says how your work extends what you cite. |
 | 4 | Preparation and prerequisites | 3 | Measurement projects: the data you have, the data you still need, the results you expect, and how you would present them. Systems projects: what you will build and which existing code base, if any, you will extend. |
