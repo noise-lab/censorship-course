@@ -101,13 +101,15 @@ possible to meet every deadline. As such, we are willing to accept late
 assignments according to the following policy:
 
 - You start the term with a grace period "balance" of 96 hours.
-- Each assignment will be due at 5:00 p.m. (Chicago Local Time) on the
-  due date.
+- Each assignment will be due at 11:59 p.m. (Chicago Local Time) on the
+  due date. Weekly reading responses are the exception: they are due at
+  9:00 a.m. on the Tuesday the topic is covered, so classmates can read them
+  before class.
 - For each assignment, every hour late (or fraction thereof) that you
   turn in the assignment will subtract one hour from your grace-period
-  balance. For example, if you turn in your assignment at 6:02 p.m. on
-  the due date, we will count this as two hours against your grace
-  period.
+  balance. For example, if you turn in your assignment at 1:02 a.m. the
+  morning after the due date, we will count this as two hours against your
+  grace period.
 - As long as your grace period balance is positive, you can turn in any
   assignment late without penalty.
 - Once your grace period balance reaches zero, you will receive half
