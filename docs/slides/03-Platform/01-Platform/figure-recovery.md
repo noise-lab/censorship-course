@@ -76,3 +76,40 @@ skip/left-out; the new Quarto slides are listed in the target column.
   `images/nyt-deepfakes-headline-2020.png` (714×150), new Oct 27 2026:
   headline-plus-subhead crops of `slide011_img013.png` and `slide011_img014.png`
   (`sips --cropOffset 1 1`; an offset of 0 0 makes sips crop from the centre).
+
+## Web-page captures (not from the pptx), Oct 27 2026
+
+Taken with headless Firefox (`/Applications/Firefox.app/Contents/MacOS/firefox
+--headless --new-instance --profile /tmp/ffprof --screenshot out.png
+--window-size=1280,1400 <url>`), cropped to masthead plus headline (and, for
+Pew, the bar chart) with PIL, resized to 1000 px wide, saved as
+`images/ce-<slug>.png` and force-added. Each is embedded inside a link to the
+page it shows; the URL is in `coverage-notes.md` / `speaker-notes.md`.
+
+| image | page | on slide |
+|---|---|---|
+| `ce-eucrim-dsa-fine.png` | eucrim, Jan 19 2026 | In the News: The Pressure |
+| `ce-senate-sunset-230.png` | Senate Judiciary, Dec 18 2025 | In the News: The Pressure |
+| `ce-engadget-kgm-verdict.png` | Engadget, Mar 25 2026 | In the News: The Pressure |
+| `ce-wvik-durbin.png` | WVIK, Mar 25 2026 | In the News: The Pressure |
+| `ce-meta-more-speech.png` | Meta Newsroom, Jan 7 2025 | In the News: Who Reviews Now |
+| `ce-techpolicy-community-notes.png` | Tech Policy Press, Sep 22 2026 | In the News: Who Reviews Now |
+| `ce-gifct-impact-2025.png` | GIFCT, May 21 2026 | Case Study: GIFCT |
+| `ce-perspective-sunset.png` | perspectiveapi.com | In the News: The Classifiers |
+| `ce-arxiv-bye-perspective.png` | arXiv 2604.25580 | In the News: The Classifiers |
+| `ce-acl-fasching-lelkes.png` | ACL Anthology, Findings 2025 | In the News: The Classifiers |
+| `ce-pew-ai-overviews.png` | Pew Research, Jul 22 2025 | From Search to Synthesis |
+| `ce-pew-chart.png` | Pew Research chart, same page | The Freshest Hook |
+| `ce-citizenlab-censorship-bias.png` | Citizen Lab, Aug 14 2025 | Censorship Baked Into the Model |
+| `ce-khoury-deepseek.png` | Khoury College, Sep 10 2025 | Censorship Baked Into the Model |
+| `ce-moderationbias.png` | moderationbias.com | Which AI You Pick Is the Policy |
+| `ce-record-grok.png` | The Record, Jan 5 2026 | The Model Is Also the Target |
+| `ce-bhrrc-kenya.png` | BHRRC, Feb 12 2026 | In the News: The Humans in Human Review |
+| `ce-tbij-accra.png` | TBIJ, Apr 27 2025 | In the News: The Humans in Human Review |
+| `ce-npr-napalm-girl.png`, `ce-npr-brazil-x.png`, `ce-lawfare-brazil-x.png`, `ce-techcrunch-deepseek.png` | NPR 2016, NPR 2024, Lawfare 2024, TechCrunch 2025 | captured, not placed (linked from the slides instead) |
+
+Not captured: EC press release IP/26/203 (renders only with JavaScript; linked
+from the Grok vignette), the Oversight Board PAO and Meta's integrity report
+(block fetches), the Irish DPC inquiry (no verified URL). The legacy pptx has
+no media for the AI-arbiter section (it was written in 2026), so nothing from
+the extraction applies there.

@@ -134,7 +134,7 @@ Governments route their preferences through "neutral" moderation pipelines:
 refusing content-removal demands. An *independent judiciary* used
 infrastructure-level blocking against a major platform — and the platform
 **accepted the block rather than comply** — a configuration the West once
-associated only with authoritarian states.
+associated only with authoritarian states. ([NPR, Aug 30 2024](https://www.npr.org/2024/08/30/nx-s1-5096220/brazil-suspends-x-elon-musk); [Lawfare, Sep 6 2024](https://www.lawfaremedia.org/article/musk-s-x-banned-in-brazil))
 :::
 
 ::: {.notes}
@@ -174,7 +174,7 @@ Headlines: New York Times, Oct 3 2019 (ECJ, *Glawischnig-Piesczek v. Facebook*);
 :::
 
 ::: {.vignette}
-**2025–26: the pressure is now legal, not just rhetorical.** **Dec 5 2025:** the first DSA fine, **€120M on X** (deceptive blue checks, ad repository, researcher access). **Dec 18 2025:** the Durbin–Graham *Sunset Section 230 Act* is introduced. **Mar 25 2026:** a Los Angeles jury finds Meta and YouTube liable for addictive design (**\$6M**), and Durbin calls for the sunset the same day.
+**2025–26: the pressure is now legal, not just rhetorical.** **Dec 5 2025:** the first DSA fine, **€120M on X** (deceptive blue checks, ad repository, researcher access; [eucrim](https://eucrim.eu/news/eu-fines-x-120-million-in-first-dsa-non-compliance-decision/)). **Dec 18 2025:** the Durbin–Graham *Sunset Section 230 Act* is introduced ([Senate Judiciary](https://www.judiciary.senate.gov/press/dem/releases/durbin-graham-introduce-bill-to-sunset-section-230-immunity-for-tech-companies-protect-americans-online)). **Mar 25 2026:** a Los Angeles jury finds Meta and YouTube liable for addictive design (**\$6M**; [Engadget](https://www.engadget.com/social-media/jury-rules-against-meta-and-youtube-in-social-media-addiction-case-181344860.html)), and Durbin calls for the sunset the same day ([WVIK](https://www.wvik.org/wvik-top-stories/2026-03-25/illinois-and-iowa-us-senators-back-ending-law-that-offers-protections-for-internet-platform-providers-claiming-companies-are-negatively-impacting-children)).
 :::
 
 ::: {.notes}
@@ -186,6 +186,48 @@ fines and juries attached. Reframe the old "spam filtering is an old problem" ar
 *same* machinery built to filter unwanted traffic now adjudicates *speech*. The
 danger is the category error — treating "is this hate speech / parody / fair
 use?" like "is this spam?" Spam has no First Amendment interest; speech does.
+:::
+
+## In the News: The Pressure, 2025–26 {.smaller}
+
+::: {.columns}
+::: {.column width="34%"}
+[![](images/ce-eucrim-dsa-fine.png){width="100%"}](https://eucrim.eu/news/eu-fines-x-120-million-in-first-dsa-non-compliance-decision/)
+
+::: {.credit}
+eucrim, Jan 19 2026: the first DSA non-compliance decision, €120M on X (Dec 5 2025).
+:::
+:::
+::: {.column width="33%"}
+[![](images/ce-senate-sunset-230.png){width="100%"}](https://www.judiciary.senate.gov/press/dem/releases/durbin-graham-introduce-bill-to-sunset-section-230-immunity-for-tech-companies-protect-americans-online)
+
+::: {.credit}
+Senate Judiciary Committee, Dec 18 2025: Durbin and Graham introduce the Sunset Section 230 Act.
+:::
+:::
+::: {.column width="33%"}
+[![](images/ce-engadget-kgm-verdict.png){width="100%"}](https://www.engadget.com/social-media/jury-rules-against-meta-and-youtube-in-social-media-addiction-case-181344860.html)
+
+::: {.credit}
+Engadget, Mar 25 2026: *K.G.M. v. Meta*, the first addictive-design verdict.
+:::
+
+[![](images/ce-wvik-durbin.png){width="100%"}](https://www.wvik.org/wvik-top-stories/2026-03-25/illinois-and-iowa-us-senators-back-ending-law-that-offers-protections-for-internet-platform-providers-claiming-companies-are-negatively-impacting-children)
+
+::: {.credit}
+WVIK (NPR, Quad Cities), Mar 25 2026: Durbin ties the verdict to the sunset bill.
+:::
+:::
+:::
+
+A fine, a bill, and a jury verdict in four months: three different levers, one message to the platforms. Click any capture to open the source.
+
+::: {.notes}
+Screenshots captured Oct 27 2026 (headless Firefox); each image links to the
+page. Use this as a one-minute "look what happened since the book" beat: the
+regulator (DSA fine), the legislature (sunset bill), and a jury (design-defect
+verdict) all pushing in the same direction. Ask which of the three the
+platforms actually fear, and why the answer is "the jury."
 :::
 
 ## Where the Machinery Came From: Spam, Malware, Abuse {.smaller}
@@ -230,7 +272,7 @@ Two families: **exact / hash-matching** (Content ID, PhotoDNA, GIFCT) vs.
 **statistical / ML prediction** (Perspective API, toxic-speech classifiers).
 
 ::: {.vignette}
-**The "human's role" column is being rewritten (2025–26).** **Jan 7 2025:** Meta ends US third-party fact-checking for **Community Notes**; by **Sep 2026** it reports **1.4M** contributors but only **~50,000** published notes, against **49M** fact-check labels it applied in the EU in 2025 (Tech Policy Press, Sep 2026). **Mar 26 2026:** Meta's Oversight Board calls Notes "not a proper substitute" for fact-checking globally. **Oct 2026:** Meta says LLM reviewers make **13% fewer** mistakes than humans and find **10% more** violations (H1 2026 integrity report).
+**The "human's role" column is being rewritten (2025–26).** **Jan 7 2025:** Meta ends US third-party fact-checking for **Community Notes** ([Meta](https://about.fb.com/news/2025/01/meta-more-speech-fewer-mistakes/)); by **Sep 2026** it reports **1.4M** contributors but only **~50,000** published notes, against **49M** fact-check labels it applied in the EU in 2025 ([Tech Policy Press, Sep 2026](https://www.techpolicy.press/meta-brings-community-notes-to-latam-without-showing-what-success-looks-like/)). **Mar 26 2026:** Meta's Oversight Board calls Notes "not a proper substitute" for fact-checking globally. **Oct 2026:** Meta says LLM reviewers make **13% fewer** mistakes than humans and find **10% more** violations (H1 2026 integrity report).
 :::
 
 ::: {.notes}
@@ -242,6 +284,35 @@ slides. The vignette: both ends of the human column moved in 2025–26. Meta
 swapped professional fact-checkers for a crowd (and the crowd publishes almost
 nothing: 50k notes vs. 49M labels), and it is now swapping human reviewers for
 LLMs on its own accuracy numbers. Ask who audits the 13% claim.
+:::
+
+## In the News: Who Reviews Now, 2025–26 {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+[![](images/ce-meta-more-speech.png){width="96%"}](https://about.fb.com/news/2025/01/meta-more-speech-fewer-mistakes/)
+
+::: {.credit}
+Meta Newsroom, Jan 7 2025, Joel Kaplan: "More Speech and Fewer Mistakes," the end of US third-party fact-checking.
+:::
+:::
+::: {.column width="50%"}
+[![](images/ce-techpolicy-community-notes.png){width="96%"}](https://www.techpolicy.press/meta-brings-community-notes-to-latam-without-showing-what-success-looks-like/)
+
+::: {.credit}
+Tech Policy Press, Sep 22 2026 (Stephan Mündges): 1.4M contributors, ~50,000 published notes, 49M EU fact-check labels.
+:::
+:::
+:::
+
+The human column of the systems table, rewritten in twenty months: professional fact-checkers out, a crowd that publishes almost nothing in, and LLM reviewers graded on Meta's own numbers. Click a capture to open the source.
+
+::: {.notes}
+Screenshots captured Oct 27 2026; each image links to the page. Left is the
+announcement; right is the scorecard twenty months later. The Oversight Board's
+Mar 26 2026 opinion ("not a proper substitute") and Meta's H1 2026 integrity
+report (LLM reviewers: 13% fewer mistakes, 10% more violations) are cited in
+the previous slide; both sites block automated fetches, so there is no capture.
 :::
 
 ## Family 1: Fingerprinting (Exact / Perceptual Match) {.smaller}
@@ -385,12 +456,18 @@ terrorist/violent-extremist content.
 
 ::: {.columns}
 ::: {.column width="50%"}
-- **408,000** distinct items (≈ **2.4M** hashes); **39** member platforms (2025 report, May 2026)
+- **408,000** distinct items (≈ **2.4M** hashes); **39** member platforms ([2025 report, May 2026](https://gifct.org/2026/05/21/our-impact-in-2025/))
 - One platform's takedown decision **propagates to all** members
 :::
 ::: {.column width="50%"}
 - Scope crept from ISIS imagery to broader "violent extremism" — **mission creep**
 - *How* content is added, by whom, and **what appeal exists** stay largely opaque
+
+[![](images/ce-gifct-impact-2025.png){width="86%"}](https://gifct.org/2026/05/21/our-impact-in-2025/)
+
+::: {.credit}
+GIFCT, May 21 2026: "Our Impact in 2025," the seventh annual transparency report.
+:::
 :::
 :::
 
@@ -426,7 +503,7 @@ The Atlantic, Jun 22 2016 (Kaveh Waddell); below, the original deck's screenshot
 ::: {.column width="45%"}
 - **2016:** PhotoDNA's co-developer, Hany Farid, and the Counter Extremism Project propose the same hashing for beheading videos; platforms "aren't convinced"
 - **2017:** GIFCT is founded; the shared hash database is the compromise
-- **2025:** ≈ **2.4M** hashes, **39** members, now including **TikTok, Snap, Roblox, GitHub, Anthropic** (GIFCT 2025 report)
+- **2025:** ≈ **2.4M** hashes, **39** members, now including **TikTok, Snap, Roblox, GitHub, Anthropic** ([GIFCT 2025 report](https://gifct.org/2026/05/21/our-impact-in-2025/))
 - Once the pipe exists, every new category is "just another hash list"
 :::
 :::
@@ -458,7 +535,7 @@ But statistical matching inherits all the failure modes of ML.
 ![](images/slide032_img030.png){width="100%"}
 
 ::: {.credit}
-Jigsaw press release, Feb 8 2021: Perspective at 500M requests a day. Google is sunsetting it on **Dec 31 2026** (perspectiveapi.com).
+Jigsaw press release, Feb 8 2021: Perspective at 500M requests a day. Google is sunsetting it on **Dec 31 2026** ([perspectiveapi.com](https://perspectiveapi.com/)).
 :::
 :::
 :::
@@ -479,7 +556,7 @@ Evasion is trivial and **easily automated** — and false positives are just as
 common.
 
 ::: {.vignette}
-**Perspective API, 2017–2026.** The classifier in this table became the de-facto toxicity yardstick for a decade of research; Google now says it **sunsets on Dec 31 2026** with "no direct migration support" (perspectiveapi.com). Its replacements are LLM moderation endpoints: more capable, and **less inspectable** ("Bye Bye Perspective API," arXiv, Apr 2026).
+**Perspective API, 2017–2026.** The classifier in this table became the de-facto toxicity yardstick for a decade of research; Google now says it **sunsets on Dec 31 2026** with "no direct migration support" ([perspectiveapi.com](https://perspectiveapi.com/)). Its replacements are LLM moderation endpoints: more capable, and **less inspectable** (["Bye Bye Perspective API," arXiv, Apr 2026](https://arxiv.org/abs/2604.25580)).
 :::
 
 ::: {.notes}
@@ -498,7 +575,7 @@ Moderation accuracy depends on **who labeled the training data**. Speech that
 by both "male" and "female" classifiers.
 
 ::: {.vignette}
-**Still true in 2025, at scale.** Fasching & Lelkes (Penn Annenberg, ACL Findings 2025) ran **1.3M** synthetic sentences about **125 groups** through **seven** systems (OpenAI and Mistral moderation endpoints, GPT-4o, Claude 3.5 Sonnet, Mistral Large, DeepSeek V3, Perspective): identical sentences got **markedly different** verdicts, most consistent for race, gender, and sexual orientation, least for education, class, and niche interests.
+**Still true in 2025, at scale.** [Fasching & Lelkes](https://aclanthology.org/2025.findings-acl.1144/) (Penn Annenberg, ACL Findings 2025) ran **1.3M** synthetic sentences about **125 groups** through **seven** systems (OpenAI and Mistral moderation endpoints, GPT-4o, Claude 3.5 Sonnet, Mistral Large, DeepSeek V3, Perspective): identical sentences got **markedly different** verdicts, most consistent for race, gender, and sexual orientation, least for education, class, and niche interests.
 :::
 
 ::: {.notes}
@@ -506,6 +583,43 @@ Source slide 34. "Like trainer, like bot." The model doesn't discover a neutral
 truth about offensiveness — it replicates the subjective judgments (and gaps) of
 whoever labeled the data. Different protected characteristics, different effects.
 There is no view from nowhere in content moderation.
+:::
+
+## In the News: The Classifiers, 2025–26 {.smaller}
+
+::: {.columns}
+::: {.column width="34%"}
+[![](images/ce-perspective-sunset.png){width="100%"}](https://perspectiveapi.com/)
+
+::: {.credit}
+perspectiveapi.com, Oct 2026: "sunsetting and service is officially ending after 2026."
+:::
+:::
+::: {.column width="33%"}
+[![](images/ce-arxiv-bye-perspective.png){width="100%"}](https://arxiv.org/abs/2604.25580)
+
+::: {.credit}
+Hartmann et al., "Bye Bye Perspective API," arXiv 2604.25580, Apr 2026: 241 papers that depended on it.
+:::
+:::
+::: {.column width="33%"}
+[![](images/ce-acl-fasching-lelkes.png){width="100%"}](https://aclanthology.org/2025.findings-acl.1144/)
+
+::: {.credit}
+Fasching & Lelkes, "Model-Dependent Moderation," Findings of ACL 2025.
+:::
+:::
+:::
+
+The yardstick for a decade of toxicity research is being retired with no successor, and the LLM endpoints replacing it disagree with each other on identical sentences. Click a capture to open the source.
+
+::: {.notes}
+Screenshots captured Oct 27 2026; each image links to the page. Left: the
+vendor's own sunset notice. Middle: the research community's post-mortem (241
+papers surveyed; the point is that a measurement infrastructure, not just a
+product, is disappearing). Right: the 2025 paper behind the Bias vignette.
+Bridge to the audit slides: if the only way to know what the replacement does
+is to probe it from outside, that is an audit problem, which is next.
 :::
 
 ## Auditing the Black Box {.smaller}
@@ -571,14 +685,25 @@ software generating the probes so volunteers could run it.
 
 # AI as Information Arbiter {.center}
 
-## From Search to Synthesis
+## From Search to Synthesis {.smaller}
 
+::: {.columns}
+::: {.column width="56%"}
 Users increasingly **ask an LLM** instead of browsing links — and accept the
 synthesized answer as authoritative.
 
 When an AI summarizes a person, event, or topic, it makes **editorial
 decisions** about what to include and exclude. It becomes the **final arbiter**:
 a publisher with **far less transparency** than any editor.
+:::
+::: {.column width="44%"}
+[![](images/ce-pew-ai-overviews.png){width="100%"}](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/)
+
+::: {.credit}
+Pew Research Center, Jul 22 2025: the first large browsing-data measurement of what an AI summary does to the click. Details next slide.
+:::
+:::
+:::
 
 ::: {.notes}
 Book ai-arbiter.tex, "From Search to Synthesis." The shift: a list of ten links
@@ -589,8 +714,10 @@ a blocked site, a missing answer doesn't announce itself.
 
 ## The Freshest Hook: The Click Has Gone {.smaller}
 
+::: {.columns}
+::: {.column width="56%"}
 ::: {.vignette}
-**Pew Research, July 22, 2025:** when an **AI Overview** appeared atop Google
+**[Pew Research, July 22, 2025](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/):** when an **AI Overview** appeared atop Google
 results, users clicked through to a website only **8%** of the time vs. **15%**
 without one — and were more likely to **end the session entirely** (26% vs.
 16%). Only **1%** clicked a link *inside* the summary. *(Pew browsing data,
@@ -599,6 +726,15 @@ March 2025.)*
 
 If AI intermediates all access, publishers lose traffic — and the incentive to
 **produce** journalism and scholarship in the first place declines.
+:::
+::: {.column width="44%"}
+[![](images/ce-pew-chart.png){width="90%"}](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/)
+
+::: {.credit}
+Pew Research Center chart, Jul 22 2025: 68,879 Google searches by 900 US adults, Mar 1–31 2025.
+:::
+:::
+:::
 
 ::: {.notes}
 This is the freshest verified vignette — swap each year (see coverage-notes).
@@ -610,15 +746,31 @@ access, not a block.
 
 ## Censorship Baked Into the Model {.smaller}
 
+::: {.columns}
+::: {.column width="55%"}
 LLMs learn from **web crawls** — but the web isn't the same everywhere. In
 heavily censored regions, large parts of the web are **filtered before they're
 crawled**.
 
 - Models answer differently in **Simplified vs. Traditional Chinese** — less
-  critical of the CCP, less complete on sensitive topics (Ahmed et al.)
+  critical of the CCP, less complete on sensitive topics (Ahmed, Knockel &
+  Greenstadt, [PoPETs 2025](https://citizenlab.ca/research/an-analysis-of-chinese-censorship-bias-in-llm/))
 - The censorship is **baked in at training time**, not inference
+- **DeepSeek-R1** (2025): the model often *knows* the answer and suppresses it;
+  the R1-0528 update tested as the most censored yet
 
 Unlike a blocked website, an LLM **presents its gaps as if they don't exist**.
+:::
+::: {.column width="45%"}
+[![](images/ce-citizenlab-censorship-bias.png){width="92%"}](https://citizenlab.ca/research/an-analysis-of-chinese-censorship-bias-in-llm/)
+
+[![](images/ce-khoury-deepseek.png){width="92%"}](https://www.khoury.northeastern.edu/khoury-researchers-find-political-censorship-in-chinese-ai-model-and-explain-how-to-get-around-it/)
+
+::: {.credit}
+Citizen Lab, Aug 14 2025 (Ahmed, Knockel & Greenstadt, PoPETs 2025); Khoury College, Northeastern, Sep 10 2025 (DeepSeek-R1 suppresses answers it has; see also [TechCrunch, May 29 2025](https://techcrunch.com/2025/05/29/deepseeks-updated-r1-ai-model-is-more-censored-test-finds/)).
+:::
+:::
+:::
 
 ::: {.notes}
 Book ai-arbiter.tex, "Research Gaps." This is the subtlest form in the whole
@@ -630,17 +782,22 @@ the semantic level.
 
 ## Which AI You Pick *Is* the Policy {.smaller}
 
-A 2024 audit ran **96 moderation scenarios** across Gemini, GPT-4, Claude, and
+A [2024 audit](https://github.com/jacobkandel/llm-content-moderation-analysis) ran **96 moderation scenarios** across Gemini, GPT-4, Claude, and
 Llama. The models **disagreed on 36.5%** of prompts.
 
 ::: {.columns}
-::: {.column width="50%"}
+::: {.column width="56%"}
 - **Gemini** ≈ *detective* — weighs context and intent ("the context is crucial")
 - **GPT-4** ≈ *referee* — strict rules, removes on offensive words alone
-:::
-::: {.column width="50%"}
 - "All billionaires are parasites": Gemini **removes**, GPT-4 **allows**
 - War-zone imagery: Gemini **allows**, GPT-4 **removes**
+:::
+::: {.column width="44%"}
+[![](images/ce-moderationbias.png){width="100%"}](https://www.moderationbias.com/)
+
+::: {.credit}
+moderationbias.com (Jacob Kandel, UChicago): the 2024 audit, now an open benchmark of 30+ models re-run biweekly; identical prompts, per-model refusal rates.
+:::
 :::
 :::
 
@@ -659,12 +816,23 @@ yet platforms don't disclose which model moderates you. Accountability gap.
 Generative AI doesn't only **moderate** content — it **produces** the content
 that must now be moderated, and regulators are treating it that way.
 
+::: {.columns}
+::: {.column width="58%"}
 ::: {.vignette}
 **Grok, 2026:** after X's Grok generated non-consensual sexualized "deepfake"
-images, the **European Commission opened DSA proceedings on Jan 26, 2026**, and
+images, the **European Commission [opened DSA proceedings on Jan 26, 2026](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_203)**, and
 **Ireland's DPC opened a GDPR inquiry on Feb 17, 2026**. X's response was to
 restrict Grok image generation to **paying subscribers** — turning a safety
 control into a **paywall**.
+:::
+:::
+::: {.column width="42%"}
+[![](images/ce-record-grok.png){width="100%"}](https://therecord.media/eu-grok-regulation-deepfake)
+
+::: {.credit}
+The Record (Recorded Future News), Jan 5 2026: the Commission "looking very seriously" at Grok, three weeks before the formal proceedings (EC press release IP/26/203).
+:::
+:::
 :::
 
 The same **safe-harbor** the platform relies on becomes the **lever**: comply
@@ -702,13 +870,13 @@ safe-harbor.
 ![](images/slide029_img029.png){width="78%"}
 
 ::: {.credit}
-Nick Ut / AP, 1972; NPR, Sep 10 2016. Facebook's human reviewers removed the Pulitzer-winning photo as child nudity, then reversed under public pressure.
+Nick Ut / AP, 1972; [NPR, Sep 10 2016](https://www.npr.org/sections/alltechconsidered/2016/09/10/493454256/with-napalm-girl-facebook-humans-not-algorithms-struggle-to-be-editor). Facebook's human reviewers removed the Pulitzer-winning photo as child nudity, then reversed under public pressure.
 :::
 :::
 :::
 
 ::: {.vignette}
-**The humans in "human review," 2025–26.** Former Nairobi moderators' cases against Meta and Sama (trafficking, unfair dismissal, union-busting; **\$1.6B** sought) are still waiting on a ruling that was postponed in **Feb 2026**. Meta moved the work to a **Teleperformance** site in **Accra**, where ~**150** moderators earn a base of ~**\$80/month**, get as little as **20 seconds** per decision, and are told not to say they work for Meta (Bureau of Investigative Journalism, Apr 2025).
+**The humans in "human review," 2025–26.** Former Nairobi moderators' cases against Meta and Sama (trafficking, unfair dismissal, union-busting; **\$1.6B** sought) are still waiting on a ruling that was postponed in **Feb 2026** ([BHRRC](https://www.business-humanrights.org/en/latest-news/kenya-court-postpones-ruling-in-two-cases-against-meta-brought-by-former-content-moderators-delaying-trial-2/)). Meta moved the work to a **Teleperformance** site in **Accra**, where ~**150** moderators earn a base of ~**\$80/month**, get as little as **20 seconds** per decision, and are told not to say they work for Meta ([Bureau of Investigative Journalism, Apr 2025](https://www.thebureauinvestigates.com/stories/2025-04-27/suicide-attempts-sackings-and-a-vow-of-silence-metas-new-moderators-face-worst-conditions-yet)).
 :::
 
 ::: {.notes}
@@ -721,6 +889,39 @@ the editors at Aftenposten, the Norwegian PM, and finally Facebook's own
 reversal. The vignette is the other half: the "humans" in human review are
 contractors in Nairobi and Accra on 20-second decisions, and the Kenya cases
 have been pending since 2022.
+:::
+
+## In the News: The Humans in Human Review {.smaller}
+
+::: {.columns}
+::: {.column width="46%"}
+[![](images/ce-bhrrc-kenya.png){width="100%"}](https://www.business-humanrights.org/en/latest-news/kenya-court-postpones-ruling-in-two-cases-against-meta-brought-by-former-content-moderators-delaying-trial-2/)
+
+::: {.credit}
+Business & Human Rights Resource Centre, Feb 12 2026: Kenya's court postpones the rulings in the moderators' cases against Meta and Sama.
+:::
+:::
+::: {.column width="54%"}
+[![](images/ce-tbij-accra.png){width="100%"}](https://www.thebureauinvestigates.com/stories/2025-04-27/suicide-attempts-sackings-and-a-vow-of-silence-metas-new-moderators-face-worst-conditions-yet)
+
+::: {.credit}
+The Bureau of Investigative Journalism, Apr 27 2025: Meta's Teleperformance moderators in Accra, ~150 people, ~\$80 a month base, 20 seconds a decision.
+:::
+
+- Nairobi cases filed 2022, rulings still pending; the work moved to Accra
+- The "human" in human review is a contractor two outsourcing layers from Meta
+:::
+:::
+
+Click a capture to open the source.
+
+::: {.notes}
+Screenshots captured Oct 27 2026; each image links to the page. Pair with
+Napalm Girl on the previous slide: the famous human-review error was made by
+Facebook's own reviewers in 2016; the people making those calls today are
+contractors in Nairobi and Accra. The 13%-fewer-mistakes LLM claim from the
+systems-table slide is the argument for replacing them; the Kenya litigation
+is the cost of the arrangement it replaces.
 :::
 
 ## What We Carry Forward {.smaller}

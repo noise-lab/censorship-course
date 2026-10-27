@@ -1,6 +1,37 @@
 # 03-Platform/01-Platform — instructor notes
 
 ## Current-events updates made (point 2)
+- 2026-10-27 (afternoon): **Links and screenshots.** Every dated source in a
+  vignette on slides 7–33 is now a Markdown link to a URL that returned 200 to
+  `curl -sIL -A Mozilla/5.0` the same day; the Oversight Board (403), Meta's
+  H1 2026 integrity report (400) and the Irish DPC stay plain text, and the EC
+  press release IP/26/203 is linked but not captured (page is JavaScript-only).
+  Page captures were taken with headless Firefox (`--headless --screenshot`,
+  1280 px wide, throwaway profile), cropped to masthead plus headline with PIL,
+  saved as `images/ce-<slug>.png` (1000 px wide) and force-added (images/ is
+  gitignored); each capture on a slide is wrapped in a link to its page. Four
+  new "In the News" slides (after Why Automate, after the systems map, after
+  Bias, after Genuinely Hard) hold the captures where a slide already had a
+  figure. Captures: `ce-eucrim-dsa-fine`, `ce-senate-sunset-230`,
+  `ce-engadget-kgm-verdict`, `ce-wvik-durbin`, `ce-meta-more-speech`,
+  `ce-techpolicy-community-notes`, `ce-gifct-impact-2025`,
+  `ce-perspective-sunset`, `ce-arxiv-bye-perspective`, `ce-acl-fasching-lelkes`,
+  `ce-pew-ai-overviews`, `ce-pew-chart`, `ce-citizenlab-censorship-bias`,
+  `ce-khoury-deepseek`, `ce-moderationbias`, `ce-record-grok`, `ce-bhrrc-kenya`,
+  `ce-tbij-accra`. Captured but not placed: `ce-npr-napalm-girl` (the slide
+  already carries the legacy NPR headline), `ce-npr-brazil-x`,
+  `ce-lawfare-brazil-x` (slide 7 is text-heavy; linked instead),
+  `ce-techcrunch-deepseek` (linked from the credit on the Baked-In slide).
+- 2026-10-27 (afternoon): **AI-arbiter section graphics.** Pew headline capture
+  (From Search to Synthesis) and Pew's own bar chart (Freshest Hook); Citizen
+  Lab page for Ahmed, Knockel & Greenstadt, PoPETs 2025 (the "Ahmed et al."
+  citation, now resolved: Simplified-character prompts are more susceptible to
+  censorship bias than Traditional) plus the Khoury College DeepSeek-R1 story
+  (Baked Into the Model); moderationbias.com, the standing benchmark that grew
+  out of Jacob Kandel's Dec 2024 UChicago audit (Which AI You Pick; citation
+  resolved from the book's ref.bib); The Record, Jan 5 2026, on the Grok
+  proceedings (The Model Is Also the Target). No chatbot transcripts were
+  fabricated or generated; every visual is a published page.
 - 2026-10-27: Second graphics pass from the legacy pptx (see figure-recovery.md):
   added the PhotoDNA infographic, Echoprint pipeline, SNARE feature table plus
   four paper-title captures, the 2017–2020 "pressure" headlines, The Atlantic
@@ -87,6 +118,11 @@
   firm dockets/dates. The EC + Ireland actions carry the slide for now.
 
 ## Next-year refresh notes
+- **Page captures (`images/ce-*.png`, Oct 27 2026):** re-capture before
+  reuse; mastheads and cookie banners change, and the Perspective sunset page
+  will read as history after Dec 31 2026. Re-check every link with
+  `curl -sIL -A Mozilla/5.0` and keep the "In the News" slides in sync with the
+  vignettes they illustrate.
 - **Pew AI-Overviews vignette (Jul 2025):** will read as dated by ~2027; check for
   a newer Pew or first-party study and update the 8%/15%/26% figures. Google
   disputes the methodology — note the contest but keep a verified source.
