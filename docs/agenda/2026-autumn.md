@@ -291,3 +291,20 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * Next meeting is content moderation, with the third student presentation and breakouts
 * **Not covered:** the four behavioral signatures of a flooding campaign; the "who spreads it and why" slide beyond the Macedonian profit-seekers; the detection slides (SNARE, infrastructure tells); coordinated inauthentic behavior; the AI-generated flooding and Digital Services Act slides beyond the one-line mention above. [Breakout A](../breakouts/disinformation.md) on Community Notes versus fact-checking was not run
 * **Next:** content moderation (book 3.6), with the third student presentation and the LLM sentiment-analysis hands-on; a comparison of platforms' content-moderation policies is planned for the same week
+
+### Meeting 9 (Tue Oct 27)
+
+*Plan; replaced with the record after class.*
+
+* Housekeeping: project proposals go in a `project/` directory of your private course repository; every repository now has a "Gradebook" issue showing what has been received; week-6 response due Tuesday November 3 at 9 a.m.
+* Reading-response discussion on 3.6: whether a user or a researcher can tell that content was downranked; coordinated mass reporting; bias, inconsistency, and language coverage in AI moderation; Community Notes and the speed problem; who sets the rules and whether users can opt out
+* Student presentation 3: content moderation
+* Lecture: how content moderation is actually done
+    * Why platforms automate, and the map of real moderation systems (editorial review, community flagging, automated detection)
+    * Fingerprinting: spectral fingerprints, perceptual versus cryptographic hashing, shared hash databases across platforms
+    * Prediction, and why it is brittle: toxicity classifiers, model disagreement, non-English content
+    * Auditing a system you cannot see
+    * The impossible choices of moderation at scale
+* Hands-on: [LLMs as content moderators](../activities/automation.md), two models and five kinds of test content, where do they disagree
+* As time permits: [platform moderation policies](../activities/moderation.md) comparison; [Breakout B](../breakouts/moderation.md) on human versus AI moderators
+* Next: personalization (3.7), Thursday October 29
