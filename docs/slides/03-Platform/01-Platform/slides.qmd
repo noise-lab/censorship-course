@@ -24,6 +24,10 @@ header-includes: |
     .reveal li { line-height: 1.3; margin-bottom: 0.15em; }
     .reveal table { font-size: 0.72em; }
     .reveal pre, .reveal code { font-size: 0.72em; }
+    /* one-line credits under recovered / third-party figures */
+    .reveal .credit { font-size: 0.6em; line-height: 1.25; color: #555; margin: 0.15em 0 0.5em; }
+    .reveal .credit p { font-size: 1em; margin: 0; }
+    .reveal .column img { margin: 0.1em 0; }
   </style>
 ---
 
@@ -145,34 +149,99 @@ EU DSA) is the subject of Ch. 4; flag the forward pointer here.
 
 # The Pressure to Automate {.center}
 
-## Why Platforms Turn to Automated Filtering
+## Why Platforms Turn to Automated Filtering {.smaller}
 
+::: {.columns}
+::: {.column width="54%"}
 - **Scale:** the universe of offending content is effectively **infinite**
 - **Speed:** "take it down *now*" — political and public pressure for fast action
 - A long security lineage: spam (2009), web malware (2010), bulletproof hosting
   (2015), DNS abuse (2016)
 - Often a **(mis)understanding** of what algorithms can actually do
+:::
+::: {.column width="46%"}
+<!-- recovered from ppt-archive/class/platform/09-Platform.pptx slides 10–11 (news screenshots; NYT headlines cropped from the extracted captures) -->
+![](images/nyt-ecj-headline-2019.png){width="84%"}
+
+![](images/slide010_img011.png){width="84%"}
+
+![](images/nyt-deepfakes-headline-2020.png){width="84%"}
+
+::: {.credit}
+Headlines: New York Times, Oct 3 2019 (ECJ, *Glawischnig-Piesczek v. Facebook*); NPR, Nov 4 2017; New York Times, Jan 7 2020.
+:::
+:::
+:::
+
+::: {.vignette}
+**2025–26: the pressure is now legal, not just rhetorical.** **Dec 5 2025:** the first DSA fine, **€120M on X** (deceptive blue checks, ad repository, researcher access). **Dec 18 2025:** the Durbin–Graham *Sunset Section 230 Act* is introduced. **Mar 25 2026:** a Los Angeles jury finds Meta and YouTube liable for addictive design (**\$6M**), and Durbin calls for the sunset the same day.
+:::
 
 ::: {.notes}
-Source slides 4–10. Reframe the old "spam filtering is an old problem" arc: the
+Source slides 4–10. The right column is the original deck's "pressure is growing"
+collage: the 2019 ECJ ruling that one country can order Facebook to delete
+worldwide, NPR's 2017 "they already have the technology" framing, and the 2020
+deepfake ban. The vignette is the 2025–26 version of the same pressure, now with
+fines and juries attached. Reframe the old "spam filtering is an old problem" arc: the
 *same* machinery built to filter unwanted traffic now adjudicates *speech*. The
 danger is the category error — treating "is this hate speech / parody / fair
 use?" like "is this spam?" Spam has no First Amendment interest; speech does.
 :::
 
+## Where the Machinery Came From: Spam, Malware, Abuse {.smaller}
+
+::: {.columns}
+::: {.column width="52%"}
+<!-- recovered from ppt-archive/class/platform/09-Platform.pptx slide 7 (paper-title captures) and slide 6 (WMF feature table, rendered through LibreOffice headless and cropped) -->
+![](images/slide007_img004.png){width="92%"}
+
+![](images/snare-features-table.png){width="92%"}
+
+::: {.credit}
+SNARE's ranked features (Hao, Syed, Feamster, Gray & Krasser, USENIX Security 2009): reputation from *how* mail is sent, not what it says.
+:::
+:::
+::: {.column width="48%"}
+![](images/slide007_img005.png){width="92%"}
+
+![](images/slide007_img006.png){width="92%"}
+
+![](images/slide007_img007.png){width="92%"}
+
+- Spam, malware, bulletproof hosting, DNS abuse: **traffic with no speech interest**
+- The same pipeline — features → classifier → takedown — was then pointed at **speech**
+:::
+:::
+
+::: {.notes}
+Recovered from the original pptx (slides 6–7). Four papers from the instructor's
+own security work, 2009–2016, each a "detect and take down" classifier. The SNARE
+table is the point: not one feature reads the message; the classifier learns who
+*behaves* like a spammer. That works because spam has no legitimate variant. Ask:
+which of these thirteen features would you accept as evidence that a *post* is
+hate speech? None. That is the category error the rest of the lecture is about.
+:::
+
 ## A Map of Real Moderation Systems {.smaller}
 
-![Notable algorithmic moderation systems — actor, technology, and the human's role (Gillespie/Gorwa et al.)](images/slide009_img008.png)
+![Notable algorithmic moderation systems — actor, technology, and the human's role (Gillespie/Gorwa et al.)](images/slide009_img008.png){width="68%"}
 
 Two families: **exact / hash-matching** (Content ID, PhotoDNA, GIFCT) vs.
 **statistical / ML prediction** (Perspective API, toxic-speech classifiers).
+
+::: {.vignette}
+**The "human's role" column is being rewritten (2025–26).** **Jan 7 2025:** Meta ends US third-party fact-checking for **Community Notes**; by **Sep 2026** it reports **1.4M** contributors but only **~50,000** published notes, against **49M** fact-check labels it applied in the EU in 2025 (Tech Policy Press, Sep 2026). **Mar 26 2026:** Meta's Oversight Board calls Notes "not a proper substitute" for fact-checking globally. **Oct 2026:** Meta says LLM reviewers make **13% fewer** mistakes than humans and find **10% more** violations (H1 2026 integrity report).
+:::
 
 ::: {.notes}
 Use this table as the spine of the technical half. Note the rightmost column:
 humans never fully leave — they label data, set thresholds, or curate the hash
 database. "Automated" moderation is automated *enforcement* of human judgments,
 with all their biases baked in. Distinguish the two families before the next
-slides.
+slides. The vignette: both ends of the human column moved in 2025–26. Meta
+swapped professional fact-checkers for a crowd (and the crowd publishes almost
+nothing: 50k notes vs. 49M labels), and it is now swapping human reviewers for
+LLMs on its own accuracy numbers. Ask who audits the 13% claim.
 :::
 
 ## Family 1: Fingerprinting (Exact / Perceptual Match) {.smaller}
@@ -202,6 +271,27 @@ privacy-preserving (store the hash, not the image) but **database-bound** and
 known CSAM or copyrighted audio, useless for novel content, parody, or fair use.
 :::
 
+## How PhotoDNA Works {.smaller}
+
+<!-- recovered from ppt-archive/class/platform/09-Platform.pptx slide 19 (Microsoft PhotoDNA infographic) -->
+![](images/slide019_img018.png){width="86%" fig-align="center"}
+
+::: {.credit}
+Microsoft PhotoDNA infographic (microsoft.com/photodna). Developed with Dartmouth in 2009; Microsoft's own framing: the hash is not reversible and PhotoDNA is not face recognition.
+:::
+
+- Five steps: image → grid → **hash** → compare with a database of known hashes → **match**
+- The **hash list** (NCMEC, IWF) is where the policy lives; the platform only computes distances
+
+::: {.notes}
+Vendor graphic from the original pptx (slide 19). Walk the five panels: the
+greyscale grid is the downsample step from the previous slide, the fingerprint
+is the hash, panel 4 is the comparison, panel 5 the verdict. Two things to say
+out loud: (1) the platform never has to look at the image, which is the whole
+privacy argument; (2) the judgment was made by whoever built the hash list, not
+by the matcher. That is why "automated" moderation is automated enforcement.
+:::
+
 ## Spectral Fingerprinting: Match the Sound, Not the File {.smaller}
 
 ::: {.columns}
@@ -228,6 +318,34 @@ bottom is the reference, and the point is that the two spectral envelopes line
 up peak for peak. This is how Audible Magic and YouTube's Content ID find
 copyrighted audio without ever reading the filename. Then turn to the
 limitation list from the previous slide: database-bound, context-free.
+:::
+
+## Inside an Audio Fingerprinter: Echoprint {.smaller}
+
+::: {.columns}
+::: {.column width="60%"}
+<!-- recovered from ppt-archive/class/platform/09-Platform.pptx slide 21 -->
+![](images/slide021_img021.png){width="100%"}
+
+::: {.credit}
+Echoprint pipeline (The Echo Nest, open-sourced 2011); figure via Leiden University Media Technology, 2015.
+:::
+:::
+::: {.column width="40%"}
+- Downsample to **11 kHz mono**, whiten, split into subbands, detect note **onsets**
+- Hash the onset-timing pattern into short **codes**; the file becomes a bag of codes
+- Lookup: an **inverted index** of codes, then a **time-histogram** vote picks the reference track
+- Nothing reads the filename, tags, or lyrics; a cover with different timing simply does not match
+:::
+:::
+
+::: {.notes}
+Third-party figure from the original pptx (slide 21). This is the spectral
+family with the lid off: the top row is signal processing, the bottom row is a
+search engine. Emphasize the time-histogram step: a match is a *vote* that many
+codes line up at a consistent offset, which is why trimming and re-encoding do
+not break it, and why a live cover does. Content ID and Audible Magic are
+proprietary, but this is the public reference design.
 :::
 
 ## Perceptual vs. Cryptographic Hashing {.smaller}
@@ -267,7 +385,7 @@ terrorist/violent-extremist content.
 
 ::: {.columns}
 ::: {.column width="50%"}
-- **408,000** distinct items; **33** member platforms (2024 transparency report)
+- **408,000** distinct items (≈ **2.4M** hashes); **39** member platforms (2025 report, May 2026)
 - One platform's takedown decision **propagates to all** members
 :::
 ::: {.column width="50%"}
@@ -281,13 +399,45 @@ voice **across the whole web at once** — with no notice and no appeal.
 
 ::: {.notes}
 Book §content-moderation, GIFCT passage. This is the syllabus's "centralization =
-takedown risk, no appeal" case study. Verified (Jun 2026): founded 2017; 2024
-GIFCT Annual & Transparency Report reports 408,000 distinct hashed items and 33
-member platforms. Civil-liberties critics (Brennan Center, Statewatch, EDRi)
+takedown risk, no appeal" case study. Verified (Oct 2026): founded 2017; the 2025
+GIFCT Annual & Transparency Report (published May 21, 2026) reports ≈408,000
+distinct items, ≈2.4M hashes (+123,500 in 2025), and 39 member platforms after
+seven joined in 2025 (TikTok, Snap, Roblox, GitHub, SoundCloud, Anthropic, 4D
+Hype). Civil-liberties critics (Brennan Center, Statewatch, EDRi)
 flag the opacity of inclusion criteria and the absence of a due-process appeal.
 The teaching point mirrors the earlier centralization slide: fingerprinting is
 precise, but a *shared* database turns one firm's judgment into a web-wide
 deletion. Cross-link: intermediary-liability / DSA framing in Ch. 4.
+:::
+
+## Mission Creep in One Headline {.smaller}
+
+::: {.columns}
+::: {.column width="55%"}
+<!-- recovered from ppt-archive/class/platform/09-Platform.pptx slide 13 -->
+![](images/slide013_img016.png){width="100%"}
+
+![](images/slide013_img015.png){width="52%"}
+
+::: {.credit}
+The Atlantic, Jun 22 2016 (Kaveh Waddell); below, the original deck's screenshot of a news site carrying a 2015 ISIS hostage video.
+:::
+:::
+::: {.column width="45%"}
+- **2016:** PhotoDNA's co-developer, Hany Farid, and the Counter Extremism Project propose the same hashing for beheading videos; platforms "aren't convinced"
+- **2017:** GIFCT is founded; the shared hash database is the compromise
+- **2025:** ≈ **2.4M** hashes, **39** members, now including **TikTok, Snap, Roblox, GitHub, Anthropic** (GIFCT 2025 report)
+- Once the pipe exists, every new category is "just another hash list"
+:::
+:::
+
+::: {.notes}
+Original pptx slide 13, whose speaker note was "oh wait… you can take down other
+stuff, too?" That is the whole slide. A tool built for one category with no
+legitimate variant (CSAM) was re-pointed at a category full of them (news
+footage, documentation of atrocities, counter-speech). The 2025 membership list
+shows the creep is now about *who* plugs into the pipe, not just what goes in:
+an AI lab and a game platform share a terror hash list with the social networks.
 :::
 
 ## Family 2: ML Prediction (Statistical Match) {.smaller}
@@ -295,11 +445,23 @@ deletion. Cross-link: intermediary-liability / DSA framing in Ch. 4.
 For open-ended categories — **hate speech, harassment, toxicity** — there's no
 database to match against, so platforms train **classifiers**:
 
+::: {.columns}
+::: {.column width="50%"}
 - Google **Jigsaw / Perspective API** (toxicity)
 - Reddit **AutoModerator** (regex rules), **ModBot** (NLP)
 - Facebook toxic-speech classifiers; Wikipedia tooling
 
 But statistical matching inherits all the failure modes of ML.
+:::
+::: {.column width="50%"}
+<!-- recovered from ppt-archive/class/platform/09-Platform.pptx slide 32 -->
+![](images/slide032_img030.png){width="100%"}
+
+::: {.credit}
+Jigsaw press release, Feb 8 2021: Perspective at 500M requests a day. Google is sunsetting it on **Dec 31 2026** (perspectiveapi.com).
+:::
+:::
+:::
 
 ::: {.notes}
 Source slides 30–31. Bridge: prediction is what lets you catch *novel* content,
@@ -316,6 +478,10 @@ Spelling "idiot" as **"idiiot"** drops the toxicity score from **84 → 20**.
 Evasion is trivial and **easily automated** — and false positives are just as
 common.
 
+::: {.vignette}
+**Perspective API, 2017–2026.** The classifier in this table became the de-facto toxicity yardstick for a decade of research; Google now says it **sunsets on Dec 31 2026** with "no direct migration support" (perspectiveapi.com). Its replacements are LLM moderation endpoints: more capable, and **less inspectable** ("Bye Bye Perspective API," arXiv, Apr 2026).
+:::
+
 ::: {.notes}
 Source slides 33. This is the killer demo. The same character-level fragility
 that breaks toxicity classifiers breaks any ML moderator. Adversaries don't need
@@ -331,6 +497,10 @@ Moderation accuracy depends on **who labeled the training data**. Speech that
 **female annotators** did not find offensive was more often **mis-flagged** —
 by both "male" and "female" classifiers.
 
+::: {.vignette}
+**Still true in 2025, at scale.** Fasching & Lelkes (Penn Annenberg, ACL Findings 2025) ran **1.3M** synthetic sentences about **125 groups** through **seven** systems (OpenAI and Mistral moderation endpoints, GPT-4o, Claude 3.5 Sonnet, Mistral Large, DeepSeek V3, Perspective): identical sentences got **markedly different** verdicts, most consistent for race, gender, and sexual orientation, least for education, class, and niche interests.
+:::
+
 ::: {.notes}
 Source slide 34. "Like trainer, like bot." The model doesn't discover a neutral
 truth about offensiveness — it replicates the subjective judgments (and gaps) of
@@ -345,7 +515,7 @@ are invisible. **Audit studies** probe behavior from the outside:
 
 ::: {.columns}
 ::: {.column width="55%"}
-![Issue-based political-ad audit: Facebook vs. Google approval behavior](images/slide043_img040.png)
+![Issue-based political-ad audit: Facebook vs. Google approval behavior (Matias, Hounsel & Feamster, CSCW 2022)](images/slide043_img040.png)
 :::
 ::: {.column width="45%"}
 - **Overblocking** — ads for **national parks, holidays, products** sharing a
@@ -360,6 +530,43 @@ Source slides 37–43. Audits are to platform moderation what OONI/Censored Plan
 are to network censorship (Ch. 5): the only way to know what a black box does is
 to feed it known inputs and watch. Both over- and under-blocking are real; you
 can't optimize away both at once.
+:::
+
+## The Audit, Probe by Probe {.smaller}
+
+::: {.columns}
+::: {.column width="40%"}
+**The probes:** 477 auto-generated ads, 2018 midterms
+
+<!-- recovered from ppt-archive/class/platform/09-Platform.pptx slides 39–40 -->
+![](images/slide039_img035.png){width="76%"}
+
+![](images/slide040_img036.png){width="76%"}
+:::
+::: {.column width="60%"}
+**The results:** publication rates, 95% intervals
+
+<!-- slides 41–42 -->
+![](images/slide041_img037.png){width="100%"}
+
+![](images/slide041_img038.png){width="100%"}
+
+![](images/slide042_img039.png){width="62%"}
+:::
+:::
+
+::: {.credit}
+Matias, Hounsel & Feamster, "Software-Supported Audits of Decision-Making Systems: Testing Google and Facebook's Political Advertising Policies," CSCW 2022 (arXiv:2103.00064). Volunteers posted non-political ads (parks, Veterans Day, products) with and without candidate names; Facebook blocked a share of them, Google blocked none.
+:::
+
+::: {.notes}
+Original pptx slides 39–42, the instructor's own audit with Matias and Hounsel.
+Left: the probes look like ordinary ads; the only "political" content is a
+place name or a product that shares a candidate's name. Right: Facebook's
+publication rate dips well below 100% for exactly those, with wide intervals
+(small samples); Google publishes everything, including the ads its policy said
+it would not. Over-blocking and under-blocking, measured from outside, with
+software generating the probes so volunteers could run it.
 :::
 
 # AI as Information Arbiter {.center}
@@ -478,6 +685,8 @@ safe-harbor.
 
 ## Content Moderation Is Genuinely Hard {.smaller}
 
+::: {.columns}
+::: {.column width="58%"}
 - The universe of offending content is **infinite**
 - **Context is absent** — fair use? parody? satire? historical record?
 - Even **humans disagree and err** — so models trained on human labels inherit
@@ -485,13 +694,33 @@ safe-harbor.
 - Stratified access: **paid tiers** get better synthesis — a "tax on access" by
   ability to pay (cf. **zero rating**). When X gated Grok behind a subscription,
   even a *safety* control became a paywall
+:::
+::: {.column width="42%"}
+<!-- recovered from ppt-archive/class/platform/09-Platform.pptx slide 29 -->
+![](images/slide029_img028.png){width="78%"}
+
+![](images/slide029_img029.png){width="78%"}
+
+::: {.credit}
+Nick Ut / AP, 1972; NPR, Sep 10 2016. Facebook's human reviewers removed the Pulitzer-winning photo as child nudity, then reversed under public pressure.
+:::
+:::
+:::
+
+::: {.vignette}
+**The humans in "human review," 2025–26.** Former Nairobi moderators' cases against Meta and Sama (trafficking, unfair dismissal, union-busting; **\$1.6B** sought) are still waiting on a ruling that was postponed in **Feb 2026**. Meta moved the work to a **Teleperformance** site in **Accra**, where ~**150** moderators earn a base of ~**\$80/month**, get as little as **20 seconds** per decision, and are told not to say they work for Meta (Bureau of Investigative Journalism, Apr 2025).
+:::
 
 ::: {.notes}
 Book takeaways across both sections. Don't let students leave thinking "platforms
 are just lazy/biased." The problem is hard: infinite content, missing context,
 human disagreement, adversarial inputs, *and* now economic stratification of who
 gets the good AI. The right posture is humility + auditing, not "let the AI
-decide."
+decide." Napalm Girl (right) is the human-error anchor from the original deck:
+the editors at Aftenposten, the Norwegian PM, and finally Facebook's own
+reversal. The vignette is the other half: the "humans" in human review are
+contractors in Nairobi and Accra on 20-second decisions, and the Kenya cases
+have been pending since 2022.
 :::
 
 ## What We Carry Forward {.smaller}
