@@ -106,10 +106,18 @@ page it shows; the URL is in `coverage-notes.md` / `speaker-notes.md`.
 | `ce-record-grok.png` | The Record, Jan 5 2026 | The Model Is Also the Target |
 | `ce-bhrrc-kenya.png` | BHRRC, Feb 12 2026 | In the News: The Humans in Human Review |
 | `ce-tbij-accra.png` | TBIJ, Apr 27 2025 | In the News: The Humans in Human Review |
-| `ce-npr-napalm-girl.png`, `ce-npr-brazil-x.png`, `ce-lawfare-brazil-x.png`, `ce-techcrunch-deepseek.png` | NPR 2016, NPR 2024, Lawfare 2024, TechCrunch 2025 | captured, not placed (linked from the slides instead) |
+| `ce-cloudflare-outage.png` | Cloudflare blog, Nov 18 2025 | Many Platforms Can Control Speech |
+| `ce-npr-brazil-x.png` | NPR / AP, Aug 30 2024 | State Pressure Now Runs Through the Platforms |
+| `ce-columbia-brazil-x.png` | Columbia Global Freedom of Expression case page | captured, linked from the State Pressure credit, not placed |
+| `ce-npr-napalm-girl.png`, `ce-lawfare-brazil-x.png`, `ce-techcrunch-deepseek.png` | NPR 2016, Lawfare 2024, TechCrunch 2025 | captured, not placed (linked from the slides instead) |
 
 Not captured: EC press release IP/26/203 (renders only with JavaScript; linked
 from the Grok vignette), the Oversight Board PAO and Meta's integrity report
 (block fetches), the Irish DPC inquiry (no verified URL). The legacy pptx has
 no media for the AI-arbiter section (it was written in 2026), so nothing from
 the extraction applies there.
+
+Early slides (2–4) use inline Graphviz `{dot}` blocks rendered by Quarto, not
+images; the legacy pptx early-slide media (`slide004_img001.png` SRUTI '06
+banner, `slide005_img002.png` 201×95 clip art, `slide010_img010/012.png`
+logos) were re-checked on Oct 27 2026 and remain out as decorative.

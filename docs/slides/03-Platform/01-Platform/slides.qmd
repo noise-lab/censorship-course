@@ -28,16 +28,44 @@ header-includes: |
     .reveal .credit { font-size: 0.6em; line-height: 1.25; color: #555; margin: 0.15em 0 0.5em; }
     .reveal .credit p { font-size: 1em; margin: 0; }
     .reveal .column img { margin: 0.1em 0; }
+    /* inline Graphviz diagrams fill their column */
+    .reveal .cell-output-display svg { width: 100%; height: auto; max-width: 100%; }
+    .reveal .cell-output-display { margin: 0.2em 0; }
   </style>
 ---
 
-## From the Pipes to the Platforms {.center}
+## From the Pipes to the Platforms
 
+::: {.columns}
+::: {.column width="50%"}
 Technical controls ask: **who gets to communicate?** Block the protocol — IP,
 DNS, TCP, HTTP.
 
 Platform controls ask a different question: **who (and what) gets to be
 heard?**
+:::
+::: {.column width="50%"}
+```{dot}
+//| fig-width: 5
+//| fig-height: 4
+digraph pipes {
+  rankdir=TB; nodesep=0.25; ranksep=0.3;
+  node [shape=box, style="rounded,filled", fillcolor="#f5f5f5", fontname="Helvetica", fontsize=13, margin="0.12,0.06"];
+  edge [arrowsize=0.7];
+  subgraph cluster_wire { label="Ch. 2: the censor on the wire"; fontname="Helvetica"; fontsize=12; color="#999999";
+    site [label="Website"]; wire [label="Drop the packets\nIP, DNS, TCP, HTTP", fillcolor="#f3d9d9"]; u1 [label="User"];
+    site -> wire -> u1; }
+  subgraph cluster_feed { label="Ch. 3: the censor inside the platform"; fontname="Helvetica"; fontsize=12; color="#999999";
+    content [label="Everything posted"]; feed [label="Rank, recommend,\nremove, synthesize", fillcolor="#f3d9d9"]; u2 [label="User"];
+    content -> feed -> u2; }
+}
+```
+
+::: {.credit}
+Same goal, a tax on access to information; different layer.
+:::
+:::
+:::
 
 ::: {.notes}
 This is the hinge from Ch. 2 to Ch. 3. In the technical chapter the censor sits
@@ -55,11 +83,36 @@ You rarely need to *delete* content. You can control information by changing the
 - Move a story **up or down** the page; change layout, font, imagery
 - **Add or remove** items from a feed; reshape a user's profile so ranking shifts
 
+::: {.columns}
+::: {.column width="58%"}
 ::: {.vignette}
 **The book's reframing:** modern information control rarely requires *removing*
 content. Manipulating **which** content reaches users — through ranking,
 recommendation, and amplification — is often more effective and **harder to
 detect**.
+:::
+:::
+::: {.column width="42%"}
+```{dot}
+//| fig-width: 4.2
+//| fig-height: 3.6
+digraph choiceset {
+  rankdir=TB; nodesep=0.2; ranksep=0.28;
+  node [shape=box, style="rounded,filled", fillcolor="#f5f5f5", fontname="Helvetica", fontsize=12, margin="0.12,0.06"];
+  edge [arrowsize=0.7, fontname="Helvetica", fontsize=11];
+  all [label="Everything published"];
+  rank [label="Ranking and recommendation", fillcolor="#f3d9d9"];
+  top [label="The choice set\n(top 10, the feed, the rail)"];
+  user [label="What the user picks"];
+  all -> rank -> top -> user;
+  del [label="Delete\n(visible, rare)", shape=note, fillcolor="#ffffff"];
+  bury [label="Reorder, bury, flood\n(invisible, common)", shape=note, fillcolor="#ffffff"];
+  del -> rank [style=dashed, arrowhead=none];
+  bury -> rank [style=dashed, arrowhead=none];
+  {rank=same; del; rank; bury;}
+}
+```
+:::
 :::
 
 ::: {.notes}
@@ -68,7 +121,23 @@ this is **friction** (bury it) and **flooding** (drown it), not the old
 fear-based delete-and-arrest model. The censor never has to say "blocked."
 :::
 
-## Three Places to Manipulate the Pipeline
+## Three Places to Manipulate the Pipeline {.smaller}
+
+```{dot}
+//| fig-width: 9
+//| fig-height: 1.5
+digraph pipeline {
+  rankdir=LR; nodesep=0.4; ranksep=0.5;
+  node [shape=box, style="rounded,filled", fillcolor="#f3d9d9", fontname="Helvetica", fontsize=13, margin="0.2,0.1"];
+  edge [arrowsize=0.8, fontname="Helvetica", fontsize=11];
+  src [label="Sources", fillcolor="#f5f5f5"];
+  prod [label="1. Production\nwhat gets made, how it looks"];
+  diss [label="2. Dissemination\nwhat the platform carries, who amplifies"];
+  disc [label="3. Discovery\nwhat search and the feed surface"];
+  user [label="User", fillcolor="#f5f5f5"];
+  src -> prod -> diss -> disc -> user;
+}
+```
 
 ::: {.columns}
 ::: {.column width="33%"}
@@ -104,6 +173,8 @@ up across all three. Foreshadow the propaganda deck.
 
 Control doesn't live in one place. **Every layer** of the stack is a chokepoint:
 
+::: {.columns}
+::: {.column width="55%"}
 - **Domain registration** and **DNS resolution** (registrars, registries)
 - **Content delivery** (CDNs, hosting)
 - **News platforms**, **search engines**, **social media**, **app stores**
@@ -111,6 +182,15 @@ Control doesn't live in one place. **Every layer** of the stack is a chokepoint:
 
 The more these consolidate into a few firms, the **lower the cost of a single
 takedown** — and the higher the systemic risk.
+:::
+::: {.column width="45%"}
+[![](images/ce-cloudflare-outage.png){width="100%"}](https://blog.cloudflare.com/18-november-2025-outage/)
+
+::: {.credit}
+Cloudflare blog, Nov 18 2025: one configuration error at one CDN took X, ChatGPT, Shopify and others dark for hours. No censor, no takedown order; the same chokepoint either way.
+:::
+:::
+:::
 
 ::: {.notes}
 Book §3.1 + the centralization thread from Ch. 1. Key teaching point:
@@ -124,10 +204,21 @@ voice globally. This is the "takedown risk" the syllabus flags.
 The line between **platform moderation** and **state action** is blurring.
 Governments route their preferences through "neutral" moderation pipelines:
 
+::: {.columns}
+::: {.column width="56%"}
 - **Brazil:** the electoral court (TSE) issued **1,000+** takedown orders; in
   2024 Justice de Moraes ordered a **nationwide block of X**
 - **India:** 2023 IT Rules amendments empowered a government "fact-check unit"
   to flag content — comply or **lose safe-harbor**; plus coordinated mass-reporting
+:::
+::: {.column width="44%"}
+[![](images/ce-npr-brazil-x.png){width="100%"}](https://www.npr.org/2024/08/30/nx-s1-5096220/brazil-suspends-x-elon-musk)
+
+::: {.credit}
+NPR / AP, Aug 30 2024. Case record: [Columbia Global Freedom of Expression](https://globalfreedomofexpression.columbia.edu/cases/the-case-of-the-x-ban-in-brazil/).
+:::
+:::
+:::
 
 ::: {.vignette}
 **Brazil, 2024:** X was blocked nationwide from **Aug 30 to Oct 8, 2024** after

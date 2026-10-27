@@ -1,6 +1,17 @@
 # 03-Platform/01-Platform — instructor notes
 
 ## Current-events updates made (point 2)
+- 2026-10-27 (late afternoon): **Early slides (2–7) given graphics.** Inline
+  Graphviz (`{dot}`) diagrams on "From the Pipes to the Platforms" (wire vs.
+  feed), "The Real Lever Is the Choice Set" (funnel, delete vs. bury), and
+  "Three Places to Manipulate the Pipeline" (production, dissemination,
+  discovery); linked captures of the Cloudflare Nov 18 2025 outage post on
+  "Many Platforms Can Control Speech" (`ce-cloudflare-outage.png`) and NPR /
+  AP Aug 30 2024 on "State Pressure" (`ce-npr-brazil-x.png`, credit links the
+  Columbia Global Freedom of Expression case record). The section divider
+  "Platforms as Points of Control" was left as a divider. The legacy pptx
+  early-slide media (`slide004_img001` SRUTI banner, `slide005_img002` clip
+  art, `slide010_img010/012` 128-px logos) are decorative and were not used.
 - 2026-10-27 (afternoon): **Links and screenshots.** Every dated source in a
   vignette on slides 7–33 is now a Markdown link to a URL that returned 200 to
   `curl -sIL -A Mozilla/5.0` the same day; the Oversight Board (403), Meta's
