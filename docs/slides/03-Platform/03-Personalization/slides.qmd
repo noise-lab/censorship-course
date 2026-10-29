@@ -24,17 +24,31 @@ header-includes: |
     .reveal li { line-height: 1.3; margin-bottom: 0.15em; }
     .reveal table { font-size: 0.72em; }
     .reveal pre, .reveal code { font-size: 0.72em; }
+    .reveal .cell-output-display svg { width: 100%; height: auto; }
+    .reveal .capture img { border: 1px solid #999; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+    .reveal .capture p { font-size: 0.6em; color: #555; margin-top: 0.2em; }
   </style>
 ---
 
 ## "A Squirrel Dying in Front of Your House" {.center}
 
+::: {.columns}
+::: {.column width="58%"}
 > "A squirrel dying in front of your house may be more relevant to your interests
 > right now than people dying in Africa."
 
 The line (attributed to Mark Zuckerberg in Eli Pariser's *The Filter Bubble*, 2011)
 is the whole problem in one sentence: **relevance is decided for you, by an
 algorithm, and you never see what it left out.**
+:::
+::: {.column width="42%"}
+::: {.capture}
+[![](images/captures/wiki-filter-bubble-figure.png){width="68%"}](https://en.wikipedia.org/wiki/Filter_bubble)
+
+The filter-bubble illustration from Wikipedia: the arrows are what never reaches you. Click to open the article.
+:::
+:::
+:::
 
 ::: {.notes}
 Open with the squirrel line. It captures the engagement logic of personalization:
@@ -75,7 +89,7 @@ is naive: the incentive, not the code, is the problem. This is the hand-off to t
 economic-controls material in Ch. 4 — don't develop it here, just plant the pointer.
 :::
 
-## Personalization Is Ubiquitous
+## Personalization Is Ubiquitous {.smaller}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -84,14 +98,33 @@ economic-controls material in Ch. 4 — don't develop it here, just plant the po
 - **News** portals and aggregators
 :::
 ::: {.column width="50%"}
-- **Shopping** — goods and services
-- **Media** — music, movies, video
+- **Shopping**, goods and services
+- **Media**: music, movies, video
 - **Maps / local** results
 :::
 :::
 
-Anywhere you get a **personalized recommendation**, ask: *what results are being
-filtered out, and would I ever know?*
+```{dot}
+//| fig-width: 11
+//| fig-height: 3.2
+digraph loop {
+  rankdir=LR; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#4a6fa5", fontname="Helvetica", fontsize=17, margin="0.18,0.1"];
+  edge [fontname="Helvetica", fontsize=14, color="#444444"];
+  ranksep=0.35; nodesep=0.25;
+  P [label="profile\n(age, location, device)"];
+  B [label="behavior\n(clicks, watch time, scroll speed)"];
+  M [label="predict what will\nhold your attention"];
+  R [label="rank and show"];
+  E [label="measure engagement"];
+  X [label="everything else:\nnever shown, never known", shape=note, fillcolor="#fde8e8", color="#b91c1c"];
+  P -> M; B -> M; M -> R; R -> E;
+  E -> B [label="updates the profile", style=dashed, constraint=false];
+  R -> X [label="omitted", color="#b91c1c", fontcolor="#b91c1c"];
+}
+```
+
+The loop every personalized service runs. Anywhere you get a **personalized recommendation**, ask what is in the red box: *what was filtered out, and would I ever know?*
 
 ::: {.notes}
 The book's point: the same mechanism spans every content type. Most of it feels benign
@@ -219,8 +252,32 @@ all; it's a WhatsApp/Telegram group with no external moderation. Both matter for
 elections. This sets up the regulatory vignette.
 :::
 
+## In the News: The For You Feed, Audited {.smaller}
+
+::: {.columns}
+::: {.column width="56%"}
+::: {.capture}
+[![](images/captures/nature-tiktok-skew.png){width="100%"}](https://www.nature.com/articles/s41586-026-10447-1)
+
+Nature, May 6 2026 (Ibrahim, Jang, Aldahoul, Kaufman, Rahwan, Zaki, NYU Abu Dhabi). Screenshot captured Oct 29 2026; click to open.
+:::
+:::
+::: {.column width="44%"}
+- Sock-puppet accounts seeded as Democrats, Republicans, and neutrals, run through the For You feed during the 2024 US election
+- The feed favored Republican-leaning content by about **12 percent** over Democratic-leaning content **regardless of how the account was seeded**
+- A peer-reviewed audit of a system nobody outside TikTok can inspect: the method is the sock puppet, the finding is a skew, and the *mechanism* is the next slide
+- It also complicates the "foreign suppression" threat model behind the US divestiture (Breakout B)
+:::
+:::
+
+::: {.notes}
+This is the passive-signal slide made concrete with the freshest audit. Say what the study did (bot accounts with controlled seeding, repeated feed scrapes, content classified by partisan lean), what it found (a consistent pro-Republican skew independent of seeding), and what it does not show (intent, or a cause). The next slide explains how a skew like this can arise with no ideological rule at all: many weak signals recruited by an engagement objective. The breakout file's Breakout B uses this paper as a prep read, so students who pick it will have seen it.
+:::
+
 ## Weak Signals, Strong Inferences {.smaller}
 
+::: {.columns}
+::: {.column width="64%"}
 Recommenders don't need a political signal to place you politically. They
 infer identity from **many weakly correlated traces** — a movie you liked,
 a hobby, a genre — and treat those as **strong evidence** for cluster
@@ -242,6 +299,15 @@ Illustration (from a class discussion): a fandom survey found dislike of
 attitudes. The recommender doesn't need to know your politics — knowing
 your movie opinion is already a probabilistic handle. *(Non-peer-reviewed
 fandom survey; use it only for intuition on the mechanism.)*
+:::
+:::
+::: {.column width="36%"}
+::: {.capture}
+[![](images/captures/knight-narayanan.png){width="100%"}](https://knightcolumbia.org/content/understanding-social-media-recommendation-algorithms)
+
+Narayanan, Knight First Amendment Institute, Mar 2023: the primer on engagement-optimized recommenders. Click to open.
+:::
+:::
 :::
 
 ::: {.notes}
@@ -302,8 +368,10 @@ away thinking the science is settled in either direction.
 Sources: pnas.org/doi/10.1073/pnas.2213020120; pnas.org/doi/10.1073/pnas.2318127122.
 :::
 
-## 2025: Regulators Demand the Algorithm Open Up
+## 2025: Regulators Demand the Algorithm Open Up {.smaller}
 
+::: {.columns}
+::: {.column width="60%"}
 ::: {.vignette}
 On **October 24, 2025**, the **European Commission** preliminarily found **TikTok and
 Meta** in breach of the **Digital Services Act** for failing to give vetted researchers
@@ -320,6 +388,15 @@ The fight is now explicitly about **algorithmic transparency** — can outsiders
 **algorithmic feeds only with parental consent** (default to chronological); proposed
 rules were out for comment through **Dec. 2025**. A separate NY law (signed **Dec. 2025**)
 mandates **warning labels** on addictive-feed features for under-18 users.
+:::
+::: {.column width="40%"}
+::: {.capture}
+[![](images/captures/ec-tiktok-meta.png){width="100%"}](https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktok-and-meta-breach-their-transparency-obligations-under-digital)
+
+European Commission, Oct 24 2025: preliminary DSA findings against TikTok and Meta on researcher data access. Captured Oct 29 2026; click to open.
+:::
+:::
+:::
 
 ::: {.notes}
 This is the freshest verified hook (swap annually — see coverage-notes). Teaching point:
@@ -343,8 +420,10 @@ Sources: ag.ny.gov SAFE for Kids NPRM (2025); nysenate.gov S4505/A5346 (Dec. 202
 
 # Can We Measure the Bubble? {.center}
 
-## Auditing Recommendation Systems Is Hard
+## Auditing Recommendation Systems Is Hard {.smaller}
 
+::: {.columns}
+::: {.column width="44%"}
 Platforms tightly control access to algorithmic transparency and usage data. Researchers
 improvise:
 
@@ -354,6 +433,30 @@ improvise:
 
 The recurring obstacle: **the platform is the thing you're trying to audit**, and it
 controls the data.
+:::
+::: {.column width="56%"}
+```{dot}
+//| fig-width: 7
+//| fig-height: 3.4
+digraph audit {
+  rankdir=LR; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#4a6fa5", fontname="Helvetica", fontsize=17, margin="0.18,0.1"];
+  edge [fontname="Helvetica", fontsize=14, color="#444444"];
+  ranksep=0.35; nodesep=0.25;
+  S [label="sock-puppet\naccounts"];
+  Q [label="adversarial\nqueries"];
+  D [label="data donations\n(real users' results)"];
+  BB [label="the recommender\n(black box)", fillcolor="#333333", fontcolor="white", color="#111111"];
+  O [label="compare what each\nprobe was shown"];
+  A [label="the platform holds the data\nand the code (DSA Art. 40 fight)", shape=note, fillcolor="#fff3cd", color="#b58900"];
+  S -> BB; Q -> BB; D -> BB;
+  BB -> O [label="outputs only"];
+  A -> BB [style=dashed, arrowhead=none];
+}
+```
+Outside auditors see outputs, never the model: every method is a way of asking the same question from controlled inputs.
+:::
+:::
 
 ::: {.notes}
 Frame measurement as an adversarial, methods-heavy problem — the same flavor as Ch. 5.
@@ -434,6 +537,8 @@ is what makes the nine-month dataset on the next slides possible.
 - Browsing history
 :::
 :::
+
+![Where the Bobble study's 75,000 queries came from (2012): the plugin's users, by location.](images/slide028_img041.png){width="46%" fig-align="center"}
 
 Disentangling **which** factor drives an inconsistency is the hard part — attribution,
 not just detection.
@@ -566,8 +671,51 @@ control without takedowns — perfectly deniable. Note the same observed inconsi
 (CA vs. GA results on a ballot proposition) can be a research finding *or* a weapon.
 :::
 
+## The Pollution Attack, Drawn {.smaller}
+
+```{dot}
+//| fig-width: 11
+//| fig-height: 3.0
+digraph pollution {
+  rankdir=LR; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#4a6fa5", fontname="Helvetica", fontsize=17, margin="0.18,0.1"];
+  edge [fontname="Helvetica", fontsize=14, color="#444444"];
+  ranksep=0.35; nodesep=0.25;
+  AT [label="attacker's web page\n(hidden iframes, scripts)", fillcolor="#fecaca", color="#b91c1c"];
+  V  [label="victim's browser"];
+  PR [label="victim's profile\n(now polluted)"];
+  PE [label="personalization\nengine"];
+  RS [label="victim's results:\nthe target rises"];
+  C  [label="the corpus\n(untouched)", fillcolor="#dcfce7", color="#16a34a"];
+  AT -> V [label="one visit"];
+  V -> PR [label="fake searches, clicks,\nvideo views, cart items", color="#b91c1c", fontcolor="#b91c1c"];
+  PR -> PE; C -> PE [style=dashed]; PE -> RS;
+}
+```
+
+
+::: {.columns}
+::: {.column width="58%"}
+Nothing in the index changes. The attacker edits the *reader*, not the content: one visit to a page the attacker controls plants fake searches, clicks, and views in the victim's profile, and the service's own personalization engine then promotes the attacker's target in the victim's results. The planted signals look exactly like real ones, so no transparency report would ever show it.
+:::
+::: {.column width="42%"}
+::: {.capture}
+[![](images/captures/usenix-pollution.png){width="78%"}](https://www.usenix.org/conference/usenixsecurity13/technical-sessions/paper/xing)
+
+Xing, Meng, Doozan, Snoeren, Feamster, Lee, USENIX Security 2013. Demonstrated on YouTube, Amazon, and Google. Click to open the paper.
+:::
+
+:::
+:::
+
+::: {.notes}
+Walk the diagram left to right. The attacker needs one thing: the victim loads a page the attacker controls (an ad, a forum post, a compromised site). That page quietly issues requests to the target service in the victim's own session: searches for a term, clicks on a product, views of a video. The service records them as the victim's behavior, so the victim's profile now says they are interested in the attacker's target. From then on the personalization engine does the attacker's work for free: the target product, video, or page climbs in the victim's own results. The corpus is untouched (dashed edge), which is why nothing in a transparency report would ever show it. Three services in the 2013 paper, three different signals; the general point is that any service that personalizes on behavior has an input the user does not control.
+:::
+
 ## Data Voids {.smaller}
 
+::: {.columns}
+::: {.column width="58%"}
 A **data void** is a query that returns **little authoritative content** — an obscure
 health term, a freshly coined phrase, a breaking-news topic.
 
@@ -576,6 +724,15 @@ health term, a freshly coined phrase, a breaking-news topic.
   keyword stuffing, coordinated backlinking, micro-site cloning
 - Especially dangerous during **breaking news** and **public-health crises**, before
   authoritative sources catch up
+:::
+::: {.column width="42%"}
+::: {.capture}
+[![](images/captures/datasociety-voids.png){width="100%"}](https://datasociety.net/library/data-voids/)
+
+Golebiewski and boyd, Data & Society, Oct 2019 (first version 2018). Click to open the report.
+:::
+:::
+:::
 
 ::: {.notes}
 Data voids are the flip side of the bubble: instead of burying content, you *plant* it
