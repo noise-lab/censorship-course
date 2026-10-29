@@ -52,7 +52,37 @@ different search results.
    portal](https://news.google.com/). You might also try other platforms that
    perform personalization (e.g., Amazon).
    
-## Part 2: Discussion
+## Part 2: Chatbots
+
+Increasingly, people ask a chatbot instead of a search engine, and the chatbot
+returns one synthesized answer rather than a list of links. That makes the
+question from Part 1 harder to answer, not easier: there is no result page to
+compare, and nothing tells you what the model left out.
+
+Repeat the experiment with two or three assistants (ChatGPT, Claude, Gemini,
+Copilot, Perplexity, or a model served from another country).
+
+1. Reuse a few of your Part 1 queries, especially the political or
+   current-events ones and anything with a regional angle (an election, a
+   border dispute, a local health question). Ask each model the same question,
+   worded the same way.
+
+2. Vary the vantage point the way you did for search: logged in versus out, a
+   fresh session, and, if you have a VPN, the same question asked from two or
+   three different countries. Try asking in a second language if you can.
+
+3. Compare the answers side by side. Which sources does each model cite, if
+   any? Does the framing change with location or language? Does one model
+   decline or hedge where another answers directly? Do two sessions of the
+   same model agree with each other?
+
+Note what you can and cannot conclude. A search engine's personalization can be
+measured by diffing result lists from many vantage points, which is how the
+studies in the lecture work. For a chatbot, what would the equivalent
+measurement even be? Think about what you would need to control, and how you
+would tell personalization from randomness in the model's output.
+
+## Part 3: Discussion
 
 1. What are some of the potential benefits of personalization? What are some
    of the potential drawbacks?
@@ -62,3 +92,5 @@ different search results.
    bubbles?
 4. To what extent do individuals have control over their own filter bubbles,
    and how can they actively seek out diverse perspectives?
+5. If chatbots become the main way people look things up, does the filter
+   bubble get bigger or smaller? Who could audit it, and how?
