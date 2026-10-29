@@ -336,3 +336,19 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * Report-back, partly captured: one group tested a sentence whose meaning flips with a comma, a long-standing favorite example. Another group got an "allowed" verdict from one chatbot, along with its rationale for why the text was not threatening, while Claude said the same text should be blocked. The instructor asked them to run the text through a fresh Claude session to see whether a second session of the same model would agree. The result was not captured before class ended
     * [Platform moderation policies](../activities/moderation.md) and [Breakout B](../breakouts/moderation.md) were not run
 * **Next:** personalization (book 3.7), Thursday October 29
+
+### Meeting 10 (Thu Oct 29)
+
+*Plan; replaced with the record after class.*
+
+- Housekeeping: week-6 response (book 4.2–4.3) due Tuesday November 3 at 9 am; presentations 4 (November 3) and 5 (November 5); project proposals and the Gradebook issue
+- Reading-response discussion on 3.7: is the filter bubble the algorithm's doing or the user's; whether a recommender can be audited from outside; chatbots answering into data voids
+- Lecture: personalization as quiet information control
+    - Benign to political: the same code path, from a local store listing to two different pages for "Egypt"
+    - What the evidence says about filter bubbles, passive signals, and the contested YouTube rabbit hole
+    - Measuring the bubble: the Bobble study, geography versus profile, ranking as removal, one ballot measure seen from two states
+    - Personalization as an attack surface: profile pollution, data voids, chatbots, and algospeak as a second-order bubble
+    - Regulators and transparency: DSA data access and the New York feed laws
+- Hands-on: [finding your own filter bubble](../activities/bubbles.md)
+- Breakout, as time permits: [chronological by default](../breakouts/personalization.md)
+- Next: copyright (book 4.2), Tuesday November 3
