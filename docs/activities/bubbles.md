@@ -129,13 +129,64 @@ would tell personalization from randomness in the model's output.
 
 ## Part 4: Discussion
 
-1. What are some of the potential benefits of personalization? What are some
-   of the potential drawbacks?
-2. Is it ethical for social media companies to manipulate users' news feeds to
-   create filter bubbles?
-3. What is the potential role of media literacy in mitigating the effects of filter
-   bubbles?
-4. To what extent do individuals have control over their own filter bubbles,
-   and how can they actively seek out diverse perspectives?
-5. If chatbots become the main way people look things up, does the filter
-   bubble get bigger or smaller? Who could audit it, and how?
+Bring your tallies from Parts 1 to 3 and work through these in your group.
+Several of them came straight out of class discussion; none has a settled
+answer.
+
+**Is personalization censorship?**
+
+1. Nothing was removed, so the access is still there. Is personalization
+   then a form of friction, in the same way that throttling is, or is
+   "censorship" the wrong word for it? Where would you draw the line, and
+   is the line anything more than "I know it when I see it"?
+2. Someone in class argued that even when you are actively looking for
+   something and know what to type, personalization can keep you from
+   finding it. Have you seen this? What would it take to show it with data
+   rather than anecdotes?
+
+**Looking versus being fed**
+
+3. Two situations came apart in discussion. In the first you search for X
+   and the ranking hands you Y. In the second you open a feed looking for
+   nothing in particular and are handed Y anyway. Most people's first
+   instinct is that the first is worse. Is it? One view is that the passive
+   case is more coercive, because there was never a real choice; another is
+   that it is no different from turning on the television in 1985 and
+   watching whatever was on. What distinguishes a feed from that channel?
+4. Does the answer change with what the feed is optimized for? Compare a
+   feed tuned to maximize engagement with one tuned to help you find what
+   you need and leave, or a shopping ranking tuned to what the seller most
+   wants you to buy. Could you tell these apart from the outside, using only
+   what Parts 1 to 3 let you observe?
+
+**Agency: the algorithm, or us?**
+
+5. The loop runs in both directions: you click and scroll, the system
+   predicts what will hold you, shows it, and reads your reaction. Is
+   "blame" even the right word? Put it instead as a question about agency:
+   how much do you really have, and what in Part 2 showed you the limits of
+   it?
+6. Does agency depend on who the user is? A thirteen-year-old and a
+   forty-year-old sit differently with respect to an engagement-optimized
+   feed, and recent litigation against the major platforms turns on exactly
+   that. Should the answer to "is it the algorithm or us" differ by age, and
+   if so, what follows for design or for law?
+7. What can an individual do, short of regulation: screen-time limits,
+   chronological views, clearing history, choosing not to be on the
+   platform? Which of these did Part 2 suggest actually works, and which are
+   mostly symbolic?
+
+**Transparency and regulation**
+
+8. Personalization creates an incentive to collect more data, and every
+   claim of the form "we need X to do Y safely" (age verification, for
+   instance) deserves an audit. Who is in a position to audit it?
+9. Should platforms be required by law to disclose how they decide what to
+   show you? It is not a yes or no. Which signals they use (location, age,
+   inferred religion or sexual orientation, scroll and watch history) is one
+   level of disclosure; how those signals are combined is another, and is
+   also the revenue-critical part. Argue it from the regulator's side, then
+   from the position of an engineer at the platform who will be asked to
+   open it up. Where is the reasonable middle?
+10. If chatbots become the main way people look things up, does the filter
+    bubble get bigger or smaller? Who could audit it, and how?
