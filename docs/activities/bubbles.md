@@ -52,7 +52,52 @@ different search results.
    portal](https://news.google.com/). You might also try other platforms that
    perform personalization (e.g., Amazon).
    
-## Part 2: Chatbots
+## Part 2: Feeds
+
+A search engine at least waits for a query. A feed (TikTok's For You page,
+Instagram Reels, YouTube Shorts, the X "For You" timeline) decides what you see
+with no question asked, from signals you may not know you are giving: what you
+watched to the end, what you scrolled past, how long you paused. There is no
+query to vary, so the thing to probe is the account itself. This part asks you
+to audit the "algorithm" the way an outside researcher would: from its
+outputs, with controlled inputs.
+
+Work with a partner so you have two feeds to compare. Use your own accounts,
+or a logged-out or fresh session where the platform allows it; do not engage
+with content you would not want in your history.
+
+1. **Baseline.** Each of you opens the same feed and scrolls the next 20 to 30
+   items without liking, following, or watching anything to the end. Tally
+   what you were shown by rough category (news, politics, sports, music,
+   shopping, a hobby, and so on). How different are the two feeds already,
+   and what in your histories would explain it?
+
+2. **Intervene.** Pick one topic that is absent from your baseline and
+   harmless to you (a sport you do not follow, a cooking style, a city).
+   For five minutes, engage only with that topic: watch those items to the
+   end, like a few, skip everything else quickly. Then scroll another 20 to
+   30 items and tally again. How many items did it take for the feed to
+   move? How much of the feed is now that topic?
+
+3. **Try to get out.** Use whatever the platform offers (not interested,
+   hide, clear watch history, "reset" or "refresh" the feed, switching to a
+   chronological or Following view). Scroll again. Did the topic fade, and how
+   quickly? This is the question the class kept coming back to: how much
+   agency does a user actually have?
+
+4. **Compare notes.** Put the two feeds side by side after the same
+   intervention. Did the same five minutes move you both the same way? Then
+   find what the platform says the feed optimizes for (its "how
+   recommendations work" page) and compare it with what you observed. Does
+   personalizing for engagement look different from personalizing to help you
+   find things, and could you tell the two apart from the outside?
+
+Keep your tallies. They are small, but they are the same kind of evidence an
+audit study collects, and they show both what you can conclude from the
+outside and what you cannot: you saw the outputs move, but not which signal
+moved them.
+
+## Part 3: Chatbots
 
 Increasingly, people ask a chatbot instead of a search engine, and the chatbot
 returns one synthesized answer rather than a list of links. That makes the
@@ -62,7 +107,7 @@ compare, and nothing tells you what the model left out.
 Repeat the experiment with two or three assistants (ChatGPT, Claude, Gemini,
 Copilot, Perplexity, or a model served from another country).
 
-1. Reuse a few of your Part 1 queries, especially the political or
+1. Reuse a few of your Part 1 queries (and, if you did Part 2, the topic you pushed your feed toward), especially the political or
    current-events ones and anything with a regional angle (an election, a
    border dispute, a local health question). Ask each model the same question,
    worded the same way.
@@ -82,7 +127,7 @@ studies in the lecture work. For a chatbot, what would the equivalent
 measurement even be? Think about what you would need to control, and how you
 would tell personalization from randomness in the model's output.
 
-## Part 3: Discussion
+## Part 4: Discussion
 
 1. What are some of the potential benefits of personalization? What are some
    of the potential drawbacks?
