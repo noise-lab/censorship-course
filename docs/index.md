@@ -43,8 +43,8 @@ Class meetings follow one of two agenda templates depending on the term:
 | 5                                        | Throttling and Rate Limiting            | 2.3.1       | [Throttling](breakouts/throttling.md)             | [Throttling](activities/throttling.md)              |
 | 6                                        | Denial of Service                       | 2.3.2       | [DDoS](breakouts/ddos.md)                         | [Galileo](activities/ddos.md)                       |
 | *Platform Controls*                      |                                         |             |                                                   |                                                     |
-| 7                                        | Flooding and Propaganda                 | 3.1-3.4     | [Propaganda](breakouts/propaganda.md)             | [Sentiment Analysis](activities/automation.md)      |
-| 8                                        | Disinformation                          | 3.5         | [Disinformation](breakouts/disinformation.md)     | [Disinformation](activities/disinformation.md)      |
+| 7                                        | Flooding and Propaganda                 | 3.1-3.3     | [Propaganda](breakouts/propaganda.md)             | [Sentiment Analysis](activities/automation.md)      |
+| 8                                        | Disinformation                          | 3.4-3.5     | [Disinformation](breakouts/disinformation.md)     | [Disinformation](activities/disinformation.md)      |
 | 9                                        | Content Moderation                      | 3.6         | [Moderation](breakouts/moderation.md)             | [Moderation Policies](activities/moderation.md)     |
 | 10                                       | Personalization                         | 3.7         | [Personalization](breakouts/personalization.md)   | [Bubbles](activities/bubbles.md)                    |
 | *Legal and Economic Controls*            |                                         |             |                                                   |                                                     |
