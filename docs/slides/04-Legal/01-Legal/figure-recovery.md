@@ -74,3 +74,17 @@ The archived deck is the whole old Chapter 8 (8.1 legal, 8.2 technical copyright
 ## Captured
 
 - `images/bittorrent-swarm-tracker.png` (2880x1377) — source: ppt-archive/class/regulatory/11-Legal.pptx slide 24, final build state, cropped to box 20,200,2900,1577 at 220 dpi (title and slide number excluded). Embedded on the new slide "Where §512 Notices Come From: Scanning the Swarm", 64% column.
+
+## Refresh, Nov 3 2026 (graphics and type pass before Meeting 11)
+
+Legacy screenshots lifted from the same pptx (previously dropped as decorative or dated, now embedded):
+
+- `images/cox-2019-verdict-form.png` — source: slide 14 (`slide014_img002.png`), cropped to the jury verdict form; on "The $1 Billion Question: Cox v. Sony", 50% column beside the 2026 reversal.
+- `images/riaa-notice-email.png` — source: slide 38 (`slide038_img107.png`), top 430 px; on the new slide "Anatomy of a Notice".
+- `images/dtecnet-investigation.png` — source: slide 37 (`slide037_img106.png`), border trimmed; on "Anatomy of a Notice".
+- `images/eff-stop-sesta.png` — source: slide 10 (`slide010_img001.png`); on "FOSTA/SESTA", 45% column.
+- `images/hotnets-review-excerpt.png` — source: slide 16 (`slide016_img006.png`); cropped and kept for the SIGCOMM story, not embedded.
+
+Live page captures (headless Firefox, 1400x900, Nov 3 2026), each clickable to the source: `images/captures/section230-text.png` (Cornell LII), `youtube-copyright-report.png` (YouTube copyright transparency report 2025), `dsa-transparency-db.png` (DSA transparency database), `contentid-help.png` (YouTube Help, not embedded). Lumen (bot wall), Google's copyright removals report (no data without JS), the SCOTUS opinion PDF (404), and eSafety (404) could not be captured.
+
+Diagrams drawn in Graphviz inside the deck: the liability spectrum (new slide), notice-and-takedown flow (new slide), and the Content ID funnel (new slide). Type: root 36px, `.smaller` 0.95em.

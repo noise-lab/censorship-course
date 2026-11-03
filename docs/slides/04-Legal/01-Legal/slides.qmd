@@ -18,10 +18,15 @@ header-includes: |
     section.title-slide h1 { font-size: 56px !important; }
     section.title-slide .subtitle { font-size: 32px !important; }
     /* Body sizing (a bit bigger than before) */
-    .reveal { font-size: 30px; }
-    .reveal .smaller, .reveal section.smaller { font-size: 0.78em; }
-    .reveal ul, .reveal ol, .reveal p, .reveal blockquote { font-size: 0.88em; }
-    .reveal li { line-height: 1.3; margin-bottom: 0.15em; }
+    .reveal { font-size: 36px; }
+    .reveal .cell-output-display svg { width: 100% !important; height: auto !important; }
+    #contentid .cell-output-display svg { width: auto !important; height: 460px !important; margin: 0 auto; }
+    .reveal .smaller, .reveal section.smaller { font-size: 0.95em; }
+    .reveal ul, .reveal ol, .reveal p, .reveal blockquote { font-size: 1.0em; }
+    .reveal .capture img { border: 1px solid #999; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+    .reveal .capture p { font-size: 0.55em; color: #555; margin-top: 0.2em; }
+    .reveal .vignette { font-size: 0.95em; }
+    .reveal li { line-height: 1.3; margin-bottom: 0.25em; }
     .reveal table { font-size: 0.72em; }
     .reveal pre, .reveal code { font-size: 0.72em; }
   </style>
@@ -97,9 +102,20 @@ treated as the publisher or speaker of any information provided by another
 information content provider."
 :::
 
+::: {.columns}
+::: {.column width="58%"}
 - Platforms get **safe harbor** — not liable for users' speech
 - Also lets them moderate in good faith **without** becoming a "publisher"
 - Still law today — and under attack from **both** political directions
+:::
+::: {.column width="42%"}
+::: {.capture}
+[![](images/captures/section230-text.png){width="100%"}](https://www.law.cornell.edu/uscode/text/47/230)
+
+47 U.S.C. §230 at Cornell's Legal Information Institute. Click to open the statute.
+:::
+:::
+:::
 
 ::: {.notes}
 The "26 words" framing (Kosseff). §230 is *why* user-generated content at scale
@@ -128,11 +144,23 @@ US baseline is so speech-protective compared to the EU. Book §4.1.
 
 The first major carve-out in two decades.
 
+::: {.columns}
+::: {.column width="55%"}
 - Removes §230 immunity for sites that **knowingly facilitate sex trafficking**
 - Aimed squarely at **backpage.com**
 - Critics: a **"censorship bill"** — a slippery slope of carve-outs
 - **Implication:** liability without notice forces platforms to deploy
   **large-scale automated detection** — which **favors incumbents**
+:::
+::: {.column width="45%"}
+<!-- recovered from ppt-archive/class/regulatory/11-Legal.pptx slide 10 -->
+::: {.capture}
+![](images/eff-stop-sesta.png){width="100%"}
+
+EFF's 2018 campaign against the bill: "Don't Let Congress Censor the Internet."
+:::
+:::
+:::
 
 ::: {.notes}
 The deep point (book §4.1): once you make a platform liable, you implicitly
@@ -263,6 +291,34 @@ DSA section and the Brussels effect. Book §4.1. Sources: Brazil STF ruling
 (June 26 2025); India MeitY IT Rules 2021; German DDG (May 2024).
 :::
 
+## The Liability Spectrum {.smaller}
+
+```{dot}
+//| fig-width: 12
+//| fig-height: 2.4
+digraph spectrum {
+  rankdir=LR; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=26, margin="0.3,0.2"];
+  edge [color="#444444", penwidth=1.5];
+  ranksep=0.5; nodesep=0.3;
+  US [label="US §230\nbroad immunity;\nplatform chooses", fillcolor="#e3f1e3", color="#2e7d32"];
+  EU [label="EU DSA\nconditional immunity +\ntransparency duties", fillcolor="#eef3fb", color="#4a6fa5"];
+  IN [label="India IT Rules\nremove on order,\n36 h or lose safe harbor", fillcolor="#fff3e0", color="#ef6c00"];
+  BR [label="Brazil, 2025\nliable once on\n\"unequivocal\" notice", fillcolor="#fde8e8", color="#b91c1c"];
+  US -> EU -> IN -> BR;
+  L [label="over-removal risk rises  →", shape=plaintext, fontsize=24, fontcolor="#b91c1c"];
+  {rank=same; L}
+}
+```
+
+- Each box is a different price on hosting someone else's speech; the further right, the cheaper it is to remove and the dearer to keep up
+- A global platform runs one moderation pipeline, so the **strictest regime it must obey** sets its behavior everywhere (the Brussels effect, later)
+- Germany's NetzDG, the original removal-on-a-clock law, now sits inside the DSA
+
+::: {.notes}
+Walk left to right. §230: immunity, so the platform decides. DSA: immunity conditioned on process (statements of reasons, risk assessments). India: safe harbor lost unless flagged content comes down within a window. Brazil, June 2025: liability attaches once the platform has "unequivocal" knowledge, which is notice-and-takedown by another name. Then the punchline: one pipeline, strictest rule wins.
+:::
+
 ## Age-Gating: Excluding a Whole Audience {.smaller}
 
 A new lever: instead of removing *speech*, remove an entire **class of
@@ -334,6 +390,34 @@ Felten/SDMI case on the next slides is exactly a §1201 chilling-effect story.
 Book §4.1.
 :::
 
+## How Notice-and-Takedown Works {.smaller}
+
+```{dot}
+//| fig-width: 12
+//| fig-height: 3.2
+digraph dmca {
+  rankdir=LR; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#4a6fa5", fontname="Helvetica", fontsize=24, margin="0.28,0.18"];
+  edge [fontname="Helvetica", fontsize=20, color="#444444"];
+  ranksep=0.4; nodesep=0.3;
+  N [label="claimant sends\na notice\n(web form,\n\"good faith belief\")", fillcolor="#fde8e8", color="#b91c1c"];
+  R [label="host removes\n\"expeditiously\"\n(keeps its\nsafe harbor)"];
+  P [label="poster files a\ncounter-notice\n(sworn; consents\nto be sued)"];
+  W [label="10 to 14\nbusiness days:\ncontent stays down", fillcolor="#fff3e0", color="#ef6c00"];
+  U [label="restored", fillcolor="#e3f1e3", color="#2e7d32"];
+  S [label="claimant sues;\nstays down", fillcolor="#fde8e8", color="#b91c1c"];
+  N -> R -> P -> W; W -> U [label="no lawsuit"]; W -> S [label="lawsuit filed"];
+}
+```
+
+- The claimant's cost: a form. The poster's cost: a sworn statement, a waiting period, and the risk of a federal suit. **That asymmetry is the censorship**
+- Most posters never counter-notice; most notices are never checked by anyone
+- §512(f) allows damages for knowingly false notices and is almost never used
+
+::: {.notes}
+This is the machine behind every "took it down, ask questions later" story. Emphasize the two unequal boxes: the red one is cheap, the sworn counter-notice is expensive, and the orange box is the window of silence. Vibha's question from the responses: a takedown reversed after two weeks is still a complete censorship of a news cycle.
+:::
+
 ## Where §512 Notices Come From: Scanning the Swarm {.smaller}
 
 ::: {.columns}
@@ -365,18 +449,47 @@ a household or a NAT, not a person). Keep the P2P mechanics to a minute; the
 deck is about the legal lever, not the protocol.
 :::
 
+## Anatomy of a Notice {.smaller}
+
+::: {.columns}
+::: {.column width="46%"}
+<!-- recovered from ppt-archive/class/regulatory/11-Legal.pptx slide 37 -->
+![](images/dtecnet-investigation.png){width="92%"}
+
+What the enforcement agent logged (DtecNet, 2008): an IP address, two timestamps, the protocol, a file name and hash, and the studio that owns the match.
+:::
+::: {.column width="54%"}
+<!-- recovered from ppt-archive/class/regulatory/11-Legal.pptx slide 38 -->
+![](images/riaa-notice-email.png){width="86%"}
+
+What the ISP (and then the subscriber) received: a form letter from the RIAA with the same fields pasted in.
+:::
+:::
+
+::: {.notes}
+Two screenshots from the old deck, side by side: the "investigation" is a database row produced by a bot that joined the swarm, and the "notice" is a mail merge of that row. Nobody adjudicates anything in between. Ajer's question (how often does it hit the wrong person, and does anyone check): the answer is in the picture, an IP address and a timestamp, and no.
+:::
+
 ## The $1 Billion Question: Cox v. Sony {.smaller}
 
+::: {.columns}
+::: {.column width="50%"}
+<!-- recovered from ppt-archive/class/regulatory/11-Legal.pptx slide 14 -->
+![](images/cox-2019-verdict-form.png){width="100%"}
+
+The 2019 jury verdict form, E.D. Va.: 10,017 works × $99,830.29 each.
+:::
+::: {.column width="50%"}
 ::: {.vignette}
-**March 25, 2026:** In *Cox Communications v. Sony Music Entertainment*, the
-**Supreme Court reversed** a **$1 billion** verdict against Cox for not
-disconnecting subscribers flagged in copyright notices. An ISP is **not**
-contributorily liable for "merely providing a service... with knowledge that it
-will be used by some to infringe." A concurrence warned this guts the incentive
-to act on notices.
+**March 25, 2026:** the **Supreme Court reversed** the **$1 billion** verdict.
+An ISP is **not** contributorily liable for "merely providing a service... with
+knowledge that it will be used by some to infringe." A concurrence warned this
+guts the incentive to act on notices.
 :::
 
 The stakes of §512: comply and you may have to **cut off your own customers**.
+:::
+:::
 
 ::: {.notes}
 This is the freshest, most on-point hook in the deck — a 9-0 SCOTUS decision
@@ -386,6 +499,46 @@ example; the case has now resolved at the Supreme Court. Teaching point: the
 threat of liability was pushing ISPs to terminate users on the basis of
 unproven notices — exactly the over-removal dynamic. Swap this hook next year
 only if a bigger §512 case lands. Source: SCOTUS opinion 24-171.
+:::
+
+## Content ID Is Not the DMCA {.smaller #contentid}
+
+::: {.columns}
+::: {.column width="56%"}
+```{dot}
+//| fig-width: 6.5
+//| fig-height: 6.2
+digraph cid {
+  rankdir=TB; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#4a6fa5", fontname="Helvetica", fontsize=22, margin="0.25,0.14"];
+  edge [fontname="Helvetica", fontsize=18, color="#444444"];
+  ranksep=0.28; nodesep=0.25;
+  U [label="upload"];
+  F [label="fingerprint matched against\nrightsholders' reference library"];
+  C [label="automatic claim: rightsholder's choice of\nmonetize  |  track  |  block", fillcolor="#fff3e0", color="#ef6c00"];
+  D [label="uploader disputes\n(claimant has 30 days)"];
+  A [label="appeal"];
+  T [label="DMCA takedown + copyright strike", fillcolor="#fde8e8", color="#b91c1c"];
+  K [label="counter-notice (§512 process begins)"];
+  U -> F -> C -> D -> A -> T -> K;
+}
+```
+:::
+::: {.column width="44%"}
+::: {.capture}
+[![](images/captures/youtube-copyright-report.png){width="100%"}](https://transparencyreport.google.com/youtube-copyright/balanced-ecosystem)
+
+YouTube's 2025 copyright transparency report; click to open.
+:::
+
+- 2025: **2.5 billion** claims; about **90%** monetized, not removed
+- Under **1%** disputed; uploaders won about **two thirds** of disputes
+- Over **6%** of webform requests judged **likely false**
+:::
+:::
+
+::: {.notes}
+The matcher is a perceptual fingerprint (not a hash) against a library rightsholders upload; the match threshold is a platform setting, not law (Luke Smith's question). A claim is not a takedown: the default is monetize, which is why 90 percent of claims cost the uploader revenue, not the video. The DMCA, with its counter-notice protections, only applies at the very bottom of the funnel. Daniel de Beer's point from the responses: this system answers to no public process, and at 2.5 billion claims a 1 percent error rate is 25 million wrong claims. Numbers from YouTube's 2025 transparency report.
 :::
 
 ## Copyright Weaponized to Silence Critics {.smaller}
@@ -496,6 +649,8 @@ even the largest firms. Note the contrast with §230's pure immunity.
 The DSA's signature innovation: every moderation action gets a documented,
 machine-readable **Statement of Reasons (SoR)**.
 
+::: {.columns}
+::: {.column width="55%"}
 - What rule was violated, **automated vs. human**, appeal rights, where it was
   restricted
 - All SoRs flow into a **public, centralized Transparency Database**
@@ -503,6 +658,15 @@ machine-readable **Statement of Reasons (SoR)**.
   across platforms
 - Plus: **researcher data access**, ad repositories, mandatory **risk
   assessments**
+:::
+::: {.column width="45%"}
+::: {.capture}
+[![](images/captures/dsa-transparency-db.png){width="100%"}](https://transparency.dsa.ec.europa.eu/)
+
+The DSA transparency database, European Commission. Captured Nov 3 2026; click to open and query it.
+:::
+:::
+:::
 
 ::: {.notes}
 Before the DSA, platforms self-reported in incompatible formats, omitting who
