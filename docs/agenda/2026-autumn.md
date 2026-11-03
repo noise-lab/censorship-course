@@ -339,16 +339,42 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 ### Meeting 10 (Thu Oct 29)
 
+*Reconstructed from the class recording. Breakout discussions and some student remarks were off-microphone and are summarized where they could be made out.*
+
+* **Housekeeping**
+    * Student presentations 4 and 5 are next week (Tuesday November 3 and Thursday November 5)
+    * Week 5 ends the platform chapter; week 6 begins chapter 4 (law and policy). The instructor expects to move through most of chapter 4 next week, so a single reading response covering all of chapter 4 is acceptable for anyone who wants to read ahead
+    * Every private repository now has a Gradebook issue showing which responses and the proposal have been received; if something is missing from it, tell the instructor, who may need to go find it
+* **Framing from the reading responses** (the instructor read from them; this is where the class went instead of the planned lecture)
+    * Personalization carries a positive connotation (relevant content) and censorship a negative one (content withheld), yet "isn't personalization just censorship with extra steps?" In moderation the problem is what gets removed; in personalization it is what never gets shown, which is harder to detect, as Tuesday's discussion of proving a downranking also found. In Roberts's terms, ranking is friction; the question is whether the era of feeds changes that
+    * Is the bubble the algorithm or us? The loop is both: our clicks, scrolls, and watch time feed the predictions that decide what is shown, and the omissions are the censorship piece. "Blame" may be the wrong word; agency is the better one
+    * How much control do users have, and should there be more? Some platforms expose a dial (opting out of personalized ads is not the same as turning off personalization). Why do Google and the large platforms not offer user-facing controls, and would regulation requiring them have a downside the advocacy usually skips?
+* **Breakout 1** (ten minutes, then whole-class discussion): is personalization censorship; is the problem the algorithm or us; how much control do we have and do we use it; should there be more, and from whom?
+    * Report-backs: friction, flooding, and personalization are all forms of information control with similar effects, so the question becomes intent; the content is still reachable, which makes it friction rather than removal. A student drew a distinction the instructor said he had not drawn before: being fed things while passively scrolling a feed versus actively searching for something and being given something else. Another student argued personalization can keep you from finding something even when you search for it, which the instructor called an open research question worth measuring
+    * The instructor noted the distinction cuts both ways: passive feeding is not automatically harmless, since the feed is optimized for engagement rather than for information; a student later called that choice "coercive," since it is not a free decision, and another called the design "predatory." Whether a 13-year-old and a 40-year-old have the same agency came up, with the recent lawsuits against Meta over addictive design as context
+    * Other threads: a student proposed paying a subscription for an algorithm whose goal is to help you navigate rather than maximize engagement (the instructor agreed the goals differ: good navigation gets you out faster). Advertising personalization steers you toward products in the seller's interest. Deciding whether personalization is censorship is "I know it when I see it" (Jacobellis v. Ohio), that is, context-dependent. Personalization requires collecting data, which is then stored and breachable, and claims that a given purpose requires a given collection (age verification was the example) deserve auditing. The instructor remarked that the course increasingly veers into surveillance and privacy
+    * On control: screen-time apps and personal responsibility; regulation that is effective but outside the user's hands
+* **Breakout 2** (about four minutes): should platforms be forced by law to disclose how they decide what to show you, and if so in what shades of grey (which signals are used versus how), given that the ranking model is the company's revenue engine and a small change is worth billions?
+    * Report-backs: a student checked Google's ad center and found it had their age wrong (classified as a minor), raising the question of whether people even care to correct an inaccurate profile, which the instructor flagged as a good HCI paper. Disclosure touches competitive advantage, so platforms will resist, and the model may be hard to explain even internally. Choosing communities (Discord servers, group chats, Bluesky feeds) is itself a form of control, and community suggestions are personalization too. A student reported that Bluesky lets users pick among ranking algorithms (custom feeds); the instructor asked for a screenshot, and a student later posted Bluesky's "algorithmic choice" post in Slack
+    * The DSA's researcher data-access provisions were shown as the regulatory version of the question
+* **Hands-on, amended live: [finding your own filter bubble](../activities/bubbles.md)** (about ten minutes, in groups)
+    * Part 1 (search engines, varying login, incognito, Tor, phone versus browser, geography) is the original exercise; Part 2 (feeds) was added during class; Part 3 (chatbots) was added this week: run the same questions through a chatbot from different locations or profiles and see what changes, with the caveat that chatbot output is stochastic. The instructor noted that with chatbots you often cannot even see the sources behind the synthesis, so transparency is one step worse than with search results
+    * Report-back: a group that compared chatbots found they pulled similar data points and reached different conclusions. A student recalled chatbots giving confidently wrong health or medication advice. A student argued that a chatbot trained on its own company's documentation and policies will be less objective than one that is not, and that the line between advertising and training is blurring; the instructor agreed this is new and worth more thought
+* **Not covered:** the lecture deck beyond the personalization-loop and DSA slides (the Bobble measurement study, geography versus profile, ranking as removal, profile pollution, data voids, algospeak). The planned breakout on chronological feeds by default did not run. The slides are posted
+* **Next:** copyright (book 4.2), Tuesday November 3, with student presentation 4
+
+### Meeting 11 (Tue Nov 3)
+
 *Plan; replaced with the record after class.*
 
-- Housekeeping: week-6 response (book 4.2–4.3) due Tuesday November 3 at 9 am; presentations 4 (November 3) and 5 (November 5); project proposals and the Gradebook issue
-- Reading-response discussion on 3.7: is the filter bubble the algorithm's doing or the user's; whether a recommender can be audited from outside; chatbots answering into data voids
-- Lecture: personalization as quiet information control
-    - Benign to political: the same code path, from a local store listing to two different pages for "Egypt"
-    - What the evidence says about filter bubbles, passive signals, and the contested YouTube rabbit hole
-    - Measuring the bubble: the Bobble study, geography versus profile, ranking as removal, one ballot measure seen from two states
-    - Personalization as an attack surface: profile pollution, data voids, chatbots, and algospeak as a second-order bubble
-    - Regulators and transparency: DSA data access and the New York feed laws
-- Hands-on: [finding your own filter bubble](../activities/bubbles.md)
-- Breakout, as time permits: [chronological by default](../breakouts/personalization.md)
-- Next: copyright (book 4.2), Tuesday November 3
+- Housekeeping: week-7 response (book 4.4–4.5) due Tuesday November 10 at 9 am; presentation 5 on Thursday; the Gradebook issue
+- Reading-response discussion on 4.2: when enforcement becomes censorship (intent, legality, or consequence); error rates in Content ID and who bears the burden of a wrong match; IP addresses as evidence in a BitTorrent swarm. Net-neutrality questions are saved for Thursday
+- Student presentation 4: denial of service
+- Lecture: copyright as a censorship tool
+    - The DMCA's two levers: §512 notice-and-takedown (cheap to obey, expensive to contest) and §1201 anti-circumvention
+    - Where notices come from: scanning the swarm, and why an IP address is thin evidence
+    - Cox v. Sony: the $1 billion verdict and the Supreme Court's 2026 reversal
+    - Copyright weaponized against critics and researchers; the CFAA; SLAPPs
+- Hands-on: [takedown archaeology](../activities/copyright.md), Part 1
+- Breakout, as time permits: [should false claims carry real costs](../breakouts/copyright.md)
+- Next: net neutrality (book 4.3), Thursday November 5, with student presentation 5
