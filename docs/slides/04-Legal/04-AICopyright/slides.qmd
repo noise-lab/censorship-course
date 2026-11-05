@@ -24,26 +24,30 @@ header-includes: |
     .reveal .capture p { font-size: 0.55em; color: #555; margin-top: 0.2em; }
     .reveal .vignette { font-size: 0.95em; }
     .reveal li { line-height: 1.3; margin-bottom: 0.25em; }
-    .reveal table { font-size: 0.7em; }
+    .reveal table { font-size: 0.85em; }
     .reveal pre, .reveal code { font-size: 0.72em; }
   </style>
 ---
 
-## Why a Detour {.center}
+## Copyright Enforcement Meets Generative AI {.center}
 
-Tuesday's responses asked three things the copyright chapter does not answer:
-how the copyright detectors actually work, what happens when the content is machine-made,
-and who owns what a model produces. There is enough law from the last eighteen
-months to fill a class. Net neutrality moves to Tuesday.
+The copyright lecture ended with a machine: a notice regime that acts first and
+asks later, and automated detectors that compare every upload to a library of
+known works. That machine assumes two things: a human made the upload, and the
+original exists somewhere to compare against. Generative AI breaks both
+assumptions, and the courts, the labels, and the platforms have spent the last
+eighteen months deciding what replaces them.
 
 ::: {.notes}
-Say the sync plan out loud: today is a new class slotted in; Tuesday Nov 10
-takes net neutrality and zero rating together (4.3–4.5, the economics of
-access), and the rest of the calendar is unchanged. The week-7 response (4.4–4.5)
-is still due Tuesday 9 am.
+Self-contained opener. Two assumptions, both broken: the uploader may be a
+model, and the "original" may be inside the model rather than in a reference
+library. Everything that follows is one of those two failures. In Autumn 2026
+this class was inserted after the copyright lecture because the reading
+responses asked for it; the housekeeping about the schedule goes here, not on
+the slide.
 :::
 
-## Three Threads From Tuesday {.smaller}
+## Three Questions This Lecture Answers {.smaller}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -58,14 +62,16 @@ is still due Tuesday 9 am.
   **pre-AI**: they compare uploads to a library of references
 - Generative models break both ends: the upload may have **no reference**, and
   the reference may be **inside the model**
-- Section 230 questions from Tuesday: one slide near the end
+- A Section 230 coda: the intermediary-liability questions that always come
+  up alongside copyright
 :::
 :::
 
 ::: {.notes}
-Thread 1 was Vibha's and Abani's; thread 2 was Pietro's, Luke's, Nhi's, and
-Avni's; thread 3 was a dozen responses (Vivienne, Sandy, Sabrina, Chris, Daniel,
-Ajer, Marton, Luca, Margaret). Use names only from the guide.
+In Autumn 2026: thread 1 was Vibha's and Abani's; thread 2 was Pietro's,
+Luke's, Nhi's, and Avni's; thread 3 was a dozen responses (Vivienne, Sandy,
+Sabrina, Chris, Daniel, Ajer, Marton, Luca, Margaret). Use names only from the
+guide.
 :::
 
 # How Content ID Works {.center}
@@ -82,8 +88,9 @@ Ajer, Marton, Luca, Margaret). Use names only from the guide.
   normalization?
 - **Perceptual hash**: does it *look* the same after resize, recolor,
   recompress?
-- **Spectral** (Audible Magic, Content ID): does it *sound* the same, peak for
-  peak, after re-encoding, trimming, renaming?
+- **Spectral** (Audible Magic; YouTube's **Content ID**, the copyright
+  detector that scans every upload): does it *sound* the same, peak for peak,
+  after re-encoding, trimming, renaming?
 - The platform stores the fingerprint, not the work, and compares against a
   **reference library** rightsholders upload
 :::
@@ -109,7 +116,7 @@ the two spectral envelopes line up. Nothing reads the filename or the lyrics.
   codes
 - Lookup: an **inverted index** of codes, then a time-histogram vote picks the
   reference
-- The match threshold is a **platform setting**, not law (Luke's question)
+- The match threshold is a **platform setting**, not law
 - A cover with different timing, a parody, a new recording: **no match**
 :::
 :::
@@ -280,7 +287,7 @@ copies. The hands-on's first experiment is the GEMA test.
 - **Copyright Office, Part 3** (May 2025, pre-publication): training is
   "often transformative" but not automatically fair use; rejects the
   "it learns like a human" analogy; calls for **licensing mechanisms**
-- Luca's point from the responses: if meaningful human contribution is the
+- A student's point from the responses: if meaningful human contribution is the
   test, a lot of today's software is on the wrong side of it
 :::
 ::: {.column width="45%"}
@@ -300,34 +307,52 @@ is why the labels' deals (next slide) are about the *input* side.
 
 ## Music: The Labels Settle, Then Sue Again {.smaller}
 
-- **Oct 29 2025:** Universal settles with **Udio** and licenses it; a
-  walled-garden, opt-in platform for 2026
-- **Nov 19 2025:** Warner settles with Udio. **Nov 25 2025:** Warner settles
-  with **Suno**, which commits to licensed models and buys Songkick
-- **Sony** keeps litigating; **Sep 18 2026:** Universal and Sony file a *new*
-  complaint against Suno over **60,202 recordings**; the Massachusetts
-  schedule puts a fair-use ruling in **2027**
-- **Jun 5 2026:** the musicians' union (AFM) sues Universal and Warner for
-  licensing members' recordings into the AI deals without pay or disclosure
-- **Sep 2026:** a class of musicians sues Suno over **right of publicity**: the
-  model "encodes their identities"
+**Suno** and **Udio** generate full songs from a text prompt. The three major
+labels sued both in June 2024 for training on their catalogues. Since then:
+
+| When | What happened |
+|---|---|
+| Oct 29 2025 | **Universal settles with Udio** and licenses its catalogue; Udio becomes an opt-in, walled-garden platform (songs stay inside the app) |
+| Nov 19 2025 | **Warner settles with Udio** on similar terms |
+| Nov 25 2025 | **Warner settles with Suno**: licensed models in 2026, old models phased out, Suno buys Songkick |
+| Jun 5 2026 | The musicians' union (**AFM**) sues Universal and Warner for licensing members' recordings into the AI deals without pay or disclosure |
+| Sep 2026 | A class of musicians sues Suno over **right of publicity**: the model "encodes their identities" |
+| Sep 18 2026 | **Universal and Sony** file a new complaint against Suno over **60,202 recordings**; a fair-use ruling in Massachusetts is now a 2027 event |
 
 ::: {.notes}
-Margaret and Chris asked about AI-music lawsuits; this is the state of play.
-The pattern is the DMCA pattern from Tuesday one level up: the fight is not
-over whether the output infringes but over who gets paid for the input. The
-walled garden is the licensing-market theory made into a product.
+Context the slide cannot carry. Suno and Udio are the two big text-to-music
+services; anyone can type "upbeat country song about a truck" and get a
+finished track with vocals. The labels' theory is the training theory from the
+previous slides: the models learned from licensed recordings without
+permission. What changed in late 2025 is that two of the three majors stopped
+litigating and started licensing, which is the Third Circuit's "licensing
+market" made real: the labels get paid for the input and in return the
+services agree to keep outputs inside a walled garden where the label controls
+distribution. Sony is the holdout, and the Sep 2026 complaint lists 60,202
+specific recordings so the case can proceed on direct infringement rather than
+the abstract fair-use question. The two 2026 suits against the labels and
+against Suno are the new front: the musicians whose recordings were licensed,
+and whose voices the model can imitate, were not at the table. Tie back to
+Chris Deng's question (can an AI company own the song?): no, nobody can under
+Thaler, so the money is all on the input side. Tie forward: the licensing deal
+decides what the model may learn, which is the censorship point on slide 18.
 :::
 
 # The Platforms Build Something Else {.center}
 
 ## From Content ID to Content Identity {.smaller}
 
+**Content ID** is YouTube's copyright detector: rightsholders upload reference
+audio and video, every upload is fingerprinted and compared, and a match
+becomes a **claim** (monetize, track, or block) with no person involved. About
+2.5 billion claims in 2025. In 2025–26 YouTube built the same machine for a
+different reference library: **people**.
+
 ::: {.columns}
 ::: {.column width="55%"}
-- **Likeness detection** (YouTube): a Content-ID-style detector for **faces**
-  in AI-generated video. Pilot in 2025; politicians, officials, and journalists
-  in spring 2026; **Apr 21 2026:** entertainers, with CAA, UTA, and WME
+- **Likeness detection:** a Content-ID-style detector for **faces** in
+  AI-generated video. Pilot in 2025; politicians, officials, and journalists
+  in spring 2026; entertainers from Apr 21 2026, with CAA, UTA, and WME
 - Enrolment needs a government ID and a selfie video; a match hands the
   person a **list** and a choice: privacy removal, copyright removal, or let
   it stand
@@ -347,9 +372,13 @@ Music Ally, Apr 24 2026. Click to open.
 :::
 
 ::: {.notes}
-Nhi asked whether fingerprinting could be built for other media; the answer
-arrived this year, for faces and voices, and the reference library is now a
-library of *people*. The Baltimore Law Review piece calls it the move from
+Say what Content ID is before anything else, since the deck has only described
+the fingerprinting underneath it: YouTube's system, launched 2007, rightsholder
+references, automatic claims, and the 2025 transparency numbers from Tuesday
+(2.5 billion claims, 90 percent monetized rather than removed, under 1 percent
+disputed). Nhi asked whether fingerprinting could be built for other media; the
+answer arrived this year, for faces and voices, and the reference library is
+now a library of *people*. The Baltimore Law Review piece calls it the move from
 Content ID to Content Identity. Note the asymmetry with Content ID: a copyright
 claim acts automatically; a likeness match hands you a list and waits.
 :::
@@ -358,49 +387,80 @@ claim acts automatically; a likeness match hands you a list and waits.
 
 ```{dot}
 //| fig-width: 12
-//| fig-height: 3.8
-digraph two {
+//| fig-height: 1.6
+digraph cid {
   rankdir=LR; bgcolor="transparent";
-  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=20, margin="0.22,0.14"];
-  edge [fontname="Helvetica", fontsize=17, color="#444444"];
-  ranksep=0.45; nodesep=0.35;
-  subgraph cluster_a { label="Content ID (2007)"; fontname="Helvetica"; fontsize=20; color="#aaaaaa";
-    A1 [label="rightsholder uploads\nreference works", fillcolor="#fff3e0", color="#ef6c00"];
-    A2 [label="match on upload", fillcolor="#eef3fb", color="#4a6fa5"];
-    A3 [label="automatic claim:\nmonetize / track / block", fillcolor="#fde8e8", color="#b91c1c"];
-    A1 -> A2 -> A3;
-  }
-  subgraph cluster_b { label="Likeness detection (2025–26)"; fontname="Helvetica"; fontsize=20; color="#aaaaaa";
-    B1 [label="person enrolls\nID + selfie video", fillcolor="#fff3e0", color="#ef6c00"];
-    B2 [label="match in AI-generated\nvideo", fillcolor="#eef3fb", color="#4a6fa5"];
-    B3 [label="a list; the person chooses:\nremove, claim, or leave", fillcolor="#e3f1e3", color="#2e7d32"];
-    B1 -> B2 -> B3;
-  }
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=22, margin="0.25,0.15"];
+  edge [color="#444444", penwidth=1.5];
+  nodesep=0.4;
+  T [label="Content ID (2007)", shape=plaintext, fontsize=22];
+  A1 [label="rightsholder uploads\nreference works", fillcolor="#fff3e0", color="#ef6c00"];
+  A2 [label="match on upload", fillcolor="#eef3fb", color="#4a6fa5"];
+  A3 [label="automatic claim: revenue\nredirected or video blocked", fillcolor="#fde8e8", color="#b91c1c"];
+  T -> A1 [style=invis]; A1 -> A2 -> A3;
 }
 ```
 
-- Same architecture, opposite defaults: one removes revenue **before anyone
-  looks**, the other **waits for a human**
-- Which default would you want for political deepfakes two weeks before an
-  election? For a parody of a celebrity?
+```{dot}
+//| fig-width: 12
+//| fig-height: 1.6
+digraph lik {
+  rankdir=LR; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=22, margin="0.25,0.15"];
+  edge [color="#444444", penwidth=1.5];
+  nodesep=0.4;
+  T [label="Likeness detection (2025–26)", shape=plaintext, fontsize=22];
+  B1 [label="person enrolls:\nID + selfie video", fillcolor="#fff3e0", color="#ef6c00"];
+  B2 [label="match in AI-generated\nvideo", fillcolor="#eef3fb", color="#4a6fa5"];
+  B3 [label="a list for the person,\nwho chooses what to do", fillcolor="#e3f1e3", color="#2e7d32"];
+  T -> B1 [style=invis]; B1 -> B2 -> B3;
+}
+```
 
-## The Censorship Angle {.smaller}
+- Same architecture, opposite defaults. **Content ID acts first:** the claim
+  is automatic and the uploader's revenue moves before any person looks.
+  **Likeness detection waits:** the match is a notification, and nothing
+  happens until the enrolled person asks
+- The default is the policy. Automatic enforcement over-removes and favors the
+  claimant; a human in the loop under-removes and favors the speaker. YouTube
+  chose the first for copyright and the second for faces
 
-- **The window of silence** does not care who made the content: an AI-made
-  takedown and a human-made one both lose the news cycle while the counter-notice
-  waits
-- **AI cats, AI mice** (Meeting 9): generative models produce the content and
-  the moderation; both sides automate, and the detector in the middle sees
-  only what it has a reference for
-- **Licensing as a gate on learning:** if training must be licensed, catalogue
-  owners decide what a model may learn from. That is the filter bubble at the
-  training stage, with the same measurement problem: you cannot see what was
-  left out
-- **Which model you pick is the policy** (Meeting 9): a platform that
-  moderates with one model and a rightsholder that trains on one catalogue
-  are each making a speech decision outside public view
+::: {.notes}
+Walk the two rows top to bottom; they are the same three boxes. The point is
+the third box. Ask the room which default they would want for a deepfake of a
+candidate posted the week before an election (fast removal matters) and for a
+parody of a celebrity (fair use matters), and notice that the answer flips.
+That is the Tuesday asymmetry again: whoever designs the default decides who
+bears the cost of a mistake.
+:::
 
-## Section 230, Tabled From Tuesday {.smaller}
+## What This Means for Information Control {.smaller}
+
+Three ways generative AI changes copyright as an information-control lever:
+
+1. **The takedown gets cheaper and the counter-notice does not.** Generative
+   tools produce claims as easily as content, and the window of silence
+   (two weeks down, then restored) is the same whether a human or a
+   model made the thing that came down
+2. **The detector decides what it can see.** Content ID catches memorized
+   copies of a label's song and misses a synthetic song entirely; likeness
+   detection catches an enrolled face and misses everyone who did not enroll.
+   Each reference library is a policy about whose interests the system
+   protects
+3. **Licensing becomes a gate on learning.** If training requires a licence,
+   catalogue owners decide what a model may learn from, and a model that never
+   saw a work cannot surface it. That is the filter bubble at the training
+   stage, with the same measurement problem: nobody can see what was left out
+
+::: {.notes}
+This replaces the earlier grab-bag. One sentence each, then move on. Point 2
+is the one to dwell on: a detector's blind spots are a choice, made by whoever
+decides what goes in the reference library, exactly as PhotoDNA's hash list is
+where its policy lives (Meeting 9). Point 3 connects to the personalization
+class: what a model never learned is as invisible as what a feed never showed.
+:::
+
+## Section 230: Three Questions That Always Come Up {.smaller}
 
 - **Is there a precedent?** Yes: the *distributor* vs *publisher* line.
   A bookstore is not liable for every book it sells (*Smith v. California*,
@@ -411,26 +471,37 @@ digraph two {
   the geolocation and viewpoint-versus-policy problems remain (legal deck,
   slides 10–11)
 - **Social media as a public utility?** That is the net-neutrality question
-  pointed at platforms, which half of you asked in the week-6 responses.
-  Tuesday.
+  pointed at platforms: must a carrier carry everyone? The next lecture, on
+  the economics of access, takes it up for the pipes; the same argument is now
+  made about the platforms
 
-## Today, and Next {.smaller}
+## Hands-On: Can the System Tell? {.smaller}
 
-::: {.columns}
-::: {.column width="50%"}
-**Hands-on:** [Can the system tell?](../../../activities/ai-copyright.md)
+Three experiments, in pairs, twenty minutes
+([instructions](../../../activities/ai-copyright.md)):
 
-1. The memorization test (ask two chatbots for lyrics)
-2. The provenance test (C2PA verify; YouTube's synthetic label)
-3. The reference test (a Suno song on YouTube)
+1. **The memorization test.** Ask two chatbots for the full lyrics of an
+   English-language hit and of a German song by a GEMA artist, then for the
+   first paragraph of a famous novel. Which ones recite, which refuse, and is
+   the rule about lyrics, about copyright, or about one rightsholder?
+2. **The provenance test.** Run an AI-generated image and a news photograph
+   through a C2PA verifier: does either carry signed provenance? Then find a
+   YouTube video with the synthetic-content label and an obviously AI-made one
+   without it. Who applied the label?
+3. **The reference test.** Find a song made with Suno or Udio on YouTube or
+   Spotify. Is it labelled? Monetized? If the model was trained on a licensed
+   catalogue, who is the rightsholder, and what would a Content ID reference
+   even be?
 
-**Breakout, as time permits:** [Training is fair use, the library is not](../../../breakouts/copyright.md)
-:::
-::: {.column width="50%"}
-**Tuesday Nov 10: the economics of access.** Net neutrality, zero rating, and
-demonetization together (book 4.3–4.5); your parked net-neutrality questions
-open the class. Week-7 response (4.4–4.5) due Tuesday 9 am.
+**Report back:** the one result that surprised you, and whether it moves you
+toward "the detectors can handle this" or "they were built for a world that no
+longer exists."
 
-**Then:** measurement (chapter 5) from Nov 12.
-:::
+**Discussion, as time permits:** [training is fair use, the library is not](../../../breakouts/copyright.md).
+
+::: {.notes}
+Autumn 2026 logistics: Tuesday Nov 10 is the economics of access (net
+neutrality, zero rating, demonetization, book 4.3–4.5); the week-7 response
+(4.4–4.5) is due Tuesday 9 am. Expect the memorization test to split by model
+and by rightsholder, which is the GEMA point from slide 12.
 :::
