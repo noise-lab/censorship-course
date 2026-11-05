@@ -389,7 +389,7 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 - Housekeeping: week-7 response (book 4.4–4.5) due Tuesday November 10 at 9 am; the schedule change (Tuesday is the economics of access, 4.3–4.5, with the parked net-neutrality questions)
 - Student presentation 5: disinformation
-- Lecture: [AI, copyright, and the matcher](../slides/04-Legal/04-AICopyright/slides.html)
+- Lecture: AI, copyright, and the matcher (a new deck; slides are not published on the site)
     - How a matcher works: three families of fingerprint, inside an audio fingerprinter, and what a matcher cannot see (no reference, no context)
     - AI meets copyright as three questions: was training lawful (Bartz, Kadrey, Thomson Reuters v. Ross, NYT v. OpenAI); does the model contain a copy (GEMA v. OpenAI, Getty v. Stability); who owns the output (Thaler, the Copyright Office reports)
     - The music settlements and the suits that followed
