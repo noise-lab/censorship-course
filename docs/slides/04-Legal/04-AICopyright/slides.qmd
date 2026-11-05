@@ -1,5 +1,5 @@
 ---
-title: "AI, Copyright, and Content ID"
+title: "AI and Copyright"
 subtitle: "Internet Censorship and Online Speech"
 author: "Nick Feamster · University of Chicago"
 header-includes: |
@@ -523,7 +523,7 @@ longer exists."
 **Discussion, as time permits:** [should training a model on a work require a licence?](../../../breakouts/copyright.md)
 
 ::: {.notes}
-Autumn 2026 logistics: Tuesday Nov 10 is the economics of access (net
+Autumn 2026 logistics: Tuesday Nov 10 is economic controls (net
 neutrality, zero rating, demonetization, book 4.3–4.5); the week-7 response
 (4.4–4.5) is due Tuesday 9 am. Expect the memorization test to split by model
 and by rightsholder, which is the GEMA point from slide 12.

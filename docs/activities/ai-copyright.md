@@ -1,4 +1,4 @@
-# AI, Copyright, and Content ID
+# AI and Copyright
 
 ## Part 1 (in class, 20 minutes): Can the system tell?
 

@@ -387,9 +387,9 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 *Plan; replaced with the record after class.*
 
-- Housekeeping: week-7 response (book 4.4–4.5) due Tuesday November 10 at 9 am; the schedule change (Tuesday is the economics of access, 4.3–4.5, with the parked net-neutrality questions)
+- Housekeeping: week-7 response (book 4.4–4.5) due Tuesday November 10 at 9 am; the schedule change (Tuesday is economic controls, 4.3–4.5, with the parked net-neutrality questions)
 - Student presentation 5: disinformation
-- Lecture: AI, copyright, and Content ID (a new deck; slides are not published on the site)
+- Lecture: AI and copyright (a new deck; slides are not published on the site)
     - How Content ID works: three families of fingerprint, inside an audio fingerprinter, and what the detector cannot see (no reference, no context)
     - AI meets copyright as three questions: was training lawful (Bartz, Kadrey, Thomson Reuters v. Ross, NYT v. OpenAI); does the model contain a copy (GEMA v. OpenAI, Getty v. Stability); who owns the output (Thaler, the Copyright Office reports)
     - The music settlements and the suits that followed
@@ -397,4 +397,4 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     - The censorship angle, and the Section 230 questions tabled on Tuesday
 - Hands-on: [can the system tell?](../activities/ai-copyright.md): does the model recite lyrics; does an AI image carry C2PA provenance; does Shazam recognize a Suno song
 - Breakout, as time permits: [should training a model on a work require a licence?](../breakouts/copyright.md)
-- Next: the economics of access (book 4.3–4.5), Tuesday November 10
+- Next: economic controls (book 4.3–4.5), Tuesday November 10
