@@ -182,32 +182,28 @@ the first half of 3; nobody has settled the second half.
 
 ## Question 1 in US Courts: Training {.smaller}
 
-::: {.columns}
-::: {.column width="58%"}
-| Case | Court, date | Holding |
+| Case | Who sued whom | Holding |
 |---|---|---|
-| **Bartz v. Anthropic** | N.D. Cal., Jun 2025 | Training on bought books: **fair use**. Keeping a pirated library: **not**. $1.5B settlement, final approval **Jul 20 2026** |
-| **Kadrey v. Meta** | N.D. Cal., Jun 2025 | Fair use **on this record**; "market dilution" would often win if proven |
-| **Thomson Reuters v. Ross** | 3d Cir., **Sep 29 2026** | First appellate ruling: copying headnotes to train a rival tool is **not** fair use |
-| **NYT v. OpenAI** | S.D.N.Y. | Summary judgment on fair use **pending**; replies due Nov 6 2026 |
-:::
-::: {.column width="42%"}
-::: {.capture}
-[![](images/captures/jurist-anthropic.png){width="100%"}](https://www.jurist.org/news/2026/07/judge-approves-record-1-5-billion-settlement-involving-anthropic/)
-
-JURIST, Jul 22 2026: final approval of the Bartz settlement. Captured Nov 5 2026; click to open.
-:::
-:::
-:::
+| **Bartz v. Anthropic** (N.D. Cal., Jun 2025) | Authors vs. Anthropic, for training Claude on their books | Training on books Anthropic **bought** was fair use. Downloading millions of **pirated** books to keep as a library was not. Anthropic settled the piracy claim for **$1.5B**; final approval Jul 20 2026 |
+| **Kadrey v. Meta** (N.D. Cal., Jun 2025) | 13 authors vs. Meta, for training Llama on their books | Fair use, because these plaintiffs offered **no evidence** that Llama hurt sales of their books. The judge said a plaintiff who proves the model floods their market would likely win |
+| **Thomson Reuters v. Ross** (3d Cir., Sep 29 2026) | Westlaw's owner vs. a startup that copied Westlaw's **headnotes** (short editorial summaries of the point of law in each court opinion) to train a competing legal-search tool | **Not** fair use: the tool was not generative, competed directly with Westlaw, and the headnotes could have been licensed. First appeals-court ruling on AI training |
+| **NYT v. OpenAI** (S.D.N.Y.) | The Times vs. OpenAI and Microsoft, for training on its articles and reproducing them | **Undecided**: summary-judgment briefs on fair use complete Nov 6 2026 |
 
 ::: {.notes}
-Daniel's line from the responses: "Sci-Hub is illegal, but training on
-Sci-Hub's corpus is fair use. Is that a coherent position?" Bartz is exactly
-that: the training was fair use, the library was not, and the money ($1.5
-billion, about $3,000 per work, 91 percent claims rate) paid for the library.
-Ross is the one appellate word so far and it is narrow: a non-generative tool
-that competed directly with the plaintiff. NYT: the Cox decision from
-Tuesday's deck already cut the secondary-liability claims in August.
+Read the holdings column slowly; each is a different reason. Bartz: the act
+of training is "quintessentially transformative" (Alsup), but how you got the
+copies is a separate question, and the pirated library is what cost $1.5
+billion (about $3,000 per work; 91 percent of eligible authors claimed).
+Kadrey: not a ruling that training is lawful in general; Chhabria said so
+explicitly. The thirteen authors simply did not put in evidence of harm, and
+he spent pages explaining how the next plaintiff could. Ross: a headnote is
+the one-paragraph summary a Westlaw editor writes above each opinion ("the
+court held that..."); Ross used thousands of them as training examples for a
+search engine that answered legal questions, i.e. a direct Westlaw substitute,
+and the Third Circuit called it "no more than an ordinary copyright case".
+NYT: the Cox decision from the copyright lecture already removed the
+secondary-liability claims in August 2026; the direct claims are what the
+pending motions decide.
 :::
 
 ## Fair Use's Fourth Factor: Which Market Counts? {.smaller}
