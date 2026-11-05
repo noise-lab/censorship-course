@@ -237,7 +237,8 @@ runs through catalogue owners, which is a gate on what models may learn.
 
 ::: {.columns}
 ::: {.column width="55%"}
-- **GEMA v. OpenAI** (Munich, Nov 11 2025): ChatGPT recited lyrics by
+- **GEMA v. OpenAI** (Munich, Nov 11 2025; GEMA is Germany's music rights
+  society, the ASCAP/BMI equivalent): ChatGPT recited lyrics by
   Grönemeyer and Fischer verbatim; the court held the lyrics were
   **memorized in the weights**, which is a **reproduction** the text-and-data-mining
   exception does not cover. Users are not to blame for simple prompts. Under appeal

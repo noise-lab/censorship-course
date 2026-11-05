@@ -6,7 +6,8 @@ Tuesday's question was how automated copyright matching works and what it can
 and cannot see. Today the content is machine-made. In pairs, with a laptop, run
 three quick experiments and write down what you find.
 
-1. **The memorization test (the GEMA question).** The Munich court held that
+1. **The memorization test (the GEMA question).** GEMA is Germany's music
+   rights society (the ASCAP/BMI equivalent). In its suit, the Munich court held that
    ChatGPT reproducing song lyrics verbatim was a copyright reproduction, and
    ordered OpenAI not to do it for GEMA-represented artists without a licence.
    Ask two different chatbots for the full lyrics of (a) a well-known
