@@ -1,0 +1,430 @@
+---
+title: "AI, Copyright, and the Matcher"
+subtitle: "Internet Censorship and Online Speech"
+author: "Nick Feamster · University of Chicago"
+header-includes: |
+  <style>
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6,
+    .reveal .title, .reveal .subtitle,
+    section.title-slide h1, section.title-slide .subtitle {
+      text-transform: none !important;
+      letter-spacing: normal !important;
+    }
+    .reveal h1, .reveal .smaller h1, .reveal section.smaller h1 { font-size: 46px !important; }
+    .reveal h2, .reveal .smaller h2, .reveal section.smaller h2 { font-size: 38px !important; }
+    .reveal h3, .reveal .smaller h3, .reveal section.smaller h3 { font-size: 30px !important; }
+    section.title-slide h1 { font-size: 56px !important; }
+    section.title-slide .subtitle { font-size: 32px !important; }
+    .reveal { font-size: 36px; }
+    .reveal .cell-output-display svg { width: 100% !important; height: auto !important; }
+    #threeq .cell-output-display svg { width: auto !important; height: 420px !important; margin: 0 auto; }
+    .reveal .smaller, .reveal section.smaller { font-size: 0.95em; }
+    .reveal ul, .reveal ol, .reveal p, .reveal blockquote { font-size: 1.0em; }
+    .reveal .capture img { border: 1px solid #999; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+    .reveal .capture p { font-size: 0.55em; color: #555; margin-top: 0.2em; }
+    .reveal .vignette { font-size: 0.95em; }
+    .reveal li { line-height: 1.3; margin-bottom: 0.25em; }
+    .reveal table { font-size: 0.7em; }
+    .reveal pre, .reveal code { font-size: 0.72em; }
+  </style>
+---
+
+## Why a Detour {.center}
+
+Tuesday's responses asked three things the copyright chapter does not answer:
+how the matchers actually work, what happens when the content is machine-made,
+and who owns what a model produces. There is enough law from the last eighteen
+months to fill a class. Net neutrality moves to Tuesday.
+
+::: {.notes}
+Say the sync plan out loud: today is a new class slotted in; Tuesday Nov 10
+takes net neutrality and zero rating together (4.3–4.5, the economics of
+access), and the rest of the calendar is unchanged. The week-7 response (4.4–4.5)
+is still due Tuesday 9 am.
+:::
+
+## Three Threads From Tuesday {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+1. **Enforcement or censorship?** The notice regime acts first and asks later;
+   a takedown reversed in two weeks has already censored the news cycle
+2. **How does the matcher work,** and what does it do with content a machine
+   made?
+3. **Who owns the output,** and was the training lawful?
+:::
+::: {.column width="50%"}
+- The book's matchers (Content ID, Rights Manager, Audible Magic) are
+  **pre-AI**: they compare uploads to a library of references
+- Generative models break both ends: the upload may have **no reference**, and
+  the reference may be **inside the model**
+- Section 230 questions from Tuesday: one slide near the end
+:::
+:::
+
+::: {.notes}
+Thread 1 was Vibha's and Abani's; thread 2 was Pietro's, Luke's, Nhi's, and
+Avni's; thread 3 was a dozen responses (Vivienne, Sandy, Sabrina, Chris, Daniel,
+Ajer, Marton, Luca, Margaret). Use names only from the guide.
+:::
+
+# How the Matcher Works {.center}
+
+## Three Families of Fingerprint {.smaller}
+
+::: {.columns}
+::: {.column width="58%"}
+<!-- figure from 03-Platform/01-Platform (ppt-archive/class/platform/09-Platform.pptx slide 20) -->
+![](images/spectral-fingerprint-match.png){width="100%"}
+:::
+::: {.column width="42%"}
+- **Exact hash** (PhotoDNA): is this the same file, bit for bit, after
+  normalization?
+- **Perceptual hash**: does it *look* the same after resize, recolor,
+  recompress?
+- **Spectral** (Audible Magic, Content ID): does it *sound* the same, peak for
+  peak, after re-encoding, trimming, renaming?
+- The platform stores the fingerprint, not the work, and compares against a
+  **reference library** rightsholders upload
+:::
+:::
+
+::: {.notes}
+Pietro asked how it works under the hood; this and the next slide are the
+answer. The picture: top is the uploaded file, bottom is the label's reference;
+the two spectral envelopes line up. Nothing reads the filename or the lyrics.
+:::
+
+## Inside an Audio Fingerprinter {.smaller}
+
+::: {.columns}
+::: {.column width="56%"}
+<!-- figure from 03-Platform/01-Platform (Echoprint pipeline, The Echo Nest, 2011; via Leiden University) -->
+![](images/slide021_img021.png){width="100%"}
+:::
+::: {.column width="44%"}
+- Downsample to **11 kHz mono**, whiten, split into subbands, find note
+  **onsets**
+- Hash the onset-timing pattern into short **codes**: a song becomes a bag of
+  codes
+- Lookup: an **inverted index** of codes, then a time-histogram vote picks the
+  reference
+- The match threshold is a **platform setting**, not law (Luke's question)
+- A cover with different timing, a parody, a new recording: **no match**
+:::
+:::
+
+## What a Matcher Cannot See {.smaller}
+
+```{dot}
+//| fig-width: 12
+//| fig-height: 3.6
+digraph cannot {
+  rankdir=LR; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=22, margin="0.25,0.15"];
+  edge [fontname="Helvetica", fontsize=18, color="#444444"];
+  ranksep=0.5; nodesep=0.3;
+  U [label="upload", fillcolor="#eef3fb", color="#4a6fa5"];
+  F [label="fingerprint", fillcolor="#eef3fb", color="#4a6fa5"];
+  R [label="reference library\n(what rightsholders uploaded)", fillcolor="#fff3e0", color="#ef6c00"];
+  M [label="match?", shape=diamond, fillcolor="#eef3fb", color="#4a6fa5"];
+  Y [label="claim\n(monetize / track / block)", fillcolor="#fde8e8", color="#b91c1c"];
+  N [label="invisible:\nfair use, parody, cover,\nnew work, AI-generated", fillcolor="#e3f1e3", color="#2e7d32"];
+  U -> F -> M; R -> M; M -> Y [label="yes"]; M -> N [label="no"];
+}
+```
+
+- The system answers one question: **have we seen this exact thing before?**
+  It has no concept of fair use, context, or intent
+- An AI-generated song has **no reference**, so it passes. A model that
+  **memorized** a song emits something the matcher *does* catch, as a copy of
+  the original
+- So the matcher is blind in one direction and over-eager in the other, and
+  the platforms have started building something else (later)
+
+::: {.notes}
+This is the hinge slide. Database-bound and context-free, from Meeting 9's
+deck that we skipped. Then the two AI failure modes: no reference (novel
+synthetic content) and memorization (the GEMA case, coming up).
+:::
+
+# AI Meets Copyright {.center}
+
+## Three Questions, Not One {.smaller #threeq}
+
+```{dot}
+//| fig-width: 7
+//| fig-height: 5.2
+digraph threeq {
+  rankdir=TB; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=22, margin="0.28,0.16"];
+  edge [fontname="Helvetica", fontsize=18, color="#444444"];
+  ranksep=0.45; nodesep=0.3;
+  I [label="1. Input: was training on\nthe work lawful?\n(fair use? licensed? pirated?)", fillcolor="#fff3e0", color="#ef6c00"];
+  W [label="2. Inside: does the model\ncontain a copy?\n(memorization)", fillcolor="#eef3fb", color="#4a6fa5"];
+  O [label="3. Output: who owns it,\nand does it infringe?\n(authorship, substitution)", fillcolor="#e3f1e3", color="#2e7d32"];
+  I -> W -> O;
+}
+```
+
+::: {.notes}
+Three different legal questions that the responses ran together. US courts have
+mostly answered 1; Munich answered 2; the Copyright Office and Thaler answered
+the first half of 3; nobody has settled the second half.
+:::
+
+## Question 1 in US Courts: Training {.smaller}
+
+::: {.columns}
+::: {.column width="58%"}
+| Case | Court, date | Holding |
+|---|---|---|
+| **Bartz v. Anthropic** | N.D. Cal., Jun 2025 | Training on bought books: **fair use**. Keeping a pirated library: **not**. $1.5B settlement, final approval **Jul 20 2026** |
+| **Kadrey v. Meta** | N.D. Cal., Jun 2025 | Fair use **on this record**; "market dilution" would often win if proven |
+| **Thomson Reuters v. Ross** | 3d Cir., **Sep 29 2026** | First appellate ruling: copying headnotes to train a rival tool is **not** fair use |
+| **NYT v. OpenAI** | S.D.N.Y. | Summary judgment on fair use **pending**; replies due Nov 6 2026 |
+:::
+::: {.column width="42%"}
+::: {.capture}
+[![](images/captures/jurist-anthropic.png){width="100%"}](https://www.jurist.org/news/2026/07/judge-approves-record-1-5-billion-settlement-involving-anthropic/)
+
+JURIST, Jul 22 2026: final approval of the Bartz settlement. Captured Nov 5 2026; click to open.
+:::
+:::
+:::
+
+::: {.notes}
+Daniel's line from the responses: "Sci-Hub is illegal, but training on
+Sci-Hub's corpus is fair use. Is that a coherent position?" Bartz is exactly
+that: the training was fair use, the library was not, and the money ($1.5
+billion, about $3,000 per work, 91 percent claims rate) paid for the library.
+Ross is the one appellate word so far and it is narrow: a non-generative tool
+that competed directly with the plaintiff. NYT: the Cox decision from
+Tuesday's deck already cut the secondary-liability claims in August.
+:::
+
+## Which Market Counts? {.smaller}
+
+::: {.columns}
+::: {.column width="55%"}
+- **Chhabria (Meta):** the market for *licensing books as training data* is
+  circular and does not count; the market the model's **outputs flood** does,
+  and a plaintiff who proves that dilution "will often decisively win"
+- **Third Circuit (Ross):** a "rapidly developing" **licensing market** for
+  training data is real harm; the rightsholder's choice not to license does
+  not mean no market exists
+- **Alsup (Anthropic):** training is "quintessentially transformative";
+  the pirated copies are a separate wrong
+- Same statute, same factor, three answers. The Copyright Office's Part 3
+  report (May 2025, still pre-publication) sits closest to Chhabria
+:::
+::: {.column width="45%"}
+::: {.capture}
+[![](images/captures/copyrightlately-ross.png){width="100%"}](https://copyrightlately.com/thomson-reuters-v-ross-third-circuit/)
+
+Copyright Lately, Sep 29 2026: the Third Circuit affirms in Ross. Click to open.
+:::
+:::
+:::
+
+::: {.notes}
+For the breakout: factor four is where every one of these cases was decided.
+The censorship angle: if the licensing-market view wins, the right to train
+runs through catalogue owners, which is a gate on what models may learn.
+:::
+
+## Question 2 in Europe: Is the Model a Copy? {.smaller}
+
+::: {.columns}
+::: {.column width="55%"}
+- **GEMA v. OpenAI** (Munich, Nov 11 2025): ChatGPT recited lyrics by
+  Grönemeyer and Fischer verbatim; the court held the lyrics were
+  **memorized in the weights**, which is a **reproduction** the text-and-data-mining
+  exception does not cover. Users are not to blame for simple prompts. Under appeal
+- **Munich again, GEMA v. Suno** (Jul 31 2026): same rule for music
+- **Getty v. Stability** (London, Nov 4 2025): Stable Diffusion **stores no
+  copy**, so it is not an "infringing copy"; appeal granted Dec 2025
+- **CJEU, Like Company v. Google:** the Advocate General's opinion treats
+  training as within the TDM exception and sits closer to London than Munich
+:::
+::: {.column width="45%"}
+::: {.capture}
+[![](images/captures/williamfry-gema.png){width="100%"}](https://www.williamfry.com/knowledge/gema-v-openai-europes-direction-on-ai-infringement/)
+
+William Fry, Nov 12 2025, on the Munich ruling. Click to open.
+:::
+:::
+:::
+
+::: {.notes}
+A week apart, two courts went opposite ways, and both can be right on their
+facts: Munich had evidence of specific memorized works; London found no stored
+copies. The hands-on's first experiment is the GEMA test.
+:::
+
+## Question 3: Who Owns the Output? {.smaller}
+
+::: {.columns}
+::: {.column width="55%"}
+- **Human authorship required.** *Thaler v. Perlmutter*: the D.C. Circuit
+  (Mar 2025) upheld the Copyright Office's refusal to register an AI-made
+  image; the Supreme Court **denied cert on Mar 2 2026**
+- **Copyright Office, Part 2** (Jan 2025): prompts alone are not authorship;
+  human selection, arrangement, and modification can be
+- **Copyright Office, Part 3** (May 2025, pre-publication): training is
+  "often transformative" but not automatically fair use; rejects the
+  "it learns like a human" analogy; calls for **licensing mechanisms**
+- Luca's point from the responses: if meaningful human contribution is the
+  test, a lot of today's software is on the wrong side of it
+:::
+::: {.column width="45%"}
+::: {.capture}
+[![](images/captures/uscopyright-part3.png){width="100%"}](https://www.copyright.gov/ai/)
+
+copyright.gov/ai, the three-part report. Captured Nov 5 2026; click to open.
+:::
+:::
+:::
+
+::: {.notes}
+Chris Deng and Pietro asked whether an AI company can claim rights to a song
+its model made: in the US, no one can, unless a human did enough to count. That
+is why the labels' deals (next slide) are about the *input* side.
+:::
+
+## Music: The Labels Settle, Then Sue Again {.smaller}
+
+- **Oct 29 2025:** Universal settles with **Udio** and licenses it; a
+  walled-garden, opt-in platform for 2026
+- **Nov 19 2025:** Warner settles with Udio. **Nov 25 2025:** Warner settles
+  with **Suno**, which commits to licensed models and buys Songkick
+- **Sony** keeps litigating; **Sep 18 2026:** Universal and Sony file a *new*
+  complaint against Suno over **60,202 recordings**; the Massachusetts
+  schedule puts a fair-use ruling in **2027**
+- **Jun 5 2026:** the musicians' union (AFM) sues Universal and Warner for
+  licensing members' recordings into the AI deals without pay or disclosure
+- **Sep 2026:** a class of musicians sues Suno over **right of publicity**: the
+  model "encodes their identities"
+
+::: {.notes}
+Margaret and Chris asked about AI-music lawsuits; this is the state of play.
+The pattern is the DMCA pattern from Tuesday one level up: the fight is not
+over whether the output infringes but over who gets paid for the input. The
+walled garden is the licensing-market theory made into a product.
+:::
+
+# The Platforms Build Something Else {.center}
+
+## From Content ID to Content Identity {.smaller}
+
+::: {.columns}
+::: {.column width="55%"}
+- **Likeness detection** (YouTube): a Content-ID-style matcher for **faces**
+  in AI-generated video. Pilot in 2025; politicians, officials, and journalists
+  in spring 2026; **Apr 21 2026:** entertainers, with CAA, UTA, and WME
+- Enrolment needs a government ID and a selfie video; a match hands the
+  person a **list** and a choice: privacy removal, copyright removal, or let
+  it stand
+- A **synthetic-singing** detector inside Content ID is in pilot with labels
+- **Labels:** uploaders must disclose realistic synthetic content; the EU AI
+  Act's Article 50 transparency duties apply from **Aug 2 2026**
+- **Provenance:** C2PA content credentials, signed at capture or generation,
+  verifiable by anyone (the hands-on)
+:::
+::: {.column width="45%"}
+::: {.capture}
+[![](images/captures/musically-likeness.png){width="100%"}](https://musically.com/2026/04/24/youtube-rolls-out-celebrity-ai-likeness-detection/)
+
+Music Ally, Apr 24 2026. Click to open.
+:::
+:::
+:::
+
+::: {.notes}
+Nhi asked whether fingerprinting could be built for other media; the answer
+arrived this year, for faces and voices, and the reference library is now a
+library of *people*. The Baltimore Law Review piece calls it the move from
+Content ID to Content Identity. Note the asymmetry with Content ID: a copyright
+claim acts automatically; a likeness match hands you a list and waits.
+:::
+
+## Two Matchers, Two Defaults {.smaller}
+
+```{dot}
+//| fig-width: 12
+//| fig-height: 3.8
+digraph two {
+  rankdir=LR; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=20, margin="0.22,0.14"];
+  edge [fontname="Helvetica", fontsize=17, color="#444444"];
+  ranksep=0.45; nodesep=0.35;
+  subgraph cluster_a { label="Content ID (2007)"; fontname="Helvetica"; fontsize=20; color="#aaaaaa";
+    A1 [label="rightsholder uploads\nreference works", fillcolor="#fff3e0", color="#ef6c00"];
+    A2 [label="match on upload", fillcolor="#eef3fb", color="#4a6fa5"];
+    A3 [label="automatic claim:\nmonetize / track / block", fillcolor="#fde8e8", color="#b91c1c"];
+    A1 -> A2 -> A3;
+  }
+  subgraph cluster_b { label="Likeness detection (2025–26)"; fontname="Helvetica"; fontsize=20; color="#aaaaaa";
+    B1 [label="person enrolls\nID + selfie video", fillcolor="#fff3e0", color="#ef6c00"];
+    B2 [label="match in AI-generated\nvideo", fillcolor="#eef3fb", color="#4a6fa5"];
+    B3 [label="a list; the person chooses:\nremove, claim, or leave", fillcolor="#e3f1e3", color="#2e7d32"];
+    B1 -> B2 -> B3;
+  }
+}
+```
+
+- Same architecture, opposite defaults: one removes revenue **before anyone
+  looks**, the other **waits for a human**
+- Which default would you want for political deepfakes two weeks before an
+  election? For a parody of a celebrity?
+
+## The Censorship Angle {.smaller}
+
+- **The window of silence** does not care who made the content: an AI-made
+  takedown and a human-made one both lose the news cycle while the counter-notice
+  waits
+- **AI cats, AI mice** (Meeting 9): generative models produce the content and
+  the moderation; both sides automate, and the matcher in the middle sees
+  only what it has a reference for
+- **Licensing as a gate on learning:** if training must be licensed, catalogue
+  owners decide what a model may learn from. That is the filter bubble at the
+  training stage, with the same measurement problem: you cannot see what was
+  left out
+- **Which model you pick is the policy** (Meeting 9): a platform that
+  moderates with one model and a rightsholder that trains on one catalogue
+  are each making a speech decision outside public view
+
+## Section 230, Tabled From Tuesday {.smaller}
+
+- **Is there a precedent?** Yes: the *distributor* vs *publisher* line.
+  A bookstore is not liable for every book it sells (*Smith v. California*,
+  1959); *Stratton Oakmont* (1995) made a moderating forum a publisher, and
+  §230 (1996) restored the distributor's position for anyone who moderates
+- **Can "political neutrality" be defined?** The Texas and Florida laws tried;
+  *Moody v. NetChoice* (2024) held curation is the platform's own speech, and
+  the geolocation and viewpoint-versus-policy problems remain (legal deck,
+  slides 10–11)
+- **Social media as a public utility?** That is the net-neutrality question
+  pointed at platforms, which half of you asked in the week-6 responses.
+  Tuesday.
+
+## Today, and Next {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Hands-on:** [Can the system tell?](../../../activities/ai-copyright.md)
+
+1. The memorization test (ask two chatbots for lyrics)
+2. The provenance test (C2PA verify; YouTube's synthetic label)
+3. The reference test (a Suno song on YouTube)
+
+**Breakout, as time permits:** [Training is fair use, the library is not](../../../breakouts/copyright.md)
+:::
+::: {.column width="50%"}
+**Tuesday Nov 10: the economics of access.** Net neutrality, zero rating, and
+demonetization together (book 4.3–4.5); your parked net-neutrality questions
+open the class. Week-7 response (4.4–4.5) due Tuesday 9 am.
+
+**Then:** measurement (chapter 5) from Nov 12.
+:::
+:::

@@ -365,16 +365,36 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 ### Meeting 11 (Tue Nov 3)
 
+*Reconstructed from the class recording, which covers the opening discussion (about 36 minutes). The student presentation that followed was not recorded, and the planned lecture and hands-on did not run.*
+
+* **Housekeeping**
+    * Student presentation 4 (denial of service) today; presentation 5 Thursday
+    * The Gradebook issue in each repository shows what has been received; tell the instructor if something is missing from it
+* **Reading-response discussion on copyright (book 4.2)**
+    * The responses converged on one question: where is the line between enforcement and censorship? Copyright is a legitimate mechanism for takedowns, but what if the claim is wrong, what safeguards exist, and what about jurisdictions the chapter does not cover (international copyright was raised as a gap in the book)
+    * **Notice and takedown, walked on one slide.** A claimant sends a notice (a web form or an email); the host removes the content "expeditiously" to keep its safe harbor; the alternative is a counter-notice, which is a sworn statement, a waiting period, and consent to be sued. The costs are asymmetric: a form on one side, resources and legal risk on the other, so most hosts never counter-notice. That asymmetry is what the responses were describing when they asked what evidence or safeguards a complaint should require
+    * **A reversed takedown can still be effective censorship.** If content tied to news, an election, or a moving algorithm comes down for two weeks and then returns, the audience has moved on; the takedown worked even though it was wrong
+    * A student who had taken a course on the history of copyright gave the other frame: copyright protections exist to let creators monetize and control their work, and the chapter's framing of copyright as a censorship tool is one side of a two-sided story. Both can be true. (The student later posted the course's book, *Who Owns This Sentence?*, in Slack)
+    * **AI and copyright** came up in many responses (who holds rights in AI-generated work, where fair use and transformative use fall, inspiration versus infringement, the Anthropic books case and its settlement). The instructor said the topic is large and live enough to deserve its own class and would re-plan the week to make room for it. As a case in point he described how the course book itself has been written and refreshed with transcripts and, for about two years, with AI agents that check whether a section is out of date, and that publishers do not yet have a settled position on what counts as acceptable AI use in writing
+    * **The SLAPP example from the book**, which a student noticed is missing its figure: the instructor received a demand letter from a lawyer over a truthful negative Google review of a nanny agency, threatening a large suit; the review came down because fighting it would cost time and money the suit's authors never expected to win. That is a strategic lawsuit against public participation, and many states make the tactic itself unlawful. A student's framing: anti-SLAPP suits only help those who could already afford to win, which is exactly who SLAPPs do not target. Asked whether a university would defend a researcher who was SLAPPed over published work, the instructor said the university's legal counsel represents faculty in matters arising from their work
+    * **The CFAA** chills research in the same way: demonstrating that a system is vulnerable often requires breaking into it, which the Computer Fraud and Abuse Act may criminalize. *Sandvig v. Barr* (researchers auditing algorithms for discrimination sued pre-emptively; the court held that violating a site's terms of service is not by itself a federal crime, which matters because a company could otherwise write anything into its terms) and *Van Buren* (the Supreme Court read "exceeds authorized access" narrowly) helped, but surveys still find many security researchers avoid some work for fear of suit
+    * **Homework, optional:** the responses also asked how the matching systems work and what platforms now do about AI-generated content. The book's examples (Content ID, RightsCorp, Rights Manager) are pre-AI; students were invited to look into what detection exists now, to be taken up Thursday
+* **Student presentation 4: denial of service.** Not recorded
+* **Not covered:** the copyright lecture (the DMCA's two levers, the swarm, Cox v. Sony, copyright weaponized against critics), the takedown-archaeology hands-on, and the breakout. The slides are posted. Section 230 questions from the responses were tabled for Thursday
+* **Next:** Thursday November 5, a new class on AI, copyright, and the matchers, with student presentation 5. Net neutrality moves to Tuesday November 10, combined with zero rating and demonetization (book 4.3–4.5)
+
+### Meeting 12 (Thu Nov 5)
+
 *Plan; replaced with the record after class.*
 
-- Housekeeping: week-7 response (book 4.4–4.5) due Tuesday November 10 at 9 am; presentation 5 on Thursday; the Gradebook issue
-- Reading-response discussion on 4.2: when enforcement becomes censorship (intent, legality, or consequence); error rates in Content ID and who bears the burden of a wrong match; IP addresses as evidence in a BitTorrent swarm. Net-neutrality questions are saved for Thursday
-- Student presentation 4: denial of service
-- Lecture: copyright as a censorship tool
-    - The DMCA's two levers: §512 notice-and-takedown (cheap to obey, expensive to contest) and §1201 anti-circumvention
-    - Where notices come from: scanning the swarm, and why an IP address is thin evidence
-    - Cox v. Sony: the $1 billion verdict and the Supreme Court's 2026 reversal
-    - Copyright weaponized against critics and researchers; the CFAA; SLAPPs
-- Hands-on: [takedown archaeology](../activities/copyright.md), Part 1
-- Breakout, as time permits: [should false claims carry real costs](../breakouts/copyright.md)
-- Next: net neutrality (book 4.3), Thursday November 5, with student presentation 5
+- Housekeeping: week-7 response (book 4.4–4.5) due Tuesday November 10 at 9 am; the schedule change (Tuesday is the economics of access, 4.3–4.5, with the parked net-neutrality questions)
+- Student presentation 5: disinformation
+- Lecture: [AI, copyright, and the matcher](../slides/04-Legal/04-AICopyright/slides.html)
+    - How a matcher works: three families of fingerprint, inside an audio fingerprinter, and what a matcher cannot see (no reference, no context)
+    - AI meets copyright as three questions: was training lawful (Bartz, Kadrey, Thomson Reuters v. Ross, NYT v. OpenAI); does the model contain a copy (GEMA v. OpenAI, Getty v. Stability); who owns the output (Thaler, the Copyright Office reports)
+    - The music settlements and the suits that followed
+    - From Content ID to content identity: likeness detection, synthetic-voice detection, labels, provenance
+    - The censorship angle, and the Section 230 questions tabled on Tuesday
+- Hands-on: [can the system tell?](../activities/ai-copyright.md): the memorization test, the provenance test, the reference test
+- Breakout, as time permits: [training is fair use, the library is not](../breakouts/copyright.md)
+- Next: the economics of access (book 4.3–4.5), Tuesday November 10

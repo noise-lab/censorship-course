@@ -63,3 +63,26 @@ breakout-metadata:
   book_chapter: "4.2"
   last_refreshed: 2026-07-06
 -->
+
+---
+
+## Breakout C: Training Is Fair Use, the Library Is Not — Is That Coherent?
+<!-- breakout id="C" status="current" refreshed="2026-11-05" -->
+
+**Motion.** *"Copyright law should treat training a generative model on a work the same way it treats copying that work: licence it or leave it alone."*
+
+<!-- current-events:start topic="ai-training-fair-use" -->
+**Prep reads (5–10 min).**
+- [Court Grants Final Approval of $1.5 Billion Anthropic Copyright Settlement](https://authorsguild.org/news/court-grants-final-approval-anthropic-copyright-settlement/) — Authors Guild, July 2026. Judge Alsup's June 2025 ruling found training on lawfully bought books fair use but keeping a pirated library not; the settlement (final approval July 20, 2026) pays for the library, not the training.
+- [Meta wins on fair use for now, but court leaves door open for "market dilution"](https://authorsalliance.substack.com/p/meta-wins-on-fair-use-for-now-but) — Authors Alliance, June 2025. Judge Chhabria: fair use on this record, but a plaintiff who proves the model floods the market for books like theirs "will often decisively win".
+- [Signed, Sealed, Affirmed: Third Circuit Backs Thomson Reuters over ROSS](https://copyrightlately.com/thomson-reuters-v-ross-third-circuit/) — Copyright Lately, October 2026. The first appellate ruling on AI training: copying Westlaw headnotes to train a competing legal-research tool was not fair use, "no more than an ordinary copyright case".
+- [GEMA v. OpenAI: Europe's Direction on AI Infringement?](https://www.williamfry.com/knowledge/gema-v-openai-europes-direction-on-ai-infringement/) — William Fry, November 2025. Munich: lyrics memorized in the model's weights are a reproduction; the text-and-data-mining exception does not cover them.
+<!-- current-events:end -->
+
+**Discussion prompts.**
+- Alsup, Chhabria, and the Third Circuit each decided on the fourth factor (market harm) and reached different places. Which market counts: the market for the book, the market for licensing books as training data, or the market the model's outputs compete in?
+- "Sci-Hub is illegal, but training on Sci-Hub's corpus is fair use." Who benefits from a rule where the training is lawful and only the acquisition is punished? Who can afford a $1.5 billion settlement, and who cannot?
+- Munich says a memorized lyric in the weights is a copy; London says a model that stores no copies is not an infringing copy. Both can be right on their facts. Does the answer turn on what the model *contains* or on what it *emits*?
+- From the censorship side: a licensing regime means a handful of catalogue owners decide which works a model may learn from. Is that a market, or is it the filter-bubble problem at the training stage?
+
+**Bring back.** Your group's rule in one sentence, and the case above it would have decided differently.
