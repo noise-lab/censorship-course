@@ -1,5 +1,5 @@
 ---
-title: "AI, Copyright, and the Matcher"
+title: "AI, Copyright, and Content ID"
 subtitle: "Internet Censorship and Online Speech"
 author: "Nick Feamster · University of Chicago"
 header-includes: |
@@ -32,7 +32,7 @@ header-includes: |
 ## Why a Detour {.center}
 
 Tuesday's responses asked three things the copyright chapter does not answer:
-how the matchers actually work, what happens when the content is machine-made,
+how the copyright detectors actually work, what happens when the content is machine-made,
 and who owns what a model produces. There is enough law from the last eighteen
 months to fill a class. Net neutrality moves to Tuesday.
 
@@ -49,12 +49,12 @@ is still due Tuesday 9 am.
 ::: {.column width="50%"}
 1. **Enforcement or censorship?** The notice regime acts first and asks later;
    a takedown reversed in two weeks has already censored the news cycle
-2. **How does the matcher work,** and what does it do with content a machine
+2. **How do the detectors work,** and what does it do with content a machine
    made?
 3. **Who owns the output,** and was the training lawful?
 :::
 ::: {.column width="50%"}
-- The book's matchers (Content ID, Rights Manager, Audible Magic) are
+- The book's detectors (Content ID, Rights Manager, Audible Magic) are
   **pre-AI**: they compare uploads to a library of references
 - Generative models break both ends: the upload may have **no reference**, and
   the reference may be **inside the model**
@@ -68,7 +68,7 @@ Avni's; thread 3 was a dozen responses (Vivienne, Sandy, Sabrina, Chris, Daniel,
 Ajer, Marton, Luca, Margaret). Use names only from the guide.
 :::
 
-# How the Matcher Works {.center}
+# How Content ID Works {.center}
 
 ## Three Families of Fingerprint {.smaller}
 
@@ -114,7 +114,7 @@ the two spectral envelopes line up. Nothing reads the filename or the lyrics.
 :::
 :::
 
-## What a Matcher Cannot See {.smaller}
+## What the Detector Cannot See {.smaller}
 
 ```{dot}
 //| fig-width: 12
@@ -137,9 +137,9 @@ digraph cannot {
 - The system answers one question: **have we seen this exact thing before?**
   It has no concept of fair use, context, or intent
 - An AI-generated song has **no reference**, so it passes. A model that
-  **memorized** a song emits something the matcher *does* catch, as a copy of
+  **memorized** a song emits something the detector *does* catch, as a copy of
   the original
-- So the matcher is blind in one direction and over-eager in the other, and
+- So the detector is blind in one direction and over-eager in the other, and
   the platforms have started building something else (later)
 
 ::: {.notes}
@@ -319,7 +319,7 @@ walled garden is the licensing-market theory made into a product.
 
 ::: {.columns}
 ::: {.column width="55%"}
-- **Likeness detection** (YouTube): a Content-ID-style matcher for **faces**
+- **Likeness detection** (YouTube): a Content-ID-style detector for **faces**
   in AI-generated video. Pilot in 2025; politicians, officials, and journalists
   in spring 2026; **Apr 21 2026:** entertainers, with CAA, UTA, and WME
 - Enrolment needs a government ID and a selfie video; a match hands the
@@ -348,7 +348,7 @@ Content ID to Content Identity. Note the asymmetry with Content ID: a copyright
 claim acts automatically; a likeness match hands you a list and waits.
 :::
 
-## Two Matchers, Two Defaults {.smaller}
+## Two Detectors, Two Defaults {.smaller}
 
 ```{dot}
 //| fig-width: 12
@@ -384,7 +384,7 @@ digraph two {
   takedown and a human-made one both lose the news cycle while the counter-notice
   waits
 - **AI cats, AI mice** (Meeting 9): generative models produce the content and
-  the moderation; both sides automate, and the matcher in the middle sees
+  the moderation; both sides automate, and the detector in the middle sees
   only what it has a reference for
 - **Licensing as a gate on learning:** if training must be licensed, catalogue
   owners decide what a model may learn from. That is the filter bubble at the

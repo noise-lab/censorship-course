@@ -381,7 +381,7 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * **Homework, optional:** the responses also asked how the matching systems work and what platforms now do about AI-generated content. The book's examples (Content ID, RightsCorp, Rights Manager) are pre-AI; students were invited to look into what detection exists now, to be taken up Thursday
 * **Student presentation 4: denial of service.** Not recorded
 * **Not covered:** the copyright lecture (the DMCA's two levers, the swarm, Cox v. Sony, copyright weaponized against critics), the takedown-archaeology hands-on, and the breakout. The slides are posted. Section 230 questions from the responses were tabled for Thursday
-* **Next:** Thursday November 5, a new class on AI, copyright, and the matchers, with student presentation 5. Net neutrality moves to Tuesday November 10, combined with zero rating and demonetization (book 4.3–4.5)
+* **Next:** Thursday November 5, a new class on AI, copyright, and Content IDs, with student presentation 5. Net neutrality moves to Tuesday November 10, combined with zero rating and demonetization (book 4.3–4.5)
 
 ### Meeting 12 (Thu Nov 5)
 
@@ -389,8 +389,8 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 - Housekeeping: week-7 response (book 4.4–4.5) due Tuesday November 10 at 9 am; the schedule change (Tuesday is the economics of access, 4.3–4.5, with the parked net-neutrality questions)
 - Student presentation 5: disinformation
-- Lecture: AI, copyright, and the matcher (a new deck; slides are not published on the site)
-    - How a matcher works: three families of fingerprint, inside an audio fingerprinter, and what a matcher cannot see (no reference, no context)
+- Lecture: AI, copyright, and Content ID (a new deck; slides are not published on the site)
+    - How Content ID works: three families of fingerprint, inside an audio fingerprinter, and what the detector cannot see (no reference, no context)
     - AI meets copyright as three questions: was training lawful (Bartz, Kadrey, Thomson Reuters v. Ross, NYT v. OpenAI); does the model contain a copy (GEMA v. OpenAI, Getty v. Stability); who owns the output (Thaler, the Copyright Office reports)
     - The music settlements and the suits that followed
     - From Content ID to content identity: likeness detection, synthetic-voice detection, labels, provenance

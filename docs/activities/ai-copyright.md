@@ -1,4 +1,4 @@
-# AI, Copyright, and the Matcher
+# AI, Copyright, and Content ID
 
 ## Part 1 (in class, 20 minutes): Can the system tell?
 
@@ -29,8 +29,8 @@ three quick experiments and write down what you find.
    reference even be?
 
 **Report back**, one pair at a time: the one result that surprised you, and
-whether it moves you toward "the matcher can handle AI content" or "the matcher
-was built for a world that no longer exists".
+whether it moves you toward "the detectors can handle AI content" or "they
+were built for a world that no longer exists".
 
 ## Part 2 (take-home, optional): what the platforms say they do
 
