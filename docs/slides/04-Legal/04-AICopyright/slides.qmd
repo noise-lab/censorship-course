@@ -303,17 +303,21 @@ is why the labels' deals (next slide) are about the *input* side.
 
 ## Music: The Labels Settle, Then Sue Again {.smaller}
 
-**Suno** and **Udio** generate full songs from a text prompt. The three major
-labels sued both in June 2024 for training on their catalogues. Since then:
+**Suno** and **Udio** generate full songs from a text prompt. In June 2024 the
+three major labels (Universal, Sony, Warner) sued both for copying the labels'
+sound recordings, without permission, to train the models. The settlements
+turned the suits into licensing deals: **the label licenses its catalogue to the
+service**, the service pays, retrains on licensed material, and keeps outputs
+inside a walled garden the label controls.
 
 | When | What happened |
 |---|---|
-| Oct 29 2025 | **Universal settles with Udio** and licenses its catalogue; Udio becomes an opt-in, walled-garden platform (songs stay inside the app) |
-| Nov 19 2025 | **Warner settles with Udio** on similar terms |
-| Nov 25 2025 | **Warner settles with Suno**: licensed models in 2026, old models phased out, Suno buys Songkick |
+| Oct 29 2025 | **Universal settles with Udio** and licenses Universal's catalogue to it; Udio becomes an opt-in, walled-garden platform (songs stay inside the app) |
+| Nov 19 2025 | **Warner settles with Udio**, licensing Warner's catalogue on similar terms |
+| Nov 25 2025 | **Warner settles with Suno**: Warner licenses its catalogue; Suno ships licensed models in 2026, phases out the old ones, and buys Songkick from Warner |
 | Jun 5 2026 | The musicians' union (**AFM**) sues Universal and Warner for licensing members' recordings into the AI deals without pay or disclosure |
 | Sep 2026 | A class of musicians sues Suno over **right of publicity**: the model "encodes their identities" |
-| Sep 18 2026 | **Universal and Sony** file a new complaint against Suno over **60,202 recordings**; a fair-use ruling in Massachusetts is now a 2027 event |
+| Sep 18 2026 | **Universal and Sony**, who have not licensed anything to Suno, file a new complaint against it over **60,202 specific recordings**; a fair-use ruling in Massachusetts is now a 2027 event |
 
 ::: {.notes}
 Context the slide cannot carry. Suno and Udio are the two big text-to-music
