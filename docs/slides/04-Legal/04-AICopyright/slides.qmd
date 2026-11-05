@@ -312,12 +312,14 @@ inside a walled garden the label controls.
 
 | When | What happened |
 |---|---|
-| Oct 29 2025 | **Universal settles with Udio** and licenses Universal's catalogue to it; Udio becomes an opt-in, walled-garden platform (songs stay inside the app) |
+| Oct 29 2025 | **Universal settles with Udio** and licenses Universal's catalogue to it; Udio becomes an opt-in, walled-garden platform |
 | Nov 19 2025 | **Warner settles with Udio**, licensing Warner's catalogue on similar terms |
 | Nov 25 2025 | **Warner settles with Suno**: Warner licenses its catalogue; Suno ships licensed models in 2026, phases out the old ones, and buys Songkick from Warner |
 | Jun 5 2026 | The musicians' union (**AFM**) sues Universal and Warner for licensing members' recordings into the AI deals without pay or disclosure |
 | Sep 2026 | A class of musicians sues Suno over **right of publicity**: the model "encodes their identities" |
-| Sep 18 2026 | **Universal and Sony**, who have not licensed anything to Suno, file a new complaint against it over **60,202 specific recordings**; a fair-use ruling in Massachusetts is now a 2027 event |
+| Sep 18 2026 | **Universal and Sony**, who have licensed nothing to Suno, sue it again over **60,202 specific recordings**; a US fair-use ruling is now a 2027 event |
+
+: {tbl-colwidths="[16,84]"}
 
 ::: {.notes}
 Context the slide cannot carry. Suno and Udio are the two big text-to-music
