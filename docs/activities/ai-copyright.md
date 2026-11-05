@@ -15,7 +15,9 @@ three quick experiments and write down what you find.
    Fischer. Note what each one does: refuses, summarizes, quotes a line, or
    recites. Then ask for the first paragraph of a famous novel. Is the behavior
    a rule about lyrics, about copyright, or about a particular rightsholder?
-2. **The provenance test.** Generate or find an AI-made image (any image model,
+2. **The provenance test.** C2PA content credentials are an industry standard
+   for a signed, embedded record of how an image or video was made and edited,
+   including whether a model generated it. Generate or find an AI-made image (any image model,
    or an image you suspect is synthetic) and check it at
    [Content Credentials Verify](https://verify.contentauthenticity.org/). Then try
    a photograph from a news site. Does either carry C2PA provenance? Now find a

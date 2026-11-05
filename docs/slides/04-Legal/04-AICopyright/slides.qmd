@@ -359,8 +359,9 @@ different reference library: **people**.
 - A **synthetic-singing** detector inside Content ID is in pilot with labels
 - **Labels:** uploaders must disclose realistic synthetic content; the EU AI
   Act's Article 50 transparency duties apply from **Aug 2 2026**
-- **Provenance:** C2PA content credentials, signed at capture or generation,
-  verifiable by anyone (the hands-on)
+- **Provenance:** C2PA content credentials (an industry standard: a signed
+  record of how a file was made and edited, embedded in the file), verifiable
+  by anyone, present only if the creator signed (the hands-on)
 :::
 ::: {.column width="45%"}
 ::: {.capture}
@@ -434,46 +435,67 @@ That is the Tuesday asymmetry again: whoever designs the default decides who
 bears the cost of a mistake.
 :::
 
-## What This Means for Information Control {.smaller}
+## AI and Copyright as a Speech Lever {.smaller}
 
-Three ways generative AI changes copyright as an information-control lever:
+Four ways the AI turn gives copyright new power over what gets published:
 
-1. **The takedown gets cheaper and the counter-notice does not.** Generative
-   tools produce claims as easily as content, and the window of silence
-   (two weeks down, then restored) is the same whether a human or a
-   model made the thing that came down
-2. **The detector decides what it can see.** Content ID catches memorized
-   copies of a label's song and misses a synthetic song entirely; likeness
-   detection catches an enrolled face and misses everyone who did not enroll.
-   Each reference library is a policy about whose interests the system
-   protects
-3. **Licensing becomes a gate on learning.** If training requires a licence,
-   catalogue owners decide what a model may learn from, and a model that never
-   saw a work cannot surface it. That is the filter bubble at the training
-   stage, with the same measurement problem: nobody can see what was left out
+1. **Claims at machine scale.** Generative tools make notices as cheap as
+   content, and the notice regime already favors the claimant. More claims,
+   same asymmetric counter-notice, longer windows of silence
+2. **"Made with AI" becomes a category to suppress.** AI-assisted work has
+   no owner to defend it (*Thaler*; Copyright Office Part 2), platforms must
+   label or demote synthetic content (EU AI Act Art. 50; YouTube's labels),
+   and publishers set AI-use rules for what they will print. A detector's
+   false positives land on legitimate speech, exactly as Content ID's do
+3. **Pre-emptive refusal.** After GEMA, models refuse whole categories
+   (lyrics, long passages) rather than risk a claim. The suppression moves from
+   the takedown to the model's policy, invisible to the user (the memorization
+   test)
+4. **Licensing as a gate on learning.** If training requires a licence,
+   catalogue owners decide what a model may learn, and what it never learned it
+   cannot surface: the filter bubble at the training stage, with the same
+   measurement problem
 
 ::: {.notes}
-This replaces the earlier grab-bag. One sentence each, then move on. Point 2
-is the one to dwell on: a detector's blind spots are a choice, made by whoever
-decides what goes in the reference library, exactly as PhotoDNA's hash list is
-where its policy lives (Meeting 9). Point 3 connects to the personalization
-class: what a model never learned is as invisible as what a feed never showed.
+Point 2 is the one to argue: a rule that AI-assisted content is unprotected,
+or must be labelled, or will not be published, is a rule about a category of
+speech, and the category is decided by a detector with a false-positive rate.
+The course book is the example in point 2: a university press working out
+what AI assistance it will accept in a manuscript is deciding what gets
+published. Point 3 is the hands-on: try a GEMA artist and a US artist and see
+which the model refuses. Point 4 connects to personalization (Meeting 10):
+what a model never learned is as invisible as what a feed never showed.
 :::
 
 ## Section 230: Three Questions That Always Come Up {.smaller}
 
-- **Is there a precedent?** Yes: the *distributor* vs *publisher* line.
-  A bookstore is not liable for every book it sells (*Smith v. California*,
-  1959); *Stratton Oakmont* (1995) made a moderating forum a publisher, and
-  §230 (1996) restored the distributor's position for anyone who moderates
-- **Can "political neutrality" be defined?** The Texas and Florida laws tried;
-  *Moody v. NetChoice* (2024) held curation is the platform's own speech, and
-  the geolocation and viewpoint-versus-policy problems remain (legal deck,
-  slides 10–11)
-- **Social media as a public utility?** That is the net-neutrality question
-  pointed at platforms: must a carrier carry everyone? The next lecture, on
-  the economics of access, takes it up for the pipes; the same argument is now
-  made about the platforms
+**Section 230** (1996) says a platform is not the publisher of what its users
+post, and may moderate without becoming one. Copyright is the big exception:
+the DMCA, not §230, governs it. Three questions students raise every year:
+
+- **Was there ever a precedent for "not responsible for what you distribute"?**
+  Yes. *Smith v. California* (1959): a bookseller cannot be convicted for an
+  obscene book he had not read. Then *Stratton Oakmont v. Prodigy* (1995) made
+  a forum that *moderated* liable as a publisher, which punished moderation;
+  §230 was written the next year to reverse that
+- **Could the law require platforms to be politically neutral?** Texas and
+  Florida tried in 2021, banning removal "based on viewpoint". *Moody v.
+  NetChoice* (2024) held that choosing what to carry is the platform's own
+  protected speech, and the laws also fail in practice: is "anti-vaccine" a
+  viewpoint or a policy violation? Which state's law governs a travelling user?
+- **Should platforms be common carriers, obliged to carry everyone?** The
+  net-neutrality argument, made for the pipes since the 2000s and now made for
+  the platforms. The next lecture takes it up for the pipes
+
+::: {.notes}
+Context for each. First bullet: the distributor/publisher distinction is older
+than the Internet; §230 restored the distributor's position for anyone who
+moderates. Second: HB 20 and SB 7072; the Supreme Court remanded for a
+feature-by-feature analysis, so the laws are not dead, but the core holding is
+that curation is speech. Florida's law fines platforms $250,000 a day for
+deplatforming a statewide candidate. Third: the common-carrier framing is the
+hinge to the economics-of-access lecture.
+:::
 
 ## Hands-On: Can the System Tell? {.smaller}
 
