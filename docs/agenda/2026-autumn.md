@@ -395,6 +395,6 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     - The music settlements and the suits that followed
     - From Content ID to content identity: likeness detection, synthetic-voice detection, labels, provenance
     - The censorship angle, and the Section 230 questions tabled on Tuesday
-- Hands-on: [can the system tell?](../activities/ai-copyright.md): the memorization test, the provenance test, the reference test
-- Breakout, as time permits: [training is fair use, the library is not](../breakouts/copyright.md)
+- Hands-on: [can the system tell?](../activities/ai-copyright.md): does the model recite lyrics; does an AI image carry C2PA provenance; does Shazam recognize a Suno song
+- Breakout, as time permits: [should training a model on a work require a licence?](../breakouts/copyright.md)
 - Next: the economics of access (book 4.3–4.5), Tuesday November 10

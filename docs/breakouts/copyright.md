@@ -66,8 +66,10 @@ breakout-metadata:
 
 ---
 
-## Breakout C: Training Is Fair Use, the Library Is Not — Is That Coherent?
+## Breakout C: Should Training a Model on a Work Require a Licence?
 <!-- breakout id="C" status="current" refreshed="2026-11-05" -->
+
+In *Bartz v. Anthropic* (2025), the court held that training a language model on books the company had bought was fair use, but that keeping a library of pirated copies of those same books was not; Anthropic then paid $1.5 billion to settle the piracy half. So the current US position is: the training is lawful, the way you got the books may not be. This breakout asks whether that line makes sense.
 
 **Motion.** *"Copyright law should treat training a generative model on a work the same way it treats copying that work: licence it or leave it alone."*
 

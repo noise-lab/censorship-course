@@ -502,24 +502,23 @@ hinge to the economics-of-access lecture.
 Three experiments, in pairs, twenty minutes
 ([instructions](../../../activities/ai-copyright.md)):
 
-1. **The memorization test.** Ask two chatbots for the full lyrics of an
-   English-language hit and of a German song by a GEMA artist, then for the
-   first paragraph of a famous novel. Which ones recite, which refuse, and is
-   the rule about lyrics, about copyright, or about one rightsholder?
-2. **The provenance test.** Run an AI-generated image and a news photograph
-   through a C2PA verifier: does either carry signed provenance? Then find a
-   YouTube video with the synthetic-content label and an obviously AI-made one
-   without it. Who applied the label?
-3. **The reference test.** Find a song made with Suno or Udio on YouTube or
-   Spotify. Is it labelled? Monetized? If the model was trained on a licensed
-   catalogue, who is the rightsholder, and what would a Content ID reference
-   even be?
+1. **Does the model recite?** Ask two chatbots for the lyrics of "Let It Be"
+   and of a Grönemeyer song, then for the first paragraph of *Harry Potter*.
+   Recited, quoted, summarized, or refused? Is the rule about lyrics, about
+   copyright, or about one rightsholder?
+2. **Does the file say where it came from?** Generate an image in ChatGPT or
+   Gemini, download it, and check it at the C2PA verifier
+   (verify.contentauthenticity.org). Then check a screenshot of it, and a
+   photo from your phone
+3. **Does the fingerprinter recognize it?** Open a "Suno AI song" video on
+   YouTube: is the synthetic-content label there? Play it and run Shazam.
+   Then do the same with a released song
 
 **Report back:** the one result that surprised you, and whether it moves you
 toward "the detectors can handle this" or "they were built for a world that no
 longer exists."
 
-**Discussion, as time permits:** [training is fair use, the library is not](../../../breakouts/copyright.md).
+**Discussion, as time permits:** [should training a model on a work require a licence?](../../../breakouts/copyright.md)
 
 ::: {.notes}
 Autumn 2026 logistics: Tuesday Nov 10 is the economics of access (net
