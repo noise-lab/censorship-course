@@ -203,7 +203,13 @@ that competed directly with the plaintiff. NYT: the Cox decision from
 Tuesday's deck already cut the secondary-liability claims in August.
 :::
 
-## Which Market Counts? {.smaller}
+## Fair Use's Fourth Factor: Which Market Counts? {.smaller}
+
+Every one of these cases was decided on **fair use**, the defense that excuses
+copying. Courts weigh four factors: the purpose of the use (is it
+transformative?), the nature of the work, how much was taken, and the **effect
+on the market for the original**. The fourth factor decided all three cases,
+and the judges disagreed about which market to look at.
 
 ::: {.columns}
 ::: {.column width="55%"}
@@ -215,8 +221,7 @@ Tuesday's deck already cut the secondary-liability claims in August.
   not mean no market exists
 - **Alsup (Anthropic):** training is "quintessentially transformative";
   the pirated copies are a separate wrong
-- Same statute, same factor, three answers. The Copyright Office's Part 3
-  report (May 2025, still pre-publication) sits closest to Chhabria
+- Same statute, same factor, three answers
 :::
 ::: {.column width="45%"}
 ::: {.capture}
