@@ -187,13 +187,13 @@ the first half of 3; nobody has settled the second half.
 | **Bartz v. Anthropic** (N.D. Cal., Jun 2025) | Authors vs. Anthropic, for training Claude on their books | Training on books Anthropic **bought** was fair use. Downloading millions of **pirated** books to keep as a library was not. Anthropic settled the piracy claim for **$1.5B**; final approval Jul 20 2026 |
 | **Kadrey v. Meta** (N.D. Cal., Jun 2025) | 13 authors vs. Meta, for training Llama on their books | Fair use, because these plaintiffs offered **no evidence** that Llama hurt sales of their books. The judge said a plaintiff who proves the model floods their market would likely win |
 | **Thomson Reuters v. Ross** (3d Cir., Sep 29 2026) | Westlaw's owner vs. a startup that copied Westlaw's **headnotes** (short editorial summaries of the point of law in each court opinion) to train a competing legal-search tool | **Not** fair use: the tool was not generative, competed directly with Westlaw, and the headnotes could have been licensed. First appeals-court ruling on AI training |
-| **NYT v. OpenAI** (S.D.N.Y.) | The Times vs. OpenAI and Microsoft, for training on its articles and reproducing them | **Undecided**: summary-judgment briefs on fair use complete Nov 6 2026 |
+| **NYT v. OpenAI** (S.D.N.Y.) | The Times vs. OpenAI and Microsoft, for training on its articles and reproducing them | **Undecided**: cross-motions for summary judgment on fair use; replies due Nov 20 2026 |
 
 ::: {.notes}
 Read the holdings column slowly; each is a different reason. Bartz: the act
 of training is "quintessentially transformative" (Alsup), but how you got the
 copies is a separate question, and the pirated library is what cost $1.5
-billion (about $3,000 per work; 91 percent of eligible authors claimed).
+billion (about $3,000 per work; claims were filed for about 91 percent of eligible works; final approval by Judge Martínez-Olguín, who took over the case from Alsup).
 Kadrey: not a ruling that training is lawful in general; Chhabria said so
 explicitly. The thirteen authors simply did not put in evidence of harm, and
 he spent pages explaining how the next plaintiff could. Ross: a headnote is
@@ -216,8 +216,9 @@ and the judges disagreed about which market to look at.
 
 ::: {.columns}
 ::: {.column width="55%"}
-- **Chhabria (Meta):** the market for *licensing books as training data* is
-  circular and does not count; the market the model's **outputs flood** does,
+- **Chhabria (Meta):** license fees lost when a work is used for a
+  transformative purpose are "not cognizable" (counting them would make the
+  factor circular); the market the model's **outputs flood** does,
   and a plaintiff who proves that dilution "will often decisively win"
 - **Third Circuit (Ross):** a "rapidly developing" **licensing market** for
   training data is real harm; the rightsholder's choice not to license does
@@ -252,9 +253,10 @@ runs through catalogue owners, which is a gate on what models may learn.
   exception does not cover. Users are not to blame for simple prompts. Under appeal
 - **Munich again, GEMA v. Suno** (Jul 31 2026): same rule for music
 - **Getty v. Stability** (London, Nov 4 2025): Stable Diffusion **stores no
-  copy**, so it is not an "infringing copy"; appeal granted Dec 2025
-- **CJEU, Like Company v. Google:** the Advocate General's opinion treats
-  training as within the TDM exception and sits closer to London than Munich
+  copy**, so it is not an "infringing copy"; permission to appeal granted Dec 2025
+- **CJEU, Like Company v. Google:** the Advocate General's opinion (Nov 3
+  2026) says in passing that training is as a rule within the TDM exception,
+  but chatbot answers that recognisably reuse an article may infringe
 :::
 ::: {.column width="45%"}
 ::: {.capture}
@@ -282,7 +284,8 @@ copies. The hands-on's first experiment is the GEMA test.
   human selection, arrangement, and modification can be
 - **Copyright Office, Part 3** (May 2025, pre-publication): training is
   "often transformative" but not automatically fair use; rejects the
-  "it learns like a human" analogy; calls for **licensing mechanisms**
+  "it learns like a human" analogy; favors letting **voluntary licensing**
+  develop without government intervention for now
 - A student's point from the responses: if meaningful human contribution is the
   test, a lot of today's software is on the wrong side of it
 :::
@@ -312,11 +315,11 @@ inside a walled garden the label controls.
 
 | When | What happened |
 |---|---|
-| Oct 29 2025 | **Universal settles with Udio** and licenses Universal's catalogue to it; Udio becomes an opt-in, walled-garden platform |
+| Oct 29 2025 | **Universal settles with Udio** and licenses Universal's catalogue to it for a new service in 2026; until then Udio stays a walled garden |
 | Nov 19 2025 | **Warner settles with Udio**, licensing Warner's catalogue on similar terms |
 | Nov 25 2025 | **Warner settles with Suno**: Warner licenses its catalogue; Suno ships licensed models in 2026, phases out the old ones, and buys Songkick from Warner |
 | Jun 5 2026 | The musicians' union (**AFM**) sues Universal and Warner for licensing members' recordings into the AI deals without pay or disclosure |
-| Sep 2026 | A class of musicians sues Suno over **right of publicity**: the model "encodes their identities" |
+| Aug 31 2026 | A class of musicians sues Suno over **right of publicity**: the model "encodes their identities" |
 | Sep 18 2026 | **Universal and Sony**, who have licensed nothing to Suno, sue it again over **60,202 specific recordings**; a US fair-use ruling is now a 2027 event |
 
 : {tbl-colwidths="[16,84]"}
@@ -354,7 +357,7 @@ different reference library: **people**.
 ::: {.column width="55%"}
 - **Likeness detection:** a Content-ID-style detector for **faces** in
   AI-generated video. Pilot in 2025; politicians, officials, and journalists
-  in spring 2026; entertainers from Apr 21 2026, with CAA, UTA, and WME
+  in spring 2026; entertainers from Apr 21 2026, with feedback from CAA, UTA, and WME
 - Enrolment needs a government ID and a selfie video; a match hands the
   person a **list** and a choice: privacy removal, copyright removal, or let
   it stand
@@ -449,8 +452,10 @@ Four ways the AI turn gives copyright new power over what gets published:
    label or demote synthetic content (EU AI Act Art. 50; YouTube's labels),
    and publishers set AI-use rules for what they will print. A detector's
    false positives land on legitimate speech, exactly as Content ID's do
-3. **Pre-emptive refusal.** After GEMA, models refuse whole categories
-   (lyrics, long passages) rather than risk a claim. The suppression moves from
+3. **Pre-emptive refusal.** Models already refuse whole categories
+   (lyrics, long passages) as policy, shaped by litigation (Anthropic's 2025
+   lyrics-guardrail agreement with music publishers); GEMA adds a European
+   legal reason. The suppression moves from
    the takedown to the model's policy, invisible to the user (the memorization
    test)
 4. **Licensing as a gate on learning.** If training requires a licence,
