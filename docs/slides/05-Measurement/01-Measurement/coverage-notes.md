@@ -41,6 +41,30 @@
   DNS queries censored globally, ~36% from inside China; DoT/DoH/DoQ widely blocked in
   censored regions). Verified via FOCI/PETS 2025–2026 papers and the 2021 WWW
   "Understanding the Impact of Encrypted DNS on Internet Censorship" line of work. No new slide.
+- 2026-11-05: **Ecosystem segment for Meeting 14 (Nov 12), material for book §5.1.1.**
+  New slides after "A Tax We Have to Detect": **"A Maturing Measurement Ecosystem"** (map of
+  OONI, Censored Planet, IODA, Cloudflare Radar, GFWatch by vantage point and signal),
+  **"Remote Measurement: Censored Planet"**, **"Outage Signals: IODA and Cloudflare Radar"**
+  (Q3 2026 vignette), and **"Triangulation and Its Limits"** (after Uganda, with a discussion
+  question). OONI slide scale updated. Slides are cues; the notes are prompts, since Nick's
+  narration replaces the §5.1.1 text. Sources:
+  OONI 2026 trends report (3B+ measurements since 2012, 30,000 networks, 245 countries and
+  territories, ~180 countries/month; TLS-interference ambiguity, uneven coverage)
+  ooni.org/post/2026-measuring-internet-censorship-trends-challenges-impact/;
+  Censored Planet CCS 2020 (since Aug 2018; 95,000+ vantage points, 221 countries)
+  dl.acm.org/doi/10.1145/3372297.3417883, docs.censoredplanet.org (60B+ data points, ~2022),
+  Crowder et al. ACSAC 2024 (Augur data not public)
+  cise.ufl.edu/~butler/pubs/acsac24-crowder-censorship.pdf;
+  IODA signals ioda.inetintel.cc.gatech.edu/resources?tab=glossary;
+  FOCI 2026 (shutdowns below IODA thresholds) petsymposium.org/foci/2026/foci-2026-0015.pdf;
+  arXiv 2605.00187 (Iran 2025–26 shutdowns without BGP withdrawal);
+  Cloudflare Radar launch (Sept 30, 2020) blog.cloudflare.com/introducing-cloudflare-radar/;
+  Radar 2025 Year in Review (almost half of 174 major outages government-directed)
+  blog.cloudflare.com/radar-2025-year-in-review/;
+  GFWatch, Hoang et al. USENIX Security 2021.
+  **Not verified:** Q3 2026 Radar figures (49 disruptions, 18 Iraq exam shutdowns, 10-day
+  Tigray shutdown) are from TelcoNews (Oct 28, 2026), not the Cloudflare post; GFWatch's
+  2026 operating status; any current (2025–26) Censored Planet scale figure.
 
 ## Suggested missing coverage on broad themes (point 3)
 - **Encore demo / same-origin policy mechanics**: could add a live or animated example of

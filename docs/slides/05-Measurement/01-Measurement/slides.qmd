@@ -76,6 +76,28 @@ for the measurer. Everything in this chapter is a response to hidden, intermitte
 hyper-localized control.
 :::
 
+## A Maturing Measurement Ecosystem {.smaller}
+
+| Project | Where it looks from | What it sees | Since |
+|---|---|---|---|
+| **OONI** | Volunteers' phones and laptops, *inside* | Site and app reachability, per network | 2012 |
+| **Censored Planet** | Remote, via infrastructure *inside* | DNS, TCP/IP, HTTP/S interference | 2018 |
+| **IODA** | Outside: routing, probing, telescope | Connectivity outages | CAIDA → Georgia Tech |
+| **Cloudflare Radar** | A CDN's own traffic | Traffic drops, shutdowns | 2020; outage center 2022 |
+| **GFWatch** | A U.S. vantage point, *into* China | Great Firewall DNS poisoning | USENIX Sec. '21 |
+
+No single project answers "is it censored?" **Different vantage points, different blind spots.**
+
+::: {.notes}
+Book §5.1. Talk through the map row by row, then the point: what grew up over the last
+decade is an ecosystem, not a tool. Talk about how in-country probes (OONI) and remote
+measurement (Censored Planet) complement each other, and where your own work fits (Iris,
+the IP-ID side channel, Encore; how those ideas became Satellite and Augur). Then the
+outage layer (IODA, Radar) that answers a different question: is the network up at all?
+GFWatch is the single-country, single-mechanism specialist. Check gfwatch.org before
+class; its continued operation in 2026 was not verified.
+:::
+
 ## OONI: The Workhorse {.smaller}
 
 The **Open Observatory of Network Interference** — volunteers run **OONI Probe**, which
@@ -92,14 +114,73 @@ runs a suite of tests and uploads results to open data.
 :::
 :::
 
-Millions of measurements from **200+ countries since 2012**; explore them at
-**OONI Explorer** without running anything.
+**3 billion+ measurements** since 2012 from **30,000 networks in 245 countries and
+territories**; explore them at **OONI Explorer** without running anything. *(OONI, 2026)*
 
 ::: {.notes}
 Book §5.1. OONI is the leading open-source tool and the one we'll use hands-on. Key
 design point: it's open data — anyone can audit and replot. The Measurement Aggregation
 Toolkit (MAT) at explorer.ooni.org/chart/mat lets you visualize confirmed blocks vs.
-anomalies vs. failures over time. Compare with the next slide: a black-box bellwether.
+anomalies vs. failures over time. 2026 scale (OONI's trends report): about 180 countries
+a month, tens of millions of new measurements a month. Talk about what volunteer probes
+buy you (real users' networks, apps not just websites) and what they cost (someone in
+the country has to take the risk). Hands-on preview.
+:::
+
+## Remote Measurement: Censored Planet {.smaller}
+
+No volunteers: measure **from outside**, through **infrastructure inside** the country.
+
+- **Satellite** — DNS, via open resolvers
+- **Augur** — TCP/IP reachability, via the IP-ID side channel
+- **Hyperquack** — HTTP/S keyword filtering, via echo and discard servers
+
+Running since **August 2018**; **95,000+ vantage points in 221 countries** *(CCS 2020)*.
+Satellite and Hyperquack data are public; **Augur's is not**.
+
+How each technique works: Part 2 of this deck. *(Book §5.2)*
+
+::: {.notes}
+Book §5.1. Talk about how OONI and remote measurement complement each other: OONI is deep
+but sparse (where volunteers are), Censored Planet is broad and continuous but sees
+infrastructure, not users. Your own Iris / IP-ID / spooky-scan work as the lineage. Scale
+figures are dated (CCS 2020; Release 2.0 docs, about 2022, cite 60 billion+ data points);
+no current 2026 count was found. Data access point: an ACSAC 2024 paper notes Augur data is
+not released. Ask: what does it mean for a field when one technique's data stays private?
+:::
+
+## Outage Signals: IODA and Cloudflare Radar {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**IODA** *(Georgia Tech, from CAIDA)*
+
+- **BGP** — are the country's routes still announced?
+- **Active probing** — do address blocks still answer?
+- **Network telescope** — is background traffic still arriving?
+- Flags an outage when **two or more signals** drop
+:::
+::: {.column width="50%"}
+**Cloudflare Radar**
+
+- A CDN's view: **its own traffic** by country and network
+- Quarterly **disruption summaries**
+- **2025:** almost half of **174 major outages** were **government-directed shutdowns**
+:::
+:::
+
+::: {.vignette}
+**Q3 2026:** Radar logged **49 disruptions**, including **18 exam-season shutdowns in Iraq**
+and a **10-day shutdown in Tigray** as fighting resumed. *(Cloudflare Radar via TelcoNews, Oct 2026)*
+:::
+
+::: {.notes}
+Book §5.1. These answer a different question from OONI: not "is this site blocked?" but
+"is the network up at all?" Talk about why a shutdown is the easy case to see and the
+hard case to attribute (cable cut? power? government?), and why IODA wants two signals.
+Radar's 2025 Year in Review is the source for the 174 figure; exam shutdowns are a big
+share. Q3 2026 figures came from secondary coverage; check the Cloudflare blog post
+before class. Next slide: Google's version of the same idea.
 :::
 
 ## Google Transparency Report: A Bellwether
@@ -136,6 +217,28 @@ Google's traffic graph (this image) shows the macro dip; OONI shows which ISPs b
 which apps. The 2026 repeat is the live hook — same country, same playbook, freshly
 documented. Swap the vignette each year for the freshest election-time block OONI
 documents. Source: OONI 2026 "Measuring Internet Censorship" report.
+:::
+
+## Triangulation and Its Limits {.smaller}
+
+**Agreement across independent vantage points** is the evidence. But each witness has gaps:
+
+- **Coverage** — volunteers are uneven; some countries have almost none
+- **Thresholds** — small or regional shutdowns can stay **below alert thresholds** *(FOCI 2026)*
+- **Signal choice** — Iran's 2025–26 shutdowns left **BGP routes up**; routing alone missed them
+- **Ambiguity** — growing **TLS interference** looks like ordinary failure *(OONI, 2026)*
+- **Access** — some data never released; platforms see the most and share the least
+
+**Discuss:** When OONI, IODA, and Radar disagree about an event, whom do you believe, and
+what would you need to see?
+
+::: {.notes}
+Book §5.1. Talk about triangulation as the field's core method and Uganda as the example
+just shown. Then walk the limits: each one is a place a censor can hide. Sources for the
+two dated claims: FOCI 2026 paper on shutdowns below IODA's thresholds; arXiv 2605.00187
+on Iran's 2025–26 shutdowns without routing withdrawal. Data access: Augur not public;
+platform data getting harder (CrowdTangle, later in the deck). Let the discussion run;
+it sets up the recipe.
 :::
 
 ## A Recipe: Investigating a Suspected Block {.smaller}
@@ -448,8 +551,9 @@ zone. The choice is a values trade-off, not a purely technical one. The named te
 map onto exactly the methods earlier in this deck: Satellite/Iris compare open vs. trusted
 resolvers (the DNS-consistency idea); Augur is the IP-ID idle/spooky scan for TCP/IP;
 Hyperquack injects keywords into HTTP/S to known-behavior servers. Censored Planet has run
-since Aug 2018 and collected tens of billions of measurements from ~95,000 vantage points
-weekly (censoredplanet.org). One slide, three techniques, all already taught.
+since Aug 2018 (95,000+ vantage points in 221 countries in the CCS 2020 paper; tens of
+billions of data points by its 2022 data release). One slide, three techniques, all
+already taught; callback to the ecosystem map at the start.
 :::
 
 # Measuring Platform & Legal Controls {.center}

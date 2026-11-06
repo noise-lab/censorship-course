@@ -37,6 +37,7 @@ refresh loop). The canonical worked example is **`01-Intro/01-Overview/`**.
 | `04-Legal/03-PaidPrioritization/` | **Ch 4** Legal & Economic Controls — §4.3 (paid prioritization) | `class/regulatory/13-PaidPrioritization.pptx` |
 | `05-Measurement/01-Measurement/` | **Ch 5** Measuring Information Controls (whole) | `class/measurement/02-Measurement.pptx` |
 | `06-Circumvention/01-Circumvention/` | **Ch 6** Taking Back Control (whole) | `class/circumvention/16-Circumvention.pptx` |
+| `06-Circumvention/02-Countering/` | **Ch 6** Taking Back Control — §6.5 (countering platform, legal, and economic controls) | new deck (Nov 2026), built from `03-Platform`, `04-Legal`, `05-Measurement`, `06-Circumvention/01` decks; no pptx |
 | `07-Conclusion/01-Conclusion/` | **Ch 7** Conclusion: The Future of Information Control (whole) | `class/intro/18-Wrapup.pptx` + `class/19-Conclusion/slides.md` |
 
 **Notes.** The EU **DSA** deck is folded into `04-Legal/01-Legal` (book §4.1), not a

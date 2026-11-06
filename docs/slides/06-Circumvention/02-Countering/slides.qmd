@@ -1,0 +1,416 @@
+---
+title: "Countering Platform, Legal, and Economic Controls"
+subtitle: "Internet Censorship and Online Speech"
+author: "Nick Feamster · University of Chicago"
+date: last-modified
+header-includes: |
+  <style>
+    /* No ALL-CAPS anywhere */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6,
+    .reveal .title, .reveal .subtitle,
+    section.title-slide h1, section.title-slide .subtitle {
+      text-transform: none !important;
+      letter-spacing: normal !important;
+    }
+    /* Uniform title sizes (absolute px — unaffected by .smaller) */
+    .reveal h1, .reveal .smaller h1, .reveal section.smaller h1 { font-size: 46px !important; }
+    .reveal h2, .reveal .smaller h2, .reveal section.smaller h2 { font-size: 38px !important; }
+    .reveal h3, .reveal .smaller h3, .reveal section.smaller h3 { font-size: 30px !important; }
+    section.title-slide h1 { font-size: 56px !important; }
+    section.title-slide .subtitle { font-size: 32px !important; }
+    /* Body sizing (a bit bigger than before) */
+    .reveal { font-size: 30px; }
+    .reveal .smaller, .reveal section.smaller { font-size: 0.78em; }
+    .reveal ul, .reveal ol, .reveal p, .reveal blockquote { font-size: 0.88em; }
+    .reveal li { line-height: 1.3; margin-bottom: 0.15em; }
+    .reveal table { font-size: 0.72em; }
+    .reveal pre, .reveal code { font-size: 0.72em; }
+  </style>
+---
+
+## You Can't Tunnel Around a Recommender {.center}
+
+Last lecture: **VPNs, Tor, pluggable transports, decoy routing**, all aimed at the
+**network** controls of Ch. 2.
+
+But what about the controls of **Ch. 3 and Ch. 4**?
+
+- A **downranked** post
+- A **Content ID** claim, or a takedown notice nobody contests
+- A **zero-rated** bundle, a **demonetized** channel, a **cut-off** payment processor
+
+**Discussion:** which of these would a VPN fix?
+
+::: {.notes}
+• Open with the question, not the answer. Cold-call: pick one item and ask whether Tor helps.<br>• The point to draw out: these controls act on the *platform, the law, or the price*, not on the packet, so there is nothing to route around.<br>• Book: §6.5 (to be rewritten from this lecture); controls themselves in Ch. 3 and Ch. 4.
+:::
+
+## Different Controls, Different Counters {.smaller}
+
+| Control | Where it acts | Why circumvention fails |
+|---|---|---|
+| **Platform / algorithmic** (removal, downranking, hash-matching) | Inside the platform | The content is on the platform; the platform decides who sees it |
+| **Legal** (notice-and-takedown, §1201, CFAA, liability rules) | On the host, the speaker, the researcher | The chill happens **before** anything is blocked |
+| **Economic** (zero rating, demonetization, payment and infrastructure cutoffs) | On the price, the revenue, the service contract | Nothing is blocked; speech just gets **expensive** |
+
+::: {.notes}
+• Walk the rows. Each row is a chapter the class has already seen: platform (Meetings on moderation and personalization), legal (Section 230, DMCA, DSA), economic (net neutrality, zero rating, demonetization).<br>• Ask: in each row, who could change the outcome? That sets up the levers on the next slide.
+:::
+
+## Seven Levers {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+1. **Measurement and audit**: observe it from outside
+2. **Data access**: make the platform open the box
+3. **Transparency**: make the platform report what it did
+4. **Appeal and counter-notice**: contest a single decision
+:::
+::: {.column width="50%"}
+5. **Exit**: competition, interoperability, federation
+6. **Archiving**: keep a copy the control can't reach
+7. **Litigation, regulation, advocacy**: change the rules
+:::
+:::
+
+**For each lever, ask:** who pulls it, who pays for it, and **who does it leave out?**
+
+::: {.notes}
+• These are the organizing frame for the rest of the hour. They are not all equally strong: 1–4 make the control *visible*, 5–6 route around a *platform*, 7 changes the *rules*.<br>• Through-line from the circumvention lecture: there the question was "who pays for circumvention?"; here it is the same question one layer up.
+:::
+
+# Platform and Algorithmic Controls {.center}
+
+Measure, open, report, appeal, leave.
+
+## Lever 1: Audit From the Outside {.smaller}
+
+- **Audit studies** feed a black box known inputs and watch: the **political-ad audit**
+  (same policy, **opposite errors** at Facebook and Google)
+- **Personalization audits**: **Bobble** showed what search personalization filtered out;
+  **sock-puppet** studies of the YouTube "rabbit hole"
+- Same idea as **OONI** for networks (Ch. 5), pointed at a platform
+
+**Limits:**
+
+- Platforms control the instruments: **CrowdTangle** shut down **Aug 14, 2024**;
+  **X** ended free API access in **2023**
+- Terms of service can make the audit itself a violation (see **Sandvig v. Barr**, later)
+
+::: {.notes}
+• Draw on the audit slides from the platform and personalization lectures; ask a student to recall the national-parks ad example.<br>• Limit to stress: an outside audit needs data the platform can withdraw. Losing CrowdTangle and the X API ended whole research programs.<br>• Book: Ch. 3 (audits), Ch. 5 §5.3–5.4.
+:::
+
+## Lever 2: Make the Platform Open the Box {.smaller}
+
+**EU Digital Services Act, Article 40**: vetted researchers can request **non-public**
+platform data through national regulators.
+
+- Delegated act on data access in force **Oct 29, 2025**; requests via a central
+  **DSA Data Access Portal**
+- **Oct 24, 2025**: Commission **preliminarily found TikTok and Meta in breach** of
+  researcher-access duties
+- **May 19, 2026**: Commission roundtable to launch the **first** vetted requests;
+  regulators had **49 applications** in hand
+
+**Limits:** EU only · slow · regulator-gated · what counts as "systemic risk" research?
+
+::: {.notes}
+• The policy answer to "the platform controls the instruments": make access a legal duty.<br>• Status as of Nov 2026: requests are being processed; no public record found of the first data actually delivered. Say "the first requests are in the pipeline," not "researchers now have the data."<br>• Ask: would a US researcher studying a US election benefit? (Only for EU-relevant systemic risks.)<br>• Book: Ch. 5 (DSA), Ch. 3 personalization.
+:::
+
+## Lever 3: Make the Platform Report {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Voluntary**
+
+- **Santa Clara Principles** (2018; **2.0** Dec 8, 2021): **Numbers, Notice, Appeal**
+- 2.0 adds: report **reinstatements**, **government** involvement, use of **automation**
+- Transparency reports: self-reported, self-defined, and they stop when the platform stops
+  (X: last full report **2017**)
+:::
+::: {.column width="50%"}
+**Mandated**
+
+- **DSA statements of reasons** for every moderation action, in a public
+  **Transparency Database**
+- **9+ billion** decisions in **H1 2025**; ~**99%** on platforms' **own terms**
+- Art. 17 reasons cover **demotion** and **payment restrictions**, not just removal
+:::
+:::
+
+**Discussion:** does a count of 9 billion decisions make anyone more accountable?
+
+::: {.notes}
+• Voluntary vs mandated is the contrast. Santa Clara is civil society's standard; the DSA borrowed its vocabulary and made it law.<br>• Correction to an earlier slide: the legal deck lists demonetization and downranking as "still missing" from the DSA. On paper, Art. 17(1)(a)–(b) requires a statement of reasons for demotion and for "suspension, termination or other restriction of monetary payments." What is still open is whether platforms actually file them for those cases and whether anyone can check.<br>• Book: Ch. 5 §5.3 (transparency reports, DSA database).
+:::
+
+## Lever 4: Appeal the Decision {.smaller}
+
+- **Internal appeal**: DSA Art. 20 requires one; **Meta's Oversight Board** (decides a
+  small number of cases)
+- **Out-of-court dispute settlement**: DSA Art. 21, certified bodies, decisions **not binding**
+
+::: {.vignette}
+**Appeals Centre Europe** (Dublin, certified under DSA Art. 21) published its second
+transparency report on **May 28, 2026**: **24,000+** disputes in Apr 2025–Mar 2026;
+where it reviewed the content it **disagreed with the platform 59%** of the time; **7,300+**
+cases were decided for the user **by default** because the platform never sent the content.
+:::
+
+::: {.notes}
+• Read the vignette, then ask: what does a 59% disagreement rate say about first-pass moderation? And what does the default count say about platform cooperation?<br>• Note the two directions: ACE also overturns decisions to *leave up* reported content (63% in that report), so appeal is not only a pro-speech lever.<br>• Limit: non-binding; first report found Meta implemented about half of overturns where it responded. Only EU users can use it.<br>• Book: Ch. 3 (Oversight Board), Ch. 4 (DSA).
+:::
+
+## Where Appeal Can't Reach {.smaller}
+
+**Shared hash databases** decide for many platforms at once.
+
+- **GIFCT**: ~**408,000** hashes (2025 transparency report, May 21, 2026)
+- No notice to the poster · no appeal · inclusion criteria not public
+- A wrong hash is wrong **everywhere** it is matched
+
+**Discussion:** who should be able to audit a hash list that nobody is allowed to see?
+
+::: {.notes}
+• Callback to the GIFCT case study in the platform lecture ("one hash, every platform").<br>• This is the hard case for every lever: no single decision to appeal, no outside measurement (the list is secret for good reasons), transparency limited to counts.<br>• Possible answers to draw out: trusted third-party auditors, sampled review by civil society, error reporting across member platforms.
+:::
+
+## Lever 5: Leave (Competition, Interoperability, Federation) {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+- **Mastodon / ActivityPub**: ~**10.5M** accounts, under **1M** monthly active (2026)
+- **Bluesky / AT Protocol**: **47M** registered (Oct 2026), ~**10M** monthly active mobile
+- **EU Digital Markets Act**: **WhatsApp** opened third-party chats (**BirdyChat**,
+  **Haiket**, announced Nov 2025)
+:::
+::: {.column width="50%"}
+**Limits**
+
+- **Network effects**: the audience stays where it is
+- Moderation **moves**, it doesn't vanish: server admins, labelers, defederation
+- A federated server is still a **host**: it gets notices and can be **blocked**
+:::
+:::
+
+::: {.notes}
+• Exit is the market answer: if one platform's control is bad, users leave. Ask who in the room has moved platforms and whether their followers came along.<br>• Federation splits moderation across many operators. Good for avoiding one chokepoint; bad if you want consistent rules or an appeal.<br>• Numbers move fast: active users matter more than registered accounts. Bluesky does not publish official MAU; the ~10M figure is a Similarweb estimate reported by TechCrunch.<br>• Book: Ch. 6 intro (running a Mastodon node is legal speech activity in the US/EU).
+:::
+
+# Legal Controls and Copyright Chilling {.center}
+
+The chill happens before the block.
+
+## The Chill Is an Asymmetry {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Notice**
+
+- A web form
+- Host removes "expeditiously" to keep its **safe harbor**
+- Automated notices at **billions-of-URLs** scale
+:::
+::: {.column width="50%"}
+**Counter-notice**
+
+- A **sworn statement**
+- **10–14 business days** offline
+- **Consent to be sued**
+:::
+:::
+
+Most posters never counter-notice; most notices are never checked.
+
+::: {.notes}
+• Callback to the notice-and-takedown slide from the legal lecture and the responses that asked what safeguards a complaint should require.<br>• Ask: if you posted a critical review and got a takedown, would you swear under penalty of perjury and consent to jurisdiction to get it back?<br>• Book: Ch. 4 (copyright, DMCA).
+:::
+
+## Contesting a Takedown: youtube-dl {.smaller}
+
+- **Oct 2020**: RIAA sends GitHub a **§1201** (anti-circumvention) notice; the
+  **youtube-dl** repository comes down
+- **EFF** answers for the developers: the tool circumvents nothing
+- **Nov 16, 2020**: GitHub **reinstates** the repo, revises its §1201 review, and pledges a
+  **$1M developer defense fund**
+
+**What made it work:** a famous project · lawyers on call · a host willing to push back
+
+**Who doesn't get that?** A creator with one video and a Content ID claim.
+
+::: {.notes}
+• The class guessed wrong on who sent this notice (most did not guess the RIAA). Use that.<br>• Counter-notice plus advocacy can win, but it needs resources the median poster lacks.<br>• Also: **Lenz v. Universal** (9th Cir. 2015) — a rights holder must consider fair use before sending a notice; in practice hard to enforce.<br>• Content ID sits *outside* the DMCA counter-notice process (book Ch. 4).
+:::
+
+## Lever: Make Legal Demands Visible {.smaller}
+
+- **Lumen** (Berkman Klein, formerly Chilling Effects): tens of millions of takedown
+  notices, billions of URLs, open to researchers
+- Reveals **abusive notices**: critics buried by fake copyright claims
+- Laws as **natural experiments**: FOSTA/SESTA (2018), GDPR geo-blocking, NetzDG
+
+**Limits:** only covers hosts that **share** notices · counts notices, not the chill on
+speech that was **never posted**
+
+::: {.notes}
+• Lumen is the legal-control equivalent of OONI: someone has to collect the demands before anyone can study them.<br>• The hardest thing to measure is the speech that never happened. The CFAA survey (next slide) is one of the few attempts.<br>• Book: Ch. 5 §5.4 (Lumen, natural experiments).
+:::
+
+## Lever: Carve Out Exceptions {.smaller}
+
+- **§1201 triennial exemptions**: the **Oct 2024** (ninth) rulemaking **renewed** the
+  good-faith **security research** exemption; **denied** a new one for AI-bias research
+- Felten and **SDMI** (2001): a paper withdrawn under §1201 threat; the origin story for
+  the security-research carve-out
+- **CFAA**: **Sandvig v. Barr** (2020), audits that break terms of service are not crimes;
+  **Van Buren** (2021) narrows "exceeds authorized access"
+- Surveys: about **40%** of security researchers avoid some research for legal reasons
+
+::: {.notes}
+• This is how auditing (Lever 1) depends on law (Lever 7): researchers need legal room before they can measure.<br>• Exemptions expire every three years and must be re-argued. Ask: who shows up to argue them?<br>• The AI-bias denial: the Copyright Office said the barrier was contracts and policy, not a technical protection measure, so §1201 was the wrong tool.<br>• Book: Ch. 4 (§1201, CFAA).
+:::
+
+## Litigation and Advocacy Cut Both Ways {.smaller}
+
+| Case / campaign | Year | Which way it pushed |
+|---|---|---|
+| **Stop SESTA** (EFF and others) | 2018 | Lost; FOSTA-SESTA passed, Craigslist closed personals |
+| **Moody v. NetChoice** | 2024 | Platforms' curation is **protected expression**; Florida and Texas must-carry laws sent back |
+| **Murthy v. Missouri** | 2024 | Jawboning claims dismissed on **standing** |
+| **Australia under-16 ban** | Dec 10, 2025 | Regulation that **removes** access |
+
+**Discussion:** a law that forbids a platform from moderating, is that a counter to
+platform control, or another control?
+
+::: {.notes}
+• Litigation is a lever, not a direction. The same courts that protect platform discretion (Moody) also block users from forcing platforms to carry them.<br>• Use the discussion question to separate "more speech" from "less platform power"; they are not the same goal.<br>• Book: Ch. 4 (US cases, liability spectrum).
+:::
+
+## Archiving: Keep a Copy {.smaller}
+
+- **Wayback Machine** and the **End of Term Web Archive**: the 2024/25 crawl captured
+  federal sites before and after **Jan 20, 2025**; pages and whole agency sites
+  (e.g., **USAID**) disappeared that spring
+- The crawl finished in 2026 at **petabyte** scale, open for bulk download
+
+**But the archive is a legal target too:**
+
+- **Hachette v. Internet Archive**: 2d Cir. ruled **against** controlled digital lending
+  (**Sept 4, 2024**); no cert petition
+- **UMG v. Internet Archive** (Great 78): **$621M** claimed; settled **Sept 15, 2025**
+
+::: {.notes}
+• Archiving counters removal by a government or a platform after the fact. It does nothing for downranking or the chill.<br>• The irony to draw out: one non-profit holds much of the record, and copyright suits threatened its existence.<br>• Ask: who should archive platform content that platforms delete, and who decides what is kept?
+:::
+
+# Economic Controls {.center}
+
+When nothing is blocked, only priced.
+
+## Zero Rating: Regulate the Price {.smaller}
+
+- **India** bans differential pricing (TRAI, **Feb 2016**): end of **Free Basics**
+- **EU**: CJEU **Telenor** (**Sept 15, 2020**), **Vodafone / Telekom Deutschland**
+  (**Sept 2, 2021**), **Telekom România** (C-367/24, **July 10, 2025**)
+- **US**: no federal net-neutrality rule after the Sixth Circuit (**Jan 2025**)
+
+**Measurement lever:** usage before and after a promotion (**Cell C / WhatsApp**,
+**MTN / Twitter**) and asking users why
+
+**Limit:** the counterfactual. In high-cost markets, zero rating may be the only access.
+
+::: {.notes}
+• Callback to the paid-prioritization lecture and our own MySpeedTest studies in Kenya and South Africa.<br>• Careful with the EU claim: commentators read the 2021 rulings as making zero rating incompatible with the Regulation; the 2025 ruling reaffirmed that an offer with an extra restriction violates it without saying every zero-rating offer is banned.<br>• Ask: is a ban the right counter, or a requirement that zero-rating be open to any service in a class?
+:::
+
+## Demonetization: Notice, Appeal, Diversify {.smaller}
+
+- **Notice**: YouTube's yellow icon; DSA Art. 17 now requires **reasons** for
+  payment restrictions (EU)
+- **Appeal**: human review of "limited ads"; slow, and the money from the first days
+  of a video is gone
+- **Audit**: creators and researchers test which words and topics trigger demonetization
+  (the LGBTQ titling experiments)
+- **Diversify**: direct support, subscriptions, multiple platforms
+
+**Limit:** nobody owes a creator an advertiser.
+
+::: {.notes}
+• Book Ch. 4, "Demonetization and Infrastructure Censorship": demonetization removes the economic basis for speech without removing the speech.<br>• The levers here are weaker than for removal: there is no right to monetization, only to an explanation (and only in the EU).<br>• Ask: is demonetization censorship if the video stays up?
+:::
+
+## Payment and Infrastructure Cutoffs {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Payment rails, July 2025**
+
+- **Collective Shout** campaign to **Visa, Mastercard, PayPal**
+- **Steam** (Jul 16) bans content that breaks **payment-processor** rules
+- **itch.io** (Jul 24) de-indexes all adult content; **20,000+** titles delisted across both stores
+:::
+::: {.column width="50%"}
+**Infrastructure**
+
+- **Cloudflare** drops **Kiwi Farms** (**Sept 3, 2022**): "a dangerous one that we are not comfortable with"
+- Daily Stormer (2017): registrars, hosts, CDN in sequence
+:::
+:::
+
+**Levers:** published infrastructure policies · alternative processors · advocacy ·
+regulation of **critical** services
+
+::: {.notes}
+• These controls stack: one decision at a payment network propagates to every store that uses it.<br>• The July 2025 case hit LGBTQ and small creators who were not the campaign's stated target, a point from the book's section on the uneven effects.<br>• Ask: should a card network be held to common-carrier duties? Should a DDoS-protection provider?<br>• Book: Ch. 4, payment-processor restrictions and domain/hosting censorship.
+:::
+
+# Putting It Together {.center}
+
+## Which Lever for Which Control? {.smaller}
+
+| Lever | Platform / algorithmic | Legal / copyright | Economic |
+|---|---|---|---|
+| **Audit / measurement** | Ad and personalization audits | Lumen, natural experiments | Usage before/after zero rating |
+| **Data access** | DSA Art. 40 | — | — |
+| **Transparency** | Santa Clara, DSA database | Lumen, transparency reports | DSA Art. 17 (payments) |
+| **Appeal** | Oversight Board, ACE | Counter-notice | "Limited ads" review |
+| **Exit** | Mastodon, Bluesky, DMA | — | Other processors, platforms |
+| **Archiving** | Wayback | (a target itself) | — |
+| **Law / advocacy** | Moody, Australia ban | §1201 exemptions, youtube-dl | TRAI, CJEU |
+
+::: {.notes}
+• Have the class fill in a blank version before revealing, or ask which cell is weakest.<br>• Pattern: the strongest levers are in the platform column, and they are mostly European. The economic column is thin.
+:::
+
+## Discussion {.smaller}
+
+1. Most of the levers on the table are **EU law**. What can a user in the **US**, or in
+   **India**, actually use?
+2. Every lever but exit leaves the platform **in charge**. Is that a problem?
+3. Which of these levers would a **state censor** happily support, and why?
+4. Pick one control from this term. Which lever would you pull first?
+
+::: {.notes}
+• Q3 is the sharp one: transparency mandates and "systemic risk" duties can be used to pressure platforms toward *more* removal. Tie back to state pressure running through platforms (platform lecture).<br>• Close by asking for one concrete proposal per breakout group.
+:::
+
+## Takeaways {.smaller}
+
+- Controls in the platform, the law, or the price **can't be tunneled around**; they
+  have to be **seen, contested, or changed**
+- **Visibility levers** (audit, data access, transparency) come first; **appeal** fixes
+  one decision at a time
+- **Exit** works only where the audience can follow
+- **Law cuts both ways**; most new counters are **European**, and **economic** controls
+  have the fewest counters
+
+# Next: The Future of Information Control {.center}
+
+*Read along: censorship-book §6.5 (Countering Platform, Legal, and Economic Controls) and
+Ch. 7.*
+
+::: {.notes}
+• Bridge to the conclusion: who governs the levers themselves?
+:::
