@@ -53,5 +53,5 @@ lectures; they are archived as-is and not converted.
 Tracked as missing-coverage suggestions in the relevant `coverage-notes.md`; several
 already have hands-on activities under [`../activities/`](../activities/): §3.2 Flooding,
 §3.3 AI as Information Arbiter, §3.5 Disinformation, §3.6 Content Moderation; §4.2
-Copyright, §4.4 Zero Rating, §4.5 Demonetization; Ch 6 sub-techniques (VPNs, Tor,
+Copyright, §4.3 Preferential Access (net neutrality and zero rating), §4.4 Demonetization; Ch 6 sub-techniques (VPNs, Tor,
 information hiding, infrastructure).

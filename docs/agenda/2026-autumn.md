@@ -387,7 +387,7 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 *Plan; replaced with the record after class.*
 
-- Housekeeping: week-7 response (book 4.4–4.5) due Tuesday November 10 at 9 am; the schedule change (Tuesday is economic controls, 4.3–4.5, with the parked net-neutrality questions)
+- Housekeeping: week-7 response (book 4.4–4.5) due Tuesday November 10 at 9 am; the schedule change (Tuesday is economic controls, 4.3–4.5, with the parked net-neutrality questions). *Update, Nov 5: the book now combines net neutrality and zero rating in one section, so the old 4.3–4.5 is now 4.3–4.4. Zero rating (old 4.4) is now 4.3.2, and demonetization (old 4.5) is now 4.4; the content is the same.*
 - Student presentation 5: disinformation
 - Lecture: AI and copyright (a new deck; slides are not published on the site)
     - How Content ID works: three families of fingerprint, inside an audio fingerprinter, and what the detector cannot see (no reference, no context)
@@ -397,4 +397,4 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     - The censorship angle, and the Section 230 questions tabled on Tuesday
 - Hands-on: [can the system tell?](../activities/ai-copyright.md): does the model recite lyrics; does an AI image carry C2PA provenance; does Shazam recognize a Suno song
 - Breakout, as time permits: [should training a model on a work require a licence?](../breakouts/copyright.md)
-- Next: economic controls (book 4.3–4.5), Tuesday November 10
+- Next: economic controls (book 4.3–4.4 in the current PDF; 4.3–4.5 in earlier copies), Tuesday November 10
