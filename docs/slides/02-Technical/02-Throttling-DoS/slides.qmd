@@ -279,8 +279,9 @@ so it accidentally slowed *anything* containing it (Reddit, Microsoft).
 
 **2025:** under the **RuNet "sovereign internet"** law, Russia throttled
 **WhatsApp** — by **up to ~70–80%**, per the Internet Protection Society, using
-**DPI** — as a soft precursor to a full ban, steering users to the state-run
-**Max** messenger. *(HRW, July 2025.)*
+**DPI** — steering users to the state-run **Max** messenger. *(HRW, July 2025.)*
+It was a precursor: in **Feb 2026** Russia dropped WhatsApp from its national DNS,
+blocking it outright. *(Meduza, Feb 12, 2026.)*
 :::
 
 A **state-scale traffic shaper** (TSPU), aimed at one app, deniable as "the app

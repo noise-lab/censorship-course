@@ -1,0 +1,370 @@
+---
+title: "Law as Information Control in Authoritarian States"
+subtitle: "Internet Censorship and Online Speech"
+author: "Nick Feamster · University of Chicago"
+date: last-modified
+header-includes: |
+  <style>
+    /* No ALL-CAPS anywhere */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6,
+    .reveal .title, .reveal .subtitle,
+    section.title-slide h1, section.title-slide .subtitle {
+      text-transform: none !important;
+      letter-spacing: normal !important;
+    }
+    /* Uniform title sizes (absolute px — unaffected by .smaller) */
+    .reveal h1, .reveal .smaller h1, .reveal section.smaller h1 { font-size: 46px !important; }
+    .reveal h2, .reveal .smaller h2, .reveal section.smaller h2 { font-size: 38px !important; }
+    .reveal h3, .reveal .smaller h3, .reveal section.smaller h3 { font-size: 30px !important; }
+    section.title-slide h1 { font-size: 56px !important; }
+    section.title-slide .subtitle { font-size: 32px !important; }
+    /* Body sizing (a bit bigger than before) */
+    .reveal { font-size: 30px; }
+    .reveal .smaller, .reveal section.smaller { font-size: 0.78em; }
+    .reveal ul, .reveal ol, .reveal p, .reveal blockquote { font-size: 0.88em; }
+    .reveal li { line-height: 1.3; margin-bottom: 0.15em; }
+    .reveal table { font-size: 0.82em; }
+    .reveal pre, .reveal code { font-size: 0.72em; }
+  </style>
+---
+
+## Same Levers, Different Regime {.center}
+
+Last lecture: **intermediary liability, takedown regimes, the DSA**, all in democracies.
+
+Today: the **same legal levers** in China, Russia, Iran, and the states that copy them.
+
+- **Licensing** · **intermediary liability** · **real-name registration**
+- **Data localization** · **takedown orders** · **shutdown authority**
+
+**Question:** if the EU can order a platform to remove content, what exactly is different
+when Russia does it?
+
+::: {.notes}
+• Open with the question; take two or three answers before showing anything.<br>• Your claim to test out loud: the difference is rarely the lever itself; it is what the law lets the state call illegal, and whether anyone can say no.<br>• Book: §4.1.1 (to be written from this lecture); §4.1 for the democratic baseline.
+:::
+
+## The Authoritarian Legal Toolkit
+
+| Lever | Democratic version (earlier lectures) | Authoritarian version (today) |
+|---|---|---|
+| **Licensing** | Telecom licences, spectrum | All international traffic through **state gateways**; VPNs need a licence |
+| **Intermediary liability** | §230 immunity; DSA notice and action | Operator **must find and delete** prohibited content |
+| **Takedown orders** | Court or regulator orders, appealable | Agency orders on a **clock** (Vietnam 24 h; China "immediately") |
+| **Real-name registration** | Age assurance (Australia's under-16 ban) | Account tied to **ID or phone number** before posting |
+| **Data localization** | GDPR transfer rules | Data **stored at home**, handed over on request |
+| **Network control** | No filtering mandate; shutdowns rare (India the exception) | **Mandated filtering boxes**; shutdowns by decree |
+
+::: {.notes}
+• Walk the rows quickly; each democratic cell is a callback to the legal lecture.<br>• Ask: which rows would you object to *as written*, before knowing which country passed them?<br>• Hold the comparison for later; this slide only establishes that the toolkit is shared.
+:::
+
+## What Makes the Same Law Work Differently?
+
+::: {.columns}
+::: {.column width="50%"}
+**Vague offences**
+
+- "Fabricating or spreading **false information**"
+- "**Extremism**," "**undermining** national unity"
+- "**Subversion** of state power"
+
+The state defines the offence **after** the speech.
+:::
+::: {.column width="50%"}
+**No independent recourse**
+
+- Orders come from an **agency**, not a court
+- Courts are **not independent** of the executive
+- Orders are **secret** or unpublished
+
+The platform has **no one to appeal to**, so it complies **in advance**.
+:::
+:::
+
+::: {.notes}
+• This is the frame for the rest of the hour: watch for vagueness and recourse on every country slide.<br>• Tie back to "Law Taxes Speech Without Banning It" from the legal lecture: when the offence is vague, the chilling effect does the work.<br>• Question for you to answer in your own words: is vagueness a bug these laws tolerate, or the feature they are written for?
+:::
+
+# China {.center}
+
+Law first, then the firewall
+
+## Law Built the Great Firewall
+
+- **1996:** State Council *Interim Provisions* on international connection, **Art. 6**:
+  international traffic must use **state-provided gateways**; no one may "establish or use
+  other channels"
+- **Jan 2017:** MIIT notice: no **cross-border channels (including VPNs)** without
+  MIIT approval
+- **Cybersecurity Law (2017), Art. 50:** authorities may order **technical measures to
+  block** prohibited information from **outside China**
+- **Art. 58:** with State Council approval, **temporary restrictions on network
+  communications** in a region (a statutory basis for regional shutdowns)
+
+The firewall is **infrastructure**, but its authority is **statute**.
+
+::: {.notes}
+• Callback to the GFW slides in the intro and protocols lectures: we studied *how* it filters; this is *why it is legal* to filter.<br>• Art. 6 is the chokepoint rule; Art. 14 of the same provisions is what is cited when someone is fined for "climbing the wall." Enforcement has mostly targeted VPN *sellers*, not users.<br>• Point to make: the 1996 rule predates the firewall; the law created the chokepoint before the technology used it.
+:::
+
+## The Cybersecurity Law Makes Every Operator a Censor
+
+**Cybersecurity Law**: adopted **Nov 7, 2016**, in force **June 1, 2017**
+
+- **Art. 12:** users may not use networks to incite **subversion** of the state, spread
+  **separatism**, or **fabricate false information**
+- **Art. 24:** operators must require **real identity** information, or refuse service
+- **Art. 47:** on finding prohibited content, operators must **stop transmission, delete,
+  keep records, and report**
+- **Art. 37:** critical-infrastructure operators **store data in mainland China**
+
+**Amended Oct 28, 2025; in force Jan 1, 2026:** higher fines, **extraterritorial** reach
+to any overseas activity that harms China's cybersecurity, an explicit article on
+**Party leadership**, and AI governance written into the statute.
+
+::: {.notes}
+• Compare Art. 47 to the DSA: in the EU the platform acts on notice; here it must *look* and act on its own. That is liability with a monitoring duty.<br>• Real-name: Freedom House says China has required it since at least 2012; Art. 24 put it in statute.<br>• Ask: if you were a foreign platform, which article would you fear most? (Usually 47.)<br>• The 2026 amendment did not change operator duties; it raised the stakes.
+:::
+
+## The Model Extends to AI and Identity
+
+::: {.columns}
+::: {.column width="50%"}
+**Generative AI** (*Interim Measures*, in force **Aug 15, 2023**)
+
+- **Art. 4(1):** "Uphold the **Core Socialist Values**"
+- Must not generate content "inciting subversion," "harming the nation's image," or
+  "fake and harmful information"
+- Applies to **providers and users**
+:::
+::: {.column width="50%"}
+**Cyberspace ID** (in force **July 15, 2025**)
+
+- One state-issued **network ID** linked to a national ID and a **face scan**
+- Formally **voluntary**; platforms may not ask for more ID from users who use it
+- Critics: the state, not each platform, now holds the **identity map**
+:::
+:::
+
+::: {.vignette}
+**The pattern:** each new medium gets the **same content list**. The Art. 12 offences of
+2017 reappear, nearly word for word, as rules for what a **chatbot may say** in 2023.
+:::
+
+::: {.notes}
+• Callback to the AI-as-information-arbiter material: here the "alignment" target is written in law.<br>• Cyberspace ID: privacy framing from the state (platforms collect less); control framing from critics (one identity, held centrally). Let students argue both.<br>• Freedom House 2026 notes China now uses child-protection language to push further against anonymity.
+:::
+
+# Russia {.center}
+
+From a sovereign network to a sovereign messenger
+
+## The "Sovereign Internet" Law
+
+**Federal Law 90-FZ** (May 1, 2019; in force **Nov 1, 2019**)
+
+- Every ISP must install state-supplied **TSPU** boxes: DPI that can **filter, throttle,
+  and reroute** traffic
+- Creates a **national DNS** and powers to **centralize routing** in a "threat"
+- Roskomnadzor operates the boxes; the **ISP no longer decides**
+
+What it enabled (from our technical lectures):
+
+- **Twitter throttled**, March 2021 (the `t.co` over-match)
+- **YouTube degraded** from **July 2024**
+- **ECH blocked** within a month of Cloudflare's rollout, **Nov 2024**
+
+::: {.notes}
+• This is the legal side of the TSPU case study in the throttling lecture. Ask a student to recall the `t.co` over-blocking.<br>• HRW 2019 called the provisions "overly broad and vague"; the law tells ISPs to install equipment without saying what it will be used for.<br>• Point to make: China built the chokepoint in 1996; Russia retrofitted one onto a commercial, decentralized Internet by statute.
+:::
+
+## Criminalizing Speakers and Readers
+
+- **Mar 4, 2022** ("fakes" law, Criminal Code **Art. 207.3**): "knowingly **false
+  information**" about the armed forces; up to **15 years** in prison
+- **Dec 1, 2022** (foreign agents, **255-FZ**): anyone "**under foreign influence**" can
+  be listed; no foreign money needs to be shown
+- **Sept 1, 2025:** fines for **deliberately searching** for "**extremist**" material,
+  including **over a VPN**, and for **advertising VPNs**
+- **Dec 2025:** blocking of the most popular **VPN protocols** begins; **469 VPN services**
+  blocked by Feb 2026
+
+The target moved from **platforms** to **speakers** to **readers**.
+
+::: {.notes}
+• Walk the escalation: the 2022 laws punish what you say; the 2025 law punishes what you look for.<br>• "False" is defined by the Ministry of Defence's account; a journalist who reports a different casualty figure has spread a fake. Ask: how would a court decide what is "knowingly false" here?<br>• Foreign agents: the label must appear on everything the person publishes, a cost on speech without a ban.<br>• Callback to the circumvention lecture's VPN vignette.
+:::
+
+## Block the Foreign, Mandate the Domestic
+
+::: {.vignette}
+**Russia, 2025–26.**
+
+- **June 2025:** law creates a **"national messenger"**: **Max**, built by VK. **Sept 1, 2025:**
+  Max must be **preinstalled** on phones and tablets sold in Russia.
+- **Aug 2025:** WhatsApp and Telegram **calls restricted**.
+- **Feb 2026:** **YouTube, WhatsApp**, Facebook, and independent media **removed from the
+  national DNS**; the Kremlin confirms the WhatsApp block (Feb 12).
+- **Feb 2026:** a new law lets the **FSB order shutdowns without a court**, on grounds
+  the president sets.
+- **Apr 10, 2026:** OONI anomalies show **95%** of Telegram tests blocked; no formal ban
+  was ever announced.
+:::
+
+Max is **not end-to-end encrypted**, and every Max account requires a **Russian or Belarusian
+phone number**.
+
+::: {.notes}
+• This is the clearest case of law as both stick and carrot: block the foreign service, then legally require the domestic one.<br>• Note the method: the national DNS from the 2019 law was the instrument for the Feb 2026 blocks. Meduza found the DNS removal leaky at first (alternative resolvers still worked).<br>• Telegram: Meduza reports it has been unusable without a VPN for most users since mid-March, yet a Levada poll found 49% still read Telegram channels.<br>• Ask: is a preinstall mandate a censorship law? Compare app-store rules elsewhere.
+:::
+
+# Iran {.center}
+
+Law delegates; the network executes
+
+## Who Decides What Is Blocked
+
+::: {.columns}
+::: {.column width="50%"}
+**Computer Crimes Law (2009)**
+
+- **Art. 21–22:** a **Committee to Determine Instances of Criminal Content**, under the
+  **Prosecutor General**, issues filtering orders
+- **Art. 23:** hosts must comply **on receipt** of an order
+- The **list of criminal content** is the committee's, not Parliament's
+:::
+::: {.column width="50%"}
+**Supreme Council of Cyberspace (2012)**
+
+- Created by order of the **Supreme Leader**
+- Sets filtering policy; drives the **National Information Network (NIN)**
+- **Shutdowns** have no clear statutory basis: treated as **national-security** decisions
+:::
+:::
+
+**Delegation is the design:** the law names a **body**, not a **rule**.
+
+::: {.notes}
+• Contrast with China and Russia, where offences are listed in statute (vaguely). Iran's law mostly delegates the list to a committee.<br>• Freedom House: shutdown decisions come from the Supreme National Security Council and are carried out by the ICT ministry through ISPs.<br>• Question for you: is "no law at all" worse or better than a vague law, for the person trying to contest a block?
+:::
+
+## From Protest Shutdowns to a Two-Tier Internet
+
+- **Nov 2019:** fuel-price protests; the NIN keeps **banks, state apps, ride-hailing**
+  running while the **global** Internet is cut
+- **Sept 2022:** Mahsa Amini protests: **Instagram and WhatsApp** blocked (Sept 21),
+  **mobile "curfews"** 4 pm–1 am
+- **June 2025:** "stealth blackout" during the war, **BGP routes left up**
+
+::: {.vignette}
+**Freedom on the Net 2026** (Oct 2026): Iran fell from **13 to 9** out of 100.
+
+- **Jan 2026:** near-total shutdown for **20 days** during the protests (from **Jan 8**)
+- From **late Feb 2026:** about **88 days**, the **longest** nationwide shutdown FOTN has
+  recorded
+- By May 2026: **"Internet Pro"** plans sell global access at **~5×** the price, with
+  consent to **surveillance**
+:::
+
+::: {.notes}
+• The NIN is what makes long shutdowns affordable: domestic services keep running, so the state pays less for cutting the world off. Article 19 made this argument in 2020; 2026 is the proof.<br>• "Internet Pro" turns access into a licence: the price and the surveillance consent are the filter. Callback to the economic-controls segment later today.<br>• Date caution: Freedom House dates the long shutdown from late February; some outlets say March, and some count Jan 8 to May 26 as one blackout. Say "about 88 days, per Freedom House."<br>• Callback to the "Not Every Shutdown Withdraws the Route" slide in the protocols lecture.
+:::
+
+# The Template Travels {.center}
+
+## Copying the Template: Vietnam and Turkey
+
+::: {.columns}
+::: {.column width="50%"}
+**Vietnam, Decree 147** (in force **Dec 25, 2024**)
+
+- Users must verify accounts with a **Vietnamese phone number** (or ID) before posting
+- Platforms remove content within **24 hours** of an authority's request
+- User data **stored locally**, handed over **on request**
+- Only **verified** accounts may livestream
+:::
+::: {.column width="50%"}
+**Turkey, Law 5651** (2007, amended 2020 and 2022)
+
+- Large foreign platforms must name a **local representative**
+- Penalty ladder: ad ban, then **bandwidth cut 50%, then 90%**
+- **2022:** Penal Code **Art. 217/A**, "publicly disseminating **misleading
+  information**": 1–3 years
+:::
+:::
+
+**Throttling as a legal sanction**: the penalty for a platform is written as a **bandwidth
+percentage**.
+
+::: {.notes}
+• Vietnam: the parts are China's (real-name, 24-hour clock, localization), assembled by decree rather than statute.<br>• Turkey: a NATO member and EU candidate. The 90% throttle mostly worked as a threat; per Article 19, the major platforms set up local entities, and the penalty was not imposed for that reason.<br>• Callback: Turkey's 2014 DNS block of Twitter from the protocols lecture (the 8.8.8.8 graffiti).<br>• Ask: is a local-representative rule censorship? The DSA has a legal-representative rule too.
+:::
+
+## The Democratic Mirror: India
+
+**IT Rules amendment** (notified **Feb 10, 2026**; in force **Feb 20, 2026**)
+
+- Government takedown orders: act within **3 hours** (was **36**)
+- **AI-generated** ("synthetically generated") content must carry **labels**
+- Miss either and the platform risks its **safe harbour**
+
+Context from earlier lectures: **65 shutdowns** in 2025, more than any other democracy.
+
+**Question:** a 3-hour clock leaves no time to check an order. Is that different in kind
+from Vietnam's 24 hours?
+
+::: {.notes}
+• This is the contrast case the comparison slide needs: an electoral democracy, with courts, using the same lever with a shorter clock than Vietnam's.<br>• Freedom House 2026 flags the 3-hour rule as pushing platforms toward removal; Amnesty warned of the same.<br>• Callback to the platform lecture's slide on state pressure running through platforms (India's earlier IT Rules amendments).<br>• Let the class argue before the next slide.
+:::
+
+# Same Lever, Different Law? {.center}
+
+## Where Is the Line?
+
+| | Democratic use | Authoritarian use | Question to argue |
+|---|---|---|---|
+| **Severity** | Fines, delisting | Prison (15 years), shutdowns, blocking | Does severity change the *kind* of law, or only its degree? |
+| **Vagueness** | "Illegal content" defined elsewhere in law | "False," "extremist," "subversion" | Can any speech offence avoid vagueness? |
+| **Recourse** | Courts, counter-notice, DSA appeal | Agency orders; courts not independent | Is recourse the real line? |
+| **Transparency** | DSA database, Lumen | Secret lists, unpublished orders | Would publishing orders make these laws acceptable? |
+
+**India, Turkey, the EU:** where on this table does each fall?
+
+::: {.notes}
+• This slide is for you to argue, not to read. Suggested questions to answer in your own words:<br>• (1) If recourse is the line, is the 3-hour Indian rule closer to Vietnam than to the DSA?<br>• (2) Germany's NetzDG had a 24-hour clock; was it authoritarian? Why not?<br>• (3) Do authoritarian laws borrow democratic language ("disinformation," "child safety," "sovereignty") on purpose? Russia cited fraud for the call blocks; China cites child protection for ID.<br>• (4) Which matters more for a platform's behaviour: the law's text or the court behind it?<br>• Say where you come down; that sentence becomes the thesis of §4.1.1.
+:::
+
+## Discussion
+
+1. China and Russia both **block the foreign** and **mandate the domestic**. Is the
+   mandate (Max, the NIN) the more powerful lever?
+2. Iran now **sells** global access. Is "Internet Pro" a legal control, an economic one, or
+   both?
+3. Which democratic law from the last lecture would be **most dangerous** in the hands of
+   a government that controls the courts?
+4. Should a platform **comply, leave, or litigate**? WhatsApp left Russia by being
+   blocked; others named local representatives in Turkey.
+
+::: {.notes}
+• Q2 is the bridge to the economic-controls segment.<br>• Q3 is the sharp one; push for a specific law (a takedown clock, a local-representative rule, age verification).<br>• Q4: tie to the countering lecture (Week 9), where exit is one lever.
+:::
+
+## Takeaways
+
+- Authoritarian states use the **same legal levers** as democracies: licensing, liability,
+  real names, localization, takedown clocks
+- What changes the law is **vague offences**, **no independent recourse**, and **secrecy**
+- The law **comes first**: China's 1996 gateway rule, Russia's 2019 TSPU mandate, Iran's
+  filtering committee
+- Newest step: **mandate the domestic** service and **price** the foreign one
+- Democracies are **borrowing the clocks**; the line is recourse, not the lever
+
+# Next: Economic Controls {.center}
+
+*Read along: censorship-book §4.1 (law as information control); §4.1.1 is being written from
+this lecture.*
+
+::: {.notes}
+• Bridge: Iran's "Internet Pro" plans are where law turns into price.
+:::

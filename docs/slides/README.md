@@ -29,15 +29,17 @@ refresh loop). The canonical worked example is **`01-Intro/01-Overview/`**.
 | `01-Intro/01-Overview/` | **Ch 1** From Censorship to Information Control (whole) | `class/intro/01-Overview.pptx` |
 | `02-Technical/01-Protocols/` | **Ch 2** Technical Controls — §2.1–2.2 (manipulating / disrupting protocols) | `class/technical/04-Protocols.pptx` |
 | `02-Technical/02-Throttling-DoS/` | **Ch 2** Technical Controls — §2.3 (disrupting the flow of data; throttling/DoS) | `class/technical/07-DoS.pptx` |
+| `02-Technical/03-Interception/` | **Ch 2** Technical Controls — §2.2.5 (intercepting encryption and filtering inside applications) | new deck (Nov 2026), built from `02-Technical/01`, `02-Technical/02`, `05-Measurement`, `07-Conclusion` decks and primary sources; no pptx |
 | `03-Platform/01-Platform/` | **Ch 3** Platform Controls — §3.1 (platforms as content-manipulation tools) | `class/platform/09-Platform.pptx` |
 | `03-Platform/02-Propaganda/` | **Ch 3** Platform Controls — §3.4 (propaganda) | `class/platform/14-Propaganda.pptx` |
 | `03-Platform/03-Personalization/` | **Ch 3** Platform Controls — §3.7 (personalization) | `class/platform/10-Personalization.pptx` |
 | `04-Legal/01-Legal/` | **Ch 4** Legal & Economic Controls — §4.1 (law as information control; incl. EU DSA) | `class/regulatory/11-Legal.pptx` + `class/regulatory/dsa/dsa.md` |
 | `04-Legal/02-NetNeutrality/` | **Ch 4** Legal & Economic Controls — §4.3 (net neutrality) | `class/regulatory/12-NetNeutrality.pptx` |
 | `04-Legal/03-PaidPrioritization/` | **Ch 4** Legal & Economic Controls — §4.3 (paid prioritization) | `class/regulatory/13-PaidPrioritization.pptx` |
+| `04-Legal/05-Authoritarian/` | **Ch 4** Legal & Economic Controls — §4.1.1 (law as information control in authoritarian states: China, Russia, Iran, Vietnam, Turkey; India as contrast) | new deck (Nov 2026), built from `01-Intro`, `02-Technical`, `03-Platform/01`, `04-Legal/01`, `06-Circumvention/01` decks and primary sources; no pptx |
 | `05-Measurement/01-Measurement/` | **Ch 5** Measuring Information Controls (whole) | `class/measurement/02-Measurement.pptx` |
-| `06-Circumvention/01-Circumvention/` | **Ch 6** Taking Back Control (whole) | `class/circumvention/16-Circumvention.pptx` |
-| `06-Circumvention/02-Countering/` | **Ch 6** Taking Back Control — §6.5 (countering platform, legal, and economic controls) | new deck (Nov 2026), built from `03-Platform`, `04-Legal`, `05-Measurement`, `06-Circumvention/01` decks; no pptx |
+| `06-Circumvention/01-Circumvention/` | **Ch 6** Taking Back Control — §6.1–6.2 getting around technical controls | `class/circumvention/16-Circumvention.pptx` |
+| `06-Circumvention/02-Countering/` | **Ch 6** Taking Back Control — §6.3 countering platform controls, §6.4 countering legal and economic controls | new deck (Nov 2026), built from `03-Platform`, `04-Legal`, `05-Measurement`, `06-Circumvention/01` decks; no pptx |
 | `07-Conclusion/01-Conclusion/` | **Ch 7** Conclusion: The Future of Information Control (whole) | `class/intro/18-Wrapup.pptx` + `class/19-Conclusion/slides.md` |
 
 **Notes.** The EU **DSA** deck is folded into `04-Legal/01-Legal` (book §4.1), not a

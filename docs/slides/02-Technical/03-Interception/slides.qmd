@@ -1,0 +1,325 @@
+---
+title: "Intercepting Encryption and Filtering Inside Applications"
+subtitle: "Internet Censorship and Online Speech"
+author: "Nick Feamster · University of Chicago"
+date: last-modified
+header-includes: |
+  <style>
+    /* No ALL-CAPS anywhere */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6,
+    .reveal .title, .reveal .subtitle,
+    section.title-slide h1, section.title-slide .subtitle {
+      text-transform: none !important;
+      letter-spacing: normal !important;
+    }
+    /* Uniform title sizes (absolute px — unaffected by .smaller) */
+    .reveal h1, .reveal .smaller h1, .reveal section.smaller h1 { font-size: 46px !important; }
+    .reveal h2, .reveal .smaller h2, .reveal section.smaller h2 { font-size: 38px !important; }
+    .reveal h3, .reveal .smaller h3, .reveal section.smaller h3 { font-size: 30px !important; }
+    section.title-slide h1 { font-size: 56px !important; }
+    section.title-slide .subtitle { font-size: 32px !important; }
+    /* Body sizing */
+    .reveal { font-size: 30px; }
+    .reveal .smaller, .reveal section.smaller { font-size: 0.78em; }
+    .reveal ul, .reveal ol, .reveal p, .reveal blockquote { font-size: 0.88em; }
+    .reveal li { line-height: 1.3; margin-bottom: 0.15em; }
+    .reveal table { font-size: 0.72em; }
+    .reveal pre, .reveal code { font-size: 0.72em; }
+  </style>
+---
+
+## When the Wire Goes Dark {.center}
+
+Earlier lectures: the censor reads the **wire**: DNS answers, TCP packets, the
+**SNI** in the TLS handshake.
+
+Encryption is closing those windows one by one. So where does the censor go?
+
+- To the **trust anchor**: make the user's device trust the censor's key
+- To the **endpoint**: put the filter inside the app or the phone
+- To **distribution**: decide which apps can be installed at all
+
+::: {.notes}
+• Open with the question; let the class guess the three answers before showing them.<br>• This deck is the bridge from Ch. 2's network controls to Ch. 3's platform controls.<br>• Book: §2.2.5 (to be written from this lecture).
+:::
+
+## What Encryption Leaves Exposed {.smaller}
+
+| Technology | Hides from the network | Still in the open |
+|---|---|---|
+| **HTTPS** (TLS) | URL path, page content | Server IP, SNI hostname |
+| **TLS 1.3** (RFC 8446, Aug 2018) | The server's certificate | SNI hostname |
+| **Encrypted DNS** (DoH, RFC 8484, Oct 2018) | The DNS query | The resolver's address |
+| **Encrypted Client Hello** (RFC 9849, **Mar 2026**) | The real SNI | Outer SNI, IP, the fact ECH is in use |
+
+None of these protects you from a key **your own device trusts**, or from the
+**app** doing the filtering.
+
+::: {.notes}
+• Callback to the SNI-vs-ECH slide in the throttling lecture: Russia began dropping Cloudflare ECH handshakes Nov 2024; China and Iran block the encrypted DNS ECH depends on.<br>• ECH became an RFC this year (RFC 9849, March 2026).<br>• Land: every row assumes the endpoints and the trust anchor are honest. The rest of the lecture is about when they aren't.
+:::
+
+## How Your Browser Decides to Trust {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+- A **certificate authority** (CA) signs a site's certificate
+- Chains end at a **root** in the **root store**
+- Four companies run the root stores most people use: **Mozilla, Apple, Google, Microsoft**
+- Any trusted root can sign for **any** domain
+:::
+::: {.column width="50%"}
+**The catch:** a user or administrator can **add** a root.
+
+- That is how corporate proxies and antivirus software work
+- It is also how a state can try to read everyone's HTTPS
+:::
+:::
+
+**Discussion:** who decided which roots your laptop trusts?
+
+::: {.notes}
+• Same root-of-trust point as the DNSSEC demo (Meeting on DNS): open the keychain and look at the list.<br>• The root store is a short list run by a few companies: a quiet form of consolidation.<br>• Set up the rest of the lecture: adding a root is a feature (enterprise) and an attack (state).
+:::
+
+# Intercepting Encryption {.center}
+
+Make the device trust the censor's key.
+
+## Interception Is Already Routine {.smaller}
+
+**Corporate middleboxes** and **antivirus** software terminate TLS, inspect, and
+re-encrypt with a locally installed root.
+
+Durumeric et al., **NDSS 2017**: ~8 billion handshakes, three vantage points
+
+- **4.0%** of Firefox update connections intercepted
+- **6.2%** of e-commerce connections
+- **10.9%** of U.S. Cloudflare connections
+- More than an **order of magnitude** above earlier estimates; most intercepted
+  connections became **less secure**
+
+::: {.notes}
+• The point: the machinery a state needs for national interception is sold commercially and deployed in every large enterprise.<br>• Method worth naming for Ch. 5: they detected interception by fingerprinting the TLS handshake, since a proxy's ClientHello doesn't match the browser's User-Agent.<br>• Ask: when your employer or school does this, is it censorship?
+:::
+
+## Kazakhstan, 2019: A National Root {.smaller}
+
+- **July 17, 2019**: ISPs tell users to install the **"Qaznet Trust Network"** root
+  "for security"; without it, some sites fail
+- Interception on **Kazakhtelecom** (AS9198), triggered by the **SNI** for
+  **37 domains**: Google, Facebook/Instagram, Mail.Ru/VK
+- Probing 6,736 TLS hosts in the country: **7%** (from outside) to **24%** (from inside) got injected certificates
+- Active on and off for **21 days**; shut down **Aug 7, 2019** as a finished "pilot"
+- **Aug 21, 2019**: **Firefox, Chrome, and Safari** block the root, even if a user installs it
+
+::: {.notes}
+• Censored Planet measured this from outside the country (Raman et al., IMC 2020): set the SNI to facebook.com, see whose certificate comes back.<br>• The target list (social media and messaging) suggests surveillance as much as blocking.<br>• Book: also Ch. 5 (the measurement deck's Kazakhstan slide).
+:::
+
+## Kazakhstan, 2020: The Browser Veto {.smaller}
+
+- **Dec 6, 2020**: "Cyber Security Nur-Sultan 2020" exercise; residents of the capital
+  told to install a **new** root
+- **Dec 18, 2020**: **Mozilla, Google, Apple, Microsoft** all block it
+- No later attempt found through **Nov 2026**
+
+**Why the browsers had to act by hand:**
+
+- Chrome skips **certificate pinning** for a root the user installed
+- **Certificate Transparency** does not apply to locally trusted roots
+- Both are deliberate, so enterprise proxies keep working
+
+::: {.notes}
+• The lesson: the defenses that catch a rogue CA (pinning, CT) are designed to step aside for a root the user installed. So the only defense against a state-installed root was a manual blocklist.<br>• That makes four companies the arbiters of whether a country's interception works. Ask: is that a good thing?
+:::
+
+## Other States, Other Routes {.smaller}
+
+- **Mauritius**, Apr 14, 2021: regulator (ICTA) proposes routing **social media**
+  traffic through a state proxy that decrypts and archives it; Mozilla and Google object;
+  later withdrawn
+- **Russia**, Mar 2022: sanctions cut off foreign CAs; the Ministry of Digital Development
+  launches the **Russian Trusted Root CA**. Trusted by **Yandex Browser**, not by
+  Chrome, Firefox, Safari, Edge
+
+::: {.vignette}
+**Aug 3, 2026:** after foreign CAs revoked their certificates, **Sberbank, VTB,
+Alfa-Bank** and other Russian banks moved to the state CA. Their sites stopped opening
+in Chrome, Safari, and Edge; banks told customers to **install the state root or switch
+to Yandex Browser**.
+:::
+
+::: {.notes}
+• Russia is not Kazakhstan: the official reason is sanctions, not interception. But the outcome is the same mechanism: millions of devices are asked to trust a state root.<br>• Ask: once the root is installed for banking, what stops it from being used for anything else?
+:::
+
+## Catching a Rogue Certificate {.smaller}
+
+- **Pinning**: **Aug 2011**, a fraudulent **DigiNotar** `*.google.com` certificate is
+  used against users in **Iran**; Chrome's pins for Google flag it; DigiNotar is distrusted
+  and goes bankrupt
+- **CNNIC**, **Mar–Apr 2015**: an intermediate it issued ends up in an interception
+  proxy; Google and Mozilla stop trusting CNNIC's roots
+- **Certificate Transparency**: Chrome requires public logging of every certificate
+  issued after **Apr 30, 2018**; mis-issuance becomes visible
+- **Measurement**: probe from inside and outside; compare the certificate you get with
+  the one everyone else gets
+
+**Limit:** all of this catches **public** CAs misbehaving. A root the **user installs**
+is outside it.
+
+::: {.notes}
+• Pair with the previous slide: these tools work against a compromised or coerced public CA, not against a root installed on the device.<br>• CT is now the quiet audit of the whole Web PKI.<br>• Book: Ch. 5 for the measurement methods.
+:::
+
+# Filtering Inside Applications {.center}
+
+If you can't read the wire, read the app.
+
+## When the App Is the Censor {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Client-side**: the keyword list ships **inside** the app
+
+- **TOM-Skype** (Citizen Lab, **Oct 2008**): messages scanned for keywords and logged
+  to servers in China
+- Knockel et al., **FOCI 2011**: decrypted TOM-Skype's keyword lists
+- **YY**, 9158, Sina Show, GuaGua (FOCI **2015**): lists in all four
+- **YY** added **45** coronavirus keywords on **Dec 31, 2019**
+:::
+::: {.column width="50%"}
+**Server-side**: the list lives on the **company's servers**
+
+- Researchers can only **guess and test**
+- **WeChat** (next slide)
+- Moving the list to the server **hides it** from reverse engineering
+:::
+:::
+
+::: {.notes}
+• The key distinction for measurement: client-side lists can be extracted and read in full; server-side lists can only be sampled.<br>• The YY date is one day after doctors in Wuhan tried to warn colleagues (Censored Contagion, Mar 2020).<br>• None of this is visible on the network: the message is encrypted to the company, filtered there or before it leaves.
+:::
+
+## WeChat: One App, Two Systems {.smaller}
+
+- **1.44 billion** monthly users (Weixin and WeChat, Q2 2026)
+- Citizen Lab, **Nov 30, 2016**: keyword filtering applies to accounts registered with
+  **mainland China** phone numbers, and stays on when they travel
+- Filtering is **server-side**, triggered by **combinations** of keywords; more terms
+  blocked in **group** chats than one-to-one
+- **No notice**: the message simply never arrives
+- **2019**: images filtered by hash and by text in the image
+- **May 2020**: files sent between **non-China** accounts are scanned and used to
+  build the filter for China accounts
+
+::: {.notes}
+• "Two systems": the same app, different rules depending on where your phone number is registered.<br>• The silent failure is the important design choice: the sender can't tell censorship from a network problem.<br>• Ask: if you use WeChat to talk to family in China, which system are you in?
+:::
+
+## Super-Apps and Mini-Programs {.smaller}
+
+A **super-app** hosts other apps: **mini-programs** (microapps) for shopping,
+payments, rides, government services. The host is a **second app store**.
+
+- **China**: since **Sept 1, 2023**, new apps and mini-programs must **file** with the
+  regulator (MIIT); existing ones by **Mar 31, 2024**; unfiled ones can be delisted or blocked
+- **Russia**: **Max** (VK) must be **preinstalled** on phones and tablets sold
+  from **Sept 1, 2025**; increasingly required for government services
+- InterSecLab (**Sept 2026**): no end-to-end encryption; behavior set per account from
+  VK's servers; the app **stops working when it detects a VPN**
+
+::: {.notes}
+• The control point: the host platform reviews, ranks, and can remove every mini-program, and a state can regulate the host instead of thousands of developers.<br>• Open question for the class (and a project idea): no study measuring censorship inside mini-programs was found.<br>• Ask: what is the difference between a super-app and an operating system?
+:::
+
+## Filtering Beyond Chat {.smaller}
+
+- **Search**: Citizen Lab, "Missing Links" (**Apr 26, 2023**): **60,000+** censorship
+  rules across eight search platforms in China, including **Microsoft Bing**, whose
+  political rules were **broader** than Baidu's
+- **Hardware**: Apple's **engraving** service (Citizen Lab, **Aug 18, 2021**):
+  **1,045** keywords filtered in mainland China, subsets in Hong Kong and Taiwan
+- **The phone itself**: Lithuania's cyber center (**Sept 2021**) reported a **449-term**
+  list on a Xiaomi phone; Germany's BSI later found **no evidence** of censorship
+
+**Discussion:** a foreign company filters in China to stay in the market. Is that
+different from a Chinese company doing it?
+
+::: {.notes}
+• The Bing finding is the sharpest: a US company out-censoring Baidu on political terms.<br>• Xiaomi is a contested case; use it to talk about how hard it is to tell an ad blocklist from a censorship list.<br>• Same method across all three: sample testing against a server you can't see inside.
+:::
+
+## App Stores as a Lever {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**China**
+
+- **Jul 29, 2017**: Apple removes VPN apps; **674** in 2017 (Apple's answer to two US senators)
+- **Apr 19, 2024**: **WhatsApp** and **Threads** removed on a CAC order
+:::
+::: {.column width="50%"}
+**Russia**
+
+- **Jul 4, 2024**: Apple removes **25** VPN providers on a Roskomnadzor order
+- **98** VPN apps unavailable by **Sept 2024** (GreatFire)
+- **Mar 2026**: bring-your-own-server clients (**V2Box, v2RayTun, Streisand**) removed
+:::
+:::
+
+One company's compliance decision reaches **every iPhone** in the country.
+
+::: {.notes}
+• This is the circumvention tool removed before anyone can install it: the network never sees a thing.<br>• Callback to the VPN breakout: "If you ran Apple in 2026..."<br>• Contrast: Google Play reportedly removed far fewer of the 2025 Russian orders. One platform's choice, not a law of nature.<br>• Book: Ch. 3 (platforms), Ch. 6 (circumvention).
+:::
+
+# Measurement {.center}
+
+## What Network Vantage Points Can't See {.smaller}
+
+| Control | Visible to OONI / Censored Planet? | Method that works |
+|---|---|---|
+| National root, interception | **Yes**: the certificate changes | Compare certificates inside vs. outside |
+| Client-side keyword list | No | **Reverse engineer** the app, extract the list |
+| Server-side keyword filter | No | **Sample testing** with instrumented accounts |
+| Mini-program or app removal | No | **Monitor the store** (AppleCensorship) |
+| On-device filtering | No | Firmware and app analysis |
+
+Inside the app, a censored message and a delivered one look **the same on the wire**.
+
+::: {.notes}
+• This is the measurement gap the reviewer's question points at: most of our Ch. 5 tools look at the network.<br>• The methods that work need a phone number in the country, a registered account, legal room to reverse engineer, and they don't scale.<br>• Ask: who has the resources to do this, and what does it mean that so much of it comes from one lab?
+:::
+
+## Discussion {.smaller}
+
+1. Browsers vetoed Kazakhstan's root. Would they veto a **democracy's** root? Who
+   should decide?
+2. Russia's state root arrived for **banking**, not censorship. Does the reason matter?
+3. If every message is encrypted to the **company**, is end-to-end encryption the only
+   counter to in-app filtering?
+4. Pick one control from today. How would you **measure** it?
+
+::: {.notes}
+• Q1 is the sharp one: the browser veto is private power over a state decision, the same tension as content moderation.<br>• Q3 sets up client-side scanning (the conclusion lecture's Chat Control slide).
+:::
+
+## Takeaways {.smaller}
+
+- Encryption moves the censor from the **wire** to the **trust anchor**, the **app**,
+  and the **store**
+- A state root can read HTTPS at national scale; so far, **browser root stores** have
+  been the backstop
+- **In-app filtering** is invisible to the network; client-side lists can be read,
+  server-side ones only sampled
+- **Super-apps** and **app stores** are control points one decision away from millions of users
+
+# Next: Disrupting the Flow of Data {.center}
+
+*Read along: censorship-book §2.2.5 (to be written from this lecture) and §2.3.*
+
+::: {.notes}
+• Bridge to throttling and denial of service.
+:::
