@@ -1,10 +1,10 @@
 # 06-Circumvention/02-Countering — instructor notes
 
-New deck for Week 9 (Dec 1–3, 2026). Its narration will become the text of book §6.5
-(Countering Platform, Legal, and Economic Controls), which is being rewritten from the
-lecture. The deck answers a reviewer's question: Ch. 6's tools defeat Ch. 2's network
+New deck for Week 9 (Dec 1–3, 2026). Its narration will become the text of book §6.3 (Countering Platform
+Controls) and §6.4 (Countering Legal and Economic Controls). Ch. 6 is being reorganized
+as 6.1 introduction, 6.2 getting around technical controls, 6.3 platform, 6.4 legal and economic. The deck answers a reviewer's question: Ch. 6's tools defeat Ch. 2's network
 controls, so what counters the platform, legal, and economic controls of Ch. 3 and Ch. 4?
-The current §6.5 text was **not** used as a source. The deck is organized around seven
+The earlier §6.5 draft text was **not** used as a source. The deck is organized around seven
 levers instead.
 
 ## Current-events updates made (point 2)

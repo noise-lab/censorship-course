@@ -68,6 +68,22 @@ a *threat-model* decision, not a technical one — a diaspora journalist and a d
 activist using the same tool run very different risks. Book Ch. 6 intro.
 :::
 
+## Taking Back Control: Three Kinds of Control {.smaller}
+
+| Control | Where we saw it | How to take back control | Book |
+|---|---|---|---|
+| **Technical**: blocking, DNS and BGP manipulation, throttling | Ch. 2 | **Get around it**: VPNs, Tor, information hiding, decoy routing | §6.2 |
+| **Platform**: removal, downranking, recommendation | Ch. 3 | **See it and contest it**: audit, data access, transparency, appeal, exit | §6.3 |
+| **Legal and economic**: takedowns, liability, zero rating, demonetization, cutoffs | Ch. 4 | **Change the rules and the price**: visible legal demands, exceptions, litigation, archiving, price regulation | §6.4 |
+
+::: {.notes}
+• The chapter follows the book's own structure: one way of taking back control per kind of control.<br>• Only the first row can be routed around; the other two act on the platform, the law, or the price.<br>• Book: Ch. 6, §6.2–6.4.
+:::
+
+# Getting Around Technical Controls {.center}
+
+VPNs, Tor, information hiding, and decoy routing (§6.2).
+
 # Virtual Private Networks {.center}
 
 *The most widely used circumvention tool — and the most misunderstood.*
@@ -742,10 +758,10 @@ Circumvention is a **continuous, adversarial process** — assemble a **portfoli
 it to your **threat model**, and remember that **accessibility** matters as much as
 cryptographic strength.
 
-*Read along: censorship-book Ch. 6 — Taking Back Control (whole chapter).*
+*Read along: censorship-book Ch. 6, §6.1–6.2. Next: countering platform, legal, and economic controls (§6.3–6.4).*
 
 ::: {.notes}
 Close on the chapter's two cross-cutting themes: legality/risk vary by jurisdiction, and
-the most usable tool usually beats the most capable one. Point students to the full Ch. 6.
-Next up in the course: the Conclusion / Internet governance (Ch. 7).
+the most usable tool usually beats the most capable one. This covers §6.2; the next Ch. 6
+lecture takes the platform (§6.3) and legal and economic (§6.4) rows of the map.
 :::

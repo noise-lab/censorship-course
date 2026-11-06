@@ -42,7 +42,19 @@ But what about the controls of **Ch. 3 and Ch. 4**?
 **Discussion:** which of these would a VPN fix?
 
 ::: {.notes}
-• Open with the question, not the answer. Cold-call: pick one item and ask whether Tor helps.<br>• The point to draw out: these controls act on the *platform, the law, or the price*, not on the packet, so there is nothing to route around.<br>• Book: §6.5 (to be rewritten from this lecture); controls themselves in Ch. 3 and Ch. 4.
+• Open with the question, not the answer. Cold-call: pick one item and ask whether Tor helps.<br>• The point to draw out: these controls act on the *platform, the law, or the price*, not on the packet, so there is nothing to route around.<br>• Book: §6.3 (platform) and §6.4 (legal and economic), written from this lecture; the controls themselves are in Ch. 3 and Ch. 4.
+:::
+
+## Taking Back Control: Three Kinds of Control {.smaller}
+
+| Control | Where we saw it | How to take back control | Book |
+|---|---|---|---|
+| **Technical**: blocking, DNS and BGP manipulation, throttling | Ch. 2 | **Get around it**: VPNs, Tor, information hiding, decoy routing | §6.2 |
+| **Platform**: removal, downranking, recommendation | Ch. 3 | **See it and contest it**: audit, data access, transparency, appeal, exit | §6.3 |
+| **Legal and economic**: takedowns, liability, zero rating, demonetization, cutoffs | Ch. 4 | **Change the rules and the price**: visible legal demands, exceptions, litigation, archiving, price regulation | §6.4 |
+
+::: {.notes}
+• The chapter follows the book's own structure: one way of taking back control per kind of control.<br>• Only the first row can be routed around; the other two act on the platform, the law, or the price.<br>• Book: Ch. 6, §6.2–6.4.
 :::
 
 ## Different Controls, Different Counters {.smaller}
@@ -79,9 +91,9 @@ But what about the controls of **Ch. 3 and Ch. 4**?
 • These are the organizing frame for the rest of the hour. They are not all equally strong: 1–4 make the control *visible*, 5–6 route around a *platform*, 7 changes the *rules*.<br>• Through-line from the circumvention lecture: there the question was "who pays for circumvention?"; here it is the same question one layer up.
 :::
 
-# Platform and Algorithmic Controls {.center}
+# Countering Platform Controls {.center}
 
-Measure, open, report, appeal, leave.
+Measure, open, report, appeal, leave (§6.3).
 
 ## Lever 1: Audit From the Outside {.smaller}
 
@@ -199,9 +211,9 @@ cases were decided for the user **by default** because the platform never sent t
 • Exit is the market answer: if one platform's control is bad, users leave. Ask who in the room has moved platforms and whether their followers came along.<br>• Federation splits moderation across many operators. Good for avoiding one chokepoint; bad if you want consistent rules or an appeal.<br>• Numbers move fast: active users matter more than registered accounts. Bluesky does not publish official MAU; the ~10M figure is a Similarweb estimate reported by TechCrunch.<br>• Book: Ch. 6 intro (running a Mastodon node is legal speech activity in the US/EU).
 :::
 
-# Legal Controls and Copyright Chilling {.center}
+# Countering Legal and Economic Controls {.center}
 
-The chill happens before the block.
+The chill happens before the block, and the price works without one (§6.4).
 
 ## The Chill Is an Asymmetry {.smaller}
 
@@ -305,10 +317,6 @@ platform control, or another control?
 • Archiving counters removal by a government or a platform after the fact. It does nothing for downranking or the chill.<br>• The irony to draw out: one non-profit holds much of the record, and copyright suits threatened its existence.<br>• Ask: who should archive platform content that platforms delete, and who decides what is kept?
 :::
 
-# Economic Controls {.center}
-
-When nothing is blocked, only priced.
-
 ## Zero Rating: Regulate the Price {.smaller}
 
 - **India** bans differential pricing (TRAI, **Feb 2016**): end of **Free Basics**
@@ -408,7 +416,7 @@ regulation of **critical** services
 
 # Next: The Future of Information Control {.center}
 
-*Read along: censorship-book §6.5 (Countering Platform, Legal, and Economic Controls) and
+*Read along: censorship-book §6.3–6.4 (Countering Platform Controls; Countering Legal and Economic Controls) and
 Ch. 7.*
 
 ::: {.notes}
