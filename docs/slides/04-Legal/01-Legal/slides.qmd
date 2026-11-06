@@ -707,11 +707,10 @@ Jan 2025.
 - Researcher access
 :::
 ::: {.column width="50%"}
-**Still missing**
+**Still weak**
 
-- **Shadow bans** / downranking
-- **Demonetization** (economic censorship)
-- **Algorithm** + recommender transparency
+- **Downranking** and **demonetization** need a statement of reasons (Art. 17), but few users ever get one
+- **Recommender** transparency stops at the main parameters (Art. 27)
 - Enforcement that actually bites
 :::
 :::
@@ -720,11 +719,13 @@ The core tension: **transparency vs. gaming** — disclose enough to be
 accountable without handing bad actors a playbook.
 
 ::: {.notes}
-The DSA documents *removals* well but is largely blind to the subtler, modern
-forms of control — friction (downranking) and flooding live in the recommender,
-which the SoR regime barely touches. Demonetization (Ch. 4 later) is pure
-economic censorship the DSA does not capture. Real risk: platforms file generic,
-minimal-compliance SoRs. Enforcement is only as good as the Commission's will to
+On paper the DSA reaches past removals: Art. 17(1)(a)-(b) requires a statement
+of reasons for demotion and for "suspension, termination or other restriction of
+monetary payments," so downranking and demonetization (Ch. 4 later) are covered.
+The gap is practice: these actions are rarely reported to the affected user, and
+the SoR database is dominated by removals. Flooding lives in the recommender,
+where Art. 27 asks only for the main parameters. Real risk: platforms file
+generic, minimal-compliance SoRs. Enforcement is only as good as the Commission's will to
 fine.
 :::
 

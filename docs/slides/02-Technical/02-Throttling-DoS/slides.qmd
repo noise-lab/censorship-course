@@ -248,7 +248,7 @@ link looks identical to the user. Foreshadows net neutrality.
 ::: {.vignette}
 In its **March 31, 2026** report, Access Now's **#KeepItOn** coalition
 documented **313 internet shutdowns across 52 countries in 2025** — its
-highest annual count (up from **296** in 2024) — and flagged a shift from **total blackouts to
+highest annual count (up from **304** in 2024) — and flagged a shift from **total blackouts to
 "targeted" restrictions**: slowing or blocking single platforms like
 **Telegram, WhatsApp, and TikTok** rather than cutting everything. **Turkey**
 in particular leans on **throttling of social media** during unrest.
