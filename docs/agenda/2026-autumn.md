@@ -385,16 +385,49 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 ### Meeting 12 (Thu Nov 5)
 
+*Reconstructed from the class recording. Student questions during the presentation and the lecture were mostly off-microphone and are paraphrased.*
+
+* **Housekeeping**
+    * Next week: economic controls (book 4.3 and 4.4: net neutrality, zero rating, demonetization), then the start of measurement
+    * The schedule on the course site now shows this class as AI and copyright, added at the end of week six because of the interest in the reading responses; it comes with a new hands-on, which may be tried next time
+    * Optional event: "Could AI Put Our Democracy at Risk?", a book discussion downtown on Wednesday November 11 (the conversation starts at 6:15 pm), which the instructor is moderating; suggestions for questions to ask the author are welcome
+    * Project proposals: the TA's feedback is in; the instructor's own feedback will follow on the GitHub issues, aiming for the weekend
+* **Student presentation 5: disinformation**
+    * Definitions: misinformation is false information spread without malicious intent (a joke taken literally, the tongue-map myth); disinformation is a deliberate attempt to control or influence a population for political, social, or economic ends. Related tactics: information overload and flooding that disengage people from critical thinking, bots and coordinated hashtags, astroturfing
+    * Turn and talk on a presidential social-media post announcing strikes on terrorists in Nigeria: which parts are misinformation or disinformation, what rhetorical devices do the work (prior warnings as justification, religious framing), and whether the classification depends on the reader
+    * AI and the democratic process: generative tools make influence operations cheaper; a former platform engineer described evading moderation by re-posting a message with small changes until one copy gets through. Examples from the 2026 campaigns: AI-generated footage of a Texas Senate candidate, and a false claim about an arrested immigrant in Pennsylvania that a federal agency repeated before it fell apart
+    * "Information gerrymandering" (an MIT study, 2020): partisan bubbles distort what people believe others think, which can bias turnout and outcomes; the structure of the network and its algorithms influence political participation
+    * Uncertainty is the opening: the pandemic "infodemic", and Russian interference in 2016. Research found the 2016 Russian Twitter activity mostly reached a small, highly partisan audience, with no measurable change in attitudes or votes among those exposed, which does not rule out individual-level effects and loss of trust
+    * Three countermeasures and their limits: labeling AI content (required in the EU and in about half of US states; labels are tiny and easy to miss), watermarking (announced by some model providers; removable, not universal, not enforced by every app), and detection (unreliable, many false positives, an arms race)
+    * Deepfakes: the fake Biden robocall, the 2022 video of Zelensky telling Ukrainians to surrender, a fake Pentagon explosion that briefly moved markets. The reverse problem: once anything can be AI, real evidence can be dismissed as fake, and a sitting president called a real White House video "probably AI"
+    * Elections: 27 viral AI fakes in the 2024 UK, EU, and French elections with no documented change in results; Slovakia's result had deeper causes than AI. Harms fall on candidates, especially women targeted with sexual imagery. OpenAI reported catching five covert campaigns in 2024 (Russia, China, Iran, and an Israeli marketing firm) that generated posts in many languages and fixed code for posting bots, with little real engagement. Through October 11, about 137 million dollars were spent on 220 AI-made or AI-enhanced political ads in 34 states, from both parties
+    * Rules: only about half of US states regulate election deepfakes, many only require a label, Texas bans deceptive ones in the 30 days before a vote, and there is no federal rule. A student noted that a platform with a known partisan tilt amplifies the effect; the presenters' view is that for now AI fakes mostly make people cling harder to the side they already hold
+    * A quiz on which images were real or AI-generated: the class, and the detectors, were often wrong
+    * "AI psychosis": chatbots are built to be agreeable; a 2026 study found even a rational user can spiral into false confidence with an agreeable model, and warning users does not prevent it. The presenters walked through a simulated multi-turn conversation that ended with the model volunteering the height of buildings; a student objected that the final turn looked like a non-sequitur without the preceding context, which the presenters granted. An Institute for Strategic Dialogue study found chatbots returned Russian state-aligned sources for a share of neutral questions, more for biased and leading ones, and in private chats nobody else sees the answer
+    * Discussion: Romania's annulled 2024 presidential election (a candidate boosted by tens of thousands of coordinated TikTok accounts; the court restarted the process and the candidate was barred and later prosecuted), and whether annulling an election over a social-media campaign was itself proper
+    * Group question: is an AI-made campaign ad disinformation? Groups landed on intent: a candidate's AI stand-in reading "I approve this message" with the candidate's consent is not; a fabricated video of an opponent is, and would be defamation anyway. Platform labels arrive days after a post has spread, so even a ban would come too late
+    * The instructor's question for the presenters: when a study says disinformation did not change an election, how could anyone know? Measuring collective outcomes is different from measuring individual belief, and "influence" may mean reinforcing a vote rather than changing it
+* **Lecture: AI and copyright** (compressed to about fifteen minutes; the hands-on and the breakout were not reached and are tabled for a later class)
+    * Pre-AI enforcement rested on two assumptions: a human made the uploaded thing, and there is an original somewhere to compare it against. Even then the line was never clean (sampling, remixing, interpolation in hip hop and pop), though a performance of a copyrighted work was clearly a use. Generative AI breaks both assumptions
+    * Three ways to match an upload against a library: an exact (cryptographic) hash, which any crop or resize defeats; a perceptual hash for images, "does it look the same"; and a spectral fingerprint for audio, built from a spectrogram of which frequencies are prominent over time, which survives trimming and excerpting. Open-source fingerprinters such as EchoPrint are not robust to a cover version. An AI-generated song has no reference in any library, so it passes
+    * Three questions, not one: was training lawful (fair use and its four factors); does the model contain a copy; who owns the output and does it infringe
+    * Training: Bartz v. Anthropic (training on purchased books held fair use; keeping a library of pirated books was not, and that part settled for about 1.5 billion dollars); Kadrey v. Meta (fair use, largely because the plaintiffs did not show harm to their sales, the market-effect factor); Thomson Reuters v. Ross went the other way (copying Westlaw's editorial headnotes to train a competing legal search tool was not fair use)
+    * Inside the model: a European court found that a chatbot reciting song lyrics on request meant the model stored them; the Stable Diffusion image-model case found no copy stored
+    * Output: the Supreme Court declined to review the case of an AI-generated image refused copyright because no human made it (correction: "denied certification" was said in class; the Court denied certiorari, leaving the refusal in place). The open question is where human making ends and machine making begins, which publishers are now asking authors about: whether a book was AI-generated or AI-assisted seems to hinge on where the first draft came from
+    * Themes for the course: claims at machine scale (automated takedown notices already exist; if the default on notice is removal, the default is censorship); "made with AI" as a ground for removal is a spectrum, not a line (mastering a recording with AI, fact-checking a book with it); model refusals in the name of risk aversion shape what gets produced; and the music settlements, in which labels license their catalogues to the generators, make the licence a gate on what goes into training, an economic lever. That theme carries into next week
+* **Not covered:** the hands-on ([can the system tell?](../activities/ai-copyright.md)) and the breakout ([should training require a licence?](../breakouts/copyright.md)); the music-industry slides; content identity and likeness detection; the Section 230 coda. Class ran about four minutes over
+* **Next:** Tuesday November 10, economic controls (book 4.3 and 4.4), with student presentation 6
+
+### Meeting 13 (Tue Nov 10)
+
 *Plan; replaced with the record after class.*
 
-- Housekeeping: week-7 response (book 4.4–4.5) due Tuesday November 10 at 9 am; the schedule change (Tuesday is economic controls, 4.3–4.5, with the parked net-neutrality questions). *Update, Nov 5: the book now combines net neutrality and zero rating in one section, so the old 4.3–4.5 is now 4.3–4.4. Zero rating (old 4.4) is now 4.3.2, and demonetization (old 4.5) is now 4.4; the content is the same.*
-- Student presentation 5: disinformation
-- Lecture: AI and copyright (a new deck; slides are not published on the site)
-    - How Content ID works: three families of fingerprint, inside an audio fingerprinter, and what the detector cannot see (no reference, no context)
-    - AI meets copyright as three questions: was training lawful (Bartz, Kadrey, Thomson Reuters v. Ross, NYT v. OpenAI); does the model contain a copy (GEMA v. OpenAI, Getty v. Stability); who owns the output (Thaler, the Copyright Office reports)
-    - The music settlements and the suits that followed
-    - From Content ID to content identity: likeness detection, synthetic-voice detection, labels, provenance
-    - The censorship angle, and the Section 230 questions tabled on Tuesday
-- Hands-on: [can the system tell?](../activities/ai-copyright.md): does the model recite lyrics; does an AI image carry C2PA provenance; does Shazam recognize a Suno song
-- Breakout, as time permits: [should training a model on a work require a licence?](../breakouts/copyright.md)
-- Next: economic controls (book 4.3–4.4 in the current PDF; 4.3–4.5 in earlier copies), Tuesday November 10
+- Housekeeping: week-7 responses are in; Thursday is measurement (book 5.2) with student presentation 7; the week-7 questions about measurement are saved for Thursday
+- Reading-response questions on zero rating (does the effect outlast the promotion; walled garden or gateway; Free Basics and India), neutrality above the ISP (clouds, CDNs, app stores), and demonetization
+- Student presentation 6: copyright, laws, and regulation
+- Lecture: economic controls
+    - Pricing as a tax on information: paid prioritization and zero rating, the Internet's business model, the 2014 Comcast and Netflix dispute, the bright-line rules and the 2025 court decision, why the threat moved up the stack, 5G slicing
+    - Zero rating: Free Basics, India's 2016 ban, the Kenya and South Africa natural experiments, the EU's 2025 ruling
+    - Demonetization and infrastructure censorship: YouTube's two rulebooks, the 2017 Adpocalypse, measured bias, the 2025 and 2026 enforcement waves, app stores, payment rails, and hosts as chokepoints
+- Hands-on, short: [traffic prioritization](../activities/prioritization.md); breakout as time permits: [zero rating and demonetization](../breakouts/zero-rating.md)
+- Next: measurement (book 5.2), Thursday November 12
