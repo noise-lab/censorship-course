@@ -79,3 +79,16 @@
 - rebuilt from _source-extract.md (12 slides) + censorship-book Ch. 4 §4.3–4.4
   (net-neutrality.tex, zero-rating.tex) + agenda.md (no dedicated meeting; built from
   book spine).
+
+## Demonetization section (added Nov 10 2026)
+
+Ten slides inserted before "Next: Measuring Information Control", built from the book's
+§4.4 (legal/demonetization.tex) with web-verified vignettes: YouTube's Jul 15 2025
+"inauthentic content" rename and Jul 13 2026 three-category rewrite (YouTube Help;
+Tubefilter), the Jan 2026 16-channel wave (reported by The Next Web and Tubefilter, not
+announced by YouTube), the Aug 31–Sep 1 2026 cop-watcher demonetization wave (The Real News
+Network), and the Jul–Aug 2025 Steam/itch.io delistings under card-network pressure
+(TechCrunch, CBC). Captures in `images/captures/` (headless Chrome, cropped to the
+headline; `images/` is gitignored, so force-add). Refresh the three vignettes yearly;
+the Divino and Adpocalypse slides are stable history.
+

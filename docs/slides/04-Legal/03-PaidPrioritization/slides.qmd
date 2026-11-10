@@ -1,5 +1,5 @@
 ---
-title: "Paid Prioritization and Zero Rating"
+title: "Paid Prioritization, Zero Rating, and Demonetization"
 subtitle: "Internet Censorship and Online Speech"
 author: "Nick Feamster · University of Chicago"
 header-includes: |
@@ -24,6 +24,8 @@ header-includes: |
     .reveal li { line-height: 1.3; margin-bottom: 0.15em; }
     .reveal table { font-size: 0.72em; }
     .reveal pre, .reveal code { font-size: 0.72em; }
+    .reveal .capture img { border: 1px solid #999; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+    .reveal .capture p { font-size: 0.55em; color: #555; margin-top: 0.2em; }
   </style>
 ---
 
@@ -480,12 +482,360 @@ is generally permitted. Verify/swap the EU case each year. Source: CJEU C-367/24
   markets the answer is genuinely mixed.
 - **The rules are unstable and divergent** — banned in India (2016), struck down in
   the US (2025), barred in the EU (2025).
+- **Demonetization is the same lever at the platform layer** — content stays up, the money and the reasons go; and the rails below (app stores, payment, hosting) can be cut with no appeal
 - **The real chokepoints moved up the stack** — to platforms, app-store/payment
   rails, CDNs — and **5G slicing** is paid prioritization's next architectural form.
 
 ::: {.notes}
 Land the through-line: control doesn't need a firewall. A price difference most
 people won't pay to escape is enough to shape what a population reads and uses.
+:::
+
+# Demonetization and Infrastructure Censorship {.center}
+
+The third economic lever: the content stays up, it just **stops paying** — or the
+rails that would pay for it are switched off.
+
+::: {.notes}
+Zero rating taxes the reader; demonetization taxes the speaker. Same family of
+control: nothing is blocked, the money does the steering. This section follows
+the book's §4.4: platform demonetization first (YouTube as the worked example),
+then the infrastructure chokepoints below the platform (payment rails, app
+stores, registrars and hosts), then what any of this looks like from the outside,
+which is Thursday's measurement question. See censorship-book Ch. 4, §4.4.
+:::
+
+## Two Rulebooks, One Platform {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+YouTube runs **two separate tests** on every video:
+
+- **Community Guidelines:** may the video *exist*?
+- **Advertiser-Friendly Guidelines:** may it *earn*?
+
+A video can pass the first and fail the second. The creator sees a **yellow
+dollar icon** — ad revenue off — usually **before any human has looked**.
+
+Since 2017 the second test has been the stricter one, and it is decided by a
+classifier tuned to what **advertisers** will sit next to.
+:::
+::: {.column width="50%"}
+```{dot}
+//| fig-width: 5.4
+//| fig-height: 4.6
+digraph two_tests {
+  rankdir=TB; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=22, margin="0.2,0.1", fillcolor="#eef3fb", color="#4a6fa5"];
+  edge [fontname="Helvetica", fontsize=19, color="#444444"];
+  ranksep=0.4; nodesep=0.3;
+  U [label="upload"];
+  CG [label="Community Guidelines\nmay it exist?"];
+  AF [label="Advertiser-Friendly\nGuidelines\nmay it earn?"];
+  R [label="removed", shape=ellipse, fillcolor="#fde8e8", color="#b91c1c"];
+  Y [label="stays up, no ads\n(yellow icon)", shape=ellipse, fillcolor="#fef3c7", color="#b45309"];
+  G [label="stays up, monetized", shape=ellipse, fillcolor="#e3f1e3", color="#2e7d32"];
+  A [label="appeal, human review", fillcolor="#f5f5f5", color="#777777", style="rounded,filled,dashed"];
+  U -> CG; CG -> R [label=" fail"]; CG -> AF [label=" pass"];
+  AF -> Y [label=" fail"]; AF -> G [label=" pass"];
+  Y -> A [style=dashed]; A -> G [style=dashed, label=" sometimes"];
+}
+```
+:::
+:::
+
+::: {.notes}
+Land the two-rulebook structure, because everything else in the section follows
+from it. Community Guidelines are the speech rules; the Advertiser-Friendly
+Guidelines are a commercial standard that is stricter and was never designed as
+a speech rule. The classifier runs first and the human reviewer, if any, comes
+on appeal. Ask the room which of the two tests is the one a government cannot
+easily impose, and which is the one that decides whether a creator can make a
+living. Source: YouTube advertiser-friendly content guidelines (book §4.4).
+:::
+
+## The 2017 Adpocalypse: Power Moves to the Advertiser {.smaller}
+
+```{dot}
+//| fig-width: 11
+//| fig-height: 3.2
+digraph adpocalypse {
+  rankdir=LR; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=22, margin="0.25,0.12", fillcolor="#eef3fb", color="#4a6fa5"];
+  edge [fontname="Helvetica", fontsize=19, color="#444444"];
+  nodesep=0.3;
+  N [label="press reports:\nbig-brand ads next to\nextremist videos"];
+  B [label="Johnson & Johnson, Verizon, AT&T\nand hundreds of brands\npull their ads", fillcolor="#fde8e8", color="#b91c1c"];
+  Y [label="YouTube ships\nautomated demonetization\nat scale"];
+  C [label="creators learn which\ntopics lose the money\nand steer away", fillcolor="#fef3c7", color="#b45309"];
+  N -> B -> Y -> C;
+}
+```
+
+- The crisis was **financial**, not legal: nobody sued, the advertisers left
+- The fix was a **classifier**, and the classifier's job is advertiser comfort, not accuracy
+- The lasting effect is the last box: a **chilling effect** that nobody ordered and nobody can see
+
+::: {.notes}
+Tell it as a sequence: the reporting, the boycott, the automated response, the
+adaptation. The message YouTube sent in 2017 was that advertiser comfort comes
+before creator revenue, and the system built then is the one still running. The
+last box is the censorship point: creators learn, through yellow icons, which
+subjects (health, war, sexuality, current events) are expensive to cover, and
+the coverage that is never made leaves no trace. That is also why this is hard
+to measure (Thursday). Sources: Ad Age, Fortune, Adweek coverage of the 2017
+boycott (book §4.4).
+:::
+
+## What the Machine Learned to Punish {.smaller}
+
+::: {.columns}
+::: {.column width="52%"}
+**Divino Group v. Google (2019–2023).** LGBTQ creators showed that videos with
+words like **"transgender"** in the title were demonetized while similar
+content from cisgender creators was not. On a call obtained by CNN, a Google
+AdSense representative said an ad was rejected **"because of the gay thing."**
+
+**Outcome:** dismissed, finally with prejudice in **July 2023**. YouTube is a
+**private actor**; the First Amendment does not apply (*Prager*), and the
+Lanham Act, Unruh Act, and contract claims all failed.
+
+**Measured bias:** Jiang et al. (CSCW 2022) found systematic differences in
+demonetization by content category and creator.
+
+The evidence was good. The law had no place to put it.
+:::
+::: {.column width="48%"}
+::: {.capture}
+[![](images/captures/goldman-divino.png){width="100%"}](https://blog.ericgoldman.org/archives/2023/07/court-finally-rejects-discrimination-lawsuit-against-youtube-divino-v-google.htm)
+
+Technology & Marketing Law Blog, Jul 14 2023: the fourth amended complaint dismissed with prejudice. Captured Nov 10 2026; click to open.
+:::
+:::
+:::
+
+::: {.notes}
+This is the slide to pair with the §230 discussion from the AI deck. The
+plaintiffs did not lose on the facts; they lost because every legal theory ran
+into the private-actor wall: no First Amendment claim against YouTube
+(Prager University v. Google, Ninth Circuit 2020), no false-advertising claim
+from YouTube's public statements about neutrality, no contract claim because the
+terms give YouTube discretion to demonetize. The AdSense recording is the
+detail students remember; the CSCW measurement study is the one that
+generalizes beyond anecdote. Ask: if a court cannot address a demonstrated
+bias in a private classifier, who can? That is Breakout B. Sources: Divino
+Group LLC v. Google LLC, N.D. Cal. 19-cv-04749 (orders Jan 2021, Sep 2022, Jul
+2023); CNN Business 2019; Jiang et al., ACM CSCW 2022.
+:::
+
+## Three Asymmetries Built Into the System {.smaller}
+
+::: {.columns}
+::: {.column width="55%"}
+```{dot}
+//| fig-width: 6.2
+//| fig-height: 4.2
+digraph asym {
+  rankdir=TB; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=21, margin="0.2,0.1", fillcolor="#eef3fb", color="#4a6fa5"];
+  edge [color="#444444"];
+  ranksep=0.35; nodesep=0.25;
+  D [label="demonetization", fillcolor="#fef3c7", color="#b45309"];
+  O [label="opaque\nclassifier decides first,\nreasons rarely given"];
+  G [label="geographic\nPartner Program in\nabout 104 countries"];
+  A [label="appeals\nwork better for big\nchannels than small ones"];
+  E [label="brand-safe drift:\nhealth, war, sexuality,\ncurrent events get avoided", fillcolor="#fde8e8", color="#b91c1c"];
+  D -> O; D -> G; D -> A; O -> E; G -> E; A -> E;
+}
+```
+:::
+::: {.column width="45%"}
+- **Opacity:** the decision arrives as an icon; the criteria are a moving commercial standard
+- **Geography:** a creator in Lagos and one in Los Angeles post the same video; one gets paid
+- **Size:** the appeal channel is the same on paper and very different in practice
+
+The result is a **tiered governance** (Caplan and Gillespie): different rules and revenue for different classes of users, and a steady pull toward content advertisers like.
+:::
+:::
+
+::: {.notes}
+Three structural features, all from §4.4, and the arrow at the bottom is the
+one that matters for a censorship course: none of them removes speech, and
+together they decide what gets made. The geography point lands with
+international students; the appeals point lands with anyone who has run a
+small channel. Caplan and Gillespie's "tiered governance" is the vocabulary for
+the whole thing. Source: book §4.4; Caplan and Gillespie 2020; YouTube Partner
+Program availability list.
+:::
+
+## 2025–2026 Vignette: "Inauthentic Content" and the AI-Slop Purge {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+- **Jul 15 2025:** YouTube renames its "repetitious content" rule **"inauthentic content"**: mass-produced or repetitive videos cannot be monetized. AI use itself is still allowed
+- **Jan 2026:** a single enforcement wave terminates **16 channels**, about **35 million subscribers** and **4.7 billion lifetime views** (reported figures, not YouTube's)
+- **Jul 13 2026:** the rule is rewritten into three named categories: *generic or repetitive*, *unsatisfying or off-putting*, and *AI personas giving health, legal, financial, or political advice*
+- **Collateral:** long-running **faceless human channels** swept up with the slop; some now hire on-camera hosts to satisfy the algorithm
+:::
+::: {.column width="50%"}
+::: {.capture}
+[![](images/captures/tubefilter-inauthentic.png){width="100%"}](https://www.tubefilter.com/2026/07/13/youtube-inauthentic-content-monetization-policy-update/)
+
+Tubefilter, Jul 13 2026. Captured Nov 10 2026; click to open.
+:::
+::: {.capture}
+[![](images/captures/youtube-help-policy.png){width="52%"}](https://support.google.com/youtube/answer/1311392)
+
+YouTube Help, the Jul 15 2025 rename, in YouTube's words. Click to open.
+:::
+:::
+:::
+
+::: {.notes}
+The freshest demonetization story, and a clean one for the course because
+nothing here is a speech rule: "inauthentic content" is a monetization
+category, enforced at the channel level, which means a strike switches off the
+revenue on everything the channel ever published. The January 2026 numbers are
+reported by The Next Web and Tubefilter, not announced by YouTube, so say
+"reported." Two discussion hooks: the third July 2026 category (an AI persona
+giving medical or legal advice is demonetized, not removed: is that the right
+lever?) and the collateral damage (a human who never showed a face is
+indistinguishable, to the classifier, from a slop factory). Ask the room
+whether "generic" is a property a classifier can see. Sources: YouTube Help,
+channel monetization policies (update log); Tubefilter, Jul 13 2026; The Next
+Web, Jun 15 2026 (reported wave figures).
+:::
+
+## 2026 Vignette: Cop Watchers Lose the Money {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+- **Aug 31 – Sep 1 2026:** dozens of **First Amendment auditor** and **cop-watch** channels, from a few thousand subscribers to over a million (Long Island Audit, Bay Area Transparency), are demonetized in one wave
+- The notices cite YouTube's **creator responsibility** policy and "reputational harm"; no criteria, no public explanation
+- Police unions had spent 2026 arguing publicly that auditors profit from antagonizing officers; the creators attribute the wave to that pressure. YouTube has not said
+- Some channels won **reinstatement on appeal**; the rest went quiet
+
+The videos stayed up. The people who film the police for a living lost the living.
+:::
+::: {.column width="50%"}
+::: {.capture}
+[![](images/captures/trnn-copwatchers.png){width="100%"}](https://therealnews.com/why-is-youtube-demonetizing-so-many-cop-watchers)
+
+The Real News Network, Sep 8 2026. Captured Nov 10 2026; click to open.
+:::
+:::
+:::
+
+::: {.notes}
+A demonetization wave aimed at speech about the state, which is the case the
+First Amendment exists for, and it never touches the First Amendment because the
+actor is YouTube. The mechanism is the "creator responsibility" policy, an
+off-platform-conduct and reputational-harm rule with no published criteria.
+Whether the union lobbying caused it is alleged by the creators and not
+confirmed by YouTube; say exactly that. The point for the course is the shape:
+content untouched, revenue gone, reasons withheld, and the only remedy an
+appeal to the same platform. Connect to Thursday: this wave is visible only
+because the creators are loud; the quiet version of the same thing is
+unmeasurable. Source: The Real News Network, Sep 8 2026, and follow-up
+reporting; YouTube creator responsibility policy.
+:::
+
+## Below the Platform: Where the Rails Can Be Cut {.smaller}
+
+::: {.columns}
+::: {.column width="48%"}
+```{dot}
+//| fig-width: 5.4
+//| fig-height: 5.0
+digraph stack {
+  rankdir=TB; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=21, margin="0.25,0.12", fillcolor="#eef3fb", color="#4a6fa5", width=4.2];
+  edge [color="#444444"];
+  ranksep=0.25;
+  P [label="platform: demonetize\n(YouTube 2017 →)", fillcolor="#fef3c7", color="#b45309"];
+  A [label="app store: remove\n(VPNs in China 2017, HKmap.live 2019)"];
+  M [label="payment rails: refuse\n(WikiLeaks 2010, Charlottesville 2017,\nSteam and itch.io 2025)"];
+  H [label="registrar, host, CDN: terminate\n(Daily Stormer 2017: GoDaddy, Google,\nthen Cloudflare)", fillcolor="#fde8e8", color="#b91c1c"];
+  P -> A -> M -> H;
+}
+```
+:::
+::: {.column width="52%"}
+Each layer down is **harder to route around** and **less accountable**:
+
+- Payment processors face less regulation than platforms and can terminate without reasons
+- A few companies control each rail; when they align, there is no alternative
+- None of it is state action, so none of it is reviewable as censorship
+
+Cloudflare's CEO, dropping Daily Stormer: *"no one should have that power."* He had it, and used it.
+:::
+:::
+
+::: {.notes}
+The book's infrastructure-censorship ladder. Walk it downward and ask at each
+rung who the customer can appeal to. App stores: Apple pulled VPN apps from its
+Chinese store at the government's request in 2017, and HKmap.live in 2019;
+for most phone users the store is the only way to install software, so a
+removal is a block. Payment rails: the WikiLeaks blockade (no charge, no
+trial), the post-Charlottesville terminations, OnlyFans and adult creators as
+the standing example. Registrars and hosts: the Daily Stormer chased from
+GoDaddy to Google to Russia's .ru, and Cloudflare's Matthew Prince writing the
+line on the slide the day he did it. The 2025 Steam case is the next slide.
+Source: book §4.4.
+:::
+
+## 2025 Vignette: The Card Networks Curate a Game Store {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+- **July 2025:** after an open letter from the Australian group **Collective Shout** to Visa, Mastercard, and PayPal, **Steam** delists hundreds of adult games and adds a rule: content is removable if it **"violates the rules of payment processors and card networks"**
+- **itch.io** deindexes its entire adult catalogue, over **7,000 listings**, to "protect core payment infrastructure"
+- **Aug 2025:** Mastercard says it placed no restriction and reviewed no games; **Valve** says the demand came through its processors citing "risk to the Mastercard brand." Stripe: "unable to support sexually explicit content" because of banking partners
+- Nothing was illegal. Nothing was blocked. The checkout was.
+:::
+::: {.column width="50%"}
+::: {.capture}
+[![](images/captures/techcrunch-mastercard-valve.png){width="100%"}](https://techcrunch.com/2025/08/03/mastercard-denies-pressuring-game-platforms-valve-tells-a-different-story)
+
+TechCrunch, Aug 3 2025. Captured Nov 10 2026; click to open.
+:::
+:::
+:::
+
+::: {.notes}
+The cleanest recent example of the payment rail as censor, and it has every
+feature from the previous slide: a private lobbying letter, a chain of
+intermediaries (card network, acquiring bank, processor, platform) in which
+each says the pressure came from the next one up, legal content, and no
+appeal. Valve's own explanation is the tell: losing card processing would stop
+customers buying anything on Steam, so the store removed the games the banks
+disliked. itch.io's response is the other half: deindex everything first,
+audit later, exactly the act-first-contest-later shape from the copyright
+lecture. Ask the room where in the chain the decision was actually made.
+Sources: TechCrunch, Aug 3 2025 (Mastercard statement and Valve's account);
+CBC Day 6, Jul 31 2025; Steam distribution rules, Jul 2025.
+:::
+
+## Demonetization Is Hard to See {.smaller}
+
+- **The unmade video leaves no trace.** A takedown is an event; a chilling effect is an absence
+- **Most of it is self-reported.** Platforms publish removal numbers, not demonetization numbers; payment and hosting terminations surface only when the target is loud
+- **Transparency law stops at removal.** The EU DSA requires a *statement of reasons* for moderation actions; demonetization is not one. Creator groups now ask for exactly that (notice, criteria, human review, appeal)
+- **What can be measured:** natural experiments (a policy change, a wave), category comparisons across similar channels, and crowd-sourced records in the style of Lumen
+
+This is Thursday's question: how do you measure a control whose whole design is that nothing visibly happens?
+
+::: {.notes}
+The bridge to Chapter 5. Every mechanism in this section was chosen, in part,
+because it is deniable: the content is still there, so the platform can say
+nothing was censored. Measurement has to work around that: compare similar
+channels across a category line (Jiang et al. did this), use enforcement waves
+as natural experiments (January and September 2026 are two), and crowdsource
+self-reports. The DSA point is worth a minute: a Statement of Reasons is owed
+for removals and restrictions but demonetization sits outside it, and the
+creator petitions grounded in DSA Articles 14, 17, and 20 are asking to close
+that gap. Breakout B asks the class to design that due process. Source: book
+§5.x measuring economic controls; DSA Art. 17; demonetization.org.
 :::
 
 # Next: Measuring Information Control {.center}
