@@ -477,3 +477,18 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * The traffic-prioritization hands-on, the AI-and-copyright hands-on, and the zero-rating breakout.
 * **Next**
     * Thursday November 12: measurement (book 5.2) with student presentation 7. The measurement questions already in the week-7 responses open the discussion.
+
+### Meeting 14 (Thu Nov 12)
+
+*Plan; replaced with the record after class.*
+
+- Measuring technical controls (book 5.2)
+    - Why measure, and why it is hard: controls are hidden, intermittent, and hyper-localized
+    - The measurement ecosystem (OONI, Censored Planet, IODA, Cloudflare Radar) and why agreement across independent vantage points is the evidence
+    - DNS manipulation and why there is no single right answer; consistency metrics and verifiable checks
+    - The idle scan and the IP ID side channel; forward and reverse blocking
+    - Encore: the browser as a vantage point, and inferring domain, IP, and URL blocking
+    - Transparency reports and the DSA; the ethics of measurement and the paradox of consent
+- Student presentation 7: AI
+- Hands-on: [censorship measurement with OONI Explorer](../activities/measurement.md)
+- Breakout as time permits: [measuring technical controls](../breakouts/measurement.md)
