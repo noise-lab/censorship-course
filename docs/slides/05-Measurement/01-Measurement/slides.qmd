@@ -24,6 +24,9 @@ header-includes: |
     .reveal li { line-height: 1.3; margin-bottom: 0.15em; }
     .reveal table { font-size: 0.72em; }
     .reveal pre, .reveal code { font-size: 0.72em; }
+    .reveal .cell-output-display svg, .reveal .cell-output-display img { width: 100%; height: auto; }
+    .reveal .capture img { border: 1px solid #bbbbbb; box-shadow: 0 2px 8px rgba(0,0,0,0.18); }
+    .reveal .capture p, .reveal .caption { font-size: 0.55em; color: #666666; margin-top: 0.2em; }
   </style>
 ---
 
@@ -104,18 +107,23 @@ The **Open Observatory of Network Interference** — volunteers run **OONI Probe
 runs a suite of tests and uploads results to open data.
 
 ::: {.columns}
-::: {.column width="50%"}
+::: {.column width="42%"}
 - **Web connectivity** — is a site reachable?
 - **Instant messaging** — WhatsApp, Signal, Telegram
-:::
-::: {.column width="50%"}
 - **Circumvention** — Tor, Psiphon, VPNs
 - **Performance** — speed, video quality
-:::
-:::
 
 **3 billion+ measurements** since 2012 from **30,000 networks in 245 countries and
-territories**; explore them at **OONI Explorer** without running anything. *(OONI, 2026)*
+territories**. *(OONI, 2026)*
+:::
+::: {.column width="58%"}
+::: {.capture}
+[![](images/captures/ooni-mat.png){width="100%"}](https://explorer.ooni.org/chart/mat?probe_cc=IR&test_name=web_connectivity&since=2026-10-12&until=2026-11-12&axis_x=measurement_start_day)
+
+OONI Measurement Aggregation Toolkit: web-connectivity results from Iran, the last 30 days, confirmed blocks vs. anomalies vs. OK. Captured Nov 12 2026; click to open.
+:::
+:::
+:::
 
 ::: {.notes}
 Book §5.1. OONI is the leading open-source tool and the one we'll use hands-on. Key
@@ -131,6 +139,8 @@ the country has to take the risk). Hands-on preview.
 
 No volunteers: measure **from outside**, through **infrastructure inside** the country.
 
+::: {.columns}
+::: {.column width="48%"}
 - **Satellite** — DNS, via open resolvers
 - **Augur** — TCP/IP reachability, via the IP-ID side channel
 - **Hyperquack** — HTTP/S keyword filtering, via echo and discard servers
@@ -139,6 +149,15 @@ Running since **August 2018**; **95,000+ vantage points in 221 countries** *(CCS
 Satellite and Hyperquack data are public; **Augur's is not**.
 
 How each technique works: Part 2 of this deck. *(Book §5.2)*
+:::
+::: {.column width="52%"}
+::: {.capture}
+[![](images/captures/censored-planet.png){width="100%"}](https://censoredplanet.org/)
+
+censoredplanet.org, the project page and data access. Captured Nov 12 2026; click to open.
+:::
+:::
+:::
 
 ::: {.notes}
 Book §5.1. Talk about how OONI and remote measurement complement each other: OONI is deep
@@ -183,13 +202,40 @@ share. Q3 2026 figures came from secondary coverage; check the Cloudflare blog p
 before class. Next slide: Google's version of the same idea.
 :::
 
-## Google Transparency Report: A Bellwether
+## The Outage Dashboards {.smaller}
 
+::: {.capture}
+[![](images/captures/ioda.png){height="400px"}](https://ioda.inetintel.cc.gatech.edu/)
+
+IODA (Georgia Tech): BGP, active probing, and telescope signals per country, with the last 24 hours of outages on the map. Captured Nov 12 2026; click to open.
+:::
+
+Also live: the [Cloudflare Radar Outage Center](https://radar.cloudflare.com/outages). Both answer "is the network up?", not "is this site blocked?"
+
+::: {.notes}
+Two live dashboards, one minute each. IODA: pick a country with a recent event and show the
+three signal rows and the alert band. Radar: the outage list with the "government-directed"
+tag. Say what neither can see: a single blocked site on a network that is otherwise up.
+:::
+
+## Google Transparency Report: A Bellwether {.smaller}
+
+::: {.columns}
+::: {.column width="45%"}
 Google's **Traffic** report tracks fluctuations in traffic to Google services — a
 **black-box signal** that something is disrupting reachability.
 
 - Specific to **Google services**, but a useful **bellwether** for broader disruption
 - Best when it **corroborates** an independent measurement
+:::
+::: {.column width="55%"}
+::: {.capture}
+[![](images/captures/google-traffic.png){width="100%"}](https://transparencyreport.google.com/traffic/overview)
+
+Google Transparency Report, Traffic and disruptions: per-product traffic by region. Captured Nov 12 2026; click to open.
+:::
+:::
+:::
 
 ::: {.notes}
 Book §5.1. Contrast with OONI: Google sees its own traffic dip but can't tell you
@@ -223,11 +269,25 @@ documents. Source: OONI 2026 "Measuring Internet Censorship" report.
 
 **Agreement across independent vantage points** is the evidence. But each witness has gaps:
 
-- **Coverage** — volunteers are uneven; some countries have almost none
-- **Thresholds** — small or regional shutdowns can stay **below alert thresholds** *(FOCI 2026)*
-- **Signal choice** — Iran's 2025–26 shutdowns left **BGP routes up**; routing alone missed them
-- **Ambiguity** — growing **TLS interference** looks like ordinary failure *(OONI, 2026)*
-- **Access** — some data never released; platforms see the most and share the least
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 4.2
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.55; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  ev [label="An event:\na site unreachable,\ntraffic drops", fillcolor="#f2d9a8"];
+  ooni [label="OONI probes\ngap: volunteers are uneven;\nsome countries have none"];
+  goog [label="Google traffic\ngap: Google services only;\ncoarse and black-box"];
+  ioda [label="IODA, Radar\ngap: small shutdowns stay below\nthresholds; Iran left BGP up"];
+  plat [label="Platform data\ngap: sees the most,\nshares the least"];
+  ag [label="Witnesses agree:\nthat is the evidence", fillcolor="#d9efd3"];
+  ev -> {ooni goog ioda plat} -> ag;
+}
+```
+
+And a growing ambiguity: **TLS interference** looks like ordinary failure *(OONI, 2026)*.
 
 **Discuss:** When OONI, IODA, and Radar disagree about an event, whom do you believe, and
 what would you need to see?
@@ -245,11 +305,25 @@ it sets up the recipe.
 
 The book's five-step walkthrough — "is **example-news.org** blocked in Country X?"
 
-1. **Falsifiable hypothesis** — name the ISP, protocol, expected failure mode
-2. **Find vantage points** — OONI Probe? VPS in-country? side channel? a local volunteer?
-3. **Run the right tests** — DNS → TCP → TLS handshake → HTTP fetch, vs. a control
-4. **Distinguish blocking from breakage** — repeat across ISPs, over time, with controls
-5. **Be conservative** — claim what the data shows, not "Country X censors the web"
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 4.4
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.55; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  h [label="1. Falsifiable hypothesis\nname the ISP, the protocol,\nthe expected failure", fillcolor="#f2d9a8"];
+  v [label="2. Vantage points\nOONI probe? VPS in-country?\nside channel? a volunteer?"];
+  t [label="3. The right tests\nDNS → TCP → TLS → HTTP,\neach against a control"];
+  d [label="4. Blocking or breakage?\nrepeat across ISPs,\nover time, with controls", fillcolor="#f8d7c4"];
+  c [label="5. Conservative claim\nthese networks, this window,\nnot \"Country X censors\"", fillcolor="#d9efd3"];
+  h -> v -> t; t -> d [constraint=false]; d -> c;
+  {rank=same; h; d;} {rank=same; v; c;}
+}
+```
+
+Most mistakes happen at step 4: a failure is not censorship until the controls say so.
 
 ::: {.notes}
 Book §5.1 "A Walkthrough." This is the spine of the whole chapter and the most
@@ -296,9 +370,23 @@ is. The next three parts of the deck measure each layer in turn.
 
 **Problem:** there is **no single right answer**. Three causes of inconsistency:
 
-- **Censorship** (intentional manipulation)
-- **Misconfiguration** (benign)
-- **Load balancing / CDNs** (legitimate, by design)
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 3.6
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.55; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  q [label="Look up one domain\nfrom many resolvers", fillcolor="#f2d9a8"];
+  a [label="The answers\ndisagree"];
+  c1 [label="Censorship\ninjected or withheld answer", fillcolor="#f8d7c4"];
+  c2 [label="Misconfiguration\nbenign"];
+  c3 [label="Load balancing, CDNs\ndifferent by design", fillcolor="#d9efd3"];
+  w [label="Which one?", fillcolor="#f8d7c4", style="filled,rounded,dashed", fontcolor="#a03030"];
+  q -> a; a -> {c1 c2 c3}; {c1 c2 c3} -> w [style=dashed];
+}
+```
 
 ::: {.notes}
 Book §5.2. This is the central difficulty of DNS measurement. Popular services
@@ -324,24 +412,22 @@ challenge is separating this legitimate spread from manipulation.
 
 Since no single check is decisive, look for **multiple checks failing together**.
 
-::: {.columns}
-::: {.column width="50%"}
-**Consistency metrics**
-
-- IP address
-- **Autonomous System** (same ISP?)
-- HTTP content returned
-- Reverse DNS (IP → name)
-:::
-::: {.column width="50%"}
-**Independently verifiable**
-
-- **TLS certificate**: right domain?
-- Signed by a **trusted CA**?
-- Currently **valid** (not expired)?
-- Re-test fetching cert with **SNI**
-:::
-:::
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 3.9
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.55; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  s [label="An answer differs from\nother vantage points", fillcolor="#f2d9a8"];
+  k1 [label="Consistency checks\nsame AS? same reverse DNS?\nsame HTTP content?"];
+  k2 [label="Verifiable check\nTLS certificate: right domain,\ntrusted CA, currently valid?"];
+  ok [label="Valid certificate:\nlegitimate variation\n(a CDN front end)", fillcolor="#d9efd3"];
+  bad [label="Checks fail together,\nor the cert is self-signed\nor for the wrong domain:\nmanipulation", fillcolor="#f8d7c4"];
+  s -> k1 -> k2; k2 -> ok; k1 -> bad; k2 -> bad;
+}
+```
 
 A valid, browser-trusted certificate for the right domain needs **no cross-comparison** —
 it verifies on its own.
@@ -387,6 +473,27 @@ censoring country. You rarely have one.
 
 **Idle scan / "spooky scan"** turns an ordinary in-country host (a **reflector**) into an
 unwitting vantage point — using a **side channel**.
+
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 3.4
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.55; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  subgraph cluster_out { label="Outside"; style=dashed; color="#999999"; fontname="Helvetica"; fontsize=16;
+    m [label="Measurer\n(your machine)", fillcolor="#f2d9a8"]; }
+  subgraph cluster_in { label="Censoring country"; style=dashed; color="#999999"; fontname="Helvetica"; fontsize=16;
+    r [label="Reflector\nany host with a global\nIP ID counter"]; }
+  t [label="Target site", fillcolor="#d9efd3"];
+  cen [label="Censor", shape=diamond, fillcolor="#f8d7c4", margin="0.05,0.02"];
+  m -> r [label="1, 4: probe; read the IP ID"];
+  m -> t [label="2: SYN, spoofed as\nthe reflector", style=dashed];
+  t -> cen [label="3: SYN-ACK"]; cen -> r;
+  r -> cen [label="RST (IP ID +1)"]; cen -> t;
+}
+```
 
 ::: {.notes}
 Book §5.2 "Measuring TCP/IP Manipulation." This is the cleverest technique in the
@@ -509,6 +616,8 @@ test a single URL. Map each arrow back to the callout it points at on the earlie
 
 ## Measurement Meets Real Infrastructure {.smaller}
 
+::: {.columns}
+::: {.column width="46%"}
 These techniques now map **state censorship systems** at scale:
 
 - **China's Great Firewall** — measured as a **multi-layered** system (DNS, TCP/IP,
@@ -517,6 +626,25 @@ These techniques now map **state censorship systems** at scale:
   domains
 - **Kazakhstan** — the state pushed its **own root CA** onto users to run a
   nationwide **HTTPS man-in-the-middle**, until browsers **blocklisted** the cert *(2019; again Dec 2020)*
+:::
+::: {.column width="54%"}
+```{dot}
+//| fig-width: 6.0
+//| fig-height: 4.2
+digraph g {
+  rankdir=TB; nodesep=0.3; ranksep=0.55; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  u [label="Citizen's browser\nQaznet root CA installed\non government instruction", fillcolor="#f2d9a8"];
+  subgraph cluster_isp { label="Kazakh ISPs, Jul 2019 and Dec 2020"; style=dashed; color="#999999"; fontname="Helvetica"; fontsize=16;
+    i [label="State interception box\nre-signs google.com, facebook.com,\nmail.ru with the Qaznet CA", fillcolor="#f8d7c4"]; }
+  g [label="The real site", fillcolor="#d9efd3"];
+  u -> i [label="TLS"]; i -> g [label="TLS"];
+}
+```
+:::
+:::
 
 ::: {.notes}
 Book §5.2 (web-filtering subsection) names all three. The teaching point: the remote
@@ -536,8 +664,25 @@ cross-link to the Technical chapter's HTTPS/TLS material.
 - **ICLab** — VPS-based probes across many countries
 - **OONI** — volunteer probes + open data
 
-Censored Planet packages the methods we just saw as named techniques:
-**Satellite/Iris** (DNS), **Augur** (TCP/IP, the IP-ID side channel), **Hyperquack** (HTTP/S).
+Censored Planet packages the methods we just saw as named techniques, one per layer:
+
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 3.2
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.55; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  subgraph cluster_l { label="Layer a fetch crosses"; style=dashed; color="#999999"; fontname="Helvetica"; fontsize=16;
+    dns [label="DNS lookup"]; tcp [label="TCP handshake"]; http [label="HTTP/S request"]; }
+  subgraph cluster_t { label="Censored Planet technique"; style=dashed; color="#999999"; fontname="Helvetica"; fontsize=16;
+    sat [label="Satellite / Iris\nopen resolvers vs. trusted answers", fillcolor="#d9efd3"];
+    aug [label="Augur\nthe IP ID side channel (idle scan)", fillcolor="#d9efd3"];
+    hq [label="Hyperquack\nkeyword requests to echo and discard servers", fillcolor="#d9efd3"]; }
+  dns -> sat; tcp -> aug; http -> hq;
+}
+```
 
 Each trades off **representativeness**, **coverage**, and **risk to people** differently.
 **There is no single best vantage point.**
@@ -566,23 +711,22 @@ Platforms publish **transparency reports** on takedown requests and removals. Us
 **self-reported and self-audited**.
 
 ::: {.columns}
-::: {.column width="50%"}
-**They tell you**
+::: {.column width="44%"}
+**They tell you:** how many requests and removals, often by **country** and **request type**.
 
-- How many requests / removals
-- Often by **country** and **request type**
-:::
-::: {.column width="50%"}
-**They usually hide**
-
-- **Who** requested it
-- **Automated vs. manual**
-- Appeals & reinstatement
-- Consistent **categories**
-:::
-:::
+**They usually hide:** **who** requested it; **automated vs. manual**; appeals and
+reinstatement; consistent **categories**.
 
 X's last full report was **2017**; transparency is only as durable as a platform's will.
+:::
+::: {.column width="56%"}
+::: {.capture}
+[![](images/captures/google-removals.png){height="400px"}](https://transparencyreport.google.com/government-removals/overview)
+
+Google Transparency Report, government requests to remove content: counts by country and reason, and nothing about who asked or whether a person decided. Captured Nov 12 2026; click to open.
+:::
+:::
+:::
 
 ::: {.notes}
 Book §5.3. The format is the message: each platform chooses what to disclose, so
@@ -598,7 +742,7 @@ say *who* asked or whether a *bot* decided.
 The restriction's **source** differs: platform moderation vs. **external** legal/economic
 pressure.
 
-- **Lumen Database** — millions of takedown notices (DMCA, court orders); reveals
+- **[Lumen Database](https://lumendatabase.org/)** — millions of takedown notices (DMCA, court orders); reveals
   systematic **DMCA abuse** (4B+ links, false claims to bury criticism)
 - **Natural experiments** — **FOSTA/SESTA** (2018), **GDPR** geo-blocking, **NetzDG**:
   compare platform behavior before/after a law
@@ -619,6 +763,8 @@ publish them, so we rely on creator self-reports and news.
 The EU **Digital Services Act** requires **VLOPs** (45M+ EU users) to file a
 **Statement of Reasons** for *every* moderation action — in **machine-readable** form.
 
+::: {.columns}
+::: {.column width="48%"}
 Each SoR records: decision type · content category · **automated or human** · legal
 ground · **government order?** · appeals info.
 
@@ -626,6 +772,15 @@ ground · **government order?** · appeals info.
 The **DSA Transparency Database** has logged **over 9 billion** moderation decisions in
 **H1 2025 alone** — but **~99%** were platforms acting on their **own terms**, not legal
 orders, showing how little of online control is formal law. *(European Commission, 2025.)*
+:::
+:::
+::: {.column width="52%"}
+::: {.capture}
+[![](images/captures/dsa-db.png){height="380px"}](https://transparency.dsa.ec.europa.eu/)
+
+The DSA Transparency Database: every statement of reasons filed by the very large platforms, with a dashboard and bulk download. Captured Nov 12 2026; click to open.
+:::
+:::
 :::
 
 ::: {.notes}
@@ -643,10 +798,26 @@ and visibility ≠ accountability. The "Brussels effect" hasn't extended it glob
 
 ## Three Ways to Measure — Three Risk Profiles
 
-- **Deploy researchers** (Citizen Lab) — consented, but snapshots only; risk to *researchers*
-- **Deploy software to citizens** — better coverage, but risk to *volunteers*
-- **Co-opt deployed software** (spooky scan, Encore, open resolvers) — scale and
-  continuity, but **implicates people without consent**
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 4.0
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.55; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  a [label="Deploy researchers\n(Citizen Lab)", fillcolor="#f2d9a8"];
+  a2 [label="consented;\nsnapshots only"];
+  a3 [label="risk falls on\nthe researchers", fillcolor="#d9efd3"];
+  b [label="Deploy software\nto volunteers (OONI)", fillcolor="#f2d9a8"];
+  b2 [label="consented;\nbetter coverage"];
+  b3 [label="risk falls on\nthe volunteers", fillcolor="#f8d7c4"];
+  c [label="Co-opt deployed software\n(idle scan, Encore, open resolvers)", fillcolor="#f2d9a8"];
+  c2 [label="no consent;\nscale and continuity"];
+  c3 [label="risk falls on people\nwho never agreed", fillcolor="#f8d7c4"];
+  a -> a2 -> a3; b -> b2 -> b3; c -> c2 -> c3;
+}
+```
 
 The first two are ethically cleaner — and often **can't get the coverage** we need.
 
@@ -660,11 +831,25 @@ sites. The rest of the section lives in that tension.
 
 ## Censorship Measurement Falls in a Gap
 
-- **IRBs** review *human-subjects* research — measuring a censor's behavior often **isn't**
-  that, so it falls **outside** their purview...
-- ...yet it can still put **people at real risk** in repressive jurisdictions
-- **Legal ≠ safe**: a method legal on paper can still endanger a user; an *illegal*
-  measurement may create no real hazard
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 3.4
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.55; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  subgraph cluster_irb { label="What an IRB reviews"; style=dashed; color="#999999"; fontname="Helvetica"; fontsize=16;
+    hs [label="Human-subjects research\nstudies people", fillcolor="#d9efd3"]; }
+  cm [label="Censorship measurement\nstudies a censor's behavior,\nso it falls outside", fillcolor="#f8d7c4", style="filled,rounded,dashed"];
+  risk [label="Yet it can put people at real risk\nin repressive jurisdictions", fillcolor="#f8d7c4"];
+  self [label="So researchers are\nlargely self-governing", fillcolor="#f2d9a8"];
+  cm -> hs [label="not reviewed", style=dashed]; cm -> risk -> self;
+}
+```
+
+**Legal ≠ safe**: a method legal on paper can still endanger a user; an *illegal*
+measurement may create no real hazard.
 
 ::: {.notes}
 Book §5.5. This is the structural problem: the oversight machinery (IRBs) was built for a
@@ -677,10 +862,25 @@ protection, and risk is genuinely hard to estimate in advance.
 
 The usual safeguard — **informed consent** — can **backfire** here.
 
-- Consent at the scale/continuity needed is often **impossible**
-- Worse: consenting creates **documentary evidence of intent** to test censorship
-- An **unwitting** cross-origin request carries **plausible deniability** — "that's just
-  how the web works"
+Consent at the scale and continuity needed is often **impossible**. Worse:
+
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 3.0
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.55; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  cf [label="A consent form,\nsigned", fillcolor="#f2d9a8"];
+  ev [label="Documentary evidence of\nintent to test censorship", fillcolor="#f8d7c4"];
+  pr [label="The user is\nmore exposed", fillcolor="#f8d7c4"];
+  uw [label="An unwitting cross-origin\nrequest (how the web works)", fillcolor="#f2d9a8"];
+  ind [label="Indistinguishable from\nordinary third-party traffic"];
+  den [label="Plausible\ndeniability", fillcolor="#d9efd3"];
+  cf -> ev -> pr; uw -> ind -> den;
+}
+```
 
 The more common co-opted measurement is, the **safer** any one user becomes.
 

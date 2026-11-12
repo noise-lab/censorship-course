@@ -121,3 +121,7 @@
 - rebuilt from _source-extract.md (44 slides) + censorship-book Ch. 5 Measuring
   Information Controls (whole chapter: overview, technical, platform, legal-economic,
   ethics) + agenda.md (Ethics of censorship measurement).
+
+## Figures added (Nov 12 2026)
+
+Pass per the `deck-graphics` skill. Ten Graphviz diagrams (triangulation, the five-step recipe, DNS disagreement, the consistency-then-certificate decision flow, the idle-scan parties, the Kazakhstan interception, the layer-to-technique map, three risk profiles, the IRB gap, the paradox of consent) and six live captures, all current-events motivators under the refresh rule (OONI MAT for Iran, censoredplanet.org, IODA, Google traffic report, Google government removals, DSA Transparency Database with its cookie banner cropped). One new slide, "The Outage Dashboards", after the IODA/Radar slide. Captures of lumendatabase.org and radar.cloudflare.com/outages returned bot walls and are links instead. Legacy clippings unchanged: the Uganda 2021 traffic graph and the Pearce et al. figures stay under the landmark rule (the book's own figures); the OONI test screenshots and the Google map from the 2017 deck stay out as dated. Header CSS added for full-width SVG output and capture captions.
