@@ -480,15 +480,43 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
 
 ### Meeting 14 (Thu Nov 12)
 
-*Plan; replaced with the record after class.*
+*The recording covers the lecture, the response discussion, and the start of the hands-on. The hands-on report-back, the student presentation, and the wrap are not in the transcript yet; this section will be extended when they are.*
 
-- Measuring technical controls (book 5.2)
-    - Why measure, and why it is hard: controls are hidden, intermittent, and hyper-localized
-    - The measurement ecosystem (OONI, Censored Planet, IODA, Cloudflare Radar) and why agreement across independent vantage points is the evidence
-    - DNS manipulation and why there is no single right answer; consistency metrics and verifiable checks
-    - The idle scan and the IP ID side channel; forward and reverse blocking
-    - Encore: the browser as a vantage point, and inferring domain, IP, and URL blocking
-    - Transparency reports and the DSA; the ethics of measurement and the paradox of consent
-- Student presentation 7: AI
-- Hands-on: [censorship measurement with OONI Explorer](../activities/measurement.md)
-- Breakout as time permits: [measuring technical controls](../breakouts/measurement.md)
+* **Housekeeping**
+    * The order was changed for today: the lecture on measurement first, with the reading responses taken up inside it, then the hands-on (the class has been running out of time for hands-ons), then student presentation 7 on AI, with the podium handed over by about 4:25.
+    * Where this sits: today closes week 7 and the first half of chapter 5 (measuring technical controls). Tuesday continues measurement from the platform side: how takedowns are measured and what transparency reports show (the second half of chapter 5). The end of next week begins the last part of the course: what to do about all of this.
+    * A writer from the university news office sat in, with a photographer, for a feature on the class. The feature runs after the course ends; anyone who did not want to be photographed could say so, and anyone willing to talk about the class was invited to.
+    * The instructor said project-proposal feedback is still owed and is coming.
+* **Measuring technical controls** (book 5.2)
+    * Two themes from the reading responses ran through the lecture: what the measurements can and cannot tell you, and why measure at all, who the data is for.
+    * Why it is hard: effective censorship is designed to look like failure. A measurement shows that something is unreachable or slow; it does not say why.
+    * Why measure, and who it is for
+        * To design better circumvention: knowing which blocking techniques a censor uses lets you improve circumvention and assess whether it works.
+        * A student asked whether publishing detection methods lets censors adapt without anyone noticing. Yes: if a paper or source code says how DNS blocking or throttling is detected, the censor can evade the detection. That is mostly theoretical for repressive regimes but very real in net neutrality, where measurement tools have recognizable signatures and ISPs have been caught detecting the tool's traffic and prioritizing it. References to follow on Slack.
+        * Variation within a country. Political scientists have asked for a decade whether controls vary by region (for example, whether provinces with different politics in China see different blocking). The instructor has not seen an authoritative study. A postdoc in the lab looked for regional variation in the OONI and GreatFire data a few years ago and found inconsistencies, but could not tell geographic variation from something else. The same question could be asked of the United States. Still open.
+        * Variation across regimes. Do more authoritarian governments block more because the consequences differ from a democracy, where blocking would be perceived and reported differently? Classifying regimes and mapping them to the controls they use was posed as a study nearly ten years ago and was untenable then because the data did not exist; the data synthesis it needs is more tenable now, and the instructor suggested it as a project direction.
+        * Correlating events. PhD students in the lab are correlating public outage reports and trouble tickets from providers (Cloudflare, Amazon, Microsoft, which had an outage today) with current events, weather, software upgrades, and elections. OONI has done this piecemeal in case studies, such as an outage lined up with an election; an exhaustive study is now feasible.
+        * Diffusion. China has been treated as the thought leader in repressing speech since the Great Firewall in the late 1990s, and things that "would never happen in a Western democracy" have turned up there twenty years later. Whether techniques spread from repressive regimes to others is a hypothesis this data could test.
+    * Why it looks like something else: censorship can be made to look like congestion, a network problem, or an outage. Today's campus email outage was the example: the first instinct was to report a local problem, and only the news said it was the provider. It can also be intermittent and localized. If it hit ten percent of people and sort of worked, it would be hard to tell there was an event at all, hard to be in the right place at the right time to measure it, and hard to attribute motive even with a measurement in hand.
+    * The measurement ecosystem
+        * OONI: volunteers install the probe through campaigns; the Explorer site shows what it collects.
+        * Censored Planet: mostly virtual private servers inside the country, running measurements of every blocking type the course has covered. Measuring from data centers is not the same as measuring from phones or homes, but it runs around the clock.
+        * IODA: watches Internet routing data, the kind examined earlier in the term, for disruptions.
+        * Cloudflare Radar: measures traffic to Cloudflare's own infrastructure.
+        * GFWatch: measures into China for reachability and replies.
+        * Platforms measure too, which is Tuesday's topic: Google's transparency report shows traffic to its services dipping when a country censors them.
+    * DNS manipulation. The baseline test is the one from the earlier hands-on: resolve a name, compare the address with someone else's, and notice that the answer changes when the VPN moves you. A different answer may be load balancing or geolocation rather than manipulation, so the hard problem is telling those apart; the papers in the reading give consistency checks for it.
+    * TCP/IP filtering, at a high level only: a side channel. From outside you can probe the IP ID counter on a router and force it to increment; if your traffic is blocked, the counter does not increment, and you can observe that. The mechanics are more involved and were not covered. A student asked whether this works for newer versions of IP. It does not: IP ID is an IPv4 field, so the book's technique has a blind spot for IPv6.
+    * Web filtering and Encore. Built in the instructor's lab about ten years ago to measure web filtering without recruiting anyone to install software. JavaScript embedded in a page the researchers controlled made every visiting browser request an object from a third-party site under test, the way a tracker works, except that the third party is the measurement target. The same-origin policy (a confluence with the security course) keeps the page from reading the cross-origin response, but JavaScript's load and error callbacks reveal whether the fetch succeeded, which is the side channel. You learn that a fetch failed, not why; many failures from one domain suggest the domain is blocked, and specific URLs can be tested the same way. IP-based blocking is less relevant now because of shared hosting.
+    * Not covered today: the consistency metrics in detail, the mechanics of the idle scan and forward versus reverse blocking, the Kazakhstan interception case, and transparency reports and the DSA, which move to Tuesday.
+* **Reading-response discussion**
+    * What the measurements can and cannot tell you: quite limited. Vantage point is the first limit; volunteer-installed tools see only where someone agreed to install them, which is what Encore tried to get around, and that leads to the second question, who gets implicated by running a measurement and whether running one could get you, or someone else, in trouble.
+    * If DNS censorship is inconsistent across resolvers within a country, does that mean governments have less control than assumed, or just reflect decentralized infrastructure? The instructor does not know; it may depend on the country, since nationalized infrastructure would suggest more control. The reading shows DNS queries from inside heavily censored countries that nonetheless succeeded. Open question.
+    * Could inconsistent censorship be porous on purpose? Definitely yes; whether it is official policy is another open question.
+    * What are the repercussions of overestimating DNS or TCP manipulation when it is hard to separate manipulation from legitimate variation? False reports. A student added that the measurements are spotty in the first place. The upshot is whether any of this helps; probably yes, because OONI-style measurements get corroborated, but who it helps and on what timescale is worth keeping in mind.
+    * Does this change with IPv6? Some of it. The book's way of measuring IP manipulation is becoming archaic, less useful if not yet irrelevant. Shared hosting pushes the same way: with everything hosted on a few clouds, censors go after individual sites, content, or platforms rather than whole addresses. More on Tuesday.
+    * Ethics: idle scans use ordinary hosts without their knowledge, and Encore does too. Does the public benefit of exposing censorship justify compromising the privacy or security of people who never agreed to take part? Framed with the two questions from research ethics: beneficence (do the benefits outweigh the risks) and justice (does the population that bears the risk receive the benefit). There was no time for the breakout discussion on it.
+* **Hands-on: [censorship measurement with OONI Explorer](../activities/measurement.md)**
+    * Parts 1 and 2 only, about eight minutes, in groups with each person trying a different test or country.
+    * Walkthrough on the projector: the charts page, pick a country (Albania as the demo) and a date range such as the last month, then break it out by test. If a country looks clean, the findings and reports pages show OONI's case studies and how they reached their conclusions.
+    * Part 3 was not reached.
