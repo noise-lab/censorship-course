@@ -24,7 +24,7 @@ The archived deck is the whole old Chapter 8 (8.1 legal, 8.2 technical copyright
 | 16 | media | | | academia copyright screenshot (`slide016_img006/007`), text-only, dropped earlier |
 | 17 | skip | | | bullets |
 | 18 | skip | | | divider (SLAPP) |
-| 19 | media | "SLAPP: Suing People into Silence" | | threat letter, already embedded (`slide019_img008.png`); ink annotations (23 strokes) composited by the renderer, not needed |
+| 19 | media | "SLAPP: Suing People into Silence" | | threat letter, replaced Nov 17 2026 by a typeset redacted version (`slapp-letter-redacted.png`, from the book's legal/figures/slapp-letter.tex); ink annotations (23 strokes) composited by the renderer, not needed |
 | 20 | skip | | | bullets |
 | 21 | skip | | | summary bullets |
 | 22 | skip | | | section title (8.2) |

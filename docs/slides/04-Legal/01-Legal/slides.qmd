@@ -602,7 +602,7 @@ it is meant to **exhaust** the critic.
 
 ::: {.columns}
 ::: {.column width="50%"}
-![A real SLAPP threat letter the instructor received over a Google review](images/slide019_img008.png)
+![A real SLAPP threat letter the instructor received over a Google review (all parties redacted)](images/slapp-letter-redacted.png)
 :::
 ::: {.column width="50%"}
 - Goal: removal through **fear, legal fees, attrition**

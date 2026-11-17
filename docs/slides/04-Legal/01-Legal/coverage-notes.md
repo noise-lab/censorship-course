@@ -85,7 +85,7 @@
 ## Curated images
 - **USED** `slide015_img004.png` — EFF "A Critic Uses the DMCA to Avoid
   Criticism" article; clean illustration of copyright-as-censorship.
-- **USED** `slide019_img008.png` — the real SLAPP threat letter the instructor
+- **USED** `slapp-letter-redacted.png` (redacted; the original screenshot was removed Nov 17 2026) — the real SLAPP threat letter the instructor
   received over a Google review ($250k threat); a genuine teaching artifact that
   matches the book narrative exactly.
 - **DROPPED** all BitTorrent animation frames (slide024–030, ~100 near-identical
