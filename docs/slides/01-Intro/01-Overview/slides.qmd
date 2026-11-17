@@ -181,7 +181,7 @@ This is the "not just authoritarians" beat. Egypt is the canonical technical exa
 
 Liberal democracies, using **regulatory and financial** levers, not firewalls:
 
-- **UK Online Safety Act:** ICO fines **Reddit £14.47M** for relying on self-declared age (2026). Ofcom fines against 4chan, AVS Group, Kick.com for missing age-assurance.
+- **UK:** under the Online Safety Act, Ofcom fines 4chan, AVS Group, Kick.com for missing age assurance. Under data-protection law, the ICO fines **Reddit £14.47M** and Imgur's owner £247,590 for relying on self-declared age (Feb 2026).
 - **EU Digital Services Act:** common age-verification wallet declared "technically ready" (Apr 2026).
 - **Australia:** world's first nationwide **under-16 social-media ban** (Dec 10, 2025). Platforms fined up to A\$50M. **4.7M under-16 accounts removed** in the first weeks.
 
