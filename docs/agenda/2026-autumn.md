@@ -532,3 +532,17 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * The instructor noted a parallel the course has not yet covered, model alignment as a form of information control, and may add it to a later lecture.
 * **Wrap**
     * The instructor is arranging an optional extended session on the last Thursday of the term, starting at about 3 pm, with a visiting speaker who leads an organization working on hate speech and election integrity and holds a fellowship at the university's Forum for Free Expression. To be announced officially; food expected.
+
+### Meeting 15 (Tue Nov 17)
+
+*Plan; replaced with the record after class.*
+
+- Measuring platform controls (book 5.3)
+    - Transparency reports: what they show (counts by country and request type) and what they hide (who asked, automated or human, appeals, consistent categories); the categories are the platform's framing
+    - The EU Digital Services Act: a statement of reasons for every moderation action, machine-readable and centralized; what the first years of the transparency database and its enforcement show
+    - Auditing a platform from outside: feed it known inputs and watch, the political-advertising audit as the example
+    - The ethics of measurement, carried from Thursday: the gap in oversight and the paradox of consent
+- Reading-response discussion: is a transparency report transparency at all; who checks, and how; platform discretion and government demands; the controls no report can see
+- Student presentation 8: VPNs
+- Hands-on: [transparency reports and the DSA database](../activities/transparency.md); discussion: [transparency report or press release?](../breakouts/transparency.md) as time permits
+- Thursday: measuring legal and economic controls (5.4)
