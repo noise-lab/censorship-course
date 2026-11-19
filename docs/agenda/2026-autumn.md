@@ -572,3 +572,15 @@ Two 80-minute meetings per week, Tuesdays and Thursdays. Notes are reconstructed
     * Breaches and trust: a 2018 breach of a data center hosting a NordVPN server (keys and configuration exposed, no user data reported), and a free VPN that used its users' connections to build a botnet that attacked a message board. The advice was to use a VPN that security researchers trust. A student added the point from the security course that a VPN does not remove the point of attack but moves it: the VPN becomes the root of trust. The instructor added Facebook's Onavo VPN, which was later shown to have harvested users' traffic data for the company's own purposes (it is in the book): solving one trust problem can create another.
     * The presenters finished early. One team member who was absent has more material; Thursday may open with ten more minutes on VPNs, and the instructor will check whether anyone has signed up to present on Tor.
 * **Thursday:** measuring legal and economic controls (5.4).
+
+### Meeting 16 (Thu Nov 19)
+
+*Plan; replaced with the record after class.*
+
+- Housekeeping: week-9 reading response (6.1, VPNs) due Tue Nov 24, 9 am, the last one; project presentations on the last day of class, Thu Dec 3, with the optional 3 pm session before class; project papers due Fri Dec 11
+- A short VPN follow-up from presentation 8, if the absent team member's material is ready
+- Reading-response discussion carried from week 8: court-ordered blocking and collateral damage, the over-removal asymmetry, who is responsible for lost speech, how zero-rated usage was measured
+- Lecture: Measuring Legal and Economic Controls (5.4): where a restriction comes from and which measurement sees it; the Lumen Database and DMCA abuse; court-ordered IP blocking on shared infrastructure; natural experiments (FOSTA/SESTA, GDPR geo-blocking, NetzDG); why economic controls are the hardest to see; what a national ranking hides
+- Hands-on: [measuring legal and economic controls](../activities/legal-economic.md), Lumen and a natural-experiment design
+- Student presentation 9
+- Breakout, if time: [can you measure a chill; country rankings](../breakouts/legal-economic.md)
