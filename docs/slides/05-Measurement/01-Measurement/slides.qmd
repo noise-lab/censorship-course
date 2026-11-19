@@ -737,7 +737,7 @@ a Pakistani takedown and accepting the risk of being blocked. The big gap: they 
 say *who* asked or whether a *bot* decided.
 :::
 
-## Legal & Economic Controls Need Other Tools {.smaller}
+## Legal & Economic Controls Need Other Tools
 
 The restriction's **source** differs: platform moderation vs. **external** legal/economic
 pressure.
@@ -756,6 +756,225 @@ Lumen makes legal demands machine-readable. Laws create natural experiments — 
 FOSTA/SESTA passed, Craigslist killed personals overnight; that's a measurable shock.
 Economic controls (demonetization, payment cutoffs) are the hardest — platforms don't
 publish them, so we rely on creator self-reports and news.
+:::
+
+## Where the Restriction Comes From
+
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 4.6
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.6; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  p [label="Platform control\nits own terms of service", fillcolor="#f2d9a8"];
+  l [label="Legal control\ncourt orders, DMCA notices,\ngovernment demands", fillcolor="#f2d9a8"];
+  e [label="Economic control\ndemonetization, zero-rating,\npayment cutoffs, app-store removal", fillcolor="#f2d9a8"];
+  pm [label="Transparency reports;\nDSA statements of reasons"];
+  lm [label="Lumen Database;\nDSA 'orders from authorities';\nnatural experiments"];
+  em [label="Self-reports, usage data,\navailability tracking, news", fillcolor="#f8d7c4"];
+  out [label="Who is responsible,\nand what policy answers it", fillcolor="#d9efd3"];
+  p -> pm -> out; l -> lm -> out; e -> em -> out;
+}
+```
+
+Platform controls are the platform's **own decision**; legal and economic controls are
+**external pressure** on platforms and users. Each source leaves a **different trace**.
+
+::: {.notes}
+Book §5.4 opening. The whole segment hangs on this distinction: a platform acting on its
+own rules versus a platform (or a user) responding to a court, a statute, an advertiser, or
+a payment processor. Attribution decides who is responsible and what policy fixes it. Walk
+the three rows: the method that sees each kind of control, and that the bottom row is
+the weakest, which is where the segment ends. Next: Lumen, the legal row's main source.
+:::
+
+## Lumen: Making Legal Demands Machine-Readable
+
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 3.2
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.45; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=20,
+        color="#555555", penwidth=1.4, margin="0.14,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  s [label="Sender\nrights holder, court,\ngovernment", fillcolor="#f2d9a8"];
+  n [label="Legal notice\nDMCA, court order,\ngovernment request"];
+  pl [label="Platform\nacts, then forwards\na copy"];
+  lu [label="Lumen\nBerkman Klein;\nmillions of notices"];
+  r [label="Researchers\nwho, from where, what,\nand is it legitimate", fillcolor="#d9efd3"];
+  s -> n -> pl -> lu -> r;
+}
+```
+
+- **[Lumen](https://lumendatabase.org/)** (formerly Chilling Effects) collects the legal complaints platforms receive;
+  Google forwards copies of the demands it acts on
+- Google's transparency data: **4 billion+ links** sent for removal since 2011, with
+  **false copyright claims** used to remove lawful content criticizing the sender
+- Machine-readable, so takedown patterns can be **counted**: which jurisdictions, what
+  content, whether claims look legitimate
+
+::: {.notes}
+Book §5.4, "Government Takedown Requests." Lumen is what makes the legal row of the
+previous slide measurable: a copy of each demand, in a form you can query. The DMCA-abuse
+finding (false claims to bury criticism) is the headline result, introduced in Ch. 1.
+Contrast with transparency reports: those give counts; Lumen gives the notice itself.
+The live site blocks headless browsers, so open it in a real browser if you want to show
+a notice. Next: a court order that hit far more than it targeted.
+:::
+
+## Court Orders Hit Shared Infrastructure
+
+::: {.columns}
+::: {.column width="54%"}
+Since **early 2025**, Spanish courts have authorized ISPs (including the partly
+state-owned **Telefonica**) to block IP addresses during **LaLiga** matches at the
+league's and its broadcaster's request.
+
+::: {.vignette}
+**OONI, June 2026:** between **January and June 2026**, at least **5.8% of the 9.2 million**
+most popular domains were unreachable in Spain at some point during matches, **over
+500,000** of them behind **Cloudflare**; the order was then extended to require
+**NordVPN** and **Proton VPN** to block streaming sites. *([OONI report, Jun 30 2026](https://ooni.org/post/2026-laliga-collateral/))*
+:::
+
+**Why it is a clean experiment:** the collateral damage comes from a **legal instrument**
+applied at the **IP layer**, not from any platform's own policy.
+:::
+::: {.column width="46%"}
+::: {.capture}
+[![](images/captures/ooni-laliga.png){width="100%"}](https://ooni.org/post/2026-laliga-collateral/)
+
+OONI, "Collateral Damage of IP-Based Blocking During LALIGA Football Streaming in Spain," Jun 30 2026. Captured Nov 18 2026; click to open.
+:::
+:::
+:::
+
+::: {.notes}
+Book §5.4, "Court-ordered IP blocking and shared infrastructure." The numbers on the
+slide are the book's and match the OONI report: 554,507 domains, 7,441 IPs across 36
+organizations (Amazon, Cloudflare, Akamai, Meta, Microsoft), and 501,305 domains behind
+just 2,218 Cloudflare IPs. OONI also found one ISP (Digi) injecting a self-signed TLS
+certificate, which turns a copyright block into interception. The teaching point is
+attribution: nothing here is platform moderation, so the measurement isolates the
+effect of the court order, and there is no transparency about which addresses are
+blocked. Ask: what procedural safeguard would have caught this?
+:::
+
+## Laws as Natural Experiments
+
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 3.4
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.6; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  b [label="Before\nmeasure the same thing:\nsections live, sites reachable,\nremoval rates"];
+  t [label="The law takes effect\nFOSTA/SESTA 2018, GDPR 2018,\nNetzDG, Texas HB20, DSA", fillcolor="#f2d9a8"];
+  a [label="After\nthe same measurement,\nsame places, same probes"];
+  d [label="Difference =\nhow platforms respond\nto legal risk", fillcolor="#d9efd3"];
+  c [label="Confounds\nother events at the same time;\nover-compliance looks like\nplatform policy", fillcolor="#f8d7c4", style="filled,rounded,dashed"];
+  b -> t -> a -> d; c -> d [style=dashed];
+}
+```
+
+- **FOSTA/SESTA (2018):** Craigslist shut its **personals** section, Reddit banned
+  subreddits; interviews documented downstream harm to sex workers who used platforms for screening
+- **GDPR (2018):** some U.S. news sites **blocked EU visitors** rather than comply; measured by
+  probing from EU addresses before and after
+- **Comparative design:** removal rates for similar content under **NetzDG** (24-hour rule),
+  the **DSA**, and **Section 230**; do platforms apply the strictest rule globally?
+
+::: {.notes}
+Book §5.4, "Natural Experiments and Comparative Studies." The design is simple: a law
+is a shock at a known time, so measure the same thing before and after. FOSTA/SESTA is
+the vivid case (Craigslist personals gone within days); GDPR geo-blocking shows de facto
+censorship nobody intended. The confound box matters: platforms over-comply to avoid
+liability, so the measured effect mixes legal control with platform caution. The
+comparative version holds the content constant and varies the jurisdiction (NetzDG vs.
+DSA vs. Section 230); the Brussels/California-effect question is whether platforms
+apply the strictest regime everywhere.
+:::
+
+## Economic Controls Are the Hardest to See
+
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 3.0
+digraph g {
+  rankdir=LR; nodesep=0.25; ranksep=0.5; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=16];
+  z [label="Zero-rating", fillcolor="#f2d9a8"]; zm [label="App usage before and\nduring promotions; surveys", fillcolor="#d9efd3"];
+  ap [label="App-store removal", fillcolor="#f2d9a8"]; apm [label="Availability tracking by\ncountry (Citizen Lab)", fillcolor="#d9efd3"];
+  de [label="Demonetization", fillcolor="#f2d9a8"]; dem [label="Creator self-reports;\nthird-party status checkers"];
+  pa [label="Payment cutoff", fillcolor="#f2d9a8"]; pam [label="News reports and\nvictims' statements only", fillcolor="#f8d7c4", style="filled,rounded,dashed"];
+  z -> zm; ap -> apm; de -> dem; pa -> pam;
+  z -> ap -> de -> pa [style=invis];
+  {rank=same; z; ap; de; pa}
+  {rank=same; zm; apm; dem; pam}
+}
+```
+
+- No blocking event to observe: the control shows up as **changed behavior**, what gets made at all
+- **Zero-rating** (South Africa, Kenya, 2013–15): MTN zero-rated Twitter for the 2014 World Cup
+  and usage **stayed elevated** afterward; Cell C zero-rated WhatsApp and usage **tripled**
+- **Demonetization** as "tiered governance": YouTube's 2017 **Adpocalypse**; creators who cannot
+  earn **leave the topic or the platform**
+
+::: {.notes}
+Book §5.4, "Measuring Economic Controls." Top row to bottom row is a ladder of
+visibility: zero-rating and app-store removals can be tracked from outside; demonetization
+only through creators and status checkers; payment cutoffs almost never announced, so a
+Lumen-style crowdsourced database is the book's suggestion. The zero-rating study is
+Chen, Feamster, and Calandro (2016–17), a natural experiment in pricing: usage spiked and
+stayed up. Caplan and Gillespie's "tiered governance" is the demonetization frame. The
+chapter's closing point: these controls shape what gets created at all, which no network
+probe can see.
+:::
+
+## Comparing Jurisdictions: What a Score Hides
+
+```{dot}
+//| fig-width: 12.4
+//| fig-height: 3.8
+digraph g {
+  rankdir=LR; nodesep=0.3; ranksep=0.6; bgcolor="transparent";
+  node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=18,
+        color="#555555", penwidth=1.4, margin="0.16,0.08", fillcolor="#cfe3f5"];
+  edge [color="#555555", penwidth=1.5, fontname="Helvetica", fontsize=15];
+  s [label="One national score\nor one removal rate", fillcolor="#f2d9a8"];
+  h1 [label="Which networks and regions\nactually blocked (ISPs differ)", fillcolor="#f8d7c4", style="filled,rounded,dashed"];
+  h2 [label="Informal pressure that\nnever became a legal demand", fillcolor="#f8d7c4", style="filled,rounded,dashed"];
+  h3 [label="The reporting gap: the same decision\nis logged for a user in France,\ninvisible for one in California", fillcolor="#f8d7c4", style="filled,rounded,dashed"];
+  s -> {h1 h2 h3};
+}
+```
+
+- **Comparative analysis** needs comparable data, but much of it is **not public**: governments
+  do not disclose demands, and payment processors and app stores rarely announce anything
+- **Attribution** is hard: legal pressure, economic incentive, or the platform's own policy?
+
+::: {.vignette}
+**Current events:** [Freedom on the Net 2025](https://freedomhouse.org/report/freedom-net/2025/uncertain-future-global-internet)
+(Nov 2025) scored **72 countries**: internet freedom fell for the **15th straight year**, declining in
+**27** and improving in **17**. One number per country hides all of the variation above.
+:::
+
+::: {.notes}
+Book §5.4, "Comparative jurisdictional analysis" and "Challenges and Limitations." A
+country-level number is the most quoted output of this field, and the least precise:
+earlier slides showed DNS manipulation varying by ISP within one country; the DSA logs a
+decision for an EU user and nothing for a U.S. user; informal pressure never appears in
+any database. The Freedom on the Net figures are current-events dressing (press release,
+Nov 13 2025); the index is itself an aggregation, so ask students what one point on a
+100-point scale could possibly mean. Next: the DSA, the one regime that mandates the
+detail.
 :::
 
 ## The DSA: Mandatory, Structured Transparency {.smaller}
@@ -858,7 +1077,7 @@ largely self-governing. Stress the legal/safe gap — in some regimes legality i
 protection, and risk is genuinely hard to estimate in advance.
 :::
 
-## The Paradox of Consent {.smaller}
+## The Paradox of Consent
 
 The usual safeguard — **informed consent** — can **backfire** here.
 
@@ -932,6 +1151,9 @@ should be modest about risks they can't foresee.
 - **Triangulate**: OONI + Google + transparency data corroborate each other
 - **Platform/legal/economic** controls need different tools — **DSA** is a step toward
   mandatory, structured transparency
+- **Legal and economic** controls shape what speech is **viable**, not just reachable: Lumen and
+  the DSA make some of it countable; laws are **natural experiments**; demonetization and payment
+  cutoffs remain visible only through **self-reports**
 - The **ethics** are genuinely contested: consent can paradoxically **increase** risk
 
 ::: {.notes}
