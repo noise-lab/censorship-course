@@ -120,7 +120,7 @@ can't be broken or analyzed. Enterprises use the same mechanism so employees can
 the campus/corporate network from home — that's where most students first meet a VPN.
 :::
 
-## VPNs Are Not a Panacea {.smaller}
+## VPNs Are Not a Panacea {.larger}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -146,7 +146,7 @@ Research," then shut down. The protective value of a VPN depends on *who runs it
 as on the crypto. Book §6.1.
 :::
 
-## How People Actually Use VPNs
+## How People Actually Use VPNs {.larger}
 
 Survey of **729 US VPN users** (Dutkowska-Żuk et al., 2022):
 
@@ -162,7 +162,7 @@ gap between perceived and actual protection is the teaching point — and it gen
 other privacy tools. Book §6.1, dutkowska2022understanding.
 :::
 
-## Censorship Can *Increase* Access
+## Censorship Can *Increase* Access {.larger}
 
 When a platform is blocked, **VPN demand spikes** — and often stays high after the block lifts.
 
@@ -294,7 +294,7 @@ eventually land on a malicious entry; exits are the relays that take on abuse co
 Book §6.2.
 :::
 
-## Tor's Threat Model and Its Limits {.smaller}
+## Tor's Threat Model and Its Limits {.larger}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -322,7 +322,7 @@ adversaries (controlling ASes/IXPs) round out the threat model. Book §6.2 "Trac
 Deanonymization."
 :::
 
-## Node-Level vs. Link-Level Adversaries {.smaller}
+## Node-Level vs. Link-Level Adversaries
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -368,7 +368,7 @@ policy debate — should truly anonymous tools exist given the abuse? Tor's posi
 anonymity is a right worth protecting despite abuse. Book §6.2 "The Dark Web."
 :::
 
-## Beyond Tor: Pick a Portfolio {.smaller}
+## Beyond Tor: Pick a Portfolio {.larger}
 
 | System | Primary goal | Anonymity | Blocking resistance | Ease of use |
 |---|---|---|---|---|
@@ -388,7 +388,7 @@ transports and auto-selects; it absorbed huge surges during Myanmar's 2021 coup 
 "Other Anonymous Communication Systems."
 :::
 
-## I2P: Garlic Routing for Internal Services {.smaller}
+## I2P: Garlic Routing for Internal Services {.larger}
 
 ::: {.columns}
 ::: {.column width="50%"}
